@@ -1,0 +1,324 @@
+// App-specific variables
+$app-light-grey: #f8f8f8;
+$app-code-color: #dd1144;
+
+// App-specific components
+@import "components/contact-panel";
+@import "components/cookie-banner";
+@import "components/example";
+@import "components/footer";
+@import "components/header";
+@import "components/highlight";
+@import "components/inverted-button";
+@import "components/masthead";
+@import "components/mobile-navigation";
+@import "components/navigation";
+@import "components/pane";
+@import "components/site-search";
+@import "components/subnav";
+@import "components/tabs";
+@import "components/table";
+@import "components/tag";
+
+body {
+  margin: 0;
+}
+
+.app-hide-mobile {
+  @include govuk-media-query($until: tablet) {
+    display: none;
+  }
+}
+
+.app-hide-tablet {
+  @include govuk-media-query($from: tablet) {
+    display: none;
+  }
+}
+
+.app-hide-desktop {
+  @include govuk-media-query($from: desktop) {
+    display: none;
+  }
+}
+
+// Mirrors Bootstrap 4 - open for discussion
+$app-breakpoint-widescreen: 1200px;
+
+// This will be coming to FE later but making it app specific for now
+.app-site-width-container {
+  @media (min-width: $app-breakpoint-widescreen) {
+    max-width: 1100px;
+  }
+}
+
+// This layout is currently used on error pages like 404
+.app-site-width-container--constraint {
+  max-width: 960px;
+}
+
+// This is consistent with Elements - will be changed in FE
+[class*="govuk-grid-column"] {
+  @include govuk-media-query($until: desktop) {
+    padding: 0 $govuk-gutter-half;
+  }
+}
+
+// This is consistent with Elements - will be changed in FE
+.govuk-grid-column-one-third,
+.govuk-grid-column-two-thirds,
+.govuk-grid-column-one-quarter {
+  @include govuk-media-query($until: desktop) {
+    width: 100%;
+  }
+}
+
+.app-content {
+
+  @include govuk-responsive-padding(6);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul:not(.app-tabs),
+  ol,
+  img,
+  video,
+  .app-table--constrained {
+    max-width: 38em;
+  }
+
+  video,
+  img {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    @include govuk-responsive-margin(2, "top");
+    @include govuk-responsive-margin(6, "bottom");
+    border: 1px solid $govuk-border-colour;
+  }
+
+  img {
+    padding: govuk-spacing(2);
+  }
+
+  video {
+    @include govuk-focusable;
+  }
+
+  // IE8 does not support the video element, so we hide the element entirely.
+  @if $govuk-is-ie8 == true {
+    video {
+      display: none;
+    }
+  }
+}
+
+.app-content__header {
+  @include govuk-font(24);
+}
+
+.app-content__heading {
+  margin-top: 0;
+  margin-bottom: govuk-spacing(6);
+}
+
+.app-content__section-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $govuk-secondary-text-colour;
+}
+
+.app-example-page {
+  padding: govuk-spacing(6) * 2 govuk-spacing(6) govuk-spacing(6);
+}
+
+.app-example-page--full-page {
+  padding: 0;
+}
+
+// Copy button
+.app-copy-button {
+  $copy-button-colour: #00823b;
+
+  @include govuk-font(16);
+  @include govuk-focusable();
+  position: absolute;
+  z-index: 1;
+  top: govuk-spacing(3);
+  right: govuk-spacing(3);
+  min-width: 80px;
+  padding: 4px 10px 0;
+  border: 1px solid $copy-button-colour;
+  color: $copy-button-colour;
+  background-color: govuk-colour("white");
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+$colour-list-breakpoint: 980px;
+
+// for IE8 we need to set that to 'desktop' so media queries get rasterised
+// $govuk-ie8-breakpoint is set in Frontend
+@if $govuk-is-ie8 == true {
+  $colour-list-breakpoint: $govuk-ie8-breakpoint;
+}
+
+
+.app-colour-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.app-colour-list-row {
+  display: table-row;
+  margin-bottom: govuk-spacing(2);
+  border-bottom: 10px solid transparent;
+  @include govuk-media-query($from: $colour-list-breakpoint) {
+    display: table-row;
+    margin: auto;
+    border-bottom: 0;
+  }
+}
+
+.app-colour-list-column {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  @include govuk-media-query($from: $colour-list-breakpoint) {
+    display: table-cell;
+    padding-left: 0;
+    vertical-align: middle;
+  }
+}
+
+.app-swatch {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent; // only light colours need a border
+  border-radius: 50%;
+  @include govuk-media-query($from: $colour-list-breakpoint) {
+    display: inline-block;
+    position: static;
+    margin-top: 6px;
+    margin-right: 10px;
+    margin-bottom: 7px; // odd number so the text lines up vertically
+    vertical-align: middle;
+  }
+}
+
+.app-swatch-border {
+  border-color: govuk-colour("grey-2");
+}
+
+.app-colour-list-column--name {
+  font-weight: normal;
+  text-align: left;
+  @include govuk-media-query($from: $colour-list-breakpoint) {
+    width: 50%;
+  }
+}
+
+.app-colour-list-column--colour {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
+    width: 15%;
+  }
+}
+
+.app-colour-list-column--notes {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
+    width: 35%;
+  }
+}
+
+pre {
+  position: relative;
+  margin: 0;
+  padding: govuk-spacing(4);
+  overflow: auto;
+  border: 1px solid $govuk-border-colour;
+  background-color: $app-light-grey;
+  font-size: 16px;
+  max-width: 38em;
+  @include govuk-responsive-margin(4, "bottom");
+}
+
+.no-js {
+  // Adjustments in app-pane layout as it has toc below
+  .app-pane__content .app-content {
+
+    @include govuk-media-query($until: tablet) {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+// Add styling for inline code
+li code,
+td code,
+p code {
+  padding: 0 govuk-spacing(1);
+  color: $app-code-color;
+  background-color: govuk-colour("grey-4");
+}
+
+.app-prose-scope {
+
+  h1 {
+    @extend %govuk-heading-xl;
+  }
+
+  h2 {
+    @extend %govuk-heading-l;
+  }
+
+  h3 {
+    @extend %govuk-heading-m;
+  }
+
+  h4 {
+    @extend %govuk-heading-s;
+  }
+
+  p {
+    @extend %govuk-body-m;
+  }
+
+  strong,
+  b {
+    @include govuk-typography-weight-bold;
+  }
+
+  ul,
+  ol {
+    @extend %govuk-list;
+  }
+
+  ol {
+    @extend %govuk-list--number;
+  }
+
+  ul {
+    @extend %govuk-list--bullet;
+  }
+
+  a {
+    @extend %govuk-link;
+  }
+
+  hr {
+    @extend %govuk-section-break;
+    @extend %govuk-section-break--visible;
+    @extend %govuk-section-break--xl;
+  }
+}

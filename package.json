@@ -1,0 +1,25 @@
+{
+  "name": "employer-funding-rules",
+  "version": "1.0.0",
+  "description": "gov.uk manual example",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdbarnes/employer-funding-rules.git"
+  },
+  "author": "ESFA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdbarnes/employer-funding-rules/issues"
+  },
+  "dependencies": {
+    "das-frontend": "github:SkillsFundingAgency/das-frontend"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1"
+  }
+}
