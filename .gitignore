@@ -1,6 +1,11 @@
-_site
+# ignore tracking usage data config - we want a different one for each user
+usage-data-config.json
+.env
 .sass-cache
-.jekyll-metadata
-/node_modules
-/dist/.DS_Store
 .DS_Store
+.start.pid
+.port.tmp
+public
+node_modules/*
+.tmuxp.*
+package-lock.json
