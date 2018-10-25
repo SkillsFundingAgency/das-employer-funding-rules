@@ -10,30 +10,32 @@ const usageData = require('./lib/usage_data');
 // Get usageDataConfig from file, if exists
 // const usageDataConfig = usageData.getUsageDataConfig()
 
-if (usageDataConfig.collectUsageData === undefined) {
-  // No recorded answer, so ask for permission
-  let promptPromise = usageData.askForUsageDataPermission();
-  promptPromise.then(function(answer) {
-    if (answer === 'yes') {
-      usageDataConfig.collectUsageData = true;
-      usageData.setUsageDataConfig(usageDataConfig);
-      usageData.startTracking(usageDataConfig);
-    } else if (answer === 'no') {
-      usageDataConfig.collectUsageData = false;
-      usageData.setUsageDataConfig(usageDataConfig);
-    } else {
-      console.error(answer);
-    }
-    runGulp();
-  });
-} else if (usageDataConfig.collectUsageData === true) {
-  // Opted in
-  usageData.startTracking(usageDataConfig);
-  runGulp();
-} else {
-  // Opted out
-  runGulp();
-}
+// if (usageDataConfig.collectUsageData === undefined) {
+//   // No recorded answer, so ask for permission
+//   let promptPromise = usageData.askForUsageDataPermission()
+//   promptPromise.then(function (answer) {
+//     if (answer === 'yes') {
+//       usageDataConfig.collectUsageData = true
+//       usageData.setUsageDataConfig(usageDataConfig)
+//       usageData.startTracking(usageDataConfig)
+//     } else if (answer === 'no') {
+//       usageDataConfig.collectUsageData = false
+//       usageData.setUsageDataConfig(usageDataConfig)
+//     } else {
+//       console.error(answer)
+//     }
+//     runGulp()
+//   })
+// } else if (usageDataConfig.collectUsageData === true) {
+//   // Opted in
+//   usageData.startTracking(usageDataConfig)
+//   runGulp()
+// } else {
+//   // Opted out
+//   runGulp()
+// }
+
+runGulp();
 
 // Warn if node_modules folder doesn't exist
 function checkFiles() {
