@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Manual
+{% endblock %}
+
+{% block content %}
+
+<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+  <div class="gem-c-contextual-breadcrumbs">
+    <!-- Rendering step by step nav breadcrumbs because there's 1 step by step -->
+    <div class="gem-c-step-nav-header" data-module="track-click">
+      <span class="gem-c-step-nav-header__part-of">Part of</span>
+      <a href="#" class="gem-c-step-nav-header__title">
+        Funding rules for employers
+      </a>
+    </div>
+  </div>
+
+
+  <header aria-labelledby="manual-title" class="">
+
+    <div class="primary">
+
+      <h1 id="manual-title">Apprenticeship funding rules for employers August 2018 to July 2019</h1>
+      <div class="gem-c-metadata" data-module="gem-toggle">
+        <dl data-module="track-click">
+          <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a href="https://www.gov.uk/government/organisations/education-and-skills-funding-agency">Education and
+              Skills Funding Agency</a>
+
+          </dd>
+          <dt class="gem-c-metadata__term">Published:</dt>
+          <dd class="gem-c-metadata__definition"><time datetime="2015-10-01"> 1 October 2018</time></dd>
+          <dt class="gem-c-metadata__term">Updated:</dt>
+          <dd class="gem-c-metadata__definition">
+            <time datetime="2018-10-01">1 October 2018</time>, <a href="#">see all
+              updates</a>
+
+          </dd>
+        </dl>
+      </div>
+
+
+      <div class="in-manual-search">
+        <form action="/search">
+          <label for="search-box">Search this manual</label>
+          <input type="hidden" name="filter_manual[]" value="/guidance/employer-funding">
+          <input id="search-box" class="in-manual-search-box" type="text" name="q">
+          <button type="submit">search</button>
+        </form>
+      </div>
+    </div>
+    <div class="secondary">
+      <div class="secondary-inner">
+        <p>
+          <a class="feedback" href="https://www.gov.uk/contact/govuk">Give feedback about this page</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <ol class="breadcrumb-trail">
+    <li><a href="../index.html">Contents</a></li>
+
+    <li class="last-child">Introduction and purpose of the document</li>
+  </ol>
+
+  <div class="manual-body" id="content">
+    <article aria-labelledby="section-title">
+      <h1 id="section-title" class="section-title">Introduction and purpose of the document</h1>
+      <p class="summary">Introduction and purpose of the document</p>
+      <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
+        <div class="collapsible-subsections">
+
+          <div class="gem-c-govspeak govuk-govspeak ">
+            <h2 id="e1">E1. This document sets out the guidance...</h2>
+            <p>E1. This document sets out the guidance for all employers participating in the new apprenticeship
+              programme from 1 August 2018. It also sets out the funding rules for levy-paying employers who are
+              participating in the apprenticeship programme through an account on the apprenticeship service.</p>
+
+            <h2 id="e2">E2. Employers who do not pay the apprenticeship levy...</h2>
+            <p>E2. Employers who do not pay the apprenticeship levy may find the guidance within this document useful.
+              If you are an employer who does not pay the levy but would like to know more about employing apprentices,
+              please visit GOV.UK.</p>
+
+            <h2 id="e3">E3. If you would like more detailed information</h2>
+            <p>E3. If you would like more detailed information on the features of the apprenticeship funding system,
+              including how we will calculate funding for organisations receiving funding from us, please refer to the
+              Apprenticeship Technical Funding Guide. This will be useful for you to understand how we will make
+              payments for main providers from your apprenticeship service account.</p>
+
+            <h2 id="e4">E4. We will use the generic term.</h2>
+            <p>E4. We will use the generic term ‘apprenticeship’ for both apprenticeship frameworks and standards,
+              unless we state otherwise.</p>
+
+            <h2 id="e5">E5. The rules contained in this document</h2>
+            <p>E5. The rules contained in this document form part of standard terms and conditions for the use of funds
+              in an employer’s apprenticeship service account or where a levy-paying employer is accessing
+              government-employer co-investment.</p>
+            <p>If you are a levy-paying employer participating in the new apprenticeship programme, you must operate
+              within the terms and conditions of your apprenticeship
+              employer agreement.</p>
+            <p>The employer agreement is with the Secretary of State for Education (acting through
+              the Education and Skills Funding Agency (the ESFA), an executive agency of the Department for Education),
+              and includes these rules.</p>
+
+            <h2 id="e6">E6. If you breach your employer agreement</h2>
+            <p>E6. If you breach your employer agreement, we reserve the right to take action.</p>
+
+            <h2 id="e7">E7. We may take action to recover all</h2>
+            <p>E7. We may take action to recover all or part of the government funding from you if we are satisfied
+              that there has been a breach of the funding rules. This includes where claims are made for funding
+              through your apprenticeship service account, government co-investment or additional payments to which you
+              are not entitled.</p>
+
+            <h2 id="e8">E8. If you would like any further support</h2>
+            <p>E8. If you would like any further support, you can contact us through our Apprenticeship Business
+              Support team on 0800 015 0600. </p>
+
+          </div>
+
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="print-page">
+    <a onclick="window.print();return false;" href="#">Print this page</a>
+  </div>
+</div>
+
+{#
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      The GOV.UK Prototype Kit
+      <span class="govuk-caption-xl">{{releaseVersion}}</span>
+    </h1>{{releaseVersion | log }}
+    <p>
+      This kit lets you rapidly create HTML prototypes of GOV.UK services.
+    </p>
+
+    <p>
+      It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
+    </p>
+
+    <h2 class="govuk-heading-m">About this page</h2>
+
+    <p>We recommend you add links to your prototype to this page, rather than delete it.
+      You'll find this page in the kit at '/app/views/index.html'.</p>
+
+    <p>You can change the service name by editing the file '/app/config.js'.</p>
+
+    <h2 class="govuk-heading-m">Examples and documentation</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
+      <li>
+        <a href="https://design-system.service.gov.uk">
+          GOV.UK Design System
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+#}
+
+{% endblock %}
