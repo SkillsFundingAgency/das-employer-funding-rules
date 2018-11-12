@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Manual
+{% endblock %}
+
+{% set _thisManual = myData.manuals['providers-manual-original'].content %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">{{_thisManual.title}}</h1>
+    <p class="govuk-body">{{_thisManual.date}}</p>
+    <p class="govuk-body-l">{{_thisManual.version}}</p>
+    <p class="govuk-body">{{_thisManual.intro}}</p>
+    <p class="govuk-body">{{_thisManual.interest}}</p>
+
+    <!-- Index -->
+    <h2 class="govuk-heading-m">Contents</h2>
+    <ul class="govuk-list govuk-list--bullet">
+        {% for section in _thisManual.sections %}
+        <li><a href="#{{section.title|replace(' ', '')}}">{{section.title}}</a>
+            {% if section.subsections|length > 0 %}
+            <ul class="govuk-list govuk-list--bullet">
+                {% for subsection in section.subsections %}
+                {% if subsection.type != "main" %}
+                <li>
+                    <a href="#{{subsection.title|replace(' ', '')}}">{{subsection.title}}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Section heading -->
+    {% for section in _thisManual.sections %}
+    <h2 class="govuk-heading-l" id="{{section.title|replace(' ', '')}}">{{section.title}}</h2>
+
+        {% for subsection in section.subsections %}
+
+            <!-- Sub section heading -->
+            {% if subsection.type != "main" %}
+            <h3 class="govuk-heading-m" id="{{subsection.title|replace(' ', '')}}">{{subsection.title}}</h3>
+            {% endif %}
+
+            <!-- Parts -->
+            {% for part in subsection.parts %}
+                <p class="govuk-body"><span class="govuk-!-font-weight-bold">P{{part.id}}.</span> {{part.content}}</p>
+            {% endfor %}
+
+        {% endfor %}
+
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}
