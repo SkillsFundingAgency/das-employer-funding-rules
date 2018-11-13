@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Manual
+{% endblock %}
+
+{% set _thisManual = myData.manuals['providers-manual-original'].content %}
+
+{% block content %}
+
+<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+    
+    {% set _manualHeaderTitle = _thisManual.title|safe + " " + _thisManual.date|safe %}
+    {% include "./includes/manual-header.html" %}
+      
+    <ol class="breadcrumb-trail">
+        <li class="no-separator">Contents</li>
+    </ol>
+      
+    <article aria-labelledby="manual-title" id="content">
+        <div class="manual-body">
+
+            <p class="summary">{{_thisManual.intro|safe}}</p>
+            <p class="summary">{{_thisManual.interest|safe}}</p>
+
+            <ol class="section-list">
+                {% for section in _thisManual.sections %}
+                <li>
+                    <a class="" href="provider-manual-page?providerpage={{section.id}}"><span class="subsection-title-text">{{section.title|safe}}</span></a>
+                </li>
+                {% endfor %}
+            </ol>
+            
+        </div>
+    </article>
+            
+    <div class="print-page">
+        <a onclick="window.print();return false;" href="#">Print this page</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -6,6 +6,7 @@ module.exports = function (router,_myData) {
         req.session.myData = JSON.parse(JSON.stringify(_myData))
         //Set version that myData was created on
         //req.session.myData.version = version
+        req.session.myData.providerpage = "provider-manual"
     }
 
     //generic.js contains wildcard get and post requests. Useful for setting session data that we want available on any other routes file. also, so we dont have duplicate wildcard requests on individual routes files that might conflict with each other.
@@ -32,11 +33,24 @@ module.exports = function (router,_myData) {
         //serviceName default (this is overridden in certain routes files e.g. paye and VAT)
         // res.locals.serviceNameOverride = res.locals.serviceName
 
+        //Set any query string values
+        req.session.myData.providerpage = req.query.providerpage || req.session.myData.providerpage
+
         next()
     });
 
     router.get('/' + version + '/index', function (req, res) {
         res.render(version + '/index', {
+            myData:req.session.myData
+        });
+    });
+    router.get('/' + version + '/provider-manual', function (req, res) {
+        res.render(version + '/provider-manual', {
+            myData:req.session.myData
+        });
+    });
+    router.get('/' + version + '/provider-manual-page', function (req, res) {
+        res.render(version + '/provider-manual-page', {
             myData:req.session.myData
         });
     });

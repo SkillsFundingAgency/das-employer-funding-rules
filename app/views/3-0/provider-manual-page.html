@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Manual
+{% endblock %}
+
+{% set _thisManual = myData.manuals['providers-manual-original'].content %}
+{% set section = {} %}
+{% for _section in _thisManual.sections %}
+    {% if myData.providerpage == _section.id %}
+        {% set section = _section %}
+    {% endif %}
+{% endfor %}
+
+{% block content %}
+
+<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+    
+    {% set _manualHeaderTitle = _thisManual.title|safe + " " + _thisManual.date|safe %}
+    {% include "./includes/manual-header.html" %}
+      
+    <ol class="breadcrumb-trail">
+        <li class="no-separator">Contents</li>
+        <!-- TODO breadcrumb -->
+    </ol>
+      
+    <article aria-labelledby="manual-title" id="content">
+        <div class="manual-body">
+            <article aria-labelledby="section-title">
+                <h1 id="section-title" class="section-title">{{section.title|safe}}</h1>
+                <!-- <p class="summary">Introduction and purpose of the document</p> -->
+                <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
+                    <div class="collapsible-subsections">
+                        <div class="gem-c-govspeak govuk-govspeak ">
+
+                            {% for subsection in section.subsections %}
+
+                                <!-- Sub section heading -->
+                                {% if subsection.type != "main" %}
+                                <h2 id="{{subsection.id}}">{{subsection.title|safe}}</h2>
+                                {% else %}
+                                <h2 id="{{section.id}}">{{section.title|safe}}</h2>
+                                {% endif %}
+            
+                                <!-- Parts e.g. 19 -->
+                                {% for part in subsection.parts %}
+                                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">P{{part.id|safe}}.</span> {{part.content|safe}}</p>
+                                    
+                                    <!-- Sub Parts e.g. 19.1 -->
+                                    {% for subpart in part.subparts %}
+                                        <p class="govuk-body" style="margin-left: 20px"><span class="govuk-!-font-weight-bold">P{{subpart.id|safe}}.</span> {{subpart.content|safe}}</p>
+                                    {% endfor %}
+            
+                                {% endfor %}
+            
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footnotes -->
+                {% if section.footnotes|length > 0 %}
+                <div class="govuk-!-margin-top-6">
+                    <!-- <h3 class="govuk-heading-s">Footnotes: {{section.title|safe}}</h3> -->
+                    <hr>
+                    <ul class="govuk-list govuk-list--bullet">
+                    {% for footnote in section.footnotes %}
+                        <li><sup class="govuk-body">{{footnote.id|safe}}</sup> {{footnote.content|safe}}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+
+            </article>
+        </div>
+    </article>
+            
+            
+    <div class="print-page">
+        <a onclick="window.print();return false;" href="#">Print this page</a>
+    </div>
+</div>
+
+{% endblock %}

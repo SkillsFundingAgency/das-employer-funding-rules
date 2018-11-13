@@ -9,6 +9,7 @@
         "intro": "This document sets out the funding rules for all training providers delivering apprenticeships from 1 August 2018 to 31 July 2019.",
         "sections": [
             {
+                "id": "intro-and-purpose",
                 "title": "Introduction and purpose of the document",
                 "subsections": [
                     {
@@ -16,11 +17,11 @@
                         "parts": [
                             {
                                 "id": "1",
-                                "content": "This document sets out the funding rules for main providers delivering apprenticeship training and on-programme assessment for employers under the apprenticeship programme from 1 August 2018. Main providers delivering to their own staff must follow the employer-provider rules and only claim actual costs."
+                                "content": "This document sets out the funding rules for main providers delivering apprenticeship training and on-programme assessment for employers under the apprenticeship programme from 1 August 2018. Main providers delivering to their own staff must follow the <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-funding-rules-2018-to-2019'>employer-provider rules</a> and only claim actual costs."
                             },
                             {
                                 "id": "2",
-                                "content": "You can find details on the features of the apprenticeship funding system, including how we will calculate funding for organisations receiving funding from us, in the apprenticeship technical funding guide."
+                                "content": "You can find details on the features of the apprenticeship funding system, including how we will calculate funding for organisations receiving funding from us, in the <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-technical-funding-guide'>apprenticeship technical funding guide</a>."
                             },
                             {
                                 "id": "3",
@@ -32,7 +33,7 @@
                             },
                             {
                                 "id": "5",
-                                "content": "These rules form part of your terms and conditions for the use of funds in an employer’s apprenticeship service account or for government-employer co-investment. You must read them in conjunction with your funding agreement with the Secretary of State for Education (acting through the Education and Skills Funding Agency (the ESFA), an executive agency of the Department for Education)."
+                                "content": "These rules form part of your terms and conditions for the use of funds in an employer’s <a class='govuk-link' href='https://manage-apprenticeships.service.gov.uk/'>apprenticeship service</a> account or for government-employer co-investment. You must read them in conjunction with your funding agreement with the Secretary of State for Education (acting through the Education and Skills Funding Agency (the ESFA), an executive agency of the Department for Education)."
                             },
                             {
                                 "id": "6",
@@ -40,7 +41,7 @@
                             },
                             {
                                 "id": "7",
-                                "content": "You must operate within the terms and conditions of your funding agreement, these rules, and the individualised learner record specification. If you do not, you will be in breach of your funding agreement with the ESFA."
+                                "content": "You must operate within the terms and conditions of your funding agreement, these rules, and the <a class='govuk-link' href='https://www.gov.uk/government/publications/ilr-specification-validation-rules-and-appendices-2018-to-2019'>individualised learner record specification</a>. If you do not, you will be in breach of your funding agreement with the ESFA."
                             },
                             {
                                 "id": "8",
@@ -56,7 +57,7 @@
                             },
                             {
                                 "id": "11",
-                                "content": "You can contact us through our Business Operations Service Desk by email SDE.servicedesk@education.GOV.UK or by telephone on 0370 2640001. You can also contact your provider manager/adviser."
+                                "content": "You can contact us through our Business Operations Service Desk by email <a class='govuk-link' href='mailto:SDE.servicedesk@education.gov.uk'>SDE.servicedesk@education.GOV.UK</a> or by telephone on 0370 2640001. You can also contact your provider manager/adviser."
                             },
                             {
                                 "id": "12",
@@ -64,15 +65,16 @@
                             },
                             {
                                 "id": "13",
-                                "content": "Any apprenticeship which started before 1 August 2018 will continue to follow the rules in force at the start of the programme. These can be accessed on GOV.UK."
+                                "content": "Any apprenticeship which started before 1 August 2018 will continue to follow the rules in force at the start of the programme. These can be accessed on <a class='govuk-link' href='https://www.gov.uk/guidance/sfa-funding-rules'>GOV.UK</a>."
                             },
                             {
                                 "id": "14",
-                                "content": "The performance-management arrangements are set out in the apprenticeship performance-management rules for training providers"
+                                "content": "The performance-management arrangements are set out in the <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-funding-rules-2018-to-2019'>apprenticeship performance-management rules for training providers</a>."
                             }
                         ]
                     },
                     {
+                        "id": "relevant-legislation",
                         "type": "subsection",
                         "title": "Relevant legislation",
                         "parts": [
@@ -83,6 +85,103 @@
                             {
                                 "id": "16",
                                 "content": "These rules will make clear where necessary how they apply to English statutory apprenticeships taking place on apprenticeship frameworks and apprenticeship standards."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "what-apprenticeship",
+                "title": "What is an apprenticeship?",
+                "footnotes": [
+                    {
+                        "id": "1",
+                        "content": "Regulation 6(5), Apprenticeships (Miscellaneous Provisions) Regulations 2017"
+                    },
+                    {
+                        "id": "2",
+                        "content": "Regulation 6(6), Apprenticeships (Miscellaneous Provisions) Regulations 2017"
+                    }
+                ],
+                "subsections": [
+                    {
+                        "id": "job-with-training",
+                        "type": "subsection",
+                        "title": "A job with training",
+                        "parts": [
+                            {
+                                "id": "17",
+                                "content": "An apprenticeship is a job with an accompanying skills development programme. The job must have a productive purpose and should provide the apprentice with the opportunity to gain the knowledge, skills and behaviours needed to achieve the apprenticeship."
+                            },
+                            {
+                                "id": "18",
+                                "content": "Through their apprenticeship, apprentices will gain the technical knowledge, practical experience and wider skills they need for their immediate job and future career. The apprentice gains this through a wide mix of learning in the workplace, formal off-the-job training and the opportunity to practise these new skills in a real work environment."
+                            },
+                            {
+                                "id": "19",
+                                "content": "You and the employer must be satisfied that the apprenticeship is the most appropriate learning programme for the individual and you must have evidence that it is either:",
+                                "subparts": [
+                                    {
+                                        "id": "19.1",
+                                        "content": "a new job that requires new knowledge and skills; or"
+                                    },
+                                    {
+                                        "id": "19.2",
+                                        "content": "an existing job role, where the individual needs significant new knowledge, skills and behaviours to be occupationally competent."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "20",
+                                "content": "The employer must provide the apprentice with appropriate support and supervision to carry out their job role."
+                            },
+                            {
+                                "id": "21",
+                                "content": "You must offer the employer the option of using the free <a class='govuk-link' href='https://www.gov.uk/recruit-apprentice'>recruit an apprentice</a> service tool for all new recruits into their business. It is not mandatory to use this service."
+                            },
+                            {
+                                "id": "22",
+                                "content": "Where you advertise on recuit an apprentice, on behalf of the employer, you must make it clear in the advert how many hours the apprentice will be expected to work per week for the role and how long the apprenticeship will last. This must meet the minimum duration requirement (see paragraphs P45 to P61)."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "employment-contract",
+                        "type": "subsection",
+                        "title": "Employment contract",
+                        "parts": [
+                            {
+                                "id": "23",
+                                "content": "The apprentice must have a contract of service with an employer, or an apprenticeship training agency (ATA), which is long enough for them to complete the apprenticeship successfully (including, for standards the end-point assessment). The only exceptions to this are:",
+                                "subparts": [
+                                    {
+                                        "id": "23.1",
+                                        "content": "Apprentices who have been made redundant less than six months before the final day of their apprenticeship<sup class='govuk-body-s'>1</sup> (see paragraphs P39, P251 and P252)."
+                                    },
+                                    {
+                                        "id": "23.2",
+                                        "content": "Apprentices who have been made redundant, with more than six months but less than 12 months of their apprenticeship remaining; these apprentices may seek a further contract of service with a duration of less than 12 months, and we will fund them for up to 12 weeks while they do so (see paragraph P251 and P253)."
+                                    },
+                                    {
+                                        "id": "23.3",
+                                        "content": "Particular office holders who are alternative apprentices, namely constables of English police forces and ministers or trainee ministers of a religious denomination, who are not engaged under a contract of service. Except for the requirement to have an apprenticeship agreement and a contract of service in relation to these alternative apprentices, you must comply with all the other rules set out here.<sup class='govuk-body-s'>2</sup>"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "apprentice-wages",
+                        "type": "subsection",
+                        "title": "Apprentice wages",
+                        "parts": [
+                            {
+                                "id": "24",
+                                "content": "Every apprentice must be paid a lawful wage for the time they are in work and in off- the-job training."
+                            },
+                            {   
+                                "id": "25",
+                                "content": "The employer must meet the cost of the apprentice’s wages. An employer can only pay the apprenticeship minimum wage from the start of the apprenticeship programme and not before. You can find information on the national minimum wage, the apprenticeship rate, and the definition of an employee on <a class='govuk-link' href='https://www.gov.uk/national-minimum-wage-rates'>GOV.UK</a>."
                             }
                         ]
                     }

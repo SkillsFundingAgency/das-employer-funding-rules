@@ -10,23 +10,23 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">{{_thisManual.title}}</h1>
-    <p class="govuk-body">{{_thisManual.date}}</p>
-    <p class="govuk-body-l">{{_thisManual.version}}</p>
-    <p class="govuk-body">{{_thisManual.intro}}</p>
-    <p class="govuk-body">{{_thisManual.interest}}</p>
+    <h1 class="govuk-heading-l">{{_thisManual.title|safe}}</h1>
+    <p class="govuk-body">{{_thisManual.date|safe}}</p>
+    <p class="govuk-body-l">{{_thisManual.version|safe}}</p>
+    <p class="govuk-body">{{_thisManual.intro|safe}}</p>
+    <p class="govuk-body">{{_thisManual.interest|safe}}</p>
 
     <!-- Index -->
     <h2 class="govuk-heading-m">Contents</h2>
     <ul class="govuk-list govuk-list--bullet">
         {% for section in _thisManual.sections %}
-        <li><a href="#{{section.title|replace(' ', '')}}">{{section.title}}</a>
+        <li><a href="#{{section.id}}">{{section.title|safe}}</a>
             {% if section.subsections|length > 0 %}
             <ul class="govuk-list govuk-list--bullet">
                 {% for subsection in section.subsections %}
                 {% if subsection.type != "main" %}
                 <li>
-                    <a href="#{{subsection.title|replace(' ', '')}}">{{subsection.title}}</a>
+                    <a href="#{{subsection.id}}">{{subsection.title|safe}}</a>
                 </li>
                 {% endif %}
                 {% endfor %}
@@ -38,21 +38,40 @@
 
     <!-- Section heading -->
     {% for section in _thisManual.sections %}
-    <h2 class="govuk-heading-l" id="{{section.title|replace(' ', '')}}">{{section.title}}</h2>
+    <h2 class="govuk-heading-l" id="{{section.id}}">{{section.title|safe}}</h2>
 
         {% for subsection in section.subsections %}
 
             <!-- Sub section heading -->
             {% if subsection.type != "main" %}
-            <h3 class="govuk-heading-m" id="{{subsection.title|replace(' ', '')}}">{{subsection.title}}</h3>
+            <h3 class="govuk-heading-m" id="{{subsection.id}}">{{subsection.title|safe}}</h3>
             {% endif %}
 
-            <!-- Parts -->
+            <!-- Parts e.g. 19 -->
             {% for part in subsection.parts %}
-                <p class="govuk-body"><span class="govuk-!-font-weight-bold">P{{part.id}}.</span> {{part.content}}</p>
+                <p class="govuk-body"><span class="govuk-!-font-weight-bold">P{{part.id|safe}}.</span> {{part.content|safe}}</p>
+                
+                <!-- Sub Parts e.g. 19.1 -->
+                {% for subpart in part.subparts %}
+                    <p class="govuk-body" style="margin-left: 20px"><span class="govuk-!-font-weight-bold">P{{subpart.id|safe}}.</span> {{subpart.content|safe}}</p>
+                {% endfor %}
+
             {% endfor %}
 
         {% endfor %}
+
+        <!-- Footnotes -->
+        {% if section.footnotes|length > 0 %}
+        <div class="govuk-!-margin-top-6">
+            <!-- <h3 class="govuk-heading-s">Footnotes: {{section.title|safe}}</h3> -->
+            <hr>
+            <ul class="govuk-list govuk-list--bullet">
+            {% for footnote in section.footnotes %}
+                <li><sup class="govuk-body">{{footnote.id|safe}}</sup> {{footnote.content|safe}}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
 
     {% endfor %}
 
