@@ -1,0 +1,433 @@
+// govuk_frontend_toolkit helpers
+// @import "typography";
+// @import "measurements";
+// @import "colours";
+// @import "shims";
+// @import "css3";
+// @import "grid_layout";
+
+// @import "reset";
+// @import 'govuk_publishing_components/all_components';
+
+// some colours used below
+$manual-search-button-colour: #0b0c0c;
+$manual-search-button-border-colour: #222;
+
+main {
+  display: block;
+}
+
+header .gem-c-metadata {
+  color: govuk-colour("white");
+}
+
+.manuals-frontend-body {
+  padding-bottom: $govuk-gutter;
+
+  header {
+    background: govuk-colour("blue");
+
+    &.hmrc {
+      background: govuk-colour-organisations("hm-revenue-customs");
+    }
+
+    padding: $govuk-gutter;
+    color: govuk-colour("white");
+    margin: 0;
+    @include govuk-font($size: 16);
+    @include govuk-clearfix;
+
+    @include govuk-media-query($from: mobile) {
+      padding: $govuk-gutter;
+    }
+
+    @include govuk-media-query($from: tablet) {
+      .primary,
+      .secondary {
+        float: left;
+      }
+
+      .primary {
+        width: 66.6%;
+      }
+
+      .secondary {
+        width: 33.3%;
+
+        .secondary-inner {
+          padding-left: $govuk-gutter;
+        }
+      }
+    }
+
+    .manual-type {
+      @extend %govuk-heading-m;
+    }
+
+    h1 {
+      @include govuk-font($size: 36);
+      font-weight: bold;
+      padding: 0 0 $govuk-gutter-half 0;
+
+      @include govuk-media-query($from: tablet) {
+        padding: 0 0 $govuk-gutter 0;
+      }
+    }
+
+    a {
+      color: govuk-colour("white");
+    }
+
+    .in-manual-search {
+      position: relative;
+      margin: $govuk-gutter 0 $govuk-gutter-half;
+
+      label {
+        padding-bottom: 5px;
+        display: inline-block;
+      }
+
+      .in-manual-search-box {
+        // Disable scss-lint complaining about declaring width twice since
+        // this is for browsers that don't understand calc
+        // scss-lint:disable DuplicateProperty
+        width: 86%;
+        width: calc(100% - 47px);
+        // scss-lint:enable DuplicateProperty
+        border: none;
+        padding: 7px;
+        height: 20px;
+
+        &.focus,
+        &:focus {
+          position: relative;
+          z-index: 1;
+        }
+
+        @include govuk-media-query($from: mobile) {
+          padding: 9px 7px;
+          height: 16px;
+        }
+      }
+
+      button {
+        width: 34px;
+        height: 34px;
+        border: 1px solid $manual-search-button-colour;
+        border-width: 0 0 0 1px;
+        border-left-color: $manual-search-button-border-colour;
+        overflow: hidden;
+        text-indent: -5000px;
+        cursor: pointer;
+        color: govuk-colour("white");
+        background: $manual-search-button-colour url("/public/images/search-button.png") no-repeat 0 50%;
+        position: absolute;
+
+        border-radius: 0;
+        @include govuk-device-pixel-ratio() {
+          background-size: 52.5px 35px;
+          background-position: 100% 50%;
+        }
+      }
+    }
+
+  }
+
+  .breadcrumb-trail {
+    @include govuk-font($size: 16);
+    margin: 10px 0 0 0;
+    padding: 0 0 10px;
+    border-bottom: 1px solid $govuk-border-colour;
+
+    strong {
+      font-weight: bold;
+    }
+
+    li {
+      background-image: url("/public/images/separator.png");
+      background-position: 100% 20%;
+      background-repeat: no-repeat;
+      display: inline;
+      list-style: none;
+      margin-left: 0;
+      margin-right: 5px;
+      padding: 0 15px 0 0;
+
+      @include govuk-media-query($from: tablet) {
+        background-position: 100% 45%;
+      }
+
+      @include govuk-device-pixel-ratio() {
+        background-image: url("/public/images/separator-2x.png");
+        background-size: 6px 11px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.last-child {
+        background-image: none;
+        color: $govuk-text-colour;
+      }
+
+      &.no-separator {
+        background-image: none;
+      }
+
+      a {
+        color: $govuk-text-colour;
+      }
+    }
+  }
+
+  .section-list {
+    margin-top: $govuk-gutter;
+
+    @include govuk-media-query($from: tablet) {
+      margin-top: $govuk-gutter * 2;
+    }
+
+    li {
+      @include govuk-font($size: 19);
+      list-style: none;
+      cursor: pointer;
+      border-top: 1px solid $govuk-border-colour;
+
+      &:hover {
+        background-color: govuk-colour("grey-4");
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $govuk-border-colour;
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        padding: $govuk-gutter / 3 $govuk-gutter / 3 $govuk-gutter / 3 0;
+
+        @include govuk-media-query($from: tablet) {
+          padding-right: 33.3%;
+        }
+
+        .subsection-title-text {
+          color: $govuk-link-colour;
+          font-weight: bold;
+          display: block;
+        }
+
+        .subsection-summary {
+          color: $govuk-text-colour;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .manual-body {
+    margin: $govuk-gutter-half 0 $govuk-gutter * 3;
+
+    @include govuk-media-query($from: tablet) {
+      margin-top: $govuk-gutter;
+    }
+
+    .section-title {
+      @extend %govuk-heading-m;
+      font-weight: bold;
+    }
+
+    .summary {
+      @include govuk-font($size: 24);
+      margin-bottom: $govuk-gutter-half;
+
+      @include govuk-media-query($from: tablet) {
+        max-width: 66.6%;
+        margin-bottom: $govuk-gutter;
+      }
+    }
+
+    .body-content-wrapper {
+      @include govuk-media-query($from: tablet) {
+        width: 66.6%;
+      }
+    }
+
+    .footnotes {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  .updates-list {
+    @include govuk-font($size: 19);
+    dd {
+      margin-bottom: 1em;
+    }
+  }
+
+  .collapsible-subsections {
+    @include govuk-media-query($from: tablet) {
+      .call-to-action p {
+        margin: 0;
+      }
+    }
+  }
+
+  .collapsible-subsections .js-subsection-title {
+    @include govuk-font($size: 19, $weight: bold);
+    display: block;
+    border-top: 1px solid $govuk-border-colour;
+    padding: $govuk-gutter / 3 $govuk-gutter $govuk-gutter / 3 0;
+    margin: $govuk-gutter 0;
+    position: relative;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .subsection-collection {
+    margin-top: $govuk-gutter-half;
+
+    @include govuk-media-query($from: tablet) {
+      margin-top: $govuk-gutter;
+    }
+
+    .js-title-controls-wrap {
+      @include govuk-clearfix;
+
+      .section-title {
+        @extend %govuk-heading-m;
+        @include govuk-media-query($from: tablet) {
+          float: left;
+          width: 75%;
+        }
+      }
+
+      .js-collection-controls {
+        display: block;
+        margin-left: -5px;
+        margin-bottom: $govuk-gutter-half;
+
+        @include govuk-media-query($from: tablet) {
+          margin: 0 0 $govuk-gutter -5px;
+          float: right;
+          display: inline-block;
+        }
+
+        a {
+          @include govuk-font($size: 16);
+          padding: 0  5px 0 5px;
+          display: inline-block;
+
+          // We're nesting quite deep here...
+          // scss-lint:disable NestingDepth
+          &.disabled {
+            color: $govuk-secondary-text-colour;
+            text-decoration: none;
+            cursor: default;
+          }
+          // scss-lint:enable NestingDepth
+        }
+      }
+    }
+  }
+
+  .js-openable {
+    border-top: 1px solid $govuk-border-colour;
+    padding-bottom: $govuk-gutter;
+
+    @include govuk-media-query($from: tablet) {
+      padding-bottom: $govuk-gutter * 2;
+    }
+
+    .js-subsection-title {
+      cursor: pointer;
+      margin: 0;
+      border: none;
+
+      // @include ie-lte(7) {
+      //   zoom: 1;
+      // }
+
+      .js-toggle {
+        height: 25px;
+        width: 25px;
+        display: block;
+        background: url("/public/images/arrows_sprite.png") no-repeat;
+        position: absolute;
+        right: 0;
+        top: $govuk-gutter / 3;
+
+        @include govuk-device-pixel-ratio() {
+          background-image: url("/public/images/arrows_sprite-2x.png");
+          background-size: 32px 50px;
+        }
+      }
+    }
+
+    .js-subsection-body {
+      margin-top: $govuk-gutter-half;
+
+      @include govuk-media-query($from: tablet) {
+        margin-top: $govuk-gutter;
+      }
+    }
+
+    .js-enabled &.closed {
+      padding: 0;
+
+      .js-toggle {
+        background: url("/public/images/arrows_sprite.png") no-repeat 0 -32px;
+
+        @include govuk-device-pixel-ratio() {
+          background-image: url("/public/images/arrows_sprite-2x.png");
+          background-size: 32px 50px;
+        }
+      }
+
+      .js-subsection-body {
+        position: absolute;
+        left: -9999px;
+        width: 100px;
+        height: 1px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .hmrc.section-list {
+    margin-top: $govuk-gutter;
+    padding-bottom: $govuk-gutter;
+
+    a {
+      padding-right: 0;
+    }
+
+    @include govuk-media-query($from: tablet) {
+      .title-wrap {
+        display: table-row;
+
+        div {
+          display: table-cell;
+        }
+      }
+    }
+  }
+
+  .subsection-id {
+    min-width: 135px;
+    color: $govuk-secondary-text-colour;
+    padding-right: $govuk-gutter-half;
+  }
+
+  .print-page {
+    display: none;
+
+    .js-enabled & {
+      display: block;
+    }
+  }
+
+}

@@ -27,8 +27,9 @@
     <article aria-labelledby="manual-title" id="content">
         <div class="manual-body">
             <article aria-labelledby="section-title">
-                <h1 id="section-title" class="section-title">{{section.title|safe}}</h1>
-                <!-- <p class="summary">Introduction and purpose of the document</p> -->
+                <h1 id="section-title" class="section-title">
+                    {{section.title|safe}}
+                </h1>
                 <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
                     <div class="collapsible-subsections">
                         <div class="gem-c-govspeak govuk-govspeak ">
@@ -36,11 +37,13 @@
                             {% for subsection in section.subsections %}
 
                                 <!-- Sub section heading -->
-                                {% if subsection.type != "main" %}
-                                <h2 id="{{subsection.id}}">{{subsection.title|safe}}</h2>
-                                {% else %}
-                                <h2 id="{{section.id}}">{{section.title|safe}}</h2>
-                                {% endif %}
+                                <h2 id="{{subsection.id}}">
+                                    {% if subsection.type != "main" %}
+                                        {{subsection.title|safe}}
+                                    {% else %}
+                                        {{section.title|safe}}
+                                    {% endif %}
+                                </h2>
             
                                 <!-- Parts e.g. 19 -->
                                 {% for part in subsection.parts %}
@@ -61,12 +64,12 @@
 
                 <!-- Footnotes -->
                 {% if section.footnotes|length > 0 %}
-                <div class="govuk-!-margin-top-6">
+                <div class="govuk-!-margin-top-9">
                     <!-- <h3 class="govuk-heading-s">Footnotes: {{section.title|safe}}</h3> -->
-                    <hr>
-                    <ul class="govuk-list govuk-list--bullet">
+                    <p class="govuk-body-s">Footnotes</p>
+                    <ul class="govuk-list govuk-list--bullet govuk-body-s">
                     {% for footnote in section.footnotes %}
-                        <li><sup class="govuk-body">{{footnote.id|safe}}</sup> {{footnote.content|safe}}</li>
+                        <li><sup class="">{{footnote.id|safe}}</sup> {{footnote.content|safe}}</li>
                     {% endfor %}
                     </ul>
                 </div>

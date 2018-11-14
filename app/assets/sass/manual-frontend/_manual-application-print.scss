@@ -1,0 +1,68 @@
+@include govuk-media-query($media-type: print) {
+    a {
+        text-decoration: none;
+    }
+    
+    // hide all the unnecessary things
+    .alpha-label,
+    .breadcrumb-trail,
+    .js-title-controls-wrap,
+    .print-page,
+    .secondary .feedback,
+    .in-manual-search {
+        display: none;
+    }
+    
+    .primary {
+        h1 {
+        margin: 0 0 10px;
+        padding: 0 0 10px;
+        font-weight: bold;
+        }
+    
+        dl {
+        float: left;
+        margin-top: 0;
+        width: 100%;
+    
+        dt {
+            min-width: 100px;
+            float: left;
+    
+            &:after {
+            content: ":";
+            }
+        }
+    
+        dd {
+            font-weight: bold;
+            margin-left: 0;
+    
+            a:after {
+            content: "";
+            }
+        }
+        }
+    }
+    
+    .manual-body {
+        clear: both;
+    
+        .subsection-title-text {
+        font-weight: bold;
+        }
+    }
+    
+    .govspeak {
+        width: 75%;
+    }
+    
+    .js-openable {
+        margin-bottom: 30px;
+    
+        h2 {
+        @include govuk-font(16);
+        font-weight: bold;
+        }
+    }
+}
