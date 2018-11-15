@@ -34,6 +34,10 @@
                     <div class="collapsible-subsections">
                         <div class="gem-c-govspeak govuk-govspeak ">
 
+                            <!-- TODO in json 
+                            - see paragraph, see paragraphs, in paragraph, in paragraphs - links
+                            -  -->
+
                             {% for subsection in section.subsections %}
 
                                 <!-- Sub section heading -->
@@ -47,11 +51,22 @@
             
                                 <!-- Parts e.g. 19 -->
                                 {% for part in subsection.parts %}
+
+                                    {% if part.type == "header" %}
+                                    <h3 class="govuk-heading-s">{{part.content|safe}}</h3>
+                                    {% else %}
                                     <p class="govuk-body"><span class="govuk-!-font-weight-bold">P{{part.id|safe}}.</span> {{part.content|safe}}</p>
+                                    {% endif %}
                                     
                                     <!-- Sub Parts e.g. 19.1 -->
                                     {% for subpart in part.subparts %}
                                         <p class="govuk-body" style="margin-left: 20px"><span class="govuk-!-font-weight-bold">P{{subpart.id|safe}}.</span> {{subpart.content|safe}}</p>
+
+                                        <!-- Sub Sub Parts e.g. 19.1.1 -->
+                                        {% for subsubpart in subpart.subsubparts %}
+                                            <p class="govuk-body" style="margin-left: 40px"><span class="govuk-!-font-weight-bold">P{{subsubpart.id|safe}}.</span> {{subsubpart.content|safe}}</p>
+                                        {% endfor %}
+
                                     {% endfor %}
             
                                 {% endfor %}

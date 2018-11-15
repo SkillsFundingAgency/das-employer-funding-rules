@@ -49,7 +49,12 @@
 
             <!-- Parts e.g. 19 -->
             {% for part in subsection.parts %}
+
+                {% if part.type == "header" %}
+                <h3 class="govuk-heading-s">{{part.content|safe}}</h3>
+                {% else %}
                 <p class="govuk-body"><span class="govuk-!-font-weight-bold">P{{part.id|safe}}.</span> {{part.content|safe}}</p>
+                {% endif %}
                 
                 <!-- Sub Parts e.g. 19.1 -->
                 {% for subpart in part.subparts %}
@@ -64,8 +69,8 @@
         {% if section.footnotes|length > 0 %}
         <div class="govuk-!-margin-top-6">
             <!-- <h3 class="govuk-heading-s">Footnotes: {{section.title|safe}}</h3> -->
-            <hr>
-            <ul class="govuk-list govuk-list--bullet">
+            <p class="govuk-body-s">Footnotes</p>
+            <ul class="govuk-list govuk-list--bullet govuk-body-s">
             {% for footnote in section.footnotes %}
                 <li><sup class="govuk-body">{{footnote.id|safe}}</sup> {{footnote.content|safe}}</li>
             {% endfor %}

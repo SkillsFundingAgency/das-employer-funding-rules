@@ -21,19 +21,19 @@
                             },
                             {
                                 "id": "2",
-                                "content": "You can find details on the features of the apprenticeship funding system, including how we will calculate funding for organisations receiving funding from us, in the <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-technical-funding-guide'>apprenticeship technical funding guide</a>."
+                                "content": "You can find details on the features of the apprenticeship funding system, including how we will calculate funding for organisations receiving funding from us, in the <a class='govuk-link'  href='https://www.gov.uk/government/publications/apprenticeship-technical-funding-guide'>Apprenticeship Technical Funding Guide</a>."
                             },
                             {
                                 "id": "3",
-                                "content": "We use the term ‘you’ to refer to the ‘main provider’, that is, any organisation holding a contract with us through which we directly route funds from an employer’s apprenticeship service account or government-employer co-investment. The main provider will have the overall responsibility for the training and on-programme assessment conducted by themselves and their delivery subcontractors, and have a contractual relationship on behalf of the employer for the end-point assessment conducted by end-point assessment organisation. The payment for the end-point assessment organisation is through the main provider."
-                            } ,
+                                "content": "We use the term ‘you’ to refer to the ‘main provider’, that is, any organisation holding a contract with us through which we directly route funds from an employer’s apprenticeship service account or government-employer co-investment. The main provider will have the overall responsibility for the training and on-programme assessment conducted by themselves and their delivery subcontractors, and have a contractual relationship on behalf of the employer for the end-point assessment conducted by an end-point assessment organisation. The payment for the end-point assessment organisation is through the main provider."
+                            },
                             {
                                 "id": "4",
                                 "content": "The terms ‘we’, ‘our’, ‘us’, and ‘ESFA’ refer to the Education and Skills Funding Agency."
                             },
                             {
                                 "id": "5",
-                                "content": "These rules form part of your terms and conditions for the use of funds in an employer’s <a class='govuk-link' href='https://manage-apprenticeships.service.gov.uk/'>apprenticeship service</a> account or for government-employer co-investment. You must read them in conjunction with your funding agreement with the Secretary of State for Education (acting through the Education and Skills Funding Agency (the ESFA), an executive agency of the Department for Education)."
+                                "content": "These rules form part of your terms and conditions for the use of funds in an employer’s <a class='govuk-link'   href='https://manage-apprenticeships.service.gov.uk/'>apprenticeship service</a> account or for government-employer co- investment. You must read them in conjunction with your funding agreement with the Secretary of State for Education (acting through the Education and Skills Funding Agency (the ESFA), an executive agency of the Department for Education)."
                             },
                             {
                                 "id": "6",
@@ -57,7 +57,7 @@
                             },
                             {
                                 "id": "11",
-                                "content": "You can contact us through our Business Operations Service Desk by email <a class='govuk-link' href='mailto:SDE.servicedesk@education.gov.uk'>SDE.servicedesk@education.GOV.UK</a> or by telephone on 0370 2640001. You can also contact your provider manager/adviser."
+                                "content": "You can contact us through our Business Operations Service Desk by email <a class='govuk-link' href='mailto:SDE.servicedesk@education.gov.uk'>SDE.servicedesk@education.gov.uk</a> or by telephone on 0370 2640001. You can also contact your provider manager/adviser."
                             },
                             {
                                 "id": "12",
@@ -69,7 +69,7 @@
                             },
                             {
                                 "id": "14",
-                                "content": "The performance-management arrangements are set out in the <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-funding-rules-2018-to-2019'>apprenticeship performance-management rules for training providers</a>."
+                                "content": "The performance-management arrangements are set out in the <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-funding-rules-2018-to-2019'>Apprenticeship Performance-management Rules for Training Providers</a>."
                             }
                         ]
                     },
@@ -96,11 +96,11 @@
                 "footnotes": [
                     {
                         "id": "1",
-                        "content": "Regulation 6(5), Apprenticeships (Miscellaneous Provisions) Regulations 2017"
+                        "content": "Regulation 6(5), <a class='govuk-link' href='http://www.legislation.gov.uk/uksi/2017/1310/contents/made'>Apprenticeships (Miscellaneous Provisions) Regulations 2017</a>"
                     },
                     {
                         "id": "2",
-                        "content": "Regulation 6(6), Apprenticeships (Miscellaneous Provisions) Regulations 2017"
+                        "content": "Regulation 6(6), <a class='govuk-link' href='http://www.legislation.gov.uk/uksi/2017/1310/contents/made'>Apprenticeships (Miscellaneous Provisions) Regulations 2017</a>"
                     }
                 ],
                 "subsections": [
@@ -137,11 +137,11 @@
                             },
                             {
                                 "id": "21",
-                                "content": "You must offer the employer the option of using the free <a class='govuk-link' href='https://www.gov.uk/recruit-apprentice'>recruit an apprentice</a> service tool for all new recruits into their business. It is not mandatory to use this service."
+                                "content": "You must offer the employer the option of using the free <a class='govuk-link' href='https://www.gov.uk/recruit-apprentice'>recruit an apprentice</a> tool for all new recruits into their business. It is not mandatory to use this service."
                             },
                             {
                                 "id": "22",
-                                "content": "Where you advertise on recuit an apprentice, on behalf of the employer, you must make it clear in the advert how many hours the apprentice will be expected to work per week for the role and how long the apprenticeship will last. This must meet the minimum duration requirement (see paragraphs P45 to P61)."
+                                "content": "Where you advertise on recruit an apprentice, on behalf of the employer, you must make it clear in the advert how many hours the apprentice will be expected to work per week for the role and how long the apprenticeship will last. This must meet the minimum duration requirement (see paragraphs P45 to P61)."
                             }
                         ]
                     },
@@ -160,7 +160,7 @@
                                     },
                                     {
                                         "id": "23.2",
-                                        "content": "Apprentices who have been made redundant, with more than six months but less than 12 months of their apprenticeship remaining; these apprentices may seek a further contract of service with a duration of less than 12 months, and we will fund them for up to 12 weeks while they do so (see paragraph P251 and P253)."
+                                        "content": "Apprentices who have been made redundant, with more than six months but less than 12 months of their apprenticeship remaining; these apprentices may seek a further contract of service with a duration of less than 12 months, and we will fund them for up to 12 weeks while they do so (see paragraphs P251 and P253)."
                                     },
                                     {
                                         "id": "23.3",
@@ -184,9 +184,984 @@
                                 "content": "The employer must meet the cost of the apprentice’s wages. An employer can only pay the apprenticeship minimum wage from the start of the apprenticeship programme and not before. You can find information on the national minimum wage, the apprenticeship rate, and the definition of an employee on <a class='govuk-link' href='https://www.gov.uk/national-minimum-wage-rates'>GOV.UK</a>."
                             }
                         ]
+                    },
+                    {
+                        "id": "off-the-job-training",
+                        "type": "subsection",
+                        "title": "Off-the-job training",
+                        "parts": [
+                            {
+                                "id": "26",
+                                "content": "Off-the-job training is training received by the apprentice, during the apprentice’s paid hours, for the purpose of achieving their apprenticeship. It is not training delivered for the sole purpose of enabling the apprentice to perform the work for which they have been employed."
+                            },
+                            {   
+                                "id": "27",
+                                "content": "Off-the-job training is a statutory requirement for an English apprenticeship."
+                            },
+                            {   
+                                "id": "28",
+                                "content": "Off-the-job training must be directly relevant to the apprenticeship framework or standard, teaching new knowledge, skills and behaviours required to reach competence in the particular occupation. It can include training that is delivered at the apprentice’s normal place of work and can include the following:",
+                                "subparts": [
+                                    {
+                                        "id": "28.1",
+                                        "content": "the teaching of theory (for example, lectures, role playing, simulation exercises, online learning, and manufacturer training);"
+                                    },
+                                    {
+                                        "id": "28.2",
+                                        "content": "practical training, shadowing, mentoring, industry visits, and attendance at competitions; or"
+                                    },
+                                    {
+                                        "id": "28.3",
+                                        "content": "learning support and time spent writing assessments/assignments."
+                                    }
+                                ]
+                            },
+                            {   
+                                "id": "29",
+                                "content": "Off-the-job training does not include:",
+                                "subparts": [
+                                    {
+                                        "id": "29.1",
+                                        "content": "training to acquire knowledge, skills and behaviours that are not required in the standard or framework;"
+                                    },
+                                    {
+                                        "id": "29.2",
+                                        "content": "progress reviews or on-programme assessment required for an apprenticeship framework or standard; or"
+                                    },
+                                    {
+                                        "id": "29.3",
+                                        "content": "training which takes place outside the apprentice’s paid hours."
+                                    }
+                                ]
+                            },
+                            {   
+                                "id": "30",
+                                "content": "It is up to you and the employer to decide how the off-the-job training is delivered. This may include regular day release, block release and special training days/workshops."
+                            },
+                            {   
+                                "id": "31",
+                                "content": "To attract government funding at least 20% of the apprentice’s paid hours, over the planned duration of the training period within the apprenticeship (for standards this is called the practical period, which ends at the gateway for end-point assessment), must be spent on off-the-job training."
+                            },
+                            {   
+                                "id": "32",
+                                "content": "When calculating the required amount of off-the-job training, the apprentice’s statutory leave entitlement should be deducted. Employees who work a 5-day week receive at least 28 days paid annual holiday (this is the statutory leave entitlement referred to in this paragraph and is the equivalent of 5.6 weeks of holiday). You should pro-rata this for part time workers. It should be clear to all parties how you have worked out the amount of off-the-job training required to comply with paragraph P31 and you must record this in the evidence pack."
+                            },
+                            {   
+                                "id": "33",
+                                "content": "The content/components of all planned off-the-job training must be set out in the apprentice’s commitment statement (see paragraphs P42 to P44) and evidence must be available to support the delivery of the commitment statement. It should be clear which elements of the commitment statement have been used towards the calculation of the 20% requirement and which have not (see paragraphs P28, P29 and P35)."
+                            },
+                            {   
+                                "id": "34",
+                                "content": "Apprentices may need more than 20% off-the-job training."
+                            },
+                            {   
+                                "id": "35",
+                                "content": "English and maths, up to and including level 2, does not count towards the minimum 20% off-the-job training requirement; where required this must be delivered in addition to the minimum requirement."
+                            },
+                            {   
+                                "id": "36",
+                                "content": "If planned off-the-job training is unable to take place as scheduled, you and the employer must ensure this is re-arranged so that the full complement of training set out in the commitment statement can still be delivered. All off-the-job training must take place during paid hours. Apprentices may choose to spend additional time on training outside their paid hours, but this must not be required to complete the apprenticeship and must not be included in the 20% calculation."
+                            },
+                            {   
+                                "id": "37",
+                                "content": "When the apprentice takes a period of leave from their work, for reasons such as medical treatment, maternity or paternity leave, this will be a break in the training they are to receive (a break in learning). The apprentice and their employer should revise the date in the apprenticeship agreement on which the apprenticeship was expected to have been completed to account for the duration of the break. The duration of the apprenticeship and the amount of off-the-job training needed to meet the 20% requirement would therefore remain the same as though there had been no break in training (break in learning)."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "apprenticeship-agreement-employer-apprentice",
+                        "type": "subsection",
+                        "title": "Apprenticeship agreement between the employer and the apprentice",
+                        "parts": [
+                            {
+                                "id": "38",
+                                "content": "You must have evidence that the apprentice has an apprenticeship agreement with their employer at the start of, and throughout, their apprenticeship. For standards, this is defined in section A1(3) of the <a class='govuk-link' href='https://www.legislation.gov.uk/ukpga/2009/22/contents'>Apprenticeships, Skills, Children and Learning Act 2009</a> (as amended by the <a class='govuk-link' href='http://www.legislation.gov.uk/ukpga/2016/12/part/4/enacted'>Enterprise Act 2016</a>); for frameworks, this is defined in section 32 of the same Act.",
+                                "subparts": [
+                                    {
+                                        "id": "38.1",
+                                        "content": "In relation to standards, the approved English apprenticeship agreement must also set out (i) the amount of time the apprentice will spend in off- the-job training, and (ii) the planned end date of the apprenticeship’s practical period, called the final day. These requirements are provided for in the <a class='govuk-link'  href='http://www.legislation.gov.uk/uksi/2017/1310/contents/made'>Apprenticeships (Miscellaneous Provisions) Regulations 2017</a>."
+                                    },
+                                    {
+                                        "id": "38.2",
+                                        "content": "In relation to frameworks, there must be an apprenticeship agreement in place which (i) meets the employer’s duty under section 1 of the Employment Rights Act 1996 and (ii) includes a statement of the skill, trade or occupation for which the apprentice is being trained under the apprenticeship framework. These requirements are provided for in the <a class='govuk-link' href='http://www.legislation.gov.uk/uksi/2012/844/made'>Apprenticeships (Form of Apprenticeship Agreement) Regulations 2012</a>."
+                                    },
+                                    {
+                                        "id": "38.3",
+                                        "content": "A template apprenticeship agreement is available on <a class='govuk-link' href='https://www.gov.uk/take-on-an-apprentice/apprenticeship-agreement'>GOV.UK</a>. This template does not have to be used but the requirements of the legislation as described above must be met when forming an apprenticeship agreement."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "39",
+                                "content": "Apprentices who are made redundant up to six months before the final day of their apprenticeship do not need to be employed under an apprenticeship agreement (see paragraphs P23.1, P251 and P252)."
+                            },
+                            {
+                                "id": "40",
+                                "content": "The signed apprenticeship agreement must be distributed to both signatories (employer and apprentice) and you must obtain a copy of this for the evidence pack, along with any revisions."
+                            },
+                            {
+                                "id": "41",
+                                "content": "The start date set out in the apprenticeship agreement must match the date in the commitment statement. Details in the commitment statement must be completed before the apprenticeship agreement can be signed."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "commitment-statement-employer-apprentice-main-provider",
+                        "type": "subsection",
+                        "title": "The commitment statement between the employer, apprentice and main provider",
+                        "parts":[
+                            {
+                                "id": "42",
+                                "content": "Before the apprenticeship starts and before the apprenticeship agreement is signed, you must ensure that the apprentice and their employer have contributed to and signed a copy of the commitment statement (often known as the individual learning plan). This should set out how all three parties (apprentice, employer, and main provider) will support the achievement of the apprenticeship."
+                            },
+                            {
+                                "id": "43",
+                                "content": "All three parties must keep a current signed and dated version. The main provider’s copy (and previous versions) must be retained in the evidence pack with the apprenticeship agreement and the written agreement between the employer and main provider. Where the apprenticeship is funded from an employer’s apprenticeship service account this is the contract for services between the main provider and employer."
+                            },
+                            {
+                                "id": "44",
+                                "content": "The commitment statement must set out:",
+                                "subparts": [
+                                    {
+                                        "id": "44.1",
+                                        "content": "the teaching of theory (for example, lectures, role playing, simulation exercises, online learning, and manufacturer training);"
+                                    },
+                                    {
+                                        "id": "44.2",
+                                        "content": "Details of the employer and main provider (and any subcontractors involved in the delivery of off-the-job training)."
+                                    },
+                                    {
+                                        "id": "44.3",
+                                        "content": "Details of the apprenticeship, including the name of the apprenticeship framework or standard, the level, the start and end-dates for the apprenticeship and (for standards) the dates relating to the end-point assessment period. The start date set out in the commitment statement must align with the start date in the apprenticeship agreement and the ILR."
+                                    },
+                                    {
+                                        "id": "44.4",
+                                        "content": "The amount of off-the-job training that will be delivered to meet the minimum 20% requirement (see paragraphs P28, P29 and P35 for what can and cannot be included in this calculation)."
+                                    },
+                                    {
+                                        "id": "44.5",
+                                        "content": "The planned content/components and schedule of eligible training (and for standards the end-point assessment). This should include key milestones for mandatory or other qualification achievements. It should also be clear if the component has been used towards the calculation of the minimum 20% off-the-job training requirement."
+                                    },
+                                    {
+                                        "id": "44.6",
+                                        "content": "Confirmation of funding sources for the planned content/components:",
+                                        "subsubparts": [
+                                            {
+                                                "id": "44.6.1",
+                                                "content": "those eligible for funding from the employer’s apprenticeship service account or government-employer co-investment;"
+                                            },
+                                            {
+                                                "id": "44.6.2",
+                                                "content": "those to be fully funded by the ESFA (e.g. English and maths to level 2); and"
+                                            },
+                                            {
+                                                "id": "44.6.3",
+                                                "content": "those to be fully funded by the employer (e.g. additional components which may not be required to complete the apprenticeship)."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "44.7",
+                                        "content": "A list of all organisations delivering the training content/components, including English and maths, and the end-point assessment organisation (for standards). We recognise that while new standards continue to be developed, not all end-point assessment organisations will be known at the start of the apprenticeship. The commitment statement must be updated to include these details as soon as they have been confirmed."
+                                    },
+                                    {
+                                        "id": "44.8",
+                                        "content": "An agreement of what is expected from, and offered by, the apprentice, employer, main provider (and any delivery subcontractors) to achieve the apprenticeship and details of how all parties will work together. This must include contact details and the expected commitment from each party, for example:",
+                                        "subsubparts": [
+                                            {
+                                                "id": "44.8.1",
+                                                "content": "the apprentice: attendance and commitment to their off- the-job training;"
+                                            },
+                                            {
+                                                "id": "44.8.2",
+                                                "content": "the employer: commitment to wages and time off to train during working hours; and"
+                                            },
+                                            {
+                                                "id": "44.8.3",
+                                                "content": "the main provider (and any delivery subcontractors): delivery of training, support and guidance."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "44.9",
+                                        "content": "The process for resolving any queries or complaints regarding the apprenticeship, including quality. This must include details of the escalation route within the main provider’s own organisation and the escalation process to the ESFA through the apprenticeship helpdesk (on 08000 150400 or email <a class='govuk-link' href='mailto:nationalhelpdesk@apprenticeships.gov.uk'>nationalhelpdesk@apprenticeships.gov.uk</a>)."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "apprenticeship-duration-employment-hours",
+                        "type": "subsection",
+                        "title": "Apprenticeship duration and employment hours",
+                        "parts":[
+                            {
+                                "id": "45",
+                                "content": "An apprenticeship must provide for training that lasts for a minimum duration of 12 months. For example, to satisfy this requirement, an apprentice who starts their training on 1 August 2018 must still be receiving training on 31 July 2019 and an apprentice who starts on 1 August 2019 must still be receiving training on 31 July 2020."
+                            },
+                            {
+                                "id": "46",
+                                "content": "The framework or standard specification or assessment plan may require this to be longer to support the delivery of the full apprenticeship content. For apprenticeship standards, the end-point assessment can only be taken after the minimum duration has been met (see paragraph P155)."
+                            },
+                            {
+                                "id": "47",
+                                "content": "You must ensure the apprenticeship meets the minimum apprenticeship duration rules. This includes where the content, negotiated price and/or duration of the apprenticeship has been adjusted to recognise prior learning (see paragraphs P197 to P202)."
+                            },
+                            {
+                                "id": "48",
+                                "content": "For standards, the apprentice must be employed until the end-point assessment is completed."
+                            },
+                            {
+                                "id": "49",
+                                "content": "You must not claim an apprenticeship framework completion certificate on behalf of the apprentice from <a class='govuk-link' href='https://acecerts.co.uk/web/'>Apprenticeship Certificates England</a> if the minimum duration has not been met. For standards, you must ensure that the minimum duration has been met as part of confirming the end-point assessment gateway requirements."
+                            },
+                            {
+                                "id": "50",
+                                "content": "The apprentice must be involved in active learning throughout an apprenticeship. The apprentice can, after achieving all of the mandatory requirements of the apprenticeship, stay in learning to embed the skills they have gained through off- the-job training. You must have evidence of this taking place."
+                            },
+                            {
+                                "id": "51",
+                                "content": "The minimum duration of each apprenticeship is based on the apprentice working at least 30 hours a week, including any off-the-job training they undertake."
+                            },
+                            {
+                                "id": "52",
+                                "content": "The apprentice must work enough hours each week so that they can undertake sufficient regular training and on-the-job activity. This is to ensure the apprentice is likely to successfully complete their apprenticeship. You must keep evidence of the agreed average weekly hours, including time spent on off-the-job training, in the evidence pack."
+                            },
+                            {
+                                "id": "53",
+                                "content": "The employer must allow the apprentice to complete the apprenticeship within their working hours. This includes English and maths if required. They must provide you with evidence of this for you to keep in the evidence pack."
+                            },
+                            {
+                                "id": "54",
+                                "content": "If the apprentice works fewer than 30 hours a week you must extend the expected duration of the apprenticeship on the ILR (pro rata) to take account of this. This will also apply to any temporary period of part-time working. You must work with the employer to make sure that the apprenticeship agreement is also extended."
+                            },
+                            {
+                                "id": "55",
+                                "content": "Where a part-time working pattern is needed, you must jointly agree with the employer and the apprentice the extended apprenticeship duration (see paragraph P56)."
+                            },
+                            {
+                                "id": "56",
+                                "content": "Where part-time working is agreed, you must:",
+                                "subparts": [
+                                    {
+                                        "id": "56.1",
+                                        "content": "record the agreed average number of hours each week;"
+                                    },
+                                    {
+                                        "id": "56.2",
+                                        "content": "evidence why this working pattern is in place; and"
+                                    },
+                                    {
+                                        "id": "56.3",
+                                        "content": "extend the minimum duration using the following formula:",
+                                        "subsubparts": [
+                                            {
+                                                "id": "56.3.1",
+                                                "content": "12 x 30/average weekly hours = new minimum duration in months."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "57",
+                                "content": "Zero-hours contracts are acceptable only where they meet all of the other rules in this document. For an apprentice with a zero-hour contract you must ensure the employer extends the duration of the apprenticeship in proportion to the hours they work."
+                            },
+                            {
+                                "id": "58",
+                                "content": "An apprentice with a zero-hours contract must be allowed to complete their apprenticeship in their working hours, including the off-the-job training. Where this is not possible, you must record a break in learning in the apprenticeship."
+                            },
+                            {
+                                "id": "59",
+                                "content": "Working fewer than 30 hours a week or being on a zero-hours contract must not be a barrier to successfully completing an apprenticeship. We will monitor working hours data and patterns of behaviour to ensure that sufficient off-the-job activity is done to ensure successful completion of the apprenticeship, regardless of the number of hours worked. We reserve the right to take action where alternative working patterns are not managed appropriately leading to a reduction in the quality of the apprenticeship."
+                            },
+                            {
+                                "id": "60",
+                                "content": "If an apprentice starts a new apprenticeship, time on any previous apprenticeship does not apply in meeting the minimum duration requirements. The only exceptions to this are where an apprentice:", 
+                                "subparts": [
+                                    {
+                                        "id": "60.1",
+                                        "content": "Is made redundant with more than six, but less than 12 months remaining before their final day. In these cases they may seek a further apprenticeship agreement which takes their prior apprenticeship experience into account. This further agreement may provide for a duration of less than 12 months."
+                                    },
+                                    {
+                                        "id": "60.2",
+                                        "content": "Changes their framework pathway."
+                                    },
+                                    {
+                                        "id": "60.3",
+                                        "content": "Transfers between main providers, but remains on the same framework or standard."
+                                    },
+                                    {
+                                        "id": "60.4",
+                                        "content": "Returns to the same apprenticeship after a break in learning."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "61",
+                                "content": "For the exceptions in paragraph P60 above you must have evidence that the total amount of time spent on their apprenticeship, which may include more than one episode of learning, meets the minimum duration requirement."
+                            }
+                        ]
+                    }
+                    
+                ]
+            },
+            {
+                "id": "who-can-funded",
+                "title": "Who can be funded?",
+                "subsections": [
+                    {
+                        "type": "main",
+                        "parts": [
+                            {
+                                "id": "62",
+                                "content": "You are responsible for checking the eligibility of the individual at the start of their apprenticeship programme. You can only use funds in the employer’s apprenticeship service account, or government-employer co-investment, for those who are eligible. You must retain evidence of the individual’s eligibility."
+                            },
+                            {
+                                "id": "63",
+                                "content": "To use funds in the employer’s apprenticeship service account or government- employer co-investment, the individual must:",
+                                "subparts":[
+                                    {
+                                        "id": "63.1",
+                                        "content": "Start their apprenticeship after the last Friday in June of the academic year in which they have their 16th birthday."
+                                    },
+                                    {
+                                        "id": "63.2",
+                                        "content": "Be able to complete the apprenticeship within the time they have available. If you know an individual is unable to complete the apprenticeship in the time they have available, they must not be funded."
+                                    },
+                                    {
+                                        "id": "63.3",
+                                        "content": "Not be undertaking another apprenticeship or be in receipt of any other DfE funding during their apprenticeship programme; this includes another apprenticeship or any other DfE funded FE/HE programme. Individuals on a sandwich placement as part of a degree programme must not undertake any part of an apprenticeship during this placement."
+                                    },
+                                    {
+                                        "id": "63.4",
+                                        "content": "Not be asked to contribute financially to the cost of training, on- programme or end-point assessment. This includes both where the individual has completed the programme successfully and has left the programme early. Costs include any co-investment or additional training and assessment costs, above the funding band, that the employer has paid directly to the main provider where this is part of the agreed apprenticeship."
+                                    },
+                                    {
+                                        "id": "63.5",
+                                        "content": "Not use a student loan to pay for their apprenticeship. Where an individual transfers to an apprenticeship from a full-time further education or higher education course, and that course has been funded by a student loan, the loan must be terminated by the individual and you must be satisfied that this has occurred."
+                                    },
+                                    {
+                                        "id": "63.6",
+                                        "content": "Not benefit from funding from an employer’s apprenticeship service account or government-employer co-investment for any part of their programme where either you or another party claim funding from another government department or agency for the same purpose. This includes any funding for that individual from the European Social Fund, the Education and Skills Funding Agency or Jobcentre Plus."
+                                    },
+                                    {
+                                        "id": "63.7",
+                                        "content": "Not benefit from funding for any part of their programme that duplicates training or assessment they have received from any other source."
+                                    },
+                                    {
+                                        "id": "63.8",
+                                        "content": "Spend at least 50% of their working hours in England over the duration of the apprenticeship. You must make separate arrangements with the relevant devolved administration if you are planning to deliver apprenticeships to individuals who spend more than 50% of their working hours in a devolved administration over the duration of their apprenticeship, including time spent on off-the-job training. Refer to Annex A (paragraph P322) for exceptions to this rule."
+                                    },
+                                    {
+                                        "id": "63.9",
+                                        "content": "Have the right to work in England."
+                                    },
+                                    {
+                                        "id": "63.10",
+                                        "content": "Have an eligible residency status (information can be found in the residency eligibility section in Annex A)."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "64",
+                                "content": "Where you are using funds from an employer’s apprenticeship service account you must have confirmation from the employer that the apprentice is employed by that employer or a <a class='govuk-link' href='https://www.gov.uk/hmrc-internal-manuals/apprenticeship-levy/alm11000'>connected company or charity</a> as defined by HMRC. This also applies where the apprentice is funded by a transfer of funds from another employer."
+                            },
+                            {
+                                "id": "65",
+                                "content": "You must give accurate unique learner number (ULN) information to the apprenticeship service, awarding organisations and (for standards) end-point assessment organisations and ensure all information used to register apprentices is correct."
+                            },
+                            {
+                                "id": "66",
+                                "content": "We will fund an apprentice to undertake an apprenticeship at a higher level than a qualification they already hold, including a previous apprenticeship."
+                            },
+                            {
+                                "id": "67",
+                                "content": "We will fund an apprentice to undertake an apprenticeship at the same or lower level than a qualification they already hold, if the apprenticeship will allow the individual to acquire substantive new skills and you can show that the content of the training is materially different from any prior qualification or a previous apprenticeship. More information is detailed in paragraph P285.4."
+                            },
+                            {
+                                "id": "68",
+                                "content": "The age of the apprentice on the day they start their apprenticeship will be used for all age-based eligibility criteria for that apprenticeship."
+                            },
+                            {
+                                "id": "69",
+                                "content": "An apprentice’s eligibility for funding will not change during the apprenticeship, unless their employment status also changes."
+                            },
+                            {
+                                "id": "70",
+                                "content": "You must reassess an individual for any new apprenticeship."
+                            },
+                            {
+                                "id": "71",
+                                "content": "If an apprentice becomes unemployed or self-employed they will at that point no longer be eligible for funding and you must report them as having withdrawn from the apprenticeship on the ILR. If the apprentice has been made redundant, see paragraphs P251 to P253."
+                            },
+                            {
+                                "id": "72",
+                                "content": "If an apprentice is made redundant, we will continue to fund their training even if they cannot find another employer. Apprentices who are made redundant within six months of their final day will be funded to completion. We will also fund apprentices’ training for 12 weeks where they are made redundant more than six months from their final day, while they seek a further apprenticeship agreement."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "individuals-not-eligible-funding",
+                        "type": "subsection",
+                        "title": "Individuals who are not eligible for funding",
+                        "parts": [
+                            {
+                                "id": "73",
+                                "content": "You must not claim funding for individuals who do not meet the eligibility criteria set out in this document unless they are eligible under the <a class='govuk-link' href='http://www.legislation.gov.uk/uksi/2007/779/contents/made'>Education (Fees and Awards) (England) Regulations 2007</a> (as amended). You must not claim for individuals who:",
+                                "subparts": [
+                                    {
+                                        "id": "73.1",
+                                        "content": "are here illegally;"
+                                    },
+                                    {
+                                        "id": "73.2",
+                                        "content": "are resident in the United Kingdom on a tier 4 (general) student visa unless they are eligible through meeting any other of the categories described in Annex A;"
+                                    },
+                                    {
+                                        "id": "73.3",
+                                        "content": "are non-EEA citizens in the United Kingdom on holiday, with or without a visa;"
+                                    },
+                                    {
+                                        "id": "73.4",
+                                        "content": "have overstayed their immigration or visitor visa;"
+                                    },
+                                    {
+                                        "id": "73.5",
+                                        "content": "are non-EEA citizens and are a family member of a person granted a tier 4 visa, have been given immigration permission to stay in the UK and have not been ordinarily resident in the UK for the previous three years on the first day of learning;"
+                                    },
+                                    {
+                                        "id": "73.6",
+                                        "content": "are ordinarily resident in the Channel Islands or Isle of Man, unless they are also ordinarily resident within England; or"
+                                    },
+                                    {
+                                        "id": "73.7",
+                                        "content": "have a biometric residence permit or residence permit imposing a study prohibition or restriction on the individual."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "apprentices-need-access-learning-support",
+                        "type": "subsection",
+                        "title": "Apprentices who need access to learning support",
+                        "parts": [
+                            {
+                                "id": "74",
+                                "content": "Learning support is available to meet the costs of putting in place a reasonable adjustment, as set out in section 20 of the Equality Act 2010, for apprentices with a learning difficulty or disability where this affects their ability to continue and complete their apprenticeship. Learning support can be claimed up to the learning actual end- date but only if it is required for this period."
+                            },
+                            {
+                                "id": "75",
+                                "content": "We will provide learning support for apprentices with learning difficulties or disabilities as defined in Section 15ZA(6) of the Education Act 1996 (as amended by section 41 of the Apprenticeships, Skills, Children and Learning Act 2009). This includes individuals who self-declare a learning difficulty or disability, and those who do not have a diagnosis of a learning difficulty or disability but in relation to whom the main provider has identified to us a learning need."
+                            },
+                            {
+                                "id": "76",
+                                "content": "Learning support must not be used to deal with everyday difficulties that are not directly associated with an apprenticeship. If an apprentice needs help at work they may be able to get help from <a class='govuk-link' href='https://www.gov.uk/access-to-work'>Access to Work</a>."
+                            },
+                            {
+                                "id": "77",
+                                "content": "For those that require learning support you must:",
+                                "subparts":[
+                                    {
+                                        "id": "77.1",
+                                        "content": "carry out an assessment to identify the support the apprentice needs;"
+                                    },
+                                    {
+                                        "id": "77.2",
+                                        "content": "deliver support to meet the apprentice’s identified needs, and review progress and continuing needs, as appropriate;"
+                                    },
+                                    {
+                                        "id": "77.3",
+                                        "content": "record and gather appropriate evidence to show that the actions in paragraphs P77.1 and P77.2 have been completed and outcomes are recorded; and"
+                                    },
+                                    {
+                                        "id": "77.4",
+                                        "content": "report in the ILR that an apprentice has a learning support need and what that support need is."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "78",
+                                "content": "Learning support will be fixed at a monthly rate of £150 when it has been reported in the ILR for the months in which there is an identified learning need. If your costs exceed £150 per month, but less than £19,000 per annum, you can claim via the earnings adjustment statement (EAS). You must use the EAS if your costs are not covered by the monthly rate and you must keep evidence of these costs. You can find further information on the EAS on <a class='govuk-link' href='https://www.gov.uk/government/publications/earnings-adjustment-statement-eas-2017-to-2018'>GOV.UK</a>."
+                            },
+                            {
+                                "id": "79",
+                                "content": "You must promptly claim for learning support through the ILR and the EAS. We will not pay you for claims from a previous funding year if you do not claim on time."
+                            }
+                            
+                            
+                        ]
+                    },
+                    {
+                        "id": "apprentices-need-access-els",
+                        "type": "subsection",
+                        "title": "Apprentices who need access to exceptional learning support (ELS)",
+                        "parts": [
+                            {
+                                "id": "80",
+                                "content": "Apprentices who need significant levels of support to start or continue learning can get access to exceptional learning support if their support costs more than £19,000 in a funding year."
+                            },
+                            {
+                                "id": "81",
+                                "content": "You must submit ELS claims to us at the beginning of the apprentice’s programme, or when you identify the apprentice requires support costing more than £19,000 in the funding year, by completing and sending the ELS claim form so we can authorise your request. You can access the exceptional learning support cost form on <a class='govuk-link' href='https://www.gov.uk/government/publications/sfa-exceptional-learning-support-cost-form'>GOV.UK</a>."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "apprenticeship-training-agency",
+                        "type": "subsection",
+                        "title": "Apprenticeship training agency (ATA)",
+                        "parts": [
+                            {
+                                "id": "82",
+                                "content": "An ATA is an organisation whose main business is employing apprentices who are made available to employers for a fee."
+                            },
+                            {
+                                "id": "83",
+                                "content": "An ATA must be set up as a distinct legal entity so that apprentices can have contracts of service with the ATA."
+                            },
+                            {
+                                "id": "84",
+                                "content": "You must report in the ILR that the apprentice is employed by an ATA."
+                            },
+                            {
+                                "id": "85",
+                                "content": "An ATA must follow our ATA framework. You can find information on ATAs on <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-training-agencies'>GOV.UK</a>."
+                            },
+                            {
+                                "id": "86",
+                                "content": "Apprenticeship positions offered by an ATA must comply with the apprenticeship requirements set out in paragraphs P17 to P23. If the job is with a third party, the cost of wages may be met by that third party, but the wages must be paid by the ATA."
+                            },
+                            {
+                                "id": "87",
+                                "content": "Where the apprentice is employed by a levy-paying ATA they must follow the rules set out in <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-funding-rules-2018-to-2019'>Apprenticeship Funding: Rules and Guidance for Employers</a>."
+                            },
+                            {
+                                "id": "88",
+                                "content": "Where an apprentice is employed by a non-levy-paying ATA, the ATA will be able to access support for training and assessment through government-employer co- investment."
+                            },
+                            {
+                                "id": "89",
+                                "content": "Group training associations that offer an ATA service to employers must follow ATA- specific rules."
+                            }
+                        ]
                     }
                 ]
+            },
+            {
+                "id": "what-can-funded",
+                "title": "What can be funded?",
+                "subsections": [
+                    {
+                        "id": "eligible-costs",
+                        "type": "subsection",
+                        "title": "Eligible costs",
+                        "parts": [
+                            {
+                                "id": "90",
+                                "content": "You must make sure that the apprenticeship is eligible for funds in the employer’s apprenticeship service account or government-employer co-investment before the individual starts. <a class='govuk-link' href='https://hub.fasst.org.uk/Pages/default.aspx'>The hub</a> contains details of all eligible apprenticeships. Apprentices can only be enrolled against an apprenticeship standard once it is identified as ‘approved for delivery’ on the <a class='govuk-link' href='https://www.instituteforapprenticeships.org/apprenticeship-standards/'>Institute for Apprenticeships</a> website."
+                            },
+                            {
+                                "id": "91",
+                                "content": "Funds from an employer’s apprenticeship service account, government-employer co-investment or the additional funds paid for 16 to 18 year olds on frameworks must only be used for eligible costs directly related to the individual apprenticeship. These funds must only be used to pay for training and assessment, including end- point assessment, to complete an apprenticeship that is eligible for funding up to the limit of the funding band."
+                            },
+                            {
+                                "id": "92",
+                                "content": "For organisations that have been accepted onto the <a class='govuk-link' href='https://www.gov.uk/government/collections/register-of-apprentice-assessment-organisations'>Register of End-Point Assessment Organisations</a> eligible costs are set out in the <a class='govuk-link' href='https://www.gov.uk/guidance/register-of-end-point-assessment-organisations'>Conditions of Acceptance</a> document."
+                            },
+                            {
+                                "id": "93",
+                                "content": "For main providers and the delivery of training and on-programme assessment, eligible costs are limited to the following:",
+                                "subparts":[
+                                    {
+                                        "id": "93.1",
+                                        "content": "Off-the-job training through a main provider, or evidenced costs for employer-provider delivery. This could include some or all of the training aspects of a licence to practise or non-mandatory qualification. In both cases there must be a clear overlap between this training and the knowledge, skills and behaviours needed for the apprenticeship standard."
+                                    },
+                                    {
+                                        "id": "93.2",
+                                        "content": "Registration, examination and certification costs associated with mandatory qualifications excluding any licence to practise (see paragraph P97.8)."
+                                    },
+                                    {
+                                        "id": "93.3",
+                                        "content": "Regular planned on-programme assessments (progress reviews) to discuss progress to date against the commitment statement and the immediate next steps required."
+                                    },
+                                    {
+                                        "id": "93.4",
+                                        "content": "Self-directed distance learning (where it forms only part of the learning experience), interactive online learning (virtual classrooms) or blended learning relating to the off-the-job training element of an apprenticeship (see paragraph P97.6)."
+                                    },
+                                    {
+                                        "id": "93.5",
+                                        "content": "Materials (non-capital items) used in the delivery of the apprenticeship framework or standard. By materials (non-capital items) we mean the equipment or supplies necessary to enable a particular learning activity to happen. These items would not normally have a lifespan beyond the individual apprenticeship being funded."
+                                    },
+                                    {
+                                        "id": "93.6",
+                                        "content": "Any administration directly linked to training and assessment, including end-point assessment. This includes costs relating to the ongoing development of existing teaching materials, lesson planning, the processing of the ILR and quality assurance."
+                                    },
+                                    {
+                                        "id": "93.7",
+                                        "content": "Time spent by employees/managers supporting or mentoring apprentices, this must be directly linked to the apprenticeship training and assessment, including end-point assessment, and be in addition to generic line management responsibilities."
+                                    },
+                                    {
+                                        "id": "93.8",
+                                        "content": "Additional learning and/or the cost to resit an exam linked to a mandatory qualification."
+                                    },
+                                    {
+                                        "id": "93.9",
+                                        "content": "Additional learning required to retake an end-point assessment."
+                                    },
+                                    {
+                                        "id": "93.10",
+                                        "content": "Accommodation costs for training delivered through residential modules where the residential training is a mandatory requirement for all apprentices. By mandatory we mean that there is a specific requirement in the apprenticeship standard which would apply equally to any apprentice, regardless of their location, employer or main provider (including subcontractors). Any costs for residential modules must represent value for money."
+                                    },
+                                    {
+                                        "id": "93.11",
+                                        "content": "Costs of an apprentice taking part in a skills competition if the employer and main provider have agreed that participation in the competition directly contributes to helping that individual achieve the apprenticeship standard."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "94",
+                                "content": "The costs of taking part in any of the above activities may be included in the total negotiated price of training and end-point assessment, agreed between the employer and main provider, and the employer and the end-point assessment organisation. The employer and the main provider agree the price of the training. The employer and the end-point assessment organisation agree the price of the end-point assessment."
+                            },
+                            {
+                                "id": "95",
+                                "content": "If the total negotiated price exceeds the maximum of the funding band, then the employer must pay in full the difference between the band maximum and the total negotiated price."
+                            },
+                            {
+                                "id": "96",
+                                "content": "Any of the eligible costs outlined in paragraph P93 can be bought in from a third party, including the apprentice’s employer, and we will fund them. Where the third party is the apprentice’s employer then only actual costs will be funded and these must be recorded. Where you buy in the delivery of apprenticeship training and/or on-programme assessment from a third party you must follow the subcontracting rules in paragraphs P157 to P192. Funds from an employer’s apprenticeship service account or government co-investment must not be used to fund other services from a third party."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ineligible-costs",
+                        "type": "subsection",
+                        "title": "Ineligible costs",
+                        "parts":[
+                            {
+                                "id": "97",
+                                "content": "For main providers and the delivery of training and on-programme assessment, ineligible costs include the following:",
+                                "subparts":[
+                                    {
+                                        "id": "97.1",
+                                        "content": "Enrolment, main provider (or subcontractor) induction, prior assessment, initial diagnostic testing, or similar activity."
+                                    },
+                                    {
+                                        "id": "97.2",
+                                        "content": "Travel costs for apprentices under any circumstances."
+                                    },
+                                    {
+                                        "id": "97.3",
+                                        "content": "Apprentice wages."
+                                    },
+                                    {
+                                        "id": "97.4",
+                                        "content": "Personal protective clothing and safety equipment required by the apprentice to carry out their day-to-day work."
+                                    },
+                                    {
+                                        "id": "97.5",
+                                        "content": "Development of original teaching materials related to the delivery of a new apprenticeship offer."
+                                    },
+                                    {
+                                        "id": "97.6",
+                                        "content": "Off-the-job training delivered only by self-directed distance learning."
+                                    },
+                                    {
+                                        "id": "97.7",
+                                        "content": "Any training, optional modules, educational trips or trips to professional events in excess of those required to achieve the apprenticeship framework or meet the knowledge, skills and behaviours of the apprenticeship standard. This includes training solely and specifically required for a licence to practise."
+                                    },
+                                    {
+                                        "id": "97.8",
+                                        "content": "Any fees to third parties associated with a licence to practise. This includes registration, examination and certification costs. This applies even where a licence to practise is specified in the apprenticeship standard and assessment plan."
+                                    },
+                                    {
+                                        "id": "97.9",
+                                        "content": "Any fees to awarding bodies for non-mandatory qualifications (qualifications that are not specifically listed in the standard). This includes registration, examination and certification costs."
+                                    },
+                                    {
+                                        "id": "97.10",
+                                        "content": "Student membership fees that are required by professional bodies, even where linked to mandatory qualifications."
+                                    },
+                                    {
+                                        "id": "97.11",
+                                        "content": "End-point assessment costs incurred by the main provider but not included in the price negotiated between the employer and the end-point assessment organisation."
+                                    },
+                                    {
+                                        "id": "97.12",
+                                        "content": "English and maths up to level 2 (this is funded separately)."
+                                    },
+                                    {
+                                        "id": "97.13",
+                                        "content": "Repeating the same regulated qualification where the apprentice has previously achieved it, unless it is a requirement of the apprenticeship or for any GCSE where the apprentice has not achieved grade C, or 4, or higher."
+                                    },
+                                    {
+                                        "id": "97.14",
+                                        "content": "Accommodation costs where the apprentice is resident away from their home base, because of the requirements of their day-to-day work or because this is convenient for the employer or main provider (or subcontractor). Residential costs associated with non-mandatory learning, including qualifications, are also excluded."
+                                    },
+                                    {
+                                        "id": "97.15",
+                                        "content": "Capital purchases including lease agreements. Capital purchases are long-term assets that would have a lifespan beyond the apprenticeship being funded, such as land, buildings, machinery and ICT equipment (e.g. tablets and similar electronic devices)."
+                                    },
+                                    {
+                                        "id": "97.16",
+                                        "content": "Maintenance of capital purchases. This includes vehicle parts and labour, insurance and MOT."
+                                    },
+                                    {
+                                        "id": "97.17",
+                                        "content": "Time spent by employees/managers supporting or mentoring apprentices, where this is not directly linked to the apprenticeship training and assessment, including end-point assessment."
+                                    },
+                                    {
+                                        "id": "97.18",
+                                        "content": "Specific services not related to the delivery and administration of the apprenticeship. This includes the recruitment and continuing professional development of staff involved in apprenticeships, company inductions, managing agents, brokerage services (to an employer or main provider) and the costs of memberships or other costs paid to employers, or their representatives, associated with procurement registers or opportunities to secure business."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "98",
+                                "content": "You must not pay inducements or any other payment not authorised by us to an employer, another training provider or to an end-point assessment organisation in relation to any part of the apprenticeship programme."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "additional-payments",
+                        "type": "subsection",
+                        "title": "Additional payments",
+                        "parts":[
+                            {
+                                "id": "99",
+                                "content": "You and the employer will receive a payment towards the additional cost associated with training if, at the start of the apprenticeship, the apprentice is:",
+                                "subparts":[
+                                    {
+                                        "id": "99.1",
+                                        "content": "aged between 16 and 18 years old (or 15 years of age if the apprentice’s 16th birthday is between the last Friday of June and 31 August); or"
+                                    },
+                                    {
+                                        "id": "99.2",
+                                        "content": "aged between 19 and 24 years old and has either an Education, Health and Care (EHC) plan provided by their local authority or has been in the care of their local authority as defined in paragraph P101."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "100",
+                                "content": "The apprentice will be eligible for a payment if they have been in the care of the local authority as defined in paragraph P101. See paragraphs P110 to P117 for more information on the care leaver’s bursary."
+                            },
+                            {
+                                "id": "101",
+                                "content": "A child in care is defined as:",
+                                "subparts":[
+                                    {
+                                        "id": "101.1",
+                                        "content": "an eligible child - a young person who is 16 or 17 and who has been looked after by the local authority/health and social care trust for at least a period of 13 weeks since the age of 14, and who is still looked after;"
+                                    },
+                                    {
+                                        "id": "101.2",
+                                        "content": "a relevant child - a young person who is 16 or 17 who has left care after their 16th birthday and before leaving care was an eligible child; or"
+                                    },
+                                    {
+                                        "id": "101.3",
+                                        "content": "a former relevant child - a young person who is aged between 18 and 21 (up to their 25th birthday if they are in education or training) who, before turning 18, was either an eligible or a relevant child."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "102",
+                                "content": "Before you claim and are paid any additional payments, you must have evidence that you are eligible for them in respect of each apprentice. You must check this and either their employer or the apprentice must provide you with evidence to keep in the evidence pack. You must then report the appropriate code in the ILR."
+                            },
+                            {
+                                "id": "103",
+                                "content": "Where these payments are for apprentices aged between 19 and 24 years old at the start of their apprenticeship (see paragraph P99.2), you must include consent from the apprentice to inform their employer that they have an EHC plan or that they have been in the care of their local authority and either:",
+                                "subparts":[
+                                    {
+                                        "id": "103.1",
+                                        "content": "a signed email or letter from a local authority appointed Personal Advisor to confirm they are a care leaver; or"
+                                    },
+                                    {
+                                        "id": "103.2",
+                                        "content": "evidence of an EHC plan."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "104",
+                                "content": "Where a 19 to 24 year old apprentice does not want to inform their employer that they were previously in care then you must report the appropriate code in the ILR. This will generate the funding for you but not the employer. You must not apply the co-investment waiver (see paragraph P118). This means that you should not record the code for the waiver in the ILR."
+                            },
+                            {
+                                "id": "105",
+                                "content": "These payments will be paid as follows:",
+                                "subparts":[
+                                    {
+                                        "id": "105.1",
+                                        "content": "90 days after the apprentice starts, 50% will be paid if the apprentice is still undertaking their apprenticeship; and"
+                                    },
+                                    {
+                                        "id": "105.2",
+                                        "content": "365 days after the apprentice starts, the remaining 50% will be paid if the apprentice is still undertaking their apprenticeship."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "106",
+                                "content": "Where the apprentice agrees to inform their employer that they were previously in care, you will also receive the additional payments due to the employer. You must pass these on in full to the employer within 30 working days of receiving this funding from us. Where an apprentice is employed by an ATA, any applicable additional payments must be paid to the ATA."
+                            },
+                            {
+                                "id": "107",
+                                "content": "For frameworks, you will also receive an additional payment of 20% of the funding band maximum if the apprentice is aged between 16 and 18 or is an eligible 19 to 24 year old. This must only be used to fund the eligible costs described in paragraph P93. The <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-technical-funding-guide'>Apprenticeship Technical Funding Guide</a> gives more information on how uplifts are paid. Employers do not have to contribute to this additional funding"
+                            },
+                            {
+                                "id": "108",
+                                "content": "You will also receive a payment if, at the start of the apprenticeship, the apprentice is undertaking an apprenticeship framework and is recorded on the ILR as having a postcode prior to enrolment, listed within the 27% most deprived areas of the country according to the <a class='govuk-link' href='https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015'>index of multiple deprivation (IMD) 2015</a>. This additional disadvantage uplift is supplementary to the negotiated price and therefore not impacted by the eligible and ineligible costs listed in paragraphs P93 to P98. The disadvantage uplift should be used on costs to support the apprentice’s training, for example on travel costs or personal support."
+                            },
+                            {
+                                "id": "109",
+                                "content": "We will monitor take-up of additional payments to identify any potential fraud or gaming."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "care-leavers-bursary",
+                        "type": "subsection",
+                        "title": "Care leavers bursary",
+                        "parts":[
+                            {
+                                "id": "110",
+                                "content": "Apprentices are eligible to receive a £1,000 bursary payment if they have been in the care of the local authority as defined in paragraph P101."
+                            },
+                            {
+                                "id": "111",
+                                "content": "You must have evidence that the apprentice is eligible for this payment before you claim or are funded for any associated additional payments for you or the employer. This must be a signed email or letter from a local authority appointed personal advisor confirming that the apprentice is a care leaver."
+                            },
+                            {
+                                "id": "112",
+                                "content": "You must tell the apprentice that they are eligible for the bursary as a care leaver and give them the opportunity to declare that they would like to access the funding. This signed declaration (see paragraph P288 for more information) must allow the apprentice to confirm that they:",
+                                "subparts":[
+                                    {
+                                        "id": "112.1",
+                                        "content": "Understand that they are eligible for and would like to receive a bursary as a care leaver."
+                                    },
+                                    {
+                                        "id": "112.2",
+                                        "content": "Understand that if they have been found to have accepted the payment incorrectly or if they are ineligible then the government will require it to be repaid."
+                                    },
+                                    {
+                                        "id": "112.3",
+                                        "content": "Have not been paid a care leavers bursary before. This only includes the care leavers bursary paid by the ESFA; other local incentives do not apply."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "113",
+                                "content": "This is a one-off payment. An eligible apprentice must only receive this payment once. Therefore an individual must not receive this funding again if they progress or start another apprenticeship. It is your responsibility to ensure that the apprentice has not received this payment previously before you pass it on. We will also monitor this to ensure that the apprentice receives this payment only once and may reclaim duplicate payments."
+                            },
+                            {
+                                "id": "114",
+                                "content": "You must include signed consent from the apprentice to inform their employer that they have been in the care of their local authority and tell the apprentice that their declaration will be used to generate additional payments to both the main provider and their employer to support their transition into work."
+                            },
+                            {
+                                "id": "115",
+                                "content": "Where a 19 to 24 year old apprentice does not want to inform their employer that they were previously in care, then you must report the appropriate code in the ILR. This will generate the funding for you and the apprentice but not the employer. Where this is the case you must not apply the co-investment waiver (see paragraph P118). This means that you should not record the code for the waiver in the ILR."
+                            },
+                            {
+                                "id": "116",
+                                "content": "The bursary payment, due to the apprentice, will be generated 60 days after they start. You must pass this on in full to the apprentice within 30 days of receiving this funding from the ESFA."
+                            },
+                            {
+                                "id": "117",
+                                "content": "Once paid, you must evidence that the apprentice has received the bursary payment. This must be a signed confirmation from the apprentice and not a receipt of transaction."
+                            } 
+                        ]
+                    },
+                    {
+                        "id": "extra-support-small-employers",
+                        "type": "subsection",
+                        "title": "Extra support for small employers",
+                        "parts":[
+                            {
+                                "id": "118",
+                                "content": "The government will fund all of the apprenticeship training costs, up to the maximum value of the funding band for the apprenticeship, for employers employing fewer than 50 people if, on the first day of their apprenticeship, the apprentice is:",
+                                "subparts":[
+                                    {
+                                        "id": "118.1",
+                                        "content": "Aged between 16 and 18 years old (or 15 years old if the apprentice’s 16th birthday is between the last Friday of June and 31 August); or"
+                                    },
+                                    {
+                                        "id": "118.2",
+                                        "content": "Aged between 19 and 24 years old and has either:",
+                                        "subsubparts":[
+                                            {
+                                                "id": "118.2.1",
+                                                "content": "an EHC plan provided by their local authority; or"
+                                            },
+                                            {
+                                                "id": "118.2.2",
+                                                "content": "or has been in the care of their local authority as defined in paragraph P101."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "119",
+                                "content": "You must not request any employer contribution (see paragraphs P216 to P221) to the cost of an apprenticeship up to the maximum value of the funding band if an employer employing fewer than 50 people recruits an eligible apprentice."
+                            },
+                            {
+                                "id": "120",
+                                "content": "Before any apprenticeship starts, you must have evidence that the apprentice and employer are eligible for the waiving of the employer contribution. The employer must provide evidence that they employed an average of 49 or fewer employees in the 365 days before the apprentice was recruited (using the calculation set out in paragraph P121) and you must keep this in the evidence pack."
+                            },
+                            {
+                                "id": "121",
+                                "content": "We define the number of employees as the number of people with a contract of service. This must be calculated using the average number of employees with a contract of service in the 365 days before the apprentice is recruited. If the average number of employees is 49 and the recruitment of an apprentice takes this number to 50, the employer will still be eligible to receive this extra support. However, if the average number of employees is 50 and the recruitment of apprentices takes this number to 51, the employer will not be eligible to receive this extra support."
+                            },
+                            {
+                                "id": "122",
+                                "content": "If the price negotiated by you and the employer is above the maximum value of the funding band for the apprenticeship, the employer must pay in full the difference between the band maximum and the negotiated agreed price. This cannot be funded from an employer’s apprenticeship service account."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "support-english-maths-training",
+                        "type": "subsection",
+                        "title": "Support for English and maths training",
+                        "parts":[
+                            {
+                                "id": "123",
+                                "content": "English and maths are essential to supporting longer-term career prospects. This is why all apprentices must be supported to gain these essential skills and secure recognised qualifications."
+                            },
+                            {
+                                "id": "achievement-levels",
+                                "type": "header",
+                                "content": "Achievement levels"
+                            },
+                            {
+                                "id": "124",
+                                "content": "As part of our ambition for a world-class technical education system and in line with recommendations from independent experts, progression towards and attainment of, approved level 2 English and maths qualifications is an important part of the apprenticeship programme. For those undertaking a level 3 or higher apprenticeship, it is a requirement that they should hold or achieve an approved level 2 in both subjects before they can successfully complete the apprenticeship."
+                            },
+                            {
+                                "id": "125",
+                                "content": "For apprentices undertaking a level 2 apprenticeship:",
+                                "subparts":[
+                                    {
+                                        "id": "125.1",
+                                        "content": "We want as many apprentices as possible to achieve level 2 English and maths and we expect all apprentices to work towards level 2 in these subjects and to take the assessment for the achievement of level 2. We recognise that for some a level 2 may be difficult to achieve. In these circumstances, we will accept achievement of level 1 English and maths as sufficient for the successful completion of their apprenticeship, except where the framework or standard specifies a higher level of English and/or maths must be achieved."
+                                    },
+                                    {
+                                        "id": "125.2",
+                                        "content": "For individuals with special educational needs, learning difficulties or disabilities, who struggle to achieve the regular English and/or maths minimum requirement due to the nature of their difficulty or disability, we will accept achievement of entry level 3 functional skills in English and/or maths (see paragraphs P137 to P143 below)."
+                                    },
+                                    {
+                                        "id": "125.3",
+                                        "content": "You should make every effort to enable apprentices with special educational needs, learning difficulties or disabilities to achieve the minimum English and maths requirements of the specific apprenticeship (as set out in paragraphs P124 to P136). This includes appropriate use of access arrangements, reasonable adjustments and other approved qualifications that are detailed in the <a class='govuk-link' href='https://www.gov.uk/government/publications/qualifications-getting-approval-for-funding'>2018 to 2018 list of qualifications in the English and maths legal entitlement offer</a>."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                    
+                    
+                    
+                ]
             }
+            
         ]
     }
 }

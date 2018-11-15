@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Manual
+{% endblock %}
+
+{% set _thisManual = myData.manuals['providers-manual-original'].content %}
+
+{% block content %}
+
+<p class="govuk-body">You searched for:</p>
+<p class="govuk-body">{{myData.searchTerm}}</p>
+
+<p class="govuk-body">Search results</p>
+<ul class="govuk-list govuk-list--bullet">
+{% for result in myData.searchResults %}
+    <li>Chapter name is: {{result.sectionID}}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

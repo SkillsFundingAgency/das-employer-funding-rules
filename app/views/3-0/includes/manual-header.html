@@ -2,6 +2,7 @@
 <div class="gem-c-contextual-breadcrumbs">
     <!-- Rendering step by step nav breadcrumbs because there's 1 step by step -->
     <div class="gem-c-step-nav-header">
+        <!-- TODO part of -->
         <span class="gem-c-step-nav-header__part-of">Part of</span>
         <a href="#" class="gem-c-step-nav-header__title">Funding rules for providers</a>
     </div>
@@ -24,11 +25,11 @@
             </dl>
         </div>
         <div class="in-manual-search">
-            <form action="search-results/results.html">
-            <label for="search-box">Search this manual</label>
-            <input type="hidden" name="filter_manual[]" value="guidance/employer-funding">
-            <input id="search-box" class="in-manual-search-box" type="text" name="q">
-            <button type="submit">search</button>
+            <form method="POST">
+                <label for="search-box">Search this manual</label>
+                <input type="hidden" name="filter_manual[]" value="">
+                <input id="search-box" class="in-manual-search-box" type="text" name="q">
+                <button type="submit">search</button>
             </form>
         </div>
     </div>

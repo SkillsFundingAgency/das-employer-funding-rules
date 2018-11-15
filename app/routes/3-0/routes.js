@@ -44,19 +44,76 @@ module.exports = function (router,_myData) {
             myData:req.session.myData
         });
     });
+    // Provider manual home
     router.get('/' + version + '/provider-manual', function (req, res) {
         res.render(version + '/provider-manual', {
             myData:req.session.myData
         });
     });
+    router.post('/' + version + '/provider-manual', function (req, res) {
+        fireSearch(req,res,"providers-manual-original")
+        res.redirect(301, '/' + version + '/provider-manual-search-results');
+    });
+    // Provider manual page
     router.get('/' + version + '/provider-manual-page', function (req, res) {
         res.render(version + '/provider-manual-page', {
             myData:req.session.myData
         });
     });
+    router.post('/' + version + '/provider-manual-page', function (req, res) {
+        fireSearch(req,res,"providers-manual-original")
+        res.redirect(301, '/' + version + '/provider-manual-search-results');
+    });
+    function fireSearch(req,res){
+        // TODO
+        // - check value of field
+        var _searchTerm = req.body.q
+        req.session.myData.searchTerm = _searchTerm
 
-    // router.post('/' + version + '/page-name-1', function (req, res) {
-    //     res.redirect(301, '/' + version + '/page-name-2');
-    // });
+        var _manual = req.session.myData.manuals["providers-manual-original"]
+        var _manualSections = _manual.content.sections
+
+
+        // 1. If match found add section.id to list and iterate it's count
+                // searchresults = [
+                //     {
+                //         "id": "id-of-section",
+                //         "count": 5
+                //     }
+                // ]
+
+        // 2. Once finished looping sort 'searchresults' by count
+
+        // 3. Store 'searchresults' against session
+
+
+        // LOOPING
+        // 1. For each 'section'
+            // Check match on section.title
+                // For each 'subsection'
+                // Check match on subsection.title
+                    // For each 'parts'
+                    // Check match on 'content'
+                        // For each 'subparts'
+                        //Check match on content
+                            // For each subsubparts
+                            // Check match on content
+
+
+
+        // Looping over object keys examnple
+        // Object.keys(_myData.companies).forEach(function(key,index) {
+        //     var _thisCompany = _myData.companies[key]
+        //     if(_thisCompany){
+        //     }
+        // });
+
+    }
+    // Search results
+    router.get('/' + version + '/provider-manual-search-results', function (req, res) {
+        res.render(version + '/provider-manual-search-results', {
+            myData:req.session.myData
+        });
+    });
 
 };
