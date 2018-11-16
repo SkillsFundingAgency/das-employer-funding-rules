@@ -1,21 +1,65 @@
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Manual
+GOV.UK Manual
 {% endblock %}
 
 {% set _thisManual = myData.manuals['providers-manual-original'].content %}
 
 {% block content %}
+<div class="search">
+    <form method="POST">
+        <div class="search-header">
+            <div class="gem-c-search gem-c-search--on-white gem-c-search--large gem-c-search--separate-label" data-module="gem-toggle-input-class-on-focus">
+                <label for="search-main" class="gem-c-search__label">
+                        
+                    <h1>Search results for <span class="visuallyhidden">{{myData.searchTerm}}</span>
+                    </h1>
 
-<p class="govuk-body">You searched for:</p>
-<p class="govuk-body">{{myData.searchTerm}}</p>
-
-<p class="govuk-body">Search results</p>
-<ul class="govuk-list govuk-list--bullet">
-{% for result in myData.searchResults %}
-    <li>Chapter name is: {{result.sectionID}}</li>
-{% endfor %}
-</ul>
-
+                </label>
+                <div class="gem-c-search__item-wrapper">
+                    <input type="search" value="{{myData.searchTerm}}" id="search-main" name="q" title="Search" class="gem-c-search__item gem-c-search__input js-class-toggle focus">
+                    <div class="gem-c-search__item gem-c-search__submit-wrapper">
+                        <button type="submit" class="gem-c-search__submit">Search</button>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="filter_manual[]" id="filter_manual_" value="">
+        </div>
+    </form>
+    <div id="results" class="js-live-search-results-block">
+        <div aria-live="assertive" class="js-aria-live-count visuallyhidden">7 found</div>
+        <div class="results-block">
+            <div class="inner-block js-live-search-results-list">
+                <div class="result-count  scoped-result-count " id="js-live-search-result-count" aria-hidden="true">
+                    <strong>
+                        {% if myData.search["count"] == 1 %}
+                        {{myData.search["count"]}} result found in
+                        {% else %}
+                        {{myData.search["count"]}} results found in
+                        {% endif %}
+                    </strong><br>
+                    {{_thisManual.title|safe}} {{_thisManual.date|safe}}<br>
+                    <a href="http://www.gov.uk/search?q={{myData.searchTerm}}">Display results from all of GOV.UK</a>
+                </div>
+                <ol class="results-list" id="js-live-search-results" start="1" data-search-query="test"
+                    data-analytics-ecommerce="" data-ecommerce-start-index="1">
+                    {% for result in myData.search["results"] %}
+                        {% if result.count > 0 %}
+                            {% for section in _thisManual.sections %}
+                                {% if section.id == result.id %}
+                                <li>
+                                    <h3><a href="provider-manual-page?providerpage={{result.id}}">{{section.title}}</a></h3>
+                                    <p>{{section.title}}</p>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

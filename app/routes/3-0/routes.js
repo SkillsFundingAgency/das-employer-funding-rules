@@ -64,56 +64,83 @@ module.exports = function (router,_myData) {
         fireSearch(req,res,"providers-manual-original")
         res.redirect(301, '/' + version + '/provider-manual-search-results');
     });
-    function fireSearch(req,res){
-        // TODO
-        // - check value of field
-        var _searchTerm = req.body.q
-        req.session.myData.searchTerm = _searchTerm
-
-        var _manual = req.session.myData.manuals["providers-manual-original"]
-        var _manualSections = _manual.content.sections
-
-
-        // 1. If match found add section.id to list and iterate it's count
-                // searchresults = [
-                //     {
-                //         "id": "id-of-section",
-                //         "count": 5
-                //     }
-                // ]
-
-        // 2. Once finished looping sort 'searchresults' by count
-
-        // 3. Store 'searchresults' against session
-
-
-        // LOOPING
-        // 1. For each 'section'
-            // Check match on section.title
-                // For each 'subsection'
-                // Check match on subsection.title
-                    // For each 'parts'
-                    // Check match on 'content'
-                        // For each 'subparts'
-                        //Check match on content
-                            // For each subsubparts
-                            // Check match on content
-
-
-
-        // Looping over object keys examnple
-        // Object.keys(_myData.companies).forEach(function(key,index) {
-        //     var _thisCompany = _myData.companies[key]
-        //     if(_thisCompany){
-        //     }
-        // });
-
-    }
     // Search results
     router.get('/' + version + '/provider-manual-search-results', function (req, res) {
         res.render(version + '/provider-manual-search-results', {
             myData:req.session.myData
         });
     });
+    router.post('/' + version + '/provider-manual-search-results', function (req, res) {
+        fireSearch(req,res,"providers-manual-original")
+        res.redirect(301, '/' + version + '/provider-manual-search-results');
+    });
+    function fireSearch(req,res){
+        var _searchTerm = req.body.q
+        var _manual = req.session.myData.manuals["providers-manual-original"]
+        var _search = {
+            "results": [],
+            "count": 0
+        }
+        if(_searchTerm.length > 2) {
+            // 1. For each 'section'
+            _manual.content.sections.forEach(function(section) {
+                var _sectionSearch = {
+                        "id": section.id,
+                        "count": 0,
+                        "title-count": 0
+                    }
+                // console.log(section.id)
+                // Check match on section.title
+                _sectionSearch["count"] = _sectionSearch["count"] + searchCount(section.title)
+                _sectionSearch["title-count"] = searchCount(section.title)
+                
+                // For each 'subsection'
+                section.subsections.forEach(function(subsection) {
+                    // Check match on subsection.title (if exists)
+                    if("title" in subsection) {
+                        _sectionSearch["count"] = _sectionSearch["count"] + searchCount(subsection.title)
+                    }
+                    // For each 'parts'
+                    if("parts" in subsection) {
+                        subsection.parts.forEach(function(part) {
+                            // Check match on 'content'
+                            _sectionSearch["count"] = _sectionSearch["count"] + searchCount(part.content)
+                            // For each 'subparts'
+                            if("subparts" in part) {
+                                part.subparts.forEach(function(subpart) {
+                                    //Check match on content
+                                    _sectionSearch["count"] = _sectionSearch["count"] + searchCount(subpart.content)
+                                    // For each subsubparts
+                                    if("subsubparts" in subpart) { 
+                                        subpart.subsubparts.forEach(function(subsubpart) {
+                                            // Check match on content
+                                            _sectionSearch["count"] = _sectionSearch["count"] + searchCount(subsubpart.content)
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+                if(_sectionSearch["count"] > 0){
+                    _search["count"]++
+                }
+                // console.log(_sectionSearch)
+                _search["results"].push(_sectionSearch)
+            });
+            _search["results"].sort(function(a, b){
+                // sorts of title-count and then count
+                return b["title-count"] - a["title-count"] || b["count"] - a["count"];
+            });
+        }
+        // console.log(_search["results"])
+        function searchCount(str){
+            var regex = new RegExp(_searchTerm.toUpperCase(),"g");
+            var count = (str.toUpperCase().match(regex) || []).length
+            return count;
+        }
+        req.session.myData.searchTerm = _searchTerm
+        req.session.myData.search = _search
+    }
 
 };
