@@ -1153,12 +1153,46 @@
                                         "content": "You should make every effort to enable apprentices with special educational needs, learning difficulties or disabilities to achieve the minimum English and maths requirements of the specific apprenticeship (as set out in paragraphs P124 to P136). This includes appropriate use of access arrangements, reasonable adjustments and other approved qualifications that are detailed in the <a class='govuk-link' href='https://www.gov.uk/government/publications/qualifications-getting-approval-for-funding'>2018 to 2018 list of qualifications in the English and maths legal entitlement offer</a>."
                                     }
                                 ]
+                            },
+                            {
+                                "id": "what-we-will-fund",
+                                "type": "header",
+                                "content": "What we will fund"
+                            },
+                            {
+                                "id": "126",
+                                "content": "We will fund an apprentice to achieve up to an approved level 2 qualification in English and maths where they do not already hold a suitable equivalent qualification. Acceptable equivalents are set out in a published list on <a class='govuk-link' href='https://www.gov.uk/government/publications/qualifications-getting-approval-for-funding'>GOV.UK</a> called ‘Acceptable current and prior equivalent qualifications for English and maths minimum requirements in apprenticeship standards at level 2 and above’."
+                            },
+                            {
+                                "id": "127",
+                                "content": "The ESFA will pay you for this at the single rate set by us for each eligible qualification undertaken. It will not be deducted from the employer’s apprenticeship service account or require employer co-investment."
+                            },
+                            {
+                                "id": "128",
+                                "content": "You can claim funding for apprentices who have not previously attained a GCSE grade A* to C (or 9 to 4) in English or maths (or both) on the day they start the following qualifications:",
+                                "subparts":[
+                                    {
+                                        "id": "128.1",
+                                        "content": "GCSE English language or maths (or both); or"
+                                    },
+                                    {
+                                        "id": "128.2",
+                                        "content": "Functional skills English or maths at level 2 (or both)."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "129",
+                                "content": "For level 2 apprenticeships, where a level 2 qualification in English or maths is not required for the apprenticeship and the apprentice does not already hold the acceptable qualifications for their framework or standard, then main providers should adopt the following approach and can claim funding for an apprentice in the following scenarios:",
+                                "subparts":[
+                                    {
+                                        "id": "129.1",
+                                        "content": "Where the apprentice holds neither level 1 nor level 2 approved qualifications and is judged by the main provider to be working below level 1 standard in English/maths:<br><br>Apprentices must study towards and achieve English and maths qualifications of at least level 1 (functional skills level 1 or GCSE grade E or 2), and start, study towards and take the assessments for level 2 qualifications in these subjects. The apprentice is not required to achieve level 2 qualifications in order to successfully complete their apprenticeship. These requirements must be fulfilled before the apprentice takes the end- point assessment or achieves an apprenticeship framework.<br><br>Main providers must also ensure that any level 1 training and assessments are taken at an early enough stage in the apprenticeship to allow sufficient time for an apprentice to study towards and take the assessments for the level 2 qualification, after a level 1 has been achieved. Where the apprentice does not achieve the level 2, main providers can claim only for the training given."
+                                    }
+                                ]
                             }
                         ]
                     }
-                    
-                    
-                    
                 ]
             }
             

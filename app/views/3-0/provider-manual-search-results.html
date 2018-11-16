@@ -45,12 +45,14 @@ GOV.UK Manual
                 </div>
                 <ol class="results-list" id="js-live-search-results" start="1" data-search-query="test"
                     data-analytics-ecommerce="" data-ecommerce-start-index="1">
+                    <!-- for each section data -->
                     {% for result in myData.search["results"] %}
-                        {% if result.count > 0 %}
+                        <!-- Has results -->
+                        {% if result.found == true %}
                             {% for section in _thisManual.sections %}
                                 {% if section.id == result.id %}
                                 <li>
-                                    <h3><a href="provider-manual-page?providerpage={{result.id}}">{{section.title}}</a></h3>
+                                    <h3><a href="provider-manual-page?providerpage={{section.id}}">{{section.title}}</a></h3>
                                     <p>{{section.title}}</p>
                                 </li>
                                 {% endif %}

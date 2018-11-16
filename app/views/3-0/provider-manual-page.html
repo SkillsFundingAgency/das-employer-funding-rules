@@ -55,7 +55,9 @@
                                     {% if part.type == "header" %}
                                     <h3 class="govuk-heading-s">{{part.content|safe}}</h3>
                                     {% else %}
-                                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">P{{part.id|safe}}.</span> {{part.content|safe}}</p>
+                                    <p class="govuk-body">
+                                        <span class="govuk-!-font-weight-bold">P{{part.id|safe}}.</span> {{part.content|safe}}
+                                    </p>
                                     {% endif %}
                                     
                                     <!-- Sub Parts e.g. 19.1 -->

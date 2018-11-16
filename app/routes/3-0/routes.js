@@ -74,9 +74,10 @@ module.exports = function (router,_myData) {
         fireSearch(req,res,"providers-manual-original")
         res.redirect(301, '/' + version + '/provider-manual-search-results');
     });
-    function fireSearch(req,res){
-        var _searchTerm = req.body.q
-        var _manual = req.session.myData.manuals["providers-manual-original"]
+    function fireSearch(req,res,manualid){
+        var _searchTerm = req.body.q.trim()
+        var _searchTermArray = _searchTerm.split(" ")
+        var _manual = req.session.myData.manuals[manualid]
         var _search = {
             "results": [],
             "count": 0
@@ -86,35 +87,41 @@ module.exports = function (router,_myData) {
             _manual.content.sections.forEach(function(section) {
                 var _sectionSearch = {
                         "id": section.id,
-                        "count": 0,
-                        "title-count": 0
+                        "found": false,
+                        "results": [
+                            {
+                                "term": _searchTerm,
+                                "count": 0
+                            }
+                        ]
                     }
+                _searchTermArray.forEach(function(searchWord,index) {
+                    _sectionSearch["results"].push({"term": searchWord,"count": 0})
+                });
                 // console.log(section.id)
                 // Check match on section.title
-                _sectionSearch["count"] = _sectionSearch["count"] + searchCount(section.title)
-                _sectionSearch["title-count"] = searchCount(section.title)
-                
+                searchCount(section.title,_sectionSearch)
                 // For each 'subsection'
                 section.subsections.forEach(function(subsection) {
                     // Check match on subsection.title (if exists)
                     if("title" in subsection) {
-                        _sectionSearch["count"] = _sectionSearch["count"] + searchCount(subsection.title)
+                        searchCount(subsection.title,_sectionSearch)
                     }
                     // For each 'parts'
                     if("parts" in subsection) {
                         subsection.parts.forEach(function(part) {
                             // Check match on 'content'
-                            _sectionSearch["count"] = _sectionSearch["count"] + searchCount(part.content)
+                            searchCount(part.content,_sectionSearch)
                             // For each 'subparts'
                             if("subparts" in part) {
                                 part.subparts.forEach(function(subpart) {
                                     //Check match on content
-                                    _sectionSearch["count"] = _sectionSearch["count"] + searchCount(subpart.content)
+                                    searchCount(subpart.content,_sectionSearch)
                                     // For each subsubparts
                                     if("subsubparts" in subpart) { 
                                         subpart.subsubparts.forEach(function(subsubpart) {
                                             // Check match on content
-                                            _sectionSearch["count"] = _sectionSearch["count"] + searchCount(subsubpart.content)
+                                            searchCount(subsubpart.content,_sectionSearch)
                                         });
                                     }
                                 });
@@ -122,25 +129,58 @@ module.exports = function (router,_myData) {
                         });
                     }
                 });
-                if(_sectionSearch["count"] > 0){
-                    _search["count"]++
-                }
+
+                
                 // console.log(_sectionSearch)
                 _search["results"].push(_sectionSearch)
             });
+
+            // Total results
+            _search["results"].forEach(function(result){
+                if(result.found == true){
+                    _search["count"]++
+                }
+            });
+
+            // Sort sections
+            // console.log(_search["results"].length)
             _search["results"].sort(function(a, b){
-                // sorts of title-count and then count
-                return b["title-count"] - a["title-count"] || b["count"] - a["count"];
+                // sorts by full count then other count
+                // console.log(b["results"][0]["count"])
+                return b["results"][0]["count"] - a["results"][0]["count"];
+                // TODO sort by other individual counts
             });
         }
         // console.log(_search["results"])
-        function searchCount(str){
+        function searchCount(str,_sectionSearch){
+            // TODO 
+            // - break _searchTerm into multiple words and search each one
+            // - store data of each word found: all words found higher up in search
+
+            
+            // Full string search
             var regex = new RegExp(_searchTerm.toUpperCase(),"g");
             var count = (str.toUpperCase().match(regex) || []).length
-            return count;
+            _sectionSearch["results"][0].count = _sectionSearch["results"][0].count + count
+            if(count > 0){
+                _sectionSearch.found = true
+            }
+
+            // Each string search
+            _searchTermArray.forEach(function(searchWord,index) {
+                if(searchWord.length > 2){
+                    var regex = new RegExp(searchWord.toUpperCase(),"g");
+                    var count = (str.toUpperCase().match(regex) || []).length
+                    _sectionSearch["results"][index+1].count = _sectionSearch["results"][index+1].count + count
+                    if(count > 0){
+                        _sectionSearch.found = true
+                    }
+                }
+            });
         }
         req.session.myData.searchTerm = _searchTerm
         req.session.myData.search = _search
+        // console.log(_search)
     }
 
 };

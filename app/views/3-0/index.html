@@ -43,9 +43,13 @@
         {% for subsection in section.subsections %}
 
             <!-- Sub section heading -->
-            {% if subsection.type != "main" %}
-            <h3 class="govuk-heading-m" id="{{subsection.id}}">{{subsection.title|safe}}</h3>
-            {% endif %}
+            <h2 class="govuk-heading-m" id="{{subsection.id}}">
+                {% if subsection.type != "main" %}
+                    {{subsection.title|safe}}
+                {% else %}
+                    <!-- {{section.title|safe}} -->
+                {% endif %}
+            </h2>
 
             <!-- Parts e.g. 19 -->
             {% for part in subsection.parts %}
@@ -53,12 +57,20 @@
                 {% if part.type == "header" %}
                 <h3 class="govuk-heading-s">{{part.content|safe}}</h3>
                 {% else %}
-                <p class="govuk-body"><span class="govuk-!-font-weight-bold">P{{part.id|safe}}.</span> {{part.content|safe}}</p>
+                <p class="govuk-body">
+                    <span class="govuk-!-font-weight-bold">P{{part.id|safe}}.</span> {{part.content|safe}}
+                </p>
                 {% endif %}
                 
                 <!-- Sub Parts e.g. 19.1 -->
                 {% for subpart in part.subparts %}
                     <p class="govuk-body" style="margin-left: 20px"><span class="govuk-!-font-weight-bold">P{{subpart.id|safe}}.</span> {{subpart.content|safe}}</p>
+
+                    <!-- Sub Sub Parts e.g. 19.1.1 -->
+                    {% for subsubpart in subpart.subsubparts %}
+                        <p class="govuk-body" style="margin-left: 40px"><span class="govuk-!-font-weight-bold">P{{subsubpart.id|safe}}.</span> {{subsubpart.content|safe}}</p>
+                    {% endfor %}
+
                 {% endfor %}
 
             {% endfor %}
@@ -67,12 +79,12 @@
 
         <!-- Footnotes -->
         {% if section.footnotes|length > 0 %}
-        <div class="govuk-!-margin-top-6">
+        <div class="govuk-!-margin-top-9">
             <!-- <h3 class="govuk-heading-s">Footnotes: {{section.title|safe}}</h3> -->
             <p class="govuk-body-s">Footnotes</p>
             <ul class="govuk-list govuk-list--bullet govuk-body-s">
             {% for footnote in section.footnotes %}
-                <li><sup class="govuk-body">{{footnote.id|safe}}</sup> {{footnote.content|safe}}</li>
+                <li><sup class="">{{footnote.id|safe}}</sup> {{footnote.content|safe}}</li>
             {% endfor %}
             </ul>
         </div>
