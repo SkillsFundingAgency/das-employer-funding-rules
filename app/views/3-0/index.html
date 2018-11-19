@@ -56,6 +56,11 @@
 
                 {% if part.type == "header" %}
                 <h3 class="govuk-heading-s">{{part.content|safe}}</h3>
+                {% elif part.type == "block" %}
+                <h3 class="govuk-heading-s">{{part.title|safe}}</h3>
+                <p class="govuk-body">
+                    {{part.content|safe}}
+                </p>
                 {% else %}
                 <p class="govuk-body">
                     <span class="govuk-!-font-weight-bold">P{{part.id|safe}}.</span> {{part.content|safe}}
@@ -68,7 +73,11 @@
 
                     <!-- Sub Sub Parts e.g. 19.1.1 -->
                     {% for subsubpart in subpart.subsubparts %}
+                        {% if subsubpart.type == "list" %}
+                        <div style="margin-left: 40px">{{subsubpart.content|safe}}</div>
+                        {% else %}
                         <p class="govuk-body" style="margin-left: 40px"><span class="govuk-!-font-weight-bold">P{{subsubpart.id|safe}}.</span> {{subsubpart.content|safe}}</p>
+                        {% endif %}
                     {% endfor %}
 
                 {% endfor %}
