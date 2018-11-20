@@ -7,6 +7,7 @@ module.exports = function (router,_myData) {
         //Set version that myData was created on
         //req.session.myData.version = version
         req.session.myData.providerpage = "provider-manual"
+        // req.session.myData.googleDestination = "generic"
     }
 
     //generic.js contains wildcard get and post requests. Useful for setting session data that we want available on any other routes file. also, so we dont have duplicate wildcard requests on individual routes files that might conflict with each other.
@@ -35,6 +36,7 @@ module.exports = function (router,_myData) {
 
         //Set any query string values
         req.session.myData.providerpage = req.query.providerpage || req.session.myData.providerpage
+        // req.session.myData.googleDestination = req.query.googleDestination || req.session.myData.googleDestination
 
         next()
     });
