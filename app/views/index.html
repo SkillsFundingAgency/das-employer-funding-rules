@@ -1,31 +1,44 @@
 {% extends "layout.html" %}
 
+{% block pageStyles %}
+<style>
+.indexLinks .govuk-link:visited, 
+.indexLinks a:visited {
+  color: #005ea5;
+}
+.indexLinks .govuk-link:hover, 
+.indexLinks a:hover {
+  color: #2b8cc4;
+}
+</style>
+{% endblock %}
+
 {% block content %}
 
-<div class="govuk-grid-row">
+<div class="govuk-grid-row indexLinks">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">User Centred Funding Rules</h1>
     <h3 class="govuk-heading-m">Prototype versions</h3>
 
 
     
-    <ul class="govuk-list govuk-list--bullet">
+    <ul class="govuk-list govuk-list--bullet govuk-!-font-size-24 govuk-!-font-weight-bold">
       <li>3-0</a>
-        <ul class="govuk-list govuk-list--bullet">
-          <li><a href="/3-0/index">Provider rules - original content</a></li>
-          <li>
-            <a href="/3-0/provider-manual">Provider rules - original content - manual</a>
+        <ul class="govuk-list govuk-list--bullet govuk-!-font-size-24 govuk-!-font-weight-bold">
+          <li class="">
+            Provider Rules<br>
+            <a href="/3-0/provider-manual">Original PDF content</a>
             <!-- TODO add list of all pages here -->
           </li>
         </ul>
       </li>
       <li><a href="/prototypes/round-2/index">2-0 - Employer Funding Rules</a> (tested: date?)
-        <ul class="govuk-list govuk-list--bullet govuk-body-s">
+        <ul class="govuk-list govuk-list--bullet govuk-!-font-size-24">
           <li>added search results page</li>
         </ul>
       </li>
       <li><a href="/prototypes/round-1/index">1-0 - Employer Funding Rules</a> (tested: 22-29/10/2018)
-        <ul class="govuk-list govuk-list--bullet govuk-body-s">
+        <ul class="govuk-list govuk-list--bullet govuk-!-font-size-24">
           <li>original content tweaked</li>
         </ul>
       </li>

@@ -44,6 +44,10 @@ module.exports = function (router,_myData) {
             myData:req.session.myData
         });
     });
+
+    //
+    // PROVIDER MANUAL ORIGINAL
+    //
     // Provider manual home
     router.get('/' + version + '/provider-manual', function (req, res) {
         res.render(version + '/provider-manual', {
@@ -74,16 +78,20 @@ module.exports = function (router,_myData) {
         fireSearch(req,res,"providers-manual-original")
         res.redirect(301, '/' + version + '/provider-manual-search-results');
     });
+
+    //
+    // SEARCH
+    //
     function fireSearch(req,res,manualid){
-        var _searchTerm = req.body.q.trim()
-        var _searchTermArray = _searchTerm.split(" ")
-        var _manual = req.session.myData.manuals[manualid]
-        var _search = {
-            "results": [],
-            "count": 0
-        }
+        var _searchTerm = req.body.q.trim(),
+            _searchTermArray = _searchTerm.split(" "),
+            _manual = req.session.myData.manuals[manualid],
+            _search = {
+                "results": [],
+                "count": 0
+            }
         if(_searchTerm.length > 2) {
-            // 1. For each 'section'
+            // For each 'section'
             _manual.content.sections.forEach(function(section) {
                 var _sectionSearch = {
                         "id": section.id,
@@ -95,33 +103,33 @@ module.exports = function (router,_myData) {
                             }
                         ]
                     }
-                _searchTermArray.forEach(function(searchWord,index) {
-                    _sectionSearch["results"].push({"term": searchWord,"count": 0})
+                _searchTermArray.forEach(function(_searchWord) {
+                    _sectionSearch["results"].push(
+                        {
+                            "term": _searchWord,
+                            "count": 0
+                        }
+                    )
                 });
-                // console.log(section.id)
-                // Check match on section.title
-                searchCount(section.title,_sectionSearch)
+                doSearch(section.title,_sectionSearch)
                 // For each 'subsection'
                 section.subsections.forEach(function(subsection) {
-                    // Check match on subsection.title (if exists)
-                    if("title" in subsection) {
-                        searchCount(subsection.title,_sectionSearch)
-                    }
+                    doSearch(subsection.title,_sectionSearch)
                     // For each 'parts'
                     if("parts" in subsection) {
                         subsection.parts.forEach(function(part) {
-                            // Check match on 'content'
-                            searchCount(part.content,_sectionSearch)
+                            doSearch(part.content,_sectionSearch)
+                            doSearch(part.title,_sectionSearch)
                             // For each 'subparts'
                             if("subparts" in part) {
                                 part.subparts.forEach(function(subpart) {
-                                    //Check match on content
-                                    searchCount(subpart.content,_sectionSearch)
-                                    // For each subsubparts
+                                    doSearch(subpart.content,_sectionSearch)
+                                    doSearch(subpart.title,_sectionSearch)
+                                    // For each 'subsubparts'
                                     if("subsubparts" in subpart) { 
                                         subpart.subsubparts.forEach(function(subsubpart) {
-                                            // Check match on content
-                                            searchCount(subsubpart.content,_sectionSearch)
+                                            doSearch(subsubpart.content,_sectionSearch)
+                                            doSearch(subsubpart.title,_sectionSearch)
                                         });
                                     }
                                 });
@@ -129,9 +137,6 @@ module.exports = function (router,_myData) {
                         });
                     }
                 });
-
-                
-                // console.log(_sectionSearch)
                 _search["results"].push(_sectionSearch)
             });
 
@@ -143,44 +148,39 @@ module.exports = function (router,_myData) {
             });
 
             // Sort sections
-            // console.log(_search["results"].length)
             _search["results"].sort(function(a, b){
-                // sorts by full count then other count
-                // console.log(b["results"][0]["count"])
+                // sorts by 'full string found' count
                 return b["results"][0]["count"] - a["results"][0]["count"];
                 // TODO sort by other individual counts
             });
         }
-        // console.log(_search["results"])
-        function searchCount(str,_sectionSearch){
-            // TODO 
-            // - break _searchTerm into multiple words and search each one
-            // - store data of each word found: all words found higher up in search
-
-            
-            // Full string search
-            var regex = new RegExp(_searchTerm.toUpperCase(),"g");
-            var count = (str.toUpperCase().match(regex) || []).length
-            _sectionSearch["results"][0].count = _sectionSearch["results"][0].count + count
-            if(count > 0){
-                _sectionSearch.found = true
-            }
-
-            // Each string search
-            _searchTermArray.forEach(function(searchWord,index) {
-                if(searchWord.length > 2){
-                    var regex = new RegExp(searchWord.toUpperCase(),"g");
-                    var count = (str.toUpperCase().match(regex) || []).length
-                    _sectionSearch["results"][index+1].count = _sectionSearch["results"][index+1].count + count
-                    if(count > 0){
-                        _sectionSearch.found = true
-                    }
-                }
-            });
-        }
         req.session.myData.searchTerm = _searchTerm
         req.session.myData.search = _search
-        // console.log(_search)
+        
+        function doSearch(_searchWithin,_sectionSearch){
+            if(_searchWithin){
+                // Full string search
+                var _searchTermSafe = encodeURIComponent(_searchTerm.toUpperCase())
+                var _fullRegex = new RegExp(_searchTermSafe,"g");
+                var count = (_searchWithin.toUpperCase().match(_fullRegex) || []).length
+                _sectionSearch["results"][0].count = _sectionSearch["results"][0].count + count
+                if(count > 0){
+                    _sectionSearch.found = true
+                }
+                // Each string part search
+                _searchTermArray.forEach(function(searchWord,index) {
+                    if(searchWord.length > 2){
+                        var _splitRegex = new RegExp(searchWord.toUpperCase(),"g");
+                        var count = (_searchWithin.toUpperCase().match(_splitRegex) || []).length
+                        _sectionSearch["results"][index+1].count = _sectionSearch["results"][index+1].count + count
+                        if(count > 0){
+                            _sectionSearch.found = true
+                        }
+                    }
+                });
+            }
+        }
+
     }
 
 };
