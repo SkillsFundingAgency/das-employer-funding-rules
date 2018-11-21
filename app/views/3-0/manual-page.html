@@ -4,10 +4,10 @@
   GOV.UK Manual
 {% endblock %}
 
-{% set _thisManual = myData.manuals['providers-manual-original'].content %}
+{% set _thisManual = myData.manuals[myData.manual].content %}
 {% set section = {} %}
 {% for _section in _thisManual.sections %}
-    {% if myData.providerpage == _section.id %}
+    {% if myData.manualpage == _section.id %}
         {% set section = _section %}
     {% endif %}
 {% endfor %}
@@ -20,9 +20,11 @@
     {% include "./includes/manual-header.html" %}
       
     <ol class="breadcrumb-trail">
-        <li class="no-separator">Contents</li>
-        <!-- TODO breadcrumb -->
+        <li><a href="manual-home?manual={{myData.manual}}">Contents</a></li>
+        <li class="last-child">{{section.title|safe}}</li>
     </ol>
+
+    <!-- TODO add 'Employers and apprenticeships: things to check' section to 'employers-manual-original' -->
       
     <article aria-labelledby="manual-title" id="content">
         <div class="manual-body">

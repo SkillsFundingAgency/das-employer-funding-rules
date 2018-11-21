@@ -1,10 +1,23 @@
 {% set _manualHeaderTitle = _manualHeaderTitle or "Manual title" %}
-<div class="gem-c-contextual-breadcrumbs">
-    <!-- Rendering step by step nav breadcrumbs because there's 1 step by step -->
-    <div class="gem-c-step-nav-header">
-        <!-- TODO part of -->
-        <span class="gem-c-step-nav-header__part-of">Part of</span>
-        <a href="#" class="gem-c-step-nav-header__title">Funding rules for providers</a>
+<div class="gem-c-contextual-breadcrumbs" style="margin-top:-20px">
+    <div class="gem-c-breadcrumbs govuk-breadcrumbs" >
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item" aria-current="false">
+                <a class="govuk-breadcrumbs__link" aria-current="false" href="#">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="false">
+                <a class="govuk-breadcrumbs__link" aria-current="false" href="#">Education, training and skills</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="false">
+                <a class="govuk-breadcrumbs__link" aria-current="false" href="#">Further and higher education, skills and vocational training</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="false">
+                <a class="govuk-breadcrumbs__link" aria-current="false" href="#">Further education funding</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="false">
+                <a class="govuk-breadcrumbs__link" aria-current="false" href="#">Apprenticeships funding</a>
+            </li>
+        </ol>
     </div>
 </div>
 <header aria-labelledby="manual-title" class="">
@@ -12,22 +25,21 @@
         <h1 id="manual-title">{{_manualHeaderTitle}}</h1>
         <div class="gem-c-metadata" data-module="gem-toggle">
             <dl>
-            <dt class="gem-c-metadata__term">From:</dt>
-            <dd class="gem-c-metadata__definition">
-                <a href="https://www.gov.uk/government/organisations/education-and-skills-funding-agency">Education and Skills Funding Agency</a>
-            </dd>
-            <dt class="gem-c-metadata__term">Published:</dt>
-            <dd class="gem-c-metadata__definition"><time datetime="2015-10-01"> 1 October 2018</time></dd>
-            <dt class="gem-c-metadata__term">Updated:</dt>
-            <dd class="gem-c-metadata__definition">
-                <time datetime="2018-10-01">1 October 2018</time>, <a href="#">see all updates</a>
-            </dd>
+                <dt class="gem-c-metadata__term">From:</dt>
+                <dd class="gem-c-metadata__definition">
+                    <a href="#">Education and Skills Funding Agency</a>
+                </dd>
+                <dt class="gem-c-metadata__term">Published:</dt>
+                <dd class="gem-c-metadata__definition"><time datetime="2015-10-01"> 1 October 2018</time></dd>
+                <dt class="gem-c-metadata__term">Updated:</dt>
+                <dd class="gem-c-metadata__definition">
+                    <time datetime="2018-10-01">1 October 2018</time>, <a href="#">see all updates</a>
+                </dd>
             </dl>
         </div>
         <div class="in-manual-search">
             <form method="POST">
                 <label for="search-box">Search this manual</label>
-                <input type="hidden" name="filter_manual[]" value="">
                 <input id="search-box" class="in-manual-search-box" type="text" name="q">
                 <button type="submit">search</button>
             </form>
@@ -35,7 +47,7 @@
     </div>
     <div class="secondary">
         <div class="secondary-inner">
-            <p><a class="feedback" href="https://www.gov.uk/contact/govuk">Give feedback about this page</a></p>
+            <p><a class="feedback" href="#">Give feedback about this page</a></p>
         </div>
     </div>
 </header>

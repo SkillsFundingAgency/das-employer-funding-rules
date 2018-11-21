@@ -6,8 +6,8 @@ module.exports = function (router,_myData) {
         req.session.myData = JSON.parse(JSON.stringify(_myData))
         //Set version that myData was created on
         //req.session.myData.version = version
-        req.session.myData.providerpage = "provider-manual"
-        // req.session.myData.googleDestination = "generic"
+        req.session.myData.manual = "providers-manual-original"
+        req.session.myData.manualpage = "provider-manual"
     }
 
     //generic.js contains wildcard get and post requests. Useful for setting session data that we want available on any other routes file. also, so we dont have duplicate wildcard requests on individual routes files that might conflict with each other.
@@ -35,8 +35,8 @@ module.exports = function (router,_myData) {
         // res.locals.serviceNameOverride = res.locals.serviceName
 
         //Set any query string values
-        req.session.myData.providerpage = req.query.providerpage || req.session.myData.providerpage
-        // req.session.myData.googleDestination = req.query.googleDestination || req.session.myData.googleDestination
+        req.session.myData.manual = req.query.manual || req.session.myData.manual
+        req.session.myData.manualpage = req.query.manualpage || req.session.myData.manualpage
 
         next()
     });
@@ -48,37 +48,37 @@ module.exports = function (router,_myData) {
     });
 
     //
-    // PROVIDER MANUAL ORIGINAL
+    // MANUAL
     //
-    // Provider manual home
-    router.get('/' + version + '/provider-manual', function (req, res) {
-        res.render(version + '/provider-manual', {
+    // manual home
+    router.get('/' + version + '/manual-home', function (req, res) {
+        res.render(version + '/manual-home', {
             myData:req.session.myData
         });
     });
-    router.post('/' + version + '/provider-manual', function (req, res) {
-        fireSearch(req,res,"providers-manual-original")
-        res.redirect(301, '/' + version + '/provider-manual-search-results');
+    router.post('/' + version + '/manual-home', function (req, res) {
+        fireSearch(req,res,req.session.myData.manual)
+        res.redirect(301, '/' + version + '/manual-search-results');
     });
-    // Provider manual page
-    router.get('/' + version + '/provider-manual-page', function (req, res) {
-        res.render(version + '/provider-manual-page', {
+    // manual page
+    router.get('/' + version + '/manual-page', function (req, res) {
+        res.render(version + '/manual-page', {
             myData:req.session.myData
         });
     });
-    router.post('/' + version + '/provider-manual-page', function (req, res) {
-        fireSearch(req,res,"providers-manual-original")
-        res.redirect(301, '/' + version + '/provider-manual-search-results');
+    router.post('/' + version + '/manual-page', function (req, res) {
+        fireSearch(req,res,req.session.myData.manual)
+        res.redirect(301, '/' + version + '/manual-search-results');
     });
     // Search results
-    router.get('/' + version + '/provider-manual-search-results', function (req, res) {
-        res.render(version + '/provider-manual-search-results', {
+    router.get('/' + version + '/manual-search-results', function (req, res) {
+        res.render(version + '/manual-search-results', {
             myData:req.session.myData
         });
     });
-    router.post('/' + version + '/provider-manual-search-results', function (req, res) {
-        fireSearch(req,res,"providers-manual-original")
-        res.redirect(301, '/' + version + '/provider-manual-search-results');
+    router.post('/' + version + '/manual-search-results', function (req, res) {
+        fireSearch(req,res,req.session.myData.manual)
+        res.redirect(301, '/' + version + '/manual-search-results');
     });
 
     //

@@ -6,7 +6,8 @@ const router = express.Router()
 var _myData = {
     "manuals":
     {
-        "providers-manual-original": require(__dirname + '/data/providers-manual-original.json')
+        "providers-manual-original": require(__dirname + '/data/providers-manual-original.json'),
+        "employers-manual-original": require(__dirname + '/data/employers-manual-original.json')
     }
 }
 

@@ -4,7 +4,7 @@
   GOV.UK Manual
 {% endblock %}
 
-{% set _thisManual = myData.manuals['providers-manual-original'].content %}
+{% set _thisManual = myData.manuals[myData.manual].content %}
 
 {% block content %}
 
@@ -20,13 +20,12 @@
     <article aria-labelledby="manual-title" id="content">
         <div class="manual-body">
 
-            <p class="summary">{{_thisManual.intro|safe}}</p>
-            <p class="summary">{{_thisManual.interest|safe}}</p>
+            <p class="summary">{{_thisManual.intro|safe}} {{_thisManual.interest|safe}}</p>
 
             <ol class="section-list">
                 {% for section in _thisManual.sections %}
                 <li>
-                    <a class="" href="provider-manual-page?providerpage={{section.id}}"><span class="subsection-title-text">{{section.title|safe}}</span></a>
+                    <a class="" href="manual-page?manualpage={{section.id}}"><span class="subsection-title-text">{{section.title|safe}}</span></a>
                 </li>
                 {% endfor %}
             </ol>
@@ -37,6 +36,7 @@
     <div class="print-page">
         <a onclick="window.print();return false;" href="#">Print this page</a>
     </div>
+
 </div>
 
 {% endblock %}
