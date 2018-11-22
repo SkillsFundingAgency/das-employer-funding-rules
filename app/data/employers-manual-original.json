@@ -465,6 +465,83 @@
                         ]
                     }
                 ]
+            },
+            {
+                "id": "who-can-be-funded",
+                "title": "Who can be funded?",
+                "subsections": [
+                    {
+                        "type": "main",
+                        "parts": [
+                            {
+                                "id": "54",
+                                "content": " You can only use funds in your apprenticeship service account, or government- employer co-investment, for those who are eligible. You must give the main provider evidence of the individual’s eligibility. "
+                            },
+                            {
+                                "id": "55",
+                                "content": " To use funds in your apprenticeship service account or government-employer co-investment, the individual must: ",
+                                "subparts": [
+                                    {
+                                        "id": "55.1",
+                                        "content": "  Start their apprenticeship after the last Friday in June of the academic year in which they have their 16th birthday. "
+                                    },
+                                    {
+                                        "id": "55.2",
+                                        "content": "  Be able to complete the apprenticeship within the time they have available. If you know an individual is unable to complete the apprenticeship in the time they have available, they must not be funded. "
+                                    },
+                                    {
+                                        "id": "55.3",
+                                        "content": "  Not be undertaking another apprenticeship or be in receipt of any other DfE funding during their apprenticeship programme; this includes another apprenticeship or any other DfE funded FE/HE programme. Individuals on a sandwich placement as part of a degree programme must not undertake any part of an apprenticeship during this placement. "
+                                    },
+                                    {
+                                        "id": "55.4",
+                                        "content": "  Not be asked to contribute financially to the cost of training, on- programme or end-point assessment. This includes where the individual has completed the programme successfully or left the programme early. Costs include any co-investment or additional training and assessment costs, above the funding band, that you have paid directly to the main provider where this is part of the agreed apprenticeship. "
+                                    },
+                                    {
+                                        "id": "55.5",
+                                        "content": "  Not use a student loan to pay for their apprenticeship. Where an individual transfers to an apprenticeship from a full-time further education or higher education course, and that course has been funded by a student loan, the loan must be terminated. "
+                                    },
+                                    {
+                                        "id": "55.6",
+                                        "content": "  Spend at least 50% of their working hours in England over the duration of the apprenticeship. You must make separate arrangements with the relevant devolved administration if you are planning to deliver apprenticeships to individuals who spend more than 50% of their working hours in a devolved administration over the duration of their apprenticeship, including time spent on off-the-job training. Refer to Annex A (paragraph E255) for exceptions to this rule. "
+                                    },
+                                    {
+                                        "id": "55.7",
+                                        "content": "  Have the right to work in England. "
+                                    },
+                                    {
+                                        "id": "55.8",
+                                        "content": "  Have an eligible residency status (information can be found in the residency eligibility section in Annex A). "
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "56",
+                                "content": " You can only use funds from your apprenticeship service account or employer- government co-investment for apprentices employed by you or a connected company or charity as defined by HMRC. You must provide evidence of employment to the main provider. This also applies where the apprentice is funded by a transfer of funds from another employer. "
+                            },
+                            {
+                                "id": "57",
+                                "content": " We will fund an apprentice to undertake an apprenticeship at a higher level than a qualification they already hold, including a previous apprenticeship. "
+                            },
+                            {
+                                "id": "58",
+                                "content": " We will fund an apprentice to undertake an apprenticeship at the same or lower level than a qualification they already hold, if the apprenticeship will allow the individual to acquire substantive new skills and you can evidence that the content of the training is materially different from any prior qualification or a previous apprenticeship. "
+                            },
+                            {
+                                "id": "59",
+                                "content": " The age of the apprentice on the day they start their apprenticeship will be used for all age-based eligibility criteria for that apprenticeship. "
+                            },
+                            {
+                                "id": "60",
+                                "content": " An apprentice’s eligibility will not change during the apprenticeship, unless their employment status also changes. "
+                            },
+                            {
+                                "id": "61",
+                                "content": " If an apprentice is made redundant, we will continue to fund their training even if they cannot find another employer. Apprentices who are made redundant within six months of their final day will be funded to completion. We will also fund apprentices’ training for 12 weeks where they are made redundant more than six months from their final day, while they seek a further apprenticeship agreement (see paragraph E15.2). "
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
