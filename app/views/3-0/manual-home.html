@@ -25,7 +25,7 @@
             <ol class="section-list">
                 {% for section in _thisManual.sections %}
                 <li>
-                    <a class="" href="manual-page?manualpage={{section.id}}"><span class="subsection-title-text">{{section.title|safe}}</span></a>
+                    <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}"><span class="subsection-title-text">{{section.title|safe}}</span></a>
                 </li>
                 {% endfor %}
             </ol>
