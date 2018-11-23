@@ -4,6 +4,7 @@
   GOV.UK Manual
 {% endblock %}
 
+{% set _thisManualType = myData.manuals[myData.manual].type %}
 {% set _thisManual = myData.manuals[myData.manual].content %}
 {% set section = {} %}
 {% for _section in _thisManual.sections %}
@@ -11,6 +12,28 @@
         {% set section = _section %}
     {% endif %}
 {% endfor %}
+
+{% set _rulePrefix = "P" %}
+{% if _thisManualType == "employer" %}
+    {% set _rulePrefix = "E" %}
+{% endif %}
+
+{% block pageStyles %}
+<style>
+    .rule-prefix,
+    .rule-content {
+        display: block;
+        /* vertical-align: top; */
+    }
+    .rule-prefix {
+        /* width: 12%; */
+    }
+    .rule-content {
+        /* width: 88%; */
+    }
+</style>
+{% endblock %}
+
 
 {% block content %}
 
@@ -67,20 +90,20 @@
 
                                     {% if section.id == "glossary" %}
                                         <h3 class="govuk-heading-s">{{part.title|safe}}</h3>
-                                        <p class="govuk-body">{{part.content|safe}}</p>
+                                        <p class="govuk-body">{{part.content|safe|trim}}</p>
                                     {% else %}
                                         {% if part.type == "header" %}
-                                        <h3 class="govuk-heading-s">{{part.content|safe}}</h3>
+                                        <h3 class="govuk-heading-s">{{part.content|safe|trim}}</h3>
                                         {% elif part.type == "block" %}
                                         <h3 class="govuk-heading-s">{{part.title|safe}}</h3>
                                         <p class="govuk-body">
-                                            {{part.content|safe}}
+                                            {{part.content|safe|trim}}
                                         </p>
                                         {% elif part.type == "table1" %}
                                         <!-- TODO render table from page 61 here -->
                                         {% else %}
                                         <p class="govuk-body">
-                                            <span class="govuk-!-font-weight-bold">P{{part.id|safe}}.</span> {{part.content|safe}}
+                                            <span class="govuk-!-font-weight-bold rule-prefix">{{_rulePrefix}}{{part.id|safe}}</span><span class="rule-content">{{part.content|safe|trim}}</span>
                                         </p>
                                         {% endif %}
                                     {% endif %}
@@ -89,17 +112,17 @@
                                     {% for subpart in part.subparts %}
                                     
                                         {% if subpart.type == "list" %}
-                                        <div style="margin-left: 20px">{{subpart.content|safe}}</div>
+                                        <div style="margin-left: 30px">{{subpart.content|safe|trim}}</div>
                                         {% else %}
-                                        <p class="govuk-body" style="margin-left: 20px"><span class="govuk-!-font-weight-bold">P{{subpart.id|safe}}.</span> {{subpart.content|safe}}</p>
+                                        <p class="govuk-body" style="margin-left: 30px"><span class="govuk-!-font-weight-bold rule-prefix">{{_rulePrefix}}{{subpart.id|safe}}</span><span class="rule-content">{{subpart.content|safe|trim}}</span></p>
                                         {% endif %}
 
                                         <!-- Sub Sub Parts e.g. 19.1.1 -->
                                         {% for subsubpart in subpart.subsubparts %}
                                             {% if subsubpart.type == "list" %}
-                                            <div style="margin-left: 40px">{{subsubpart.content|safe}}</div>
+                                            <div style="margin-left: 60px">{{subsubpart.content|safe|trim}}</div>
                                             {% else %}
-                                            <p class="govuk-body" style="margin-left: 40px"><span class="govuk-!-font-weight-bold">P{{subsubpart.id|safe}}.</span> {{subsubpart.content|safe}}</p>
+                                            <p class="govuk-body" style="margin-left: 60px"><span class="govuk-!-font-weight-bold rule-prefix">{{_rulePrefix}}{{subsubpart.id|safe}}</span><span class="rule-content">{{subsubpart.content|safe|trim}}</span></p>
                                             {% endif %}
                                         {% endfor %}
 
@@ -120,7 +143,7 @@
                     <p class="govuk-body-s">Footnotes</p>
                     <ul class="govuk-list govuk-list--bullet govuk-body-s">
                     {% for footnote in section.footnotes %}
-                        <li><sup class="">{{footnote.id|safe}}</sup> {{footnote.content|safe}}</li>
+                        <li><sup class="">{{footnote.id|safe}}</sup> {{footnote.content|safe|trim}}</li>
                     {% endfor %}
                     </ul>
                 </div>
