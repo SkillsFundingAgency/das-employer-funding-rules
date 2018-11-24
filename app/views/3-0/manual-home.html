@@ -4,6 +4,7 @@
   GOV.UK Manual
 {% endblock %}
 
+{% set _thisManualType = myData.manuals[myData.manual].type %}
 {% set _thisManual = myData.manuals[myData.manual].content %}
 
 {% block content %}
@@ -21,6 +22,20 @@
         <div class="manual-body">
 
             <p class="summary">{{_thisManual.intro|safe}} {{_thisManual.interest|safe}}</p>
+            
+            <div class="download-manual govuk-inset-text">
+                <p class="govuk-body">
+                        You can
+                    {% if _thisManualType == "employer" %}
+                    <a href="/public/downloads/1819_Employer_Rules_v1.0.pdf" target="_blank" class="govuk-link govuk-link--no-visited-state">
+                    {% else %}
+                    <a href="/public/downloads/1819_Provider_Rules_v1.0.pdf" target="_blank" class="govuk-link govuk-link--no-visited-state">
+                    {% endif %}
+                    <!-- <a href="manual-pdf?manual={{myData.manual}}" target="_blank" class="govuk-link govuk-link--no-visited-state"> -->
+                        download a copy of this manual as a PDF</a>.
+                </p>
+                <p class="govuk-body">If you would like this manual in another format please email <a href="#">[email address here]</a>.</p>
+            </div>
 
             <ol class="section-list">
                 {% for section in _thisManual.sections %}
@@ -32,6 +47,11 @@
             
         </div>
     </article>
+
+    <!-- <div class="download-manual">
+        <p class="govuk-body"><a href="manual-pdf?manual={{myData.manual}}" target="_blank" class="govuk-link govuk-link--no-visited-state">Download this manual (PDF, 250KB)</a></p>
+        <p class="govuk-body">If you would like this manual in another format please email <a href="#">email address here</a>.</p>
+    </div> -->
             
     <div class="print-page">
         <a onclick="window.print();return false;" href="#">Print this page</a>
