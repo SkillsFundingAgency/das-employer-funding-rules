@@ -1,68 +1,430 @@
 @include govuk-media-query($media-type: print) {
+
+    // Core gov print 
     a {
-        text-decoration: none;
+        text-decoration: none
     }
     
-    // hide all the unnecessary things
-    .alpha-label,
-    .breadcrumb-trail,
-    .js-title-controls-wrap,
-    .print-page,
-    .secondary .feedback,
-    .in-manual-search {
-        display: none;
+    a[href^="/"]:after {
+        content: " (https://www.gov.uk" attr(href) ")"
     }
     
-    .primary {
-        h1 {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold
+    }
+    
+    h2, h3, h4, p, ul {
+        orphans: 3;
+        widows: 3
+    }
+    
+    h2, h3, h4 {
+        page-break-after: avoid
+    }
+    
+    h2 {
+        font-family: sans-serif;
+        font-weight: 700;
+        text-transform: none;
+        font-size: 14pt;
+        line-height: 1.3157894737;
+        padding-top: 7pt
+    }
+    
+    h3 {
+        font-family: sans-serif;
+        font-weight: 700;
+        text-transform: none;
+        font-size: 12pt;
+        line-height: 1.25
+    }
+    
+    h4 {
+        font-family: sans-serif;
+        font-weight: 700;
+        text-transform: none;
+        font-size: 11pt;
+        line-height: 1.4285714286
+    }
+    
+    p {
+        font-family: sans-serif;
+        font-weight: 400;
+        text-transform: none;
+        font-size: 11pt;
+        line-height: 1.4285714286
+    }
+    
+    ul, ol {
+        font-family: sans-serif;
+        font-weight: 400;
+        text-transform: none;
+        font-size: 11pt;
+        line-height: 1.4285714286;
+        padding-left: 26pt
+    }
+    
+    ul {
+        list-style: disc
+    }
+    
+    ol {
+        list-style: decimal
+    }
+    
+    li {
+        line-height: 1.5
+    }
+    
+    li p {
+        margin: 0
+    }
+    
+    figure {
+        margin: 15px 0
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 15px 0
+    }
+    
+    table th, table td {
+        border: 1pt solid #bfc1c3;
+        padding: 10px;
+        text-align: left
+    }
+    
+    table caption {
+        font-family: sans-serif;
+        font-weight: 400;
+        text-transform: none;
+        font-size: 14pt;
+        line-height: 1.3157894737;
+        margin: 15px 0
+    }
+    
+    .dont-print, #global-header #search, #global-header .search-toggle,
+    #global-header .header-proposition, #global-breadcrumb, #global-browser-prompt,
+    #user-satisfaction-survey, .print-link {
+        display: none
+    }
+    
+    // Manuals print
+    a {
+        text-decoration: none
+    }
+    
+    .alpha-label, .breadcrumb-trail, .js-title-controls-wrap, .print-page,
+    .secondary .feedback, .in-manual-search {
+        display: none
+    }
+    
+    .primary h1 {
         margin: 0 0 10px;
         padding: 0 0 10px;
-        font-weight: bold;
-        }
+        font-weight: bold
+    }
     
-        dl {
+    .primary dl {
         float: left;
         margin-top: 0;
-        width: 100%;
+        width: 100%
+    }
     
-        dt {
-            min-width: 100px;
-            float: left;
+    .primary dl dt {
+        min-width: 100px;
+        float: left
+    }
     
-            &:after {
-            content: ":";
-            }
-        }
+    .primary dl dt:after {
+        content: ":"
+    }
     
-        dd {
-            font-weight: bold;
-            margin-left: 0;
+    .primary dl dd {
+        font-weight: bold;
+        margin-left: 0
+    }
     
-            a:after {
-            content: "";
-            }
-        }
-        }
+    .primary dl dd a:after {
+        content: ""
     }
     
     .manual-body {
-        clear: both;
+        clear: both
+    }
     
-        .subsection-title-text {
-        font-weight: bold;
-        }
+    .manual-body .subsection-title-text {
+        font-weight: bold
     }
     
     .govspeak {
-        width: 75%;
+        width: 75%
     }
     
     .js-openable {
-        margin-bottom: 30px;
-    
-        h2 {
-        @include govuk-font(16);
-        font-weight: bold;
-        }
+        margin-bottom: 30px
     }
+    
+    .js-openable h2 {
+        font-family: sans-serif;
+        font-weight: 400;
+        text-transform: none;
+        font-size: 12pt;
+        line-height: 1.25;
+        font-weight: bold
+    }
+    
+    .gem-c-contents-list__list-item--numbered .gem-c-contents-list__link {
+        display: table
+    }
+    
+    .gem-c-contents-list__number, .gem-c-contents-list__numbered-text {
+        display: table-cell
+    }
+    
+    .gem-c-contents-list__number {
+        min-width: 1.5em
+    }
+    
+    .gem-c-contents-list__numbered-text {
+        padding-left: 0.3em
+    }
+    
+    .direction-rtl .gem-c-contents-list__numbered-text {
+        padding-left: 0;
+        padding-right: 0.3em
+    }
+    
+    .gem-c-contents-list__list, .gem-c-contents-list__nested-list {
+        padding-left: 0;
+        margin-left: 0
+    }
+    
+    .gem-c-contents-list__list-item--dashed {
+        margin-left: 15px;
+        list-style-type: disc
+    }
+    
+    .gem-c-contents-list__list-item--numbered, .gem-c-contents-list__list-item--parent {
+        list-style-type: none
+    }
+    
+    .gem-c-feedback {
+        display: none
+    }
+    
+    .gem-c-govspeak-html-publication .govuk-sticky-element {
+        display: none
+    }
+    
+    .gem-c-govspeak .media-player {
+        display: none
+    }
+    
+    .gem-c-govspeak .info-notice, .gem-c-govspeak .help-notice, .gem-c-govspeak .call-to-action {
+        margin: 15px 0;
+        padding: 0 15px;
+        border: 1pt solid #bfc1c3
+    }
+    
+    .gem-c-govspeak .help-notice p {
+        font-weight: 700
+    }
+    
+    .gem-c-govspeak .fraction img {
+        display: inline-block;
+        margin-bottom: -7px
+    }
+    
+    .gem-c-govspeak .attachment {
+        margin: 30px 0
+    }
+    
+    .gem-c-govspeak .attachment:first-child {
+        margin-top: 0
+    }
+    
+    .gem-c-govspeak .attachment .attachment-thumb {
+        display: none
+    }
+    
+    .gem-c-govspeak .attachment .attachment-details .download {
+        display: block
+    }
+    
+    .gem-c-govspeak .attachment .accessibility-warning h2 {
+        font-family: sans-serif;
+        font-weight: 400;
+        text-transform: none;
+        font-size: 11pt;
+        line-height: 1.4285714286
+    }
+    
+    .gem-c-govspeak .attachment .accessibility-warning .toggler {
+        display: none
+    }
+    
+    .gem-c-govspeak .footnotes {
+        border-top: 1px solid #0b0c0c
+    }
+    
+    .gem-c-govspeak .legislative-list {
+        padding-left: 0
+    }
+    
+    .gem-c-govspeak .legislative-list, .gem-c-govspeak .legislative-list ol {
+        list-style: none
+    }
+    
+    .gem-c-share-links {
+        display: none
+    }
+    
+    .gem-c-step-nav-header__part-of {
+        display: block
+    }
+    
+    .gem-c-step-nav-header__title {
+        font-family: sans-serif;
+        font-weight: 700;
+        text-transform: none;
+        font-size: 16pt;
+        line-height: 1.25
+    }
+    
+    .gem-c-step-nav-header__skip-link {
+        display: none
+    }
+    
+    .gem-c-step-nav:not(.gem-c-step-nav--large), .gem-c-step-nav__controls,
+    .gem-c-step-nav__toggle-link, .gem-c-step-nav__help {
+        display: none
+    }
+    
+    .gem-c-step-nav {
+        position: relative
+    }
+    
+    .gem-c-step-nav:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 17.5px;
+        width: 3px;
+        height: 100%;
+        margin-left: -1.5px;
+        border-left: solid 3px #bfc1c3
+    }
+    
+    .gem-c-step-nav:after {
+        content: "";
+        position: absolute;
+        z-index: 6;
+        bottom: 0;
+        left: 0;
+        margin-left: 8.75px;
+        width: 17.5px;
+        height: 0;
+        border-bottom: solid 3px #bfc1c3
+    }
+    
+    .gem-c-step-nav__step {
+        position: relative
+    }
+    
+    .gem-c-step-nav__steps {
+        padding: 0;
+        list-style: none
+    }
+    
+    .gem-c-step-nav__circle {
+        font-family: sans-serif;
+        font-weight: bold;
+        text-transform: none;
+        font-size: 19px;
+        line-height: 30px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: 35px;
+        background: #ffffff;
+        border-radius: 100px;
+        text-align: center
+    }
+    
+    .gem-c-step-nav__circle--number {
+        border: solid 3px #bfc1c3
+    }
+    
+    .gem-c-step-nav__step, .gem-c-step-nav__paragraph, .gem-c-step-nav__links {
+        font-family: sans-serif;
+        font-weight: 400;
+        text-transform: none;
+        font-size: 12pt;
+        line-height: 1.25;
+        padding-bottom: 1em
+    }
+    
+    .gem-c-step-nav__step {
+        position: relative;
+        padding-left: 60px
+    }
+    
+    .gem-c-step-nav__title {
+        font-family: sans-serif;
+        font-weight: 700;
+        text-transform: none;
+        font-size: 14pt;
+        line-height: 1.3157894737;
+        margin: 0 0 0.5em 0;
+        padding: 0
+    }
+    
+    .gem-c-step-nav__button--title {
+        font-family: sans-serif;
+        font-weight: 700;
+        text-transform: none;
+        font-size: 14pt;
+        line-height: 1.3157894737;
+        padding: 0;
+        border: 0;
+        background: none
+    }
+    
+    .gem-c-step-nav__context:before {
+        content: " \2013  "
+    }
+    
+    .gem-c-step-nav__panel-link--active {
+        font-weight: bold
+    }
+    
+    .gem-c-step-nav__links {
+        padding-left: 0;
+        list-style: none
+    }
+    
+    .gem-c-step-nav__links--choice {
+        padding-left: 30px;
+        list-style: disc
+    }
+    
+    .gem-c-step-nav__link {
+        margin-bottom: 0.3em
+    }
+    
+    .gem-c-title__context {
+        margin: 0
+    }
+    
+    .gem-c-title__text {
+        margin-top: 0
+    }
+    
+    
+    
 }
