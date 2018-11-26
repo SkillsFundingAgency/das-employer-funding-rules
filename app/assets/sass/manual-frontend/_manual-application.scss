@@ -273,6 +273,20 @@ header .gem-c-metadata {
       }
     }
   }
+.call-to-action {
+    margin: 2em 0;
+    background-color: #dee0e2;
+    padding: 2em
+}
+
+.call-to-action:first-child {
+    margin-top: 0
+}
+
+.call-to-action p:last-child, .call-to-action ul:last-child,
+.call-to-action ol:last-child {
+    margin-bottom: 0
+}
 
   .collapsible-subsections .js-subsection-title {
     @include govuk-font($size: 19, $weight: bold);

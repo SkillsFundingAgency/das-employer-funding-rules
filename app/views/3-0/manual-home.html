@@ -23,19 +23,36 @@
 
             <p class="summary">{{_thisManual.intro|safe}} {{_thisManual.interest|safe}}</p>
             
-            <div class="download-manual govuk-inset-text">
-                <p class="govuk-body">
-                        You can
-                    {% if _thisManualType == "employer" %}
-                    <a href="/public/downloads/1819_Employer_Rules_v1.0.pdf" target="_blank" class="govuk-link govuk-link--no-visited-state">
-                    {% else %}
-                    <a href="/public/downloads/1819_Provider_Rules_v1.0.pdf" target="_blank" class="govuk-link govuk-link--no-visited-state">
-                    {% endif %}
-                    <!-- <a href="manual-pdf?manual={{myData.manual}}" target="_blank" class="govuk-link govuk-link--no-visited-state"> -->
-                        download a copy of this manual as a PDF</a>.
-                </p>
-                <p class="govuk-body">If you would like this manual in another format please email <a href="#">[email address here]</a>.</p>
+            <div class="call-to-action">
+                <p class="govuk-body"><a href="rules-list" class="govuk-link govuk-link--no-visited-state">Download this manual in another format</a>.</p>
             </div>
+
+            <!-- <div class="download-manual govuk-inset-text">
+                <p class="govuk-body">
+                    You can download a copy of this manual as a:
+                </p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                        {% if _thisManualType == "employer" %}
+                        <a href="/public/downloads/1819_Employer_Rules_v1.0.pdf" target="_blank" class="govuk-link govuk-link--no-visited-state">
+                        {% else %}
+                        <a href="/public/downloads/1819_Provider_Rules_v1.0.pdf" target="_blank" class="govuk-link govuk-link--no-visited-state">
+                        {% endif %}
+                        PDF, 1.4MB, 70 pages
+                        </a>
+                    </li>
+                    <li>
+                        {% if _thisManualType == "employer" %}
+                        <a href="/public/downloads/1819_Employer_Rules_v1.0.pdf" target="_blank" class="govuk-link govuk-link--no-visited-state">
+                        {% else %}
+                        <a href="/public/downloads/1819_Provider_Rules_v1.0.pdf" target="_blank" class="govuk-link govuk-link--no-visited-state">
+                        {% endif %}
+                        RTF, 1.1MB, 72 pages
+                        </a>
+                    </li>
+                </ul>
+                <p class="govuk-body">If you need this document in a different format, email <a href="#">[email address here]</a>.</p>
+            </div> -->
 
             <ol class="section-list">
                 {% for section in _thisManual.sections %}
