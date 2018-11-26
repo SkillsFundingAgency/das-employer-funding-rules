@@ -191,4 +191,12 @@ module.exports = function (router,_myData) {
 
     }
 
+
+    // Updates
+    router.get('/' + version + '/manual-updates', function (req, res) {
+        res.render(version + '/manual-updates', {
+            myData:req.session.myData
+        });
+    });
+
 };

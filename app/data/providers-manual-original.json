@@ -12,6 +12,14 @@
             {
                 "id": "intro-and-purpose",
                 "title": "Introduction and purpose of the document",
+                "updates": [
+                    {
+                        "content": "Reference to updated performance-management rules included. P14"
+                    },
+                    {
+                        "content": "Include section referring to ‘relevant legislation’. Restructure: section on ‘recovery of funds’ incorporated. P15-16"
+                    }
+                ],
                 "subsections": [
                     {
                         "type": "main",
@@ -94,6 +102,38 @@
             {
                 "id": "what-apprenticeship",
                 "title": "What is an apprenticeship?",
+                "updates": [
+                    {
+                        "content": "Restructure: changes made for ease of understanding, including incorporation of ‘commitment statement’ into this section."
+                    }, 
+                    {
+                        "title": "A job with training",
+                        "content": "New terminology: a job with training replaces the term genuine job."
+                    }, 
+                    {
+                        "content": "Clarification: what a ‘job with training’ should be. P17-22"
+                    },
+                    {
+                        "content": "Rule change: the requirement for the apprentice to stay with the employer after the apprenticeship has been achieved has been removed. 17/18 v6 P30-31"
+                    },
+                    {
+                        "title": "Employment contract",
+                        "content": "Restructure: of the section on the apprentice’s contract of service and relevant exceptions. P23"
+                    },
+                    {
+                        "title": "Off-the-job training",
+                        "content": "Clarification: off-the-job training is a statutory requirement for an English apprenticeship. P27"
+                    },
+                    {
+                        "content": "Clarification: that 20% off-the-job training should cover the planned duration of the training period within the apprenticeship, which for standards is the practical period (which ends at the gateway for end-point assessment (called the final day)). P31"
+                    },
+                    {
+                        "content": "New rule: statutory leave should be deducted when calculating the 20% off-the- job requirement for all apprentices who begin their programme from 1 August 2018. P32"
+                    },
+                    {
+                        "content": "Clarification: planned off-the-job training must be set out in the apprentice’s commitment statement and it should be clear which components have been used to calculate the 20% requirement. P33"
+                    }
+                ],
                 "footnotes": [
                     {
                         "id": "1",
