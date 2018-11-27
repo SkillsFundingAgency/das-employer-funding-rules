@@ -7,30 +7,6 @@ GOV.UK Manual
 {% set _thisManualType = myData.manuals[myData.manual].type %}
 {% set _thisManual = myData.manuals[myData.manual].content %}
 
-{% set _rulePrefix = "P" %}
-{% if _thisManualType == "employer" %}
-{% set _rulePrefix = "E" %}
-{% endif %}
-
-{% block pageStyles %}
-<style>
-    .rule-prefix,
-    .rule-content {
-        display: block;
-        /* vertical-align: top; */
-    }
-
-    .rule-prefix {
-        /* width: 12%; */
-    }
-
-    .rule-content {
-        /* width: 88%; */
-    }
-</style>
-{% endblock %}
-
-
 {% block content %}
 
 <div id="manuals-frontend" class="manuals-frontend-body inner-block">
@@ -66,15 +42,16 @@ GOV.UK Manual
                                         {% for update in section.updates %}
                                         <dt>
                                             {% if loop.index == 1 %}
-                                            <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state">{{section.title}}</a><br><br>
-                                            <span class="govuk-!-font-weight-bold">General</span>
+                                            <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">{{section.title}}</a>
+                                            <br><br>
                                             {% endif %}
                                             {% if update.title %}
-                                            <span class="govuk-!-font-weight-bold">{{update.title}}</span>
+                                            <span class="govuk-!-font-weight-bold">{{update.title}}</span><br><br>
                                             {% endif %}
                                         </dt>
                                         <dd>
-                                            {{update.content}}{% if update.rule %} {{_rulePrefix}}{{update.rule}}{% endif %}
+                                            {% if update.rule %}<span class="">{{update.rule}}</span> - {% endif %}
+                                            {{update.content}}
                                         </dd>
                                         {% endfor %}
                                     {% endfor %}
