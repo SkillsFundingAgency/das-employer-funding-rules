@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Manual
+{% endblock %}
+
+{% block pageStyles %}
+<style>
+.svg-container svg,
+.html-container,
+.flow-chart {
+    width: 100%;
+    margin-bottom: 60px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Flowcharts</h1>
+
+        <!-- jpg -->
+        <h2 class="govuk-heading-m">1 - jpeg</h2>
+        <img class="flow-chart" alt="Determine English and maths training - flow chart" src="/public/images/english-maths-flow.jpg" >
+
+        <!-- html viewer -->
+        <h2 class="govuk-heading-m">2 - html (auto generated) - draw.io viewer - requires js</h2>
+        <div class="html-container">
+            {% include "./includes/english-maths.html" %}
+        </div>
+
+        <!-- svg -->
+        <h2 class="govuk-heading-m">3 - svg (auto generated)</h2>
+        <div class="svg-container">
+            {% include "./includes/english-maths.svg" %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
