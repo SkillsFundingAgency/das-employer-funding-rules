@@ -17,3 +17,22 @@ $govuk-global-styles: true;
 // TODO import generic gov styles here
 @import 'manual-frontend/manual-application';
 @import 'manual-frontend/manual-application-print';
+
+/* SVG */
+.svg-1 text {
+    color: #0b0c0c;
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.svg-1 g g:hover path,
+.svg-1 g g:hover rect {
+    stroke-width: 4px;
+    cursor: pointer;
+}

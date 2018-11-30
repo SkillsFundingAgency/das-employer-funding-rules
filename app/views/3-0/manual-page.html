@@ -84,6 +84,11 @@
                                         {{section.title|safe}}
                                     {% endif %}
                                 </h2>
+
+                                <!-- Flow chart -->
+                                {% if subsection.id == "support-english-maths-training" %}
+                                {% include "./includes/english-maths-flow-fixed.svg" %}
+                                {% endif %}
             
                                 <!-- Parts e.g. 19 -->
                                 {% for part in subsection.parts %}
