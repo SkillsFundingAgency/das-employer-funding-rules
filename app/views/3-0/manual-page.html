@@ -86,9 +86,11 @@
                                 </h2>
 
                                 <!-- Flow chart -->
-                                {% if subsection.id == "support-english-maths-training" %}
-                                    <h3 class="govuk-heading-s">Check what English and maths training an apprentice should undertake.</h3>
-                                    {% include "./includes/english-maths-flow-fixed.svg" %}
+                                {% if myData.svgflow == "true" %}
+                                    {% if subsection.id == "support-english-maths-training" %}
+                                        <h3 class="govuk-heading-s">Check what English and maths training an apprentice should undertake.</h3>
+                                        {% include "./includes/english-maths-flow-fixed.svg" %}
+                                    {% endif %}
                                 {% endif %}
             
                                 <!-- Parts e.g. 19 -->
