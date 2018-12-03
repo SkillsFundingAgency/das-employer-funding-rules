@@ -9,6 +9,7 @@ module.exports = function (router,_myData) {
         req.session.myData.manual = "providers-manual-original"
         req.session.myData.manualpage = "provider-manual"
         req.session.myData.svgflow = "false"
+        req.session.myData.textflow = "false"
     }
 
     //generic.js contains wildcard get and post requests. Useful for setting session data that we want available on any other routes file. also, so we dont have duplicate wildcard requests on individual routes files that might conflict with each other.
@@ -39,6 +40,7 @@ module.exports = function (router,_myData) {
         req.session.myData.manual = req.query.manual || req.session.myData.manual
         req.session.myData.manualpage = req.query.manualpage || req.session.myData.manualpage
         req.session.myData.svgflow = req.query.svgflow || req.session.myData.svgflow
+        req.session.myData.textflow = req.query.textflow || req.session.myData.textflow
 
         next()
     });
