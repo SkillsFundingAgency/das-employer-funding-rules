@@ -37,26 +37,27 @@ GOV.UK Manual
                             <h2>
                                 31 July 2018
                             </h2>
-                                <dl class="updates-list">
-                                    {% for section in _thisManual.sections %}
-                                        {% for update in section.updates %}
-                                        <dt>
-                                            {% if loop.index == 1 %}
-                                            <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">{{section.title}}</a>
-                                            <br><br>
-                                            {% endif %}
-                                            {% if update.title %}
-                                            <span class="govuk-!-font-weight-bold">{{update.title}}</span><br><br>
-                                            {% endif %}
-                                        </dt>
-                                        <dd>
-                                            {% if update.rule %}<span class="">{{update.rule}}</span> - {% endif %}
-                                            {{update.content}}
-                                        </dd>
-                                        {% endfor %}
+                            <p class="govuk-!-font-size-24">These are the amendments that were made to {{_thisManual.title}} August 2017 to July 2018.</p>
+                            <br>
+                            <dl class="updates-list">
+                                {% for section in _thisManual.sections %}
+                                    {% for update in section.updates %}
+                                    <dt>
+                                        {% if loop.index == 1 %}
+                                        <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">{{section.title}}</a>
+                                        <br><br>
+                                        {% endif %}
+                                        {% if update.title %}
+                                        <span class="govuk-!-font-weight-bold">{{update.title}}</span><br><br>
+                                        {% endif %}
+                                    </dt>
+                                    <dd>
+                                        {% if update.rule %}<span class="">{{update.rule}}</span> - {% endif %}
+                                        {{update.content}}
+                                    </dd>
                                     {% endfor %}
-                                </dl>
-
+                                {% endfor %}
+                            </dl>
                         </div>
                     </div>
                 </div>

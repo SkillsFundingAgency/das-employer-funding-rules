@@ -25,7 +25,7 @@
             
             <div class="call-to-action govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
-                    <p class="govuk-body"><a href="rules-list" class="govuk-link govuk-link--no-visited-state">View all formats of apprenticeship funding rules 2018 to 2019</a>.</p>
+                    <p class="govuk-body"><a href="rules-list" class="govuk-link govuk-link--no-visited-state">View the rules in alternative formats (including PDF)</a> which you can download, print and view them offline.</p>
                 </div>
             </div>
 
@@ -64,7 +64,9 @@
             <ol class="section-list">
                 {% for section in _thisManual.sections %}
                 <li>
-                    <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}"><span class="subsection-title-text">{{section.title|safe}}</span></a>
+                    <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}">
+                        <span class="subsection-title-text">{{section.title|safe}}</span>
+                    </a>
                 </li>
                 {% endfor %}
             </ol>
