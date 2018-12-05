@@ -7,7 +7,8 @@ var _myData = {
     "manuals":
     {
         "providers-manual-original": require(__dirname + '/data/providers-manual-original.json'),
-        "employers-manual-original": require(__dirname + '/data/employers-manual-original.json')
+        "employers-manual-original": require(__dirname + '/data/employers-manual-original.json'),
+        "providers-manual-2": require(__dirname + '/data/providers-manual-2.json')
     }
 }
 

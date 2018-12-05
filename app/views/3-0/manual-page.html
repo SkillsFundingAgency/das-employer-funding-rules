@@ -19,24 +19,6 @@
 {% endif %}
 
 {% block pageStyles %}
-<style>
-    .rule-prefix,
-    .rule-content {
-        display: block;
-        /* vertical-align: top; */
-    }
-    .rule-prefix {
-        /* width: 12%; */
-    }
-    .rule-content {
-        /* width: 88%; */
-    }
-    /* Decion tree */
-    .call-to-action ol,
-    .call-to-action ul {
-        /* margin-top: 0; */
-    }
-</style>
 {% endblock %}
 
 
@@ -170,40 +152,92 @@
                                         <p class="govuk-body">{{part.content|safe|trim}}</p>
                                     {% else %}
                                         {% if part.type == "header" %}
-                                        <h3 class="govuk-heading-s">{{part.content|safe|trim}}</h3>
+                                            <h3 class="govuk-heading-m">{{part.content|safe|trim}}</h3>
                                         {% elif part.type == "block" %}
-                                        <h3 class="govuk-heading-s">{{part.title|safe}}</h3>
-                                        <p class="govuk-body">
-                                            {{part.content|safe|trim}}
-                                        </p>
+                                            <h3 class="govuk-heading-s">{{part.title|safe}}</h3>
+                                            <p class="govuk-body">
+                                                {{part.content|safe|trim}}
+                                            </p>
                                         {% elif part.type == "table1" %}
-                                        <!-- TODO render table from page 61 here -->
+                                            <!-- TODO render table from page 61 here -->
+                                        {% elif part.type == "intro" %}
+                                            <div class="call-to-action">
+                                            <!-- <div class="govuk-inset-text"> -->
+                                                <p class="govuk-body">{{part.content|safe|trim}}</p>
+                                                <!-- CLOSE TAG FURTHER DOWN AFTER SUBPARTS -->
+                                        {% elif part.type == "additional" %}
+                                            <details class="govuk-details">
+                                                <summary class="govuk-details__summary">
+                                                    <span class="govuk-details__summary-text">
+                                                    {{part.title|safe|trim}}
+                                                    </span>
+                                                </summary>
+                                                <div class="govuk-details__text">
+                                                    {{part.content|safe|trim}}
+                                                <!-- CLOSE TAGS FURTHER DOWN AFTER SUBPARTS -->
                                         {% else %}
-                                        <p class="govuk-body">
-                                            <span class="govuk-!-font-weight-bold rule-prefix">{{_rulePrefix}}{{part.id|safe}}</span><span class="rule-content">{{part.content|safe|trim}}</span>
-                                        </p>
+                                            <h3 class="govuk-heading-s">{{_rulePrefix}}{{part.id|safe}}</h3>
+                                            <p class="govuk-body">{{part.content|safe|trim}}</span></p>
                                         {% endif %}
                                     {% endif %}
                                     
                                     <!-- Sub Parts e.g. 19.1 -->
+                                    {% if part.subparts %}
+                                        <div style="margin-left: 20px">
+                                            <ul class='govuk-list govuk-list--bullet'>
+                                    {% endif %}
+
                                     {% for subpart in part.subparts %}
-                                    
+                                        
                                         {% if subpart.type == "list" %}
-                                        <div style="margin-left: 30px">{{subpart.content|safe|trim}}</div>
+                                            <!-- LIST ARRAY -->
+                                            {% for listitem in subpart.content %}
+                                            <li>{{listitem|safe|trim}}</li>
+                                            {% endfor %}
                                         {% else %}
-                                        <p class="govuk-body" style="margin-left: 30px"><span class="govuk-!-font-weight-bold rule-prefix">{{_rulePrefix}}{{subpart.id|safe}}</span><span class="rule-content">{{subpart.content|safe|trim}}</span></p>
+                                            <li>
+                                                <h3 class="govuk-heading-s">{{_rulePrefix}}{{subpart.id|safe}}</h3>
+                                                <p class="govuk-body">{{subpart.content|safe|trim}}</span></p>
+                                            </li>
                                         {% endif %}
 
                                         <!-- Sub Sub Parts e.g. 19.1.1 -->
+                                        {% if subpart.subsubparts %}
+                                            <div style="margin-left: 40px">
+                                                <ul class='govuk-list govuk-list--bullet'>
+                                        {% endif %}
                                         {% for subsubpart in subpart.subsubparts %}
                                             {% if subsubpart.type == "list" %}
-                                            <div style="margin-left: 60px">{{subsubpart.content|safe|trim}}</div>
+                                                <!-- LIST ARRAY -->
+                                                {% for listitem in subsubpart.content %}
+                                                <li>{{listitem|safe|trim}}</li>
+                                                {% endfor %}
                                             {% else %}
-                                            <p class="govuk-body" style="margin-left: 60px"><span class="govuk-!-font-weight-bold rule-prefix">{{_rulePrefix}}{{subsubpart.id|safe}}</span><span class="rule-content">{{subsubpart.content|safe|trim}}</span></p>
+                                                <li>
+                                                    <h3 class="govuk-heading-s">{{_rulePrefix}}{{subsubpart.id|safe}}</h3>
+                                                    <p class="govuk-body">{{subsubpart.content|safe|trim}}</span></p>
+                                                </li>
                                             {% endif %}
                                         {% endfor %}
 
+                                        {% if subpart.subsubparts %}
+                                            </ul>
+                                        </div>
+                                        {% endif %}
+
                                     {% endfor %}
+
+                                    {% if part.subparts %}
+                                            </ul>
+                                        </div>
+                                    {% endif %}
+
+                                    {% if part.type == "intro" %}
+                                    </div>
+                                    {% elif part.type == "additional" %}
+                                        </div>
+                                    </details>
+                                    {% endif %}
             
                                 {% endfor %}
             

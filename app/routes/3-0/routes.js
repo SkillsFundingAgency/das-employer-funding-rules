@@ -173,18 +173,40 @@ module.exports = function (router,_myData) {
             if(_searchWithin){
                 // Full string search
                 var _searchTermSafe = encodeURIComponent(_searchTerm.toUpperCase())
-                var _fullRegex = new RegExp(_searchTermSafe,"g");
-                var count = (_searchWithin.toUpperCase().match(_fullRegex) || []).length
-                _sectionSearch["results"][0].count = _sectionSearch["results"][0].count + count
+                // var _fullRegex = new RegExp(_searchTermSafe,"g");
+                var _fullRegex = new RegExp(_searchTerm.toUpperCase(),"g");
+
+                // TODO tidy up
+                if(Array.isArray(_searchWithin)){
+                    _searchWithin.forEach(function(_searchItem){
+                        var count = (_searchItem.toUpperCase().match(_fullRegex) || []).length
+                        _sectionSearch["results"][0].count = _sectionSearch["results"][0].count + count
+                    });
+                } else {
+                    var count = (_searchWithin.toUpperCase().match(_fullRegex) || []).length
+                    _sectionSearch["results"][0].count = _sectionSearch["results"][0].count + count
+                }
+                
                 if(count > 0){
                     _sectionSearch.found = true
                 }
+
                 // Each string part search
                 _searchTermArray.forEach(function(searchWord,index) {
                     if(searchWord.length > 2){
                         var _splitRegex = new RegExp(searchWord.toUpperCase(),"g");
-                        var count = (_searchWithin.toUpperCase().match(_splitRegex) || []).length
-                        _sectionSearch["results"][index+1].count = _sectionSearch["results"][index+1].count + count
+
+                        // TODO tidy up
+                        if(Array.isArray(_searchWithin)){
+                            _searchWithin.forEach(function(_searchItem){
+                                var count = (_searchItem.toUpperCase().match(_splitRegex) || []).length
+                                _sectionSearch["results"][index+1].count = _sectionSearch["results"][index+1].count + count
+                            });
+                        } else {
+                            var count = (_searchWithin.toUpperCase().match(_splitRegex) || []).length
+                            _sectionSearch["results"][index+1].count = _sectionSearch["results"][index+1].count + count
+                        }
+
                         if(count > 0){
                             _sectionSearch.found = true
                         }
