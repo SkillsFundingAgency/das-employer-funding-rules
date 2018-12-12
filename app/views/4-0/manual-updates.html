@@ -51,7 +51,7 @@ GOV.UK Manual
                                         <span class="govuk-!-font-weight-bold">{{update.title}}</span><br><br>
                                         {% endif %}
                                     </dt>
-                                    <dd>
+                                    <dd id="{{update.rule}}">
                                         {% if update.rule %}<span class="">{{update.rule}}</span> - {% endif %}
                                         {{update.content}}
                                     </dd>

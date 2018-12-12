@@ -80,7 +80,13 @@
                             },
                             {
                                 "id": "14",
-                                "content": "The performance-management arrangements are set out in the <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-funding-rules-2018-to-2019'>Apprenticeship Performance-management Rules for Training Providers</a>."
+                                "content": "The performance-management arrangements are set out in the <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-funding-rules-2018-to-2019'>Apprenticeship Performance-management Rules for Training Providers</a>.",
+                                "updates": [
+                                    {
+                                        "type": "edited",
+                                        "content": "Reference to updated performance-management rules included."
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -91,11 +97,22 @@
                         "parts": [
                             {
                                 "id": "15",
-                                "content": "These rules constitute funding conditions made under section 101 of the Apprenticeships, Skills, Children and Learning Act 2009 (ASCLA 2009), in connection with the Secretary of State’s power to fund English statutory apprenticeships under section 100(1A) (as inserted by the Enterprise Act 2016)."
+                                "content": "These rules constitute funding conditions made under section 101 of the Apprenticeships, Skills, Children and Learning Act 2009 (ASCLA 2009), in connection with the Secretary of State’s power to fund English statutory apprenticeships under section 100(1A) (as inserted by the Enterprise Act 2016).",
+                                "updates": [
+                                    {
+                                        "type": "added",
+                                        "content": "Include section referring to ‘relevant legislation’. Restructure: section on ‘recovery of funds’ incorporated."
+                                    }
+                                ]
                             },
                             {
                                 "id": "16",
-                                "content": "These rules will make clear where necessary how they apply to English statutory apprenticeships taking place on apprenticeship frameworks and apprenticeship standards."
+                                "content": "These rules will make clear where necessary how they apply to English statutory apprenticeships taking place on apprenticeship frameworks and apprenticeship standards.",
+                                "updates": [
+                                    {
+                                        "type": "added"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -2148,8 +2165,8 @@
                 "title": "Paying for an apprenticeship",
                 "updates": [
                     {
-                        "content": "Clarification: funding method for apprenticeships is determined at the start of the apprenticeship.",
-                        "rule": "P193"
+                        "rule": "P193",
+                        "content": "Clarification: funding method for apprenticeships is determined at the start of the apprenticeship."
                     },
                     {
                         "content": "Clarification: the funding bands, and standards and frameworks placed within them, may be subject to change.",
@@ -2191,7 +2208,13 @@
                         "parts": [
                             {
                                 "id": "193",
-                                "content": "The funding method for an apprenticeship is determined at the start of each apprentice’s programme. Where the employer does not have an apprenticeship service account at the start of the apprenticeship, it will be funded through government-employer co-investment for its duration unless the apprentice changes employer. Even if the employer subsequently becomes a levy-payer, the apprenticeship will not be funded from the employer’s apprenticeship service account."
+                                "content": "The funding method for an apprenticeship is determined at the start of each apprentice’s programme. Where the employer does not have an apprenticeship service account at the start of the apprenticeship, it will be funded through government-employer co-investment for its duration unless the apprentice changes employer. Even if the employer subsequently becomes a levy-payer, the apprenticeship will not be funded from the employer’s apprenticeship service account.",
+                                "updates": [
+                                    {
+                                        "type": "added",
+                                        "content": "Clarification: funding method for apprenticeships is determined at the start of the apprenticeship."
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -2218,7 +2241,13 @@
                                     },
                                     {
                                         "id": "194.4",
-                                        "content": "If the employer negotiates an overall price that is more than the maximum allowed by the funding band for the chosen apprenticeship, then the employer must pay in full the difference between the band maximum and the total negotiated price. This must not be funded from the apprenticeship service account or co-investment. You may charge VAT on the difference. The funding bands, and the standards and frameworks placed within them, may be subject to change."
+                                        "content": "If the employer negotiates an overall price that is more than the maximum allowed by the funding band for the chosen apprenticeship, then the employer must pay in full the difference between the band maximum and the total negotiated price. This must not be funded from the apprenticeship service account or co-investment. You may charge VAT on the difference. The funding bands, and the standards and frameworks placed within them, may be subject to change.",
+                                        "updates": [
+                                           {
+                                               "type": "edited",
+                                               "content": "Clarification: the funding bands, and standards and frameworks placed within them, may be subject to change. Originally Rule P173.4."
+                                           }
+                                        ]
                                     }
                                 ]
                             },
@@ -2239,23 +2268,53 @@
                         "parts": [
                             {
                                 "id": "197",
-                                "content": "Funds must not be used to pay for training for skills, knowledge and behaviours already attained by the apprentice. We may take action to recover apprenticeship funding where this happens."
+                                "content": "Funds must not be used to pay for training for skills, knowledge and behaviours already attained by the apprentice. We may take action to recover apprenticeship funding where this happens.",
+                                "updates": [
+                                    {
+                                        "type": "edited",
+                                        "content": "Emphasis/clarification: funds must not be used to pay for training in skills already attained. We will recover funding where this happens."
+                                    }
+                                ]
                             },
                             {
                                 "id": "198",
-                                "content": "You must account for prior learning when negotiating a price with the employer. You must reduce the content, duration and price, where the individual has prior learning necessary to achieve occupational competence."
+                                "content": "You must account for prior learning when negotiating a price with the employer. You must reduce the content, duration and price, where the individual has prior learning necessary to achieve occupational competence.",
+                                "updates": [
+                                    {
+                                        "type": "edited",
+                                        "content": "Clarification: the provider must account for prior learning, you must reduce the content, duration and price where an appropriate."
+                                    }
+                                ]
                             },
                             {
                                 "id": "199",
-                                "content": "Where you account for prior learning and the reduction of content would mean the apprenticeship would take less than the minimum duration to complete (as set out in paragraphs P45 to P61), or fail to meet the requirement for the apprentice to spend 20% of their time in off-the-job training (as set out in paragraph P31), the apprenticeship is ineligible for funding."
+                                "content": "Where you account for prior learning and the reduction of content would mean the apprenticeship would take less than the minimum duration to complete (as set out in paragraphs P45 to P61), or fail to meet the requirement for the apprentice to spend 20% of their time in off-the-job training (as set out in paragraph P31), the apprenticeship is ineligible for funding.",
+                                "updates": [
+                                    {
+                                        "type": "edited",
+                                        "content": "Clarification: where accounting for prior learning would mean the duration would be less than 12 months or fail to meet the 20% off-the-job, the apprenticeship is ineligible."
+                                    }
+                                ]
                             },
                             {
                                 "id": "200",
-                                "content": "You must assess the individual’s prior learning before starting the apprenticeship. You must quantify and evidence the proportion of prior learning already attained, quantify the proportion of off-the-job training content that will not be covered, and quantify the amount that the funding will be reduced by."
+                                "content": "You must assess the individual’s prior learning before starting the apprenticeship. You must quantify and evidence the proportion of prior learning already attained, quantify the proportion of off-the-job training content that will not be covered, and quantify the amount that the funding will be reduced by.",
+                                "updates": [
+                                    {
+                                        "type": "edited",
+                                        "content": "Clarification: the provider must assess prior learning before the start of the apprenticeship. You must evidence and quantify prior learning already attained."
+                                    }
+                                ]
                             },
                             {
                                 "id": "201",
                                 "content": "You must include a thorough appraisal of the apprentice’s existing knowledge, skills and behaviours against those required to achieve occupational competence. Where applicable, you must include in your appraisal any knowledge, skills and behaviours gained from the following:",
+                                "updates": [
+                                    {
+                                        "type": "edited",
+                                        "content": "Clarification: the provider must include a thorough assessment of apprentice’s existing knowledge, skills and behaviours against those required for apprenticeship. This includes work experience, previous apprenticeships and prior education."
+                                    }
+                                ],
                                 "subparts": [
                                     {
                                         "id": "201.1",
@@ -2273,7 +2332,13 @@
                             },
                             {
                                 "id": "202",
-                                "content": "he initial assessment must be documented in the evidence pack."
+                                "content": "The initial assessment must be documented in the evidence pack.",
+                                "updates": [
+                                    {
+                                        "type": "added",
+                                        "content": "New rule: the above assessment must be included in the evidence pack."
+                                    }
+                                ]
                             }
                         ]
                     },

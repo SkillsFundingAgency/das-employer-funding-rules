@@ -27,7 +27,7 @@
 <div id="manuals-frontend" class="manuals-frontend-body inner-block">
     
     {% set _manualHeaderTitle = _thisManual.title|safe + " " + _thisManual.date|safe %}
-    {% include "./includes/manual-header.html" %}
+    {% include "../includes/manual-header.html" %}
       
     <ol class="breadcrumb-trail">
         <li><a href="manual-home?manual={{myData.manual}}">Contents</a></li>
@@ -76,7 +76,7 @@
                                 {% if myData.svgflow == "true" %}
                                     {% if subsection.id == "support-english-maths-training" %}
                                         <h3 class="govuk-heading-s">Check what English and maths training an apprentice should undertake.</h3>
-                                        {% include "./includes/english-maths-flow-fixed.svg" %}
+                                        {% include "../includes/english-maths-flow-fixed.svg" %}
                                     {% endif %}
                                 {% endif %}
                                 <!-- Text decision tree -->
