@@ -18,6 +18,8 @@
     {% set _rulePrefix = "E" %}
 {% endif %}
 
+{% set _filterState = myData.filter %}
+
 {% block pageStyles %}
 <style>
 
@@ -35,7 +37,8 @@
     .show-updates .updates {
         display: block;
     }
-    .updates.call-to-action {
+    .updates.call-to-action,
+    .updates .call-to-action {
         margin: 0;
     }
 </style>
@@ -50,7 +53,7 @@
     {% include "../includes/manual-header.html" %}
       
     <ol class="breadcrumb-trail">
-        <li><a href="manual-home?manual={{myData.manual}}">Contents</a></li>
+        <li><a href="manual-home?manual={{myData.manual}}&filter=false">Contents</a></li>
         <li class="last-child">{{section.title|safe}}</li>
     </ol>
 
@@ -77,7 +80,13 @@
                 <!-- FILTER -->
 
                 {% set _sectionHasUpdates = false %}
+                {% if section["updates-section"] %}
+                    {% set _sectionHasUpdates = true %}
+                {% endif %}
                 {% for subsection in section.subsections %}
+                    {% if subsection.updates %}
+                        {% set _sectionHasUpdates = true %}
+                    {% endif %}
                     {% for part in subsection.parts %}
                         {% if part.updates %}
                             {% set _sectionHasUpdates = true %}
@@ -102,18 +111,37 @@
                         <fieldset class="govuk-fieldset" >
                             <div class="govuk-checkboxes">
                                 <div class="govuk-checkboxes__item" >
-                                    <input class="govuk-checkboxes__input" id="version-1" name="filter" type="checkbox" value="version1">
+                                    <input class="govuk-checkboxes__input" id="version-1" name="filter" {% if _filterState == 'true' %}checked{% endif %} type="checkbox" value="version1">
                                     <label class="govuk-label govuk-checkboxes__label" for="version-1">
                                     Show only content updated in 2018
                                     </label>
                                 </div>
                                 <div class="filtered-message call-to-action" style="margin-bottom:0">
-                                    <p class="govuk-body govuk-!-font-weight-bol">You are viewing only a selection of the content.</p>
+                                    <p class="govuk-body">You are viewing only a selection of the content.</p>
                                     <p class="govuk-body govuk-!-font-weight-bold"><a href="#" class="clear-filter govuk-link govuk-link--no-visited-state">Remove filter</a> to see all.</p>
                                 </div>
                             </div>
                         </fieldset>
                     <!-- </div> -->
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- TODO section level updates -->
+                {% if section["updates-section"] %}
+                <div class="updates govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds" >
+                        <div class=" updates call-to-action" style="margin-top:1em">
+                            <!-- <p class="govuk-body  govuk-!-font-weight-bold">{{section.title|safe}}</p> -->
+                            {% for update in section["updates-section"] %}
+                                <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
+                                    {{update.type or "edited"}} in 2018
+                                </strong>
+                                {% if update.content %}
+                                <br><br><p class="govuk-body">{{update.content|trim|safe}}</p>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
                 {% endif %}
@@ -130,6 +158,9 @@
 
                                 <!-- Classes for if section contains updates -->
                                 {% set _subsectionClasses = "section-contains-no-updates" %}
+                                {% if subsection.updates %}
+                                    {% set _subsectionClasses = "" %}
+                                {% endif %}
                                 {% for part in subsection.parts %}
                                     {% if part.updates %}
                                         {% set _subsectionClasses = "" %}
@@ -155,6 +186,21 @@
                                     {% endif %}
                                 </h2>
 
+                                <!-- subsection level updates -->
+                                {% if subsection.updates %}
+                                    <div class="updates call-to-action" style="margin-bottom: 1em">
+                                        <!-- <div class="govuk-inset-text" style="padding-top: 0"> -->
+                                        {% for update in subsection.updates %}
+                                            <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
+                                                {{update.type or "edited"}} in 2018
+                                            </strong>
+                                            {% if update.content %}
+                                            <br><br><p class="govuk-body">{{update.content|trim|safe}}</p>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+
                                 <!-- Flow chart -->
                                 {% if myData.svgflow == "true" %}
                                     {% if subsection.id == "support-english-maths-training" %}
@@ -174,6 +220,12 @@
 
                                     <!-- Classes for part updates-->
                                     {% set _partClasses = "part-non-updated" %}
+
+                                    <!-- Commented out -->
+                                    {# {% if subsection.updates %}
+                                        {% set _partClasses = "" %}
+                                    {% endif %} #}
+
                                     {% if part.updates %}
                                         {% set _partClasses = "" %}
                                     {% endif %}
@@ -227,10 +279,10 @@
                                                     <!-- <div class="govuk-inset-text" style="padding-top: 0"> -->
                                                     {% for update in part.updates %}
                                                         <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
-                                                            {{update.type}} in 2018
+                                                            {{update.type or "edited"}} in 2018
                                                         </strong>
                                                         {% if update.content %}
-                                                        <br><br><p class="govuk-body">{{update.content}}</p>
+                                                        <br><br><p class="govuk-body">{{update.content|trim|safe}}</p>
                                                         {% endif %}
                                                     {% endfor %}
                                                 </div>
@@ -250,6 +302,12 @@
                                     {% for subpart in part.subparts %}
 
                                         {% set _subPartClasses = "subpart-non-updated" %}
+                                        {# {% if subsection.updates %}
+                                            {% set _subPartClasses = "" %}
+                                        {% endif %} #}
+                                        {% if part.updates %}
+                                            {% set _subPartClasses = "" %}
+                                        {% endif %}
                                         {% if subpart.updates %}
                                             {% set _subPartClasses = "" %}
                                         {% endif %}
@@ -274,10 +332,10 @@
                                                             <!-- <div class="govuk-inset-text" style="padding-top: 0"> -->
                                                             {% for update in subpart.updates %}
                                                                 <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
-                                                                    {{update.type}} in 2018
+                                                                    {{update.type or "edited"}} in 2018
                                                                 </strong>
                                                                 {% if update.content %}
-                                                                <br><br><p class="govuk-body">{{update.content}}</p>
+                                                                <br><br><p class="govuk-body">{{update.content|trim|safe}}</p>
                                                                 {% endif %}
                                                             {% endfor %}
                                                         </div>
@@ -294,8 +352,14 @@
                                                         {% for subsubpart in subpart.subsubparts %}
                                                         
                                                         {% set _subsubPartClasses = "subsubpart-non-updated" %}
+                                                        {# {% if subsection.updates %}
+                                                            {% set _subsubPartClasses = "" %}
+                                                        {% endif %} #}
+                                                        {% if part.updates or subpart.updates %}
+                                                            {% set _subsubPartClasses = "" %}
+                                                        {% endif %}
                                                         {% if subsubpart.updates %}
-                                                            {% set _subPartClasses = "" %}
+                                                            {% set _subsubPartClasses = "" %}
                                                         {% endif %}
 
                                                         <div class=" subsubpart {{_subsubPartClasses}} ">
@@ -360,11 +424,6 @@
         </div>
     </article>
             
-    <!-- <div class="download-manual">
-        <p class="govuk-body"><a href="manual-pdf?manual={{myData.manual}}" target="_blank" class="govuk-link govuk-link--no-visited-state">Download this manual (PDF, 250KB)</a></p>
-        <p class="govuk-body">If you would like this manual in another format please email <a href="#">email address here</a>.</p>
-    </div> -->
-            
     <div class="print-page">
         <a onclick="window.print();return false;" href="#">Print this page</a>
     </div>
@@ -376,12 +435,13 @@
 <script>
 $(document).ready(function(){
     var _checkFilters = $("input[name='filter']")
-    var _rulesContainer = $(".parts-container")
+    var _rulesContainer = $("#manuals-frontend")
     var _filteredMessage = $(".filtered-message").hide()
     var _clearFilter = $(".clear-filter")
     var _showUpdates = $(".show-updates")
     var _openAll = $(".js-collection-controls").children().first()
     var _sectionsWithNoUpdates = $(".section-contains-no-updates")
+    var _breadcrumbLink = $(".breadcrumb-trail a")
 
     _showUpdates.click(function (e){
         _checkFilters.each(function( index ) {
@@ -399,10 +459,13 @@ $(document).ready(function(){
         e.preventDefault();
     })
 
-
-
+    toggleFilter()
     _checkFilters.change(function(){
-        var _addTheClass = false
+        toggleFilter()
+    });
+
+    function toggleFilter(){
+        var _filtered = false
         _rulesContainer.removeClass("show-updates")
         _rulesContainer.removeClass("hide-non-updated")
         _checkFilters.each(function( index ) {
@@ -414,7 +477,7 @@ $(document).ready(function(){
             if(_checked){
                 _openAll.trigger("click")
                 _rulesContainer.addClass("show-part-"+_thisID)
-                _addTheClass = true
+                _filtered = true
                 _filteredMessage.show()
                 _showUpdates.hide()
                 // hide sections
@@ -427,11 +490,20 @@ $(document).ready(function(){
             }
 
         });
-        if(_addTheClass == true) {
+        // update breadcrumb link
+        var _newHREF = _breadcrumbLink.attr('href')
+        if(_breadcrumbLink.attr('href').includes("filter=false")){
+            _newHREF = _breadcrumbLink.attr('href').replace("filter=false", "filter="+_filtered);
+        } else if(_breadcrumbLink.attr('href').includes("filter=true")) {
+            _newHREF = _breadcrumbLink.attr('href').replace("filter=true", "filter="+_filtered);
+        }
+        _breadcrumbLink.attr('href',_newHREF)
+
+        if(_filtered == true) {
             _rulesContainer.addClass("show-updates")
             _rulesContainer.addClass("hide-non-updated")
         }
-    });
+    }
 
 
 

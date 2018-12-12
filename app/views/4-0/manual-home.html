@@ -7,6 +7,8 @@
 {% set _thisManualType = myData.manuals[myData.manual].type %}
 {% set _thisManual = myData.manuals[myData.manual].content %}
 
+{% set _filterState = myData.filter %}
+
 {% block pageStyles %}
 <style>
     /* hiding parts */
@@ -14,11 +16,15 @@
         display: none;
     }
     /* showing updates */
-    .updates {
+    .updates,
+    .update-tag {
         display: none;
         /* margin-top:0.5em; */
     }
     .show-updates .updates {
+        display: block;
+    }
+    .show-updates .update-tag {
         display: inline-block;
     }
 </style>
@@ -52,6 +58,9 @@
 
             {% set _manualHasUpdates = false %}
             {% for section in _thisManual.sections %}
+                {% if section["updates-section"] %}
+                    {% set _sectionHasUpdates = true %}
+                {% endif %}
                 {% for subsection in section.subsections %}
                     {% for part in subsection.parts %}
                         {% if part.updates %}
@@ -75,20 +84,28 @@
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds" >
                     <!-- <div class="govuk-form-group"> -->
-                        <fieldset class="govuk-fieldset" >
-                            <div class="govuk-checkboxes">
-                                <div class="govuk-checkboxes__item" >
-                                    <input class="govuk-checkboxes__input" id="version-1" name="filter" type="checkbox" value="version1">
-                                    <label class="govuk-label govuk-checkboxes__label" for="version-1">
-                                    Show only sections with content updates in 2018
-                                    </label>
+                        <form method="GET" action="manual-home">
+                            <fieldset class="govuk-fieldset" >
+                                <div class="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item" >
+                                        <input class="govuk-checkboxes__input" id="version-1" {% if _filterState == 'true' %}checked{% endif %} name="filter" type="checkbox" value="version1">
+                                        <label class="govuk-label govuk-checkboxes__label" for="version-1">
+                                        Show only sections with content updates in 2018
+                                        </label>
+                                    </div>
+                                    <div class="filtered-message call-to-action" style="margin-bottom:0">
+                                        <p class="govuk-body govuk-!-font-weight-bol">You are viewing only a selection of the contents.</p>
+                                        <p class="govuk-body govuk-!-font-weight-bold"><a href="#" class="clear-filter govuk-link govuk-link--no-visited-state">Remove filter</a> to see all.</p>
+                                    </div>
                                 </div>
-                                <div class="filtered-message call-to-action" style="margin-bottom:0">
-                                    <p class="govuk-body govuk-!-font-weight-bol">You are viewing only a selection of the contents.</p>
-                                    <p class="govuk-body govuk-!-font-weight-bold"><a href="#" class="clear-filter govuk-link govuk-link--no-visited-state">Remove filter</a> to see all.</p>
-                                </div>
-                            </div>
-                        </fieldset>
+                            </fieldset>
+                        </form>
+                        <!-- <div class="updates call-to-action" style="margin-bottom: 0">
+                            <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
+                                Edited in 2018
+                            </strong>
+                            <br><br><p class="govuk-body">These sections have had updates in 2018.</p>
+                        </div> -->
                     <!-- </div> -->
                 </div>
             </div>
@@ -99,7 +116,13 @@
 
                     {% set _sectionClasses = "section-contains-no-updates" %}
                     {% set _sectionHasUpdates = false %}
+                    {% if section["updates-section"] %}
+                        {% set _sectionHasUpdates = true %}
+                    {% endif %}
                     {% for subsection in section.subsections %}
+                        {% if subsection.updates %}
+                            {% set _sectionHasUpdates = true %}
+                        {% endif %}
                         {% for part in subsection.parts %}
                             {% if part.updates %}
                                 {% set _sectionClasses = "" %}
@@ -121,16 +144,14 @@
                     {% endfor %}
 
                 <li class=" {{_sectionClasses}} ">
-                    <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}">
+                    <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}&filter=false">
                         <span class="subsection-title-text">{{section.title|safe}}</span>
                         <!-- <span class="subsection-summary">
                             Description goes here
                         </span> -->
-                        {% if _sectionHasUpdates %}
-                        <strong class="updates govuk-tag" style="margin-right: 5px; background: #005ea5">
+                        <strong class="update-tag govuk-tag" style="margin-right: 5px; background: #005ea5">
                             Edited in 2018
                         </strong>
-                        {% endif %}
                     </a>
                 </li>
                 {% endfor %}
@@ -138,11 +159,6 @@
             
         </div>
     </article>
-
-    <!-- <div class="download-manual">
-        <p class="govuk-body"><a href="manual-pdf?manual={{myData.manual}}" target="_blank" class="govuk-link govuk-link--no-visited-state">Download this manual (PDF, 250KB)</a></p>
-        <p class="govuk-body">If you would like this manual in another format please email <a href="#">email address here</a>.</p>
-    </div> -->
             
     <div class="print-page">
         <a onclick="window.print();return false;" href="#">Print this page</a>
@@ -156,12 +172,13 @@
 <script>
 $(document).ready(function(){
     var _checkFilters = $("input[name='filter']")
-    var _rulesContainer = $(".section-list")
+    var _rulesContainer = $("#manuals-frontend")
     var _filteredMessage = $(".filtered-message").hide()
     var _clearFilter = $(".clear-filter")
     var _showUpdates = $(".show-updates")
     var _openAll = $(".js-collection-controls").children().first()
     var _sectionsWithNoUpdates = $(".section-contains-no-updates")
+    var _sectionLinks = $(".section-list a")
 
     _showUpdates.click(function (e){
         _checkFilters.each(function( index ) {
@@ -179,10 +196,15 @@ $(document).ready(function(){
         e.preventDefault();
     })
 
-
-
+    // on load
+    toggleFilter()
+    // on change
     _checkFilters.change(function(){
-        var _addTheClass = false
+        toggleFilter()
+    });
+
+    function toggleFilter(){
+        var _filtered = false
         _rulesContainer.removeClass("show-updates")
         _rulesContainer.removeClass("hide-non-updated")
         _checkFilters.each(function( index ) {
@@ -194,7 +216,7 @@ $(document).ready(function(){
             if(_checked){
                 _openAll.trigger("click")
                 _rulesContainer.addClass("show-part-"+_thisID)
-                _addTheClass = true
+                _filtered = true
                 _filteredMessage.show()
                 _showUpdates.hide()
                 // hide sections
@@ -207,13 +229,23 @@ $(document).ready(function(){
             }
 
         });
-        if(_addTheClass == true) {
+        // update query string
+        _sectionLinks.each(function( index ) {
+            var _thisLink = $(this)
+            var _newHREF = _thisLink.attr('href')
+            if(_thisLink.attr('href').includes("filter=false")){
+                _newHREF = _thisLink.attr('href').replace("filter=false", "filter="+_filtered);
+            } else if(_breadcrumbLink.attr('href').includes("filter=true")) {
+                _newHREF = _thisLink.attr('href').replace("filter=true", "filter="+_filtered);
+            }
+            _thisLink.attr('href',_newHREF)
+        })
+
+        if(_filtered == true) {
             _rulesContainer.addClass("show-updates")
             _rulesContainer.addClass("hide-non-updated")
         }
-    });
-
-
+    }
 
 });
 </script>
