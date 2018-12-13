@@ -235,10 +235,9 @@ $(document).ready(function(){
             var _newHREF = _thisLink.attr('href')
             if(_thisLink.attr('href').includes("filter=false")){
                 _newHREF = _thisLink.attr('href').replace("filter=false", "filter="+_filtered);
-            } 
-            // else if(_breadcrumbLink.attr('href').includes("filter=true")) {
-            //     _newHREF = _thisLink.attr('href').replace("filter=true", "filter="+_filtered);
-            // }
+            } else if(_thisLink.attr('href').includes("filter=true")) {
+                _newHREF = _thisLink.attr('href').replace("filter=true", "filter="+_filtered);
+            }
             _thisLink.attr('href',_newHREF)
         })
 
