@@ -175,18 +175,18 @@ $(document).ready(function(){
     var _rulesContainer = $("#manuals-frontend")
     var _filteredMessage = $(".filtered-message").hide()
     var _clearFilter = $(".clear-filter")
-    var _showUpdates = $(".show-updates")
+    // var _showUpdates = $(".show-updates")
     var _openAll = $(".js-collection-controls").children().first()
     var _sectionsWithNoUpdates = $(".section-contains-no-updates")
     var _sectionLinks = $(".section-list a")
 
-    _showUpdates.click(function (e){
-        _checkFilters.each(function( index ) {
-            $(this).prop('checked', true);
-        })
-        _checkFilters.trigger("change")
-        e.preventDefault();
-    })
+    // _showUpdates.click(function (e){
+    //     _checkFilters.each(function( index ) {
+    //         $(this).prop('checked', true);
+    //     })
+    //     _checkFilters.trigger("change")
+    //     e.preventDefault();
+    // })
 
     _clearFilter.click(function (e){
         _checkFilters.each(function( index ) {
@@ -218,11 +218,11 @@ $(document).ready(function(){
                 _rulesContainer.addClass("show-part-"+_thisID)
                 _filtered = true
                 _filteredMessage.show()
-                _showUpdates.hide()
+                // _showUpdates.hide()
                 // hide sections
                 // _sectionsWithNoUpdates.parent().hide()
             } else {
-                _showUpdates.show()
+                // _showUpdates.show()
                 _filteredMessage.hide()
                 // show sections
                 // _sectionsWithNoUpdates.parent().show()
@@ -235,9 +235,10 @@ $(document).ready(function(){
             var _newHREF = _thisLink.attr('href')
             if(_thisLink.attr('href').includes("filter=false")){
                 _newHREF = _thisLink.attr('href').replace("filter=false", "filter="+_filtered);
-            } else if(_breadcrumbLink.attr('href').includes("filter=true")) {
-                _newHREF = _thisLink.attr('href').replace("filter=true", "filter="+_filtered);
-            }
+            } 
+            // else if(_breadcrumbLink.attr('href').includes("filter=true")) {
+            //     _newHREF = _thisLink.attr('href').replace("filter=true", "filter="+_filtered);
+            // }
             _thisLink.attr('href',_newHREF)
         })
 
