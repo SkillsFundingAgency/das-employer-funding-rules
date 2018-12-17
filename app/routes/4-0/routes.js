@@ -68,8 +68,6 @@ module.exports = function (router,_myData) {
     });
     // manual page
     router.get('/' + version + '/manual-page', function (req, res) {
-        console.log(req)
-        console.log(res)
         res.render(version + '/manual-page', {
             myData:req.session.myData
         });
