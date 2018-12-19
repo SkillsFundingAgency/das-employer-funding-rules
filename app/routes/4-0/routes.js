@@ -9,6 +9,7 @@ module.exports = function (router,_myData) {
         req.session.myData.manual = "providers-manual-2"
         req.session.myData.manualpage = "provider-manual"
         req.session.myData.updatesFilter = "false"
+        req.session.myData.updatesFilterOn = "false"
         req.session.myData.startFrom = "manual-home"
         req.session.myData.emChart = "false"
         req.session.myData.svgflow = "false"
@@ -47,6 +48,7 @@ module.exports = function (router,_myData) {
         req.session.myData.svgflow = req.query.svgflow || req.session.myData.svgflow
         req.session.myData.textflow = req.query.textflow || req.session.myData.textflow
         req.session.myData.updatesFilter = req.query.updatesFilter || req.session.myData.updatesFilter
+        req.session.myData.updatesFilterOn = req.query.updatesFilterOn || req.session.myData.updatesFilterOn
         req.session.myData.startFrom = req.query.startFrom || req.session.myData.startFrom
         req.session.myData.emChart = req.query.emChart || req.session.myData.emChart
         // Legacy visibility of flow chart - english maths
@@ -75,8 +77,6 @@ module.exports = function (router,_myData) {
     //setup
     router.get('/' + version + '/manual-setup', function (req, res) {
         req.session.myData.version = version
-        req.session.myData.domain = req.headers.host
-        console.log(req.session.myData.domain)
         res.render(version + '/manual-setup', {
             myData:req.session.myData
         });

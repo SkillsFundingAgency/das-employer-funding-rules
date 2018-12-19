@@ -7,7 +7,7 @@
 {% set _thisManualType = myData.manuals[myData.manual].type %}
 {% set _thisManual = myData.manuals[myData.manual].content %}
 
-{% set _filterState = myData.filter %}
+{% set _filterState = myData.updatesFilterOn %}
 
 {% block pageStyles %}
 <style>
@@ -144,7 +144,7 @@
                     {% endfor %}
 
                 <li class=" {{_sectionClasses}} ">
-                    <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}&filter=false">
+                    <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}&updatesFilterOn=false">
                         <span class="subsection-title-text">{{section.title|safe}}</span>
                         <!-- <span class="subsection-summary">
                             Description goes here
@@ -182,7 +182,7 @@ $(document).ready(function(){
 
     // _showUpdates.click(function (e){
     //     _checkFilters.each(function( index ) {
-    //         $(this).attr('checked', "checked");
+    //         $(this).prop('checked', true);
     //     })
     //     _checkFilters.trigger("change")
     //     e.preventDefault();
@@ -190,7 +190,7 @@ $(document).ready(function(){
 
     _clearFilter.click(function (e){
         _checkFilters.each(function( index ) {
-            $(this).removeAttr('checked');
+            $(this).prop('checked', false);
         })
         _checkFilters.trigger("change")
         e.preventDefault();
@@ -233,10 +233,10 @@ $(document).ready(function(){
         _sectionLinks.each(function( index ) {
             var _thisLink = $(this)
             var _newHREF = _thisLink.attr('href')
-            if(_thisLink.attr('href').includes("filter=false")){
-                _newHREF = _thisLink.attr('href').replace("filter=false", "filter="+_filtered);
-            } else if(_thisLink.attr('href').includes("filter=true")) {
-                _newHREF = _thisLink.attr('href').replace("filter=true", "filter="+_filtered);
+            if(_thisLink.attr('href').includes("updatesFilterOn=false")){
+                _newHREF = _thisLink.attr('href').replace("updatesFilterOn=false", "updatesFilterOn="+_filtered);
+            } else if(_thisLink.attr('href').includes("updatesFilterOn=true")) {
+                _newHREF = _thisLink.attr('href').replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
             }
             _thisLink.attr('href',_newHREF)
         })
