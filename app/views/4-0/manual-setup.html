@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="POST">
+            <!-- <h1 class="govuk-heading-l">Quick links - manuals</h1>
+            <ul class="govuk-list govuk-list--bullet govuk-!-font-size-19 ">
+                <li>
+                    <span class="govuk-!-font-weight-bold">Training Provider</span><br>
+                    <a href="manual-home?manual=providers-manual-original&resetSession=true"
+                        class="govuk-link govuk-link--no-visited-state">original PDF content</a><br>
+                    <a href="google?manual=providers-manual-original&resetSession=true"
+                        class="govuk-link govuk-link--no-visited-state">original PDF content (from google)</a><br>
+                    <a href="manual-home?manual=providers-manual-original&svgflow=true&resetSession=true"
+                        class="govuk-link govuk-link--no-visited-state">original PDF content + flowchart</a><br>
+                    <a href="manual-home?manual=providers-manual-original&textflow=true&resetSession=true"
+                        class="govuk-link govuk-link--no-visited-state">original PDF content + text decision
+                        tree</a><br>
+                    <a href="manual-home?manual=providers-manual-2&resetSession=true"
+                        class="govuk-link govuk-link--no-visited-state">original PDF content + updated english
+                        & maths content
+                    </a>
+                    <br><span style="margin-left:20px;">- includes contextual updates</span>
+                </li>
+                <li>
+                    <span class="govuk-!-font-weight-bold">Employer </span><br>
+                    <a href="manual-home?manual=employers-manual-original&resetSession=true"
+                        class="govuk-link govuk-link--no-visited-state">original PDF content</a><br>
+                    <a href="google?manual=employers-manual-original&resetSession=true" class="govuk-link govuk-link--no-visited-state">original PDF content (from google)</a>
+                </li>
+                <li>
+                    <span class="govuk-!-font-weight-bold">Training Provider Heavy Edit</span><br>
+                    <a href="guidance?resetSession=true" class="govuk-link govuk-link--no-visited-state">Funding
+                        for training apprentices in England (Heavy edit)</a>
+                </li>
+            </ul> -->
+
+            <h1 class="govuk-heading-l">Custom setup - manual</h1>
+            <fieldset>
+
+                <!-- TODO different settings  for employer and provider -->
+            
+                <!-- Manual main content -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualSetupManual">
+                        Manual main content
+                    </label>
+                    <select class="govuk-select" id="manualSetupManual" name="manualSetupManual" data-option="manualSetupManual">
+                        {% for key, item in myData.manuals %}
+                        <option {% if myData.manual == key %}selected{% endif %} value="{{key}}">{{item.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <!-- english maths flowchart none/svg/text -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualSetupEngMathsChart">
+                        English and Maths Flow Chart
+                    </label>
+                    <select class="govuk-select" id="manualSetupEngMathsChart" name="manualSetupEngMathsChart" data-option="manualSetupEngMathsChart">
+                        <option {% if myData.emChart == 'false' %}selected{% endif %} value="false">None</option>
+                        <option {% if myData.emChart == 'svgflow' %}selected{% endif %} value="svgflow">Graphical chart</option>
+                        <option {% if myData.emChart == 'textflow' %}selected{% endif %} value="textflow">Text decision tree</option>
+                    </select>
+                </div>
+
+                <!-- contextual updates filter -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualSetupContextualUpdates">
+                        Contextual updates filter
+                    </label>
+                    <select class="govuk-select" id="manualSetupContextualUpdates" name="manualSetupContextualUpdates" data-option="manualSetupContextualUpdates">
+                        <option {% if myData.updatesFilter == 'false' %}selected{% endif %} value="false">None</option>
+                        <option {% if myData.updatesFilter == 'true' %}selected{% endif %} value="true">On (if data available)</option>
+                    </select>
+                </div>
+                
+                <!-- Start from -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualSetupStartFrom">
+                        Start journey from
+                    </label>
+                    <select class="govuk-select" id="manualSetupStartFrom" name="manualSetupStartFrom" data-option="manualSetupStartFrom">
+                        <option {% if myData.startFrom == 'manual-home' %}selected{% endif %} value="manual-home">Manual homepage</option>
+                        <option {% if myData.startFrom == 'google' %}selected{% endif %} value="google">Google</option>
+                        <option {% if myData.startFrom == 'rules-list' %}selected{% endif %} value="rules-list">Collections list</option>
+                    </select>
+                </div>
+
+                <p class="govuk-body" id="start-url" style="display:none"><a href="" class="govuk-link govuk-link--no-visited-state"></a></p>
+
+                <!-- TODO if google selected - make sure links on rules list page match the correct manual content -->
+
+                <!-- <button type="submit" class="govuk-button">
+                    Start
+                </button> -->
+
+                <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block pageScripts %}
+<script>
+$(document).ready(function(){
+    var _startURL = $("#start-url a"),
+        _options = $("[data-option]")
+
+    _options.change(function(){
+
+        //update url text
+        var _urlVersion = {{myData.domain|dump|safe}} + "/" + {{myData.version|dump|safe}} + "/",
+            _urlPage = _options.filter("#manualSetupStartFrom").val() + "?",
+            _urlstartFrom = "&startFrom=" + _options.filter("#manualSetupStartFrom").val(),
+            _urlmanual = "&manual=" + _options.filter("#manualSetupManual").val(),
+            _urlupdatesFilter = "&updatesFilter=" + _options.filter("#manualSetupContextualUpdates").val(),
+            _urlemChart = "&emChart=" + _options.filter("#manualSetupEngMathsChart").val(),
+            _urlReset = "&resetSession=true";
+
+        var _startURLText = _urlVersion + _urlPage + _urlstartFrom + _urlmanual + _urlupdatesFilter + _urlemChart + _urlReset;
+
+        //update link
+        _startURL
+            .attr("href", _startURLText)
+            .text(_startURLText)
+            .parent().hide().fadeIn()
+
+    }).trigger("change");
+    
+});
+</script>
+{% endblock %}

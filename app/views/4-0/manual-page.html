@@ -104,7 +104,7 @@
                     {% endfor %}
                 {% endfor %}
 
-                {% if _sectionHasUpdates %}
+                {% if _sectionHasUpdates and myData.updatesFilter == "true" %}
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-two-thirds" >
                     <!-- <div class="govuk-form-group"> -->
@@ -201,16 +201,16 @@
                                     </div>
                                 {% endif %}
 
-                                <!-- Flow chart -->
-                                {% if myData.svgflow == "true" %}
-                                    {% if subsection.id == "support-english-maths-training" %}
+                                {% if subsection.id == "support-english-maths-training" %}
+                                    <!-- Flow chart -->
+                                    {% if myData.svgflow == "true" %}
                                         <h3 class="govuk-heading-s">Check what English and maths training an apprentice should undertake.</h3>
-                                        {% include "../includes/english-maths-flow-fixed.svg" %}
+                                        <div style="margin-bottom:20px">
+                                            {% include "../includes/english-maths-flow-fixed.svg" %}
+                                        </div>
                                     {% endif %}
-                                {% endif %}
-                                <!-- Text decision tree -->
-                                {% if myData.textflow == "true" %}
-                                    {% if subsection.id == "support-english-maths-training" %}
+                                    <!-- Text decision tree -->
+                                    {% if myData.textflow == "true" %}
                                         {% include "../includes/english-maths-text-flow.html" %}
                                     {% endif %}
                                 {% endif %}
@@ -445,7 +445,7 @@ $(document).ready(function(){
 
     _showUpdates.click(function (e){
         _checkFilters.each(function( index ) {
-            $(this).prop('checked', true);
+            $(this).attr('checked', "checked");
         })
         _checkFilters.trigger("change")
         e.preventDefault();
@@ -453,7 +453,7 @@ $(document).ready(function(){
 
     _clearFilter.click(function (e){
         _checkFilters.each(function( index ) {
-            $(this).prop('checked', false);
+            $(this).removeAttr('checked');
         })
         _checkFilters.trigger("change")
         e.preventDefault();

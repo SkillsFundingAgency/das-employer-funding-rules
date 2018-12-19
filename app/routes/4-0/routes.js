@@ -6,11 +6,15 @@ module.exports = function (router,_myData) {
         req.session.myData = JSON.parse(JSON.stringify(_myData))
         //Set version that myData was created on
         //req.session.myData.version = version
-        req.session.myData.manual = "providers-manual-original"
+        req.session.myData.manual = "providers-manual-2"
         req.session.myData.manualpage = "provider-manual"
+        req.session.myData.updatesFilter = "false"
+        req.session.myData.startFrom = "manual-home"
+        req.session.myData.emChart = "false"
         req.session.myData.svgflow = "false"
         req.session.myData.textflow = "false"
-        req.session.myData.filter = "false"
+        // TODO
+        // default provider manual, default employer manual - for rules-list page
     }
 
     //generic.js contains wildcard get and post requests. Useful for setting session data that we want available on any other routes file. also, so we dont have duplicate wildcard requests on individual routes files that might conflict with each other.
@@ -20,7 +24,7 @@ module.exports = function (router,_myData) {
 
         //Sets req.session.myData to session if not already set
 
-        if(!req.session.myData || req.query.resetSession || (req.url == '/' + version + '/setup' && req.method == 'POST')) {
+        if(!req.session.myData || req.query.resetSession || (req.url == '/' + version + '/manual-setup' && req.method == 'POST')) {
             // Note: Can't also reset if version doesnt match as may switch between versions in testing
             // e.g. cant use "... || req.session.myData.version != version"
             resetSession(req)
@@ -42,7 +46,19 @@ module.exports = function (router,_myData) {
         req.session.myData.manualpage = req.query.manualpage || req.session.myData.manualpage
         req.session.myData.svgflow = req.query.svgflow || req.session.myData.svgflow
         req.session.myData.textflow = req.query.textflow || req.session.myData.textflow
-        req.session.myData.filter = req.query.filter || req.session.myData.filter
+        req.session.myData.updatesFilter = req.query.updatesFilter || req.session.myData.updatesFilter
+        req.session.myData.startFrom = req.query.startFrom || req.session.myData.startFrom
+        req.session.myData.emChart = req.query.emChart || req.session.myData.emChart
+        // Legacy visibility of flow chart - english maths
+        switch(req.session.myData.emChart) {
+            case "svgflow":
+                req.session.myData.svgflow = "true"
+                break;
+            case "textflow":
+                req.session.myData.textflow = "true"
+                break;
+            default:
+        }
 
         next()
     });
@@ -56,6 +72,49 @@ module.exports = function (router,_myData) {
     //
     // MANUAL
     //
+    //setup
+    router.get('/' + version + '/manual-setup', function (req, res) {
+        req.session.myData.version = version
+        req.session.myData.domain = req.headers.host
+        console.log(req.session.myData.domain)
+        res.render(version + '/manual-setup', {
+            myData:req.session.myData
+        });
+    });
+    router.post('/' + version + '/manual-setup', function (req, res) {
+
+        //Manual Data
+        req.session.myData.manual = req.body.manualSetupManual
+        //Start From
+        req.session.myData.startFrom = req.body.manualSetupStartFrom
+        //Updates Filter
+        req.session.myData.updatesFilter = req.body.manualSetupContextualUpdates
+        
+        //Flow chart - english maths
+        req.session.myData.emChart = req.body.manualSetupEngMathsChart
+        // Legacy visibility of flow chart - english maths
+        switch(req.session.myData.emChart) {
+            case "svgflow":
+                req.session.myData.svgflow = "true"
+                break;
+            case "textflow":
+                req.session.myData.textflow = "true"
+                break;
+            default:
+        }
+
+        var _startFrom = req.session.myData.startFrom
+        switch(_startFrom) {
+            case "google":
+                res.redirect(301, '/' + version + '/google');
+                break;
+            case "manual":
+                res.redirect(301, '/' + version + '/manual-home');
+                break;
+            default:
+                res.redirect(301, '/' + version + '/manual-home');
+        }
+    });
     // manual home
     router.get('/' + version + '/manual-home', function (req, res) {
         res.render(version + '/manual-home', {
