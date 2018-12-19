@@ -89,7 +89,14 @@
                     </select>
                 </div>
 
-                <p class="govuk-body" id="start-url" style="display:none"><a href="" class="govuk-link govuk-link--no-visited-state"></a></p>
+                <p class="govuk-body" id="start-url" style="display:none">
+                    <a href="" class="govuk-button">Start prototype</a>
+                </p>
+                <p class="govuk-body" >
+                    <span class="govuk-!-font-weight-bold">Shareable link:</span><br>
+                    <span class="govuk-body" id="start-url-label" style="display:none"></span>
+                </p>
+                
 
                 <!-- TODO if google selected - make sure links on rules list page match the correct manual content -->
 
@@ -111,26 +118,32 @@
 <script>
 $(document).ready(function(){
     var _startURL = $("#start-url a"),
+        _startURLLabel = $("#start-url-label"),
         _options = $("[data-option]")
 
     _options.change(function(){
 
         //update url text
-        var _urlVersion = {{myData.domain|dump|safe}} + "/" + {{myData.version|dump|safe}} + "/",
+        var _urlVersion = "https://employer-funding-rules.herokuapp.com/" + {{myData.version|dump|safe}} + "/",
             _urlPage = _options.filter("#manualSetupStartFrom").val() + "?",
             _urlstartFrom = "&startFrom=" + _options.filter("#manualSetupStartFrom").val(),
             _urlmanual = "&manual=" + _options.filter("#manualSetupManual").val(),
             _urlupdatesFilter = "&updatesFilter=" + _options.filter("#manualSetupContextualUpdates").val(),
             _urlemChart = "&emChart=" + _options.filter("#manualSetupEngMathsChart").val(),
-            _urlReset = "&resetSession=true";
+            _urlReset = "&resetSession=true",
+            _urlPageQueries = _urlPage + _urlstartFrom + _urlmanual + _urlupdatesFilter + _urlemChart + _urlReset;
 
-        var _startURLText = _urlVersion + _urlPage + _urlstartFrom + _urlmanual + _urlupdatesFilter + _urlemChart + _urlReset;
+        var _startURLText = _urlVersion + _urlPageQueries,
+            _startURLHREF =  _urlPageQueries;
 
+        // update label
+        _startURLLabel
+            .text(_startURLText)
+            .hide().fadeIn()
         //update link
         _startURL
-            .attr("href", _startURLText)
-            .text(_startURLText)
-            .parent().hide().fadeIn()
+            .attr("href", _startURLHREF)
+            .parent().show()
 
     }).trigger("change");
     
