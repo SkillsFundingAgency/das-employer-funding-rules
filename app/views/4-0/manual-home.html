@@ -56,6 +56,8 @@
                 <!-- </div>
             </div> -->
 
+            <!-- <p><a href="rules-list" class="govuk-link govuk-link--no-visited-state">Sign up for email alerts</a> for rule changes.</p> -->
+
             {% set _manualHasUpdates = false %}
             {% for section in _thisManual.sections %}
                 {% if section["updates-section"] %}
@@ -223,12 +225,13 @@ $(document).ready(function(){
         });
         // update query string
         _sectionLinks.each(function( index ) {
-            var _thisLink = $(this)
-            var _newHREF = _thisLink.attr('href')
-            if(_thisLink.attr('href').includes("updatesFilterOn=false")){
-                _newHREF = _thisLink.attr('href').replace("updatesFilterOn=false", "updatesFilterOn="+_filtered);
-            } else if(_thisLink.attr('href').includes("updatesFilterOn=true")) {
-                _newHREF = _thisLink.attr('href').replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
+            var _thisLink = $(this),
+                _thisHREF = _thisLink.attr('href'),
+                _newHREF = _thisHREF
+            if(_thisHREF.indexOf('updatesFilterOn=false') != -1){
+                _newHREF = _thisHREF.replace("updatesFilterOn=false", "updatesFilterOn="+_filtered);
+            } else if(_thisHREF.indexOf('updatesFilterOn=true') != -1){
+                _newHREF = _thisHREF.replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
             }
             _thisLink.attr('href',_newHREF)
         })

@@ -491,11 +491,12 @@ $(document).ready(function(){
 
         });
         // update breadcrumb link
-        var _newHREF = _breadcrumbLink.attr('href')
-        if(_breadcrumbLink.attr('href').includes("updatesFilterOn=false")){
-            _newHREF = _breadcrumbLink.attr('href').replace("updatesFilterOn=false", "updatesFilterOn="+_filtered);
-        } else if(_breadcrumbLink.attr('href').includes("updatesFilterOn=true")) {
-            _newHREF = _breadcrumbLink.attr('href').replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
+        var _breadcrumbHREF = _breadcrumbLink.attr('href'),
+            _newHREF = _breadcrumbHREF
+        if(_breadcrumbHREF.indexOf('updatesFilterOn=false') != -1){
+            _newHREF = _breadcrumbHREF.replace("updatesFilterOn=false", "updatesFilterOn="+_filtered);
+        } else if(_breadcrumbHREF.indexOf('updatesFilterOn=true') != -1){
+            _newHREF = _breadcrumbHREF.replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
         }
         _breadcrumbLink.attr('href',_newHREF)
 
