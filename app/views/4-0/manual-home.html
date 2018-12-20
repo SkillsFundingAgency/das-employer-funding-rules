@@ -180,17 +180,9 @@ $(document).ready(function(){
     var _sectionsWithNoUpdates = $(".section-contains-no-updates")
     var _sectionLinks = $(".section-list a")
 
-    // _showUpdates.click(function (e){
-    //     _checkFilters.each(function( index ) {
-    //         $(this).prop('checked', true);
-    //     })
-    //     _checkFilters.trigger("change")
-    //     e.preventDefault();
-    // })
-
     _clearFilter.click(function (e){
         _checkFilters.each(function( index ) {
-            $(this).prop('checked', false);
+            $(this).prop("checked", false).attr("checked", false).removeAttr("checked")
         })
         _checkFilters.trigger("change")
         e.preventDefault();

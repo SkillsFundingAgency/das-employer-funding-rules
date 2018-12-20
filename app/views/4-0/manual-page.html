@@ -445,7 +445,7 @@ $(document).ready(function(){
 
     _showUpdates.click(function (e){
         _checkFilters.each(function( index ) {
-            $(this).prop('checked', true);
+            $(this).prop('checked', true).attr('checked', 'checked');
         })
         _checkFilters.trigger("change")
         e.preventDefault();
@@ -453,7 +453,7 @@ $(document).ready(function(){
 
     _clearFilter.click(function (e){
         _checkFilters.each(function( index ) {
-            $(this).prop('checked', false);
+            $(this).prop("checked", false).attr("checked", false).removeAttr("checked")
         })
         _checkFilters.trigger("change")
         e.preventDefault();
