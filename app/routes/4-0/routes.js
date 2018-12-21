@@ -25,7 +25,9 @@ module.exports = function (router,_myData) {
 
         //Sets req.session.myData to session if not already set
 
-        if(!req.session.myData || req.query.resetSession || (req.url == '/' + version + '/manual-setup' && req.method == 'POST')) {
+        // console.log(req.session.myData)
+
+        if(req.session.myData == undefined || req.query.resetSession || (req.url == '/' + version + '/manual-setup' && req.method == 'POST')) {
             // Note: Can't also reset if version doesnt match as may switch between versions in testing
             // e.g. cant use "... || req.session.myData.version != version"
             resetSession(req)
