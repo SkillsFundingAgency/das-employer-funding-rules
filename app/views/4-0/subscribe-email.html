@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Manual
+{% endblock %}
+
+{% block pageStyles %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% if myData.emailUpdates == "3" %}
+            <!-- 1st -->
+            <p class="govuk-body"><a href="manual-home?manual=providers-manual-2&resetSession=true" class="govuk-link govuk-link--no-visited-state">Apprenticeship funding rules for training providers</a></p>
+            <p class="govuk-body">New rule: confirmation that student membership fees, even where linked to mandatory qualifications, are an ineligible cost.</p>
+            <p class="govuk-body">2:38pm, 2 January 2018: First published.</p>
+            <!-- 2nd -->
+            <p class="govuk-body"><a href="manual-home?manual=providers-manual-2&resetSession=true" class="govuk-link govuk-link--no-visited-state">Apprenticeship funding rules for training providers</a></p>
+            <p class="govuk-body">Policy: recognising that many providers still deliver frameworks to 16 to 18 year olds, we are maintaining the 20% transitional uplift for 16 to 18 year olds or eligible 19 to 24 year olds. This measure is being extended and will be kept under review ahead of 2020.</p>
+            <p class="govuk-body">3:04pm, 1 January 2018: First published.</p>
+            <!-- 3rd  different manual -->
+            <p class="govuk-body"><a href="manual-home?manual=employers-manual-original&resetSession=true" class="govuk-link govuk-link--no-visited-state">Apprenticeship funding: rules and guidance for employers</a></p>
+            <p class="govuk-body">Clarification: who is eligible for learning support, now includes individuals who do not have a diagnosis but for whom the provider has identified and evidenced a learning need.</p>
+            <p class="govuk-body">3:04pm, 1 January 2018: First published.</p>
+        {% elif myData.emailUpdates == "2" %}
+           <!-- 1st -->
+           <p class="govuk-body"><a href="manual-home?manual=providers-manual-2&resetSession=true" class="govuk-link govuk-link--no-visited-state">Apprenticeship funding rules for training providers</a></p>
+           <p class="govuk-body">New rule: confirmation that student membership fees, even where linked to mandatory qualifications, are an ineligible cost.</p>
+           <p class="govuk-body">2:38pm, 2 January 2018: First published.</p>
+           <!-- 2nd -->
+           <p class="govuk-body"><a href="manual-home?manual=providers-manual-2&resetSession=true" class="govuk-link govuk-link--no-visited-state">Apprenticeship funding rules for training providers</a></p>
+           <p class="govuk-body">Policy: recognising that many providers still deliver frameworks to 16 to 18 year olds, we are maintaining the 20% transitional uplift for 16 to 18 year olds or eligible 19 to 24 year olds. This measure is being extended and will be kept under review ahead of 2020.</p>
+           <p class="govuk-body">3:04pm, 1 January 2018: First published.</p>
+        {% else %}
+            <!-- 1st -->
+           <p class="govuk-body"><a href="manual-home?manual=providers-manual-2&resetSession=true" class="govuk-link govuk-link--no-visited-state">Apprenticeship funding rules for training providers</a></p>
+           <p class="govuk-body">New rule: confirmation that student membership fees, even where linked to mandatory qualifications, are an ineligible cost.</p>
+           <p class="govuk-body">2:38pm, 2 January 2018: First published.</p>
+        {% endif %}
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <p class="govuk-body">You’re getting this email because you subscribed to ‘Apprenticeships funding’ updates on GOV.​UK.</p>
+        <p class="govuk-body">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Unsubscribe from ‘Apprenticeships funding’</a>
+            <br>
+            <a href="#" class="govuk-link govuk-link--no-visited-state">View and manage your subscriptions</a>
+        </p>
+        <br>
+        <div class="govuk-inset-text">Is this email useful? <a href="#" class="govuk-link govuk-link--no-visited-state">Answer some questions to tell us more.</a></div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+

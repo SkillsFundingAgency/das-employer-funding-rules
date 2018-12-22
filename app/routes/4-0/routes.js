@@ -14,6 +14,7 @@ module.exports = function (router,_myData) {
         req.session.myData.emChart = "false"
         req.session.myData.svgflow = "false"
         req.session.myData.textflow = "false"
+        req.session.myData.emailUpdates = "1"
         // TODO
         // default provider manual, default employer manual - for rules-list page
     }
@@ -64,6 +65,7 @@ module.exports = function (router,_myData) {
                 break;
             default:
         }
+        req.session.myData.emailUpdates = req.query.emailUpdates || req.session.myData.emailUpdates
 
         next()
     });
@@ -117,6 +119,12 @@ module.exports = function (router,_myData) {
             default:
                 res.redirect(301, '/' + version + '/manual-home');
         }
+    });
+    // Email updates
+    router.get('/' + version + '/subscribe-email', function (req, res) {
+        res.render(version + '/subscribe-email', {
+            myData:req.session.myData
+        });
     });
     // manual home
     router.get('/' + version + '/manual-home', function (req, res) {
