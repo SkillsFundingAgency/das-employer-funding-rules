@@ -7,8 +7,8 @@ module.exports = function (router,_myData) {
         //Set version that myData was created on
         //req.session.myData.version = version
         req.session.myData.manual = "providers-manual-2"
-        req.session.myData.manualpage = "provider-manual"
-        req.session.myData.updatesFilter = "RESETTED"
+        req.session.myData.manualpage = "intro-and-purpose"
+        req.session.myData.updatesFilter = "true"
         req.session.myData.updatesFilterOn = "false"
         req.session.myData.startFrom = "manual-home"
         req.session.myData.emChart = "false"
@@ -28,10 +28,7 @@ module.exports = function (router,_myData) {
         // console.log(req.session.myData)
         // console.log(req.query.resetSession != null)
 
-        if(req.session.myData == null || req.query.resetSession != null) {
-            // Temporarily removed
-            // || (req.url == '/' + version + '/manual-setup' && req.method == 'POST')
-
+        if(!req.session.myData || req.query.resetSession || (req.url == '/' + version + '/manual-setup' && req.method == 'POST')) {
             // Note: Can't also reset if version doesnt match as may switch between versions in testing
             // e.g. cant use "... || req.session.myData.version != version"
             resetSession(req)
