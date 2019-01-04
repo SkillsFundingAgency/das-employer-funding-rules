@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Quick links - manuals</h1>
+        <ul class="govuk-list govuk-list--bullet govuk-!-font-size-19 ">
+            <li>
+                <span class="govuk-!-font-weight-bold">Training Provider Rules Manuals</span><br>
+                <a href="manual-home?manual=providers-manual-original&resetSession=true"
+                    class="govuk-link govuk-link--no-visited-state">original PDF content</a><br>
+                <a href="google?manual=providers-manual-original&resetSession=true"
+                    class="govuk-link govuk-link--no-visited-state">original PDF content (from google)</a><br>
+                <a href="manual-home?manual=providers-manual-original&svgflow=true&resetSession=true"
+                    class="govuk-link govuk-link--no-visited-state">original PDF content + flowchart</a><br>
+                <a href="manual-home?manual=providers-manual-original&textflow=true&resetSession=true"
+                    class="govuk-link govuk-link--no-visited-state">original PDF content + text decision
+                    tree</a><br>
+                <a href="manual-home?manual=providers-manual-2&resetSession=true"
+                    class="govuk-link govuk-link--no-visited-state">original PDF content + updated english
+                    & maths content</a>
+            </li>
+            <li>
+                <span class="govuk-!-font-weight-bold">Employer Rules Manuals</span><br>
+                <a href="manual-home?manual=employers-manual-original&resetSession=true"
+                    class="govuk-link govuk-link--no-visited-state">original PDF content</a><br>
+                <a href="google?manual=employers-manual-original&resetSession=true" class="govuk-link govuk-link--no-visited-state">original PDF content (from google)</a>
+            </li>
+            <li>
+                <span class="govuk-!-font-weight-bold">Training Provider Rules Heavy Edit</span><br>
+                <a href="guidance?resetSession=true" class="govuk-link govuk-link--no-visited-state">Funding
+                    for training apprentices in England (Heavy edit)</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
