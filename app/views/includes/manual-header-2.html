@@ -1,4 +1,5 @@
 {% set _manualHeaderTitle = _manualHeaderTitle or "Manual title" %}
+{% set _manualSubTitle = _manualSubTitle or "" %}
 <div class="gem-c-contextual-breadcrumbs" style="margin-top:-20px">
     <div class="gem-c-breadcrumbs govuk-breadcrumbs" >
         <ol class="govuk-breadcrumbs__list">
@@ -22,7 +23,8 @@
 </div>
 <header aria-labelledby="manual-title" class="">
     <div class="primary">
-        <h1 id="manual-title">{{_manualHeaderTitle}}</h1>
+        <h1 id="manual-title" {% if _manualSubTitle != '' %}style="padding-bottom:10px"{% endif %}>{{_manualHeaderTitle}}</h1>
+        <h2 class="govuk-heading-m" style="color:white">{{_manualSubTitle}}</h2>
         <div class="gem-c-metadata" data-module="gem-toggle">
             <dl>
                 <dt class="gem-c-metadata__term">From:</dt>
