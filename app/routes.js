@@ -9,7 +9,9 @@ var _myData = {
         "providers-manual-original": require(__dirname + '/data/providers-manual-original.json'),
         "employers-manual-original": require(__dirname + '/data/employers-manual-original.json'),
         "providers-manual-2": require(__dirname + '/data/providers-manual-2.json')
-    }
+    },
+    "latestEmployerManual": "employers-manual-original",
+    "latestProviderManual": "providers-manual-2"
 }
 
 require('./routes/3-0/routes.js')(router,JSON.parse(JSON.stringify(_myData)));

@@ -295,26 +295,32 @@
               <div class="gem-c-govspeak govuk-govspeak direction-ltr">
 
                 <!-- EMPLLOYERS -->
+                {% set _employerManual = myData.latestEmployerManual %}
+                {% if myData.useLatestManual == "false" %}
+                  {% if myData.manuals[myData.manual].type == "employer" %}
+                    {% set _employerManual = myData.manuals[myData.manual].id %}
+                  {% endif %}
+                {% endif %}
+
                 <section class="attachment embedded" id="attachment_2875831">
                   <div class="attachment-thumb">
-                    <a aria-hidden="true" class="thumbnail" href="manual-home?manual=employers-manual-original"><img
+                    <a aria-hidden="true" class="thumbnail" href="manual-home?manual={{_employerManual}}"><img
                         alt="" src="/public/images/thumbnail_1819_Employer_Rules_v1.0.png"></a>
                   </div>
                   <div class="attachment-details">
-                    <h2 class="title"><a href="manual-home?manual=employers-manual-original">Apprenticeship funding:
-                        rules and guidance for employers</a></h2>
+                    <h2 class="title"><a href="manual-home?manual={{_employerManual}}">Apprenticeship funding: rules and guidance for employers</a></h2>
                     <p class="metadata">
                       <span class="type">HTML</span>
                     </p>
                   </div>
                 </section>
+
                 <section class="attachment embedded" id="attachment_2875834">
                     <div class="attachment-thumb">
                       <a aria-hidden="true" class="thumbnail" href="#"><img alt="" src="/public/images/thumbnail_1819_Employer_Rules_v1.0.png"></a>
                     </div>
                     <div class="attachment-details">
-                      <h2 class="title"><a aria-describedby="attachment-2875834-accessibility-help" href="/public/downloads/1819_Employer_Rules_v1.0.pdf">Apprenticeship funding:
-                        rules and guidance for employers</a></h2>
+                      <h2 class="title"><a aria-describedby="attachment-2875834-accessibility-help" href="/public/downloads/1819_Employer_Rules_v1.0.pdf">Apprenticeship funding: rules and guidance for employers</a></h2>
                       <p class="metadata">
                         <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">2.3MB</span>,
                         <span class="page-length">59 pages</span>
@@ -336,14 +342,20 @@
                   </section>
 
                   <!-- PROVIDERS -->
+                  {% set _providerManual = myData.latestProviderManual %}
+                  {% if myData.useLatestManual == "false" %}
+                    {% if myData.manuals[myData.manual].type == "provider" %}
+                      {% set _providerManual = myData.manuals[myData.manual].id %}
+                    {% endif %}
+                  {% endif %}
+                  
                   <section class="attachment embedded" id="attachment_2875833">
                     <div class="attachment-thumb">
-                      <a aria-hidden="true" class="thumbnail" href="manual-home?manual=providers-manual-original"><img
+                      <a aria-hidden="true" class="thumbnail" href="manual-home?manual={{_providerManual}}"><img
                           alt="" src="/public/images/thumbnail_1819_Employer_Rules_v1.0.png"></a>
                     </div>
                     <div class="attachment-details">
-                      <h2 class="title"><a href="manual-home?manual=providers-manual-original">Apprenticeship funding:
-                          rules and guidance for training providers</a></h2>
+                      <h2 class="title"><a href="manual-home?manual={{_providerManual}}">Apprenticeship funding: rules and guidance for training providers</a></h2>
                       <p class="metadata">
                         <span class="type">HTML</span>
                       </p>
@@ -354,8 +366,7 @@
                         <a aria-hidden="true" class="thumbnail" href="#"><img alt="" src="/public/images/thumbnail_1819_Employer_Rules_v1.0.png"></a>
                       </div>
                       <div class="attachment-details">
-                        <h2 class="title"><a aria-describedby="attachment-2875834-accessibility-help" href="/public/downloads/1819_Provider_Rules_v1.0.pdf">Apprenticeship funding:
-                          rules and guidance for training providers</a></h2>
+                        <h2 class="title"><a aria-describedby="attachment-2875834-accessibility-help" href="/public/downloads/1819_Provider_Rules_v1.0.pdf">Apprenticeship funding: rules and guidance for training providers</a></h2>
                         <p class="metadata">
                           <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">2.3MB</span>,
                           <span class="page-length">72 pages</span>

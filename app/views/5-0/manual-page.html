@@ -58,19 +58,6 @@
         <li><a href="manual-home?manual={{myData.manual}}&updatesFilterOn=false">Contents</a></li>
         <li class="last-child">{{section.title|safe}}</li>
     </ol>
-
-    <!-- TODO 
-        - add 'Employers and apprenticeships: things to check' section to 'employers-manual-original'
-        - add links from sup to footnote
-        -- add links to rules that are references e.g. (see paragraphs <a class='govuk-link' href='manual-page?manualpage=what-apprenticeship#apprenticeship-duration-employment-hours'>P45 to P61</a>)  
-    -->
-
-    <!-- 
-        TODO ideas: 
-            - add blurb to each section
-            - add rules numbers after each section header e.g. Intro (rules 1-18)
-            - add links to rules that are references e.g. "see paragraphs P45 to P61" could change to "see Ineligible costs (45 to 61)"
-    -->
       
     <article aria-labelledby="manual-title" id="content">
         <div class="manual-body">
@@ -133,7 +120,6 @@
                 </div>
                 {% endif %}
 
-                <!-- TODO section level updates -->
                 {% if section["updates-section"] %}
                 <div class="updates govuk-grid-row">
                     <div class="govuk-grid-column-two-thirds" >
@@ -155,10 +141,6 @@
                 <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
                     <div class="collapsible-subsections">
                         <div class="gem-c-govspeak govuk-govspeak parts-container">
-
-                            <!-- TODO in json 
-                            - see paragraph, see paragraphs, in paragraph, in paragraphs - links
-                            -  -->
 
                             {% for subsection in section.subsections %}
 

@@ -6,7 +6,7 @@ module.exports = function (router,_myData) {
         req.session.myData = JSON.parse(JSON.stringify(_myData))
         //Set version that myData was created on
         //req.session.myData.version = version
-        req.session.myData.manual = "providers-manual-2"
+        req.session.myData.manual = req.session.myData.latestProviderManual
         req.session.myData.manualpage = "intro-and-purpose"
         req.session.myData.updatesFilter = "true"
         req.session.myData.updatesFilterOn = "false"
@@ -15,8 +15,7 @@ module.exports = function (router,_myData) {
         req.session.myData.svgflow = "false"
         req.session.myData.textflow = "false"
         req.session.myData.emailUpdates = "1"
-        // TODO
-        // default provider manual, default employer manual - for rules-list page
+        req.session.myData.useLatestManual = "false"
     }
 
     //generic.js contains wildcard get and post requests. Useful for setting session data that we want available on any other routes file. also, so we dont have duplicate wildcard requests on individual routes files that might conflict with each other.
@@ -54,6 +53,9 @@ module.exports = function (router,_myData) {
         req.session.myData.updatesFilter = req.query.updatesFilter || req.session.myData.updatesFilter
         req.session.myData.updatesFilterOn = req.query.updatesFilterOn || req.session.myData.updatesFilterOn
         req.session.myData.startFrom = req.query.startFrom || req.session.myData.startFrom
+        if(req.session.myData.startFrom == "google" || req.session.myData.startFrom == "rules-list"){
+            req.session.myData.useLatestManual = "true"
+        }
         req.session.myData.emChart = req.query.emChart || req.session.myData.emChart
         // Legacy visibility of flow chart - english maths
         switch(req.session.myData.emChart) {
@@ -123,6 +125,12 @@ module.exports = function (router,_myData) {
     // Email updates
     router.get('/' + version + '/subscribe-email', function (req, res) {
         res.render(version + '/subscribe-email', {
+            myData:req.session.myData
+        });
+    });
+    // collections list
+    router.get('/' + version + '/rules-list', function (req, res) {
+        res.render(version + '/rules-list', {
             myData:req.session.myData
         });
     });
