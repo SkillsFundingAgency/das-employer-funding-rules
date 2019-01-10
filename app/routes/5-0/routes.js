@@ -204,6 +204,7 @@ module.exports = function (router,_myData) {
                     )
                 });
                 doSearch(section.title,_sectionSearch)
+                doSearch(section.summary,_sectionSearch)
                 // For each 'subsection'
                 section.subsections.forEach(function(subsection) {
                     doSearch(subsection.title,_sectionSearch)
