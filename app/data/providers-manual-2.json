@@ -13,6 +13,7 @@
             {
                 "id": "intro-and-purpose",
                 "title": "Introduction and purpose of the document",
+                "summary": "What these rules cover, why you should read them and some terms we use throughout the document.",
                 "updates": [
                     {
                         "rule": "P14",
@@ -122,6 +123,7 @@
             {
                 "id": "what-apprenticeship",
                 "title": "What is an apprenticeship?",
+                "summary": "What employers, providers and apprentices should expect from an apprenticeship. Includes important information about contracts, pay and training.",
                 "updates-section": [
                     {
                         "content": "Restructure: changes made for ease of understanding, including incorporation of ‘commitment statement’ into this section."
@@ -727,6 +729,7 @@
             {
                 "id": "who-can-funded",
                 "title": "Who can be funded?",
+                "summary": "How to determine whether someone is eligible for apprenticeship funding. Includes information on additional support for learners with learning difficulties.",
                 "updates-section": [
                     {
                         "content": "Restructure: moved details on residency criteria to Annex A.<br><br>Rule change: removal of previous requirements regarding education, health and care (EHC) plan. This no longer affects eligibility."
@@ -1075,6 +1078,7 @@
             {
                 "id": "what-can-funded",
                 "title": "What can be funded?",
+                "summary": "What costs can and cannot be paid for with apprenticeship funds. Includes information on extra support for care leavers, end-point assessments and English and maths training.",
                 "updates": [
                     {
                         "title": "Eligible costs",
@@ -2080,6 +2084,7 @@
             {
                 "id": "contracting-subcontracting",
                 "title": "Contracting and subcontracting",
+                "summary": "The responsibilities of providers and their subcontractors, including subcontracting to providers who are not on the Register of Approved Training Providers (RoATP).",
                 "updates": [
                     {
                         "title": "Agreeing use of subcontractors with employers",
@@ -2491,6 +2496,7 @@
             {
                 "id": "paying-apprenticeship",
                 "title": "Paying for an apprenticeship",
+                "summary": "Agreeing a price, when payments are made and reporting requirements. Also covers accounting for prior learning, employer contributions (co-investment) and VAT.",
                 "updates": [
                     {
                         "rule": "P193",
@@ -2879,6 +2885,7 @@
             {
                 "id": "apprenticeships-funded-transfers",
                 "title": "Apprenticeships funded by transfers of levy funds",
+                "summary": "Sending and receiving (transferring) apprenticeship levy funds.",
                 "updates": [
                     {
                         "content": "Clarification: transfer allowance is recalculated every tax year, unused allowance will not be carried forward.",
@@ -2950,6 +2957,7 @@
             {
                 "id": "delivering-the-apprenticeship",
                 "title": "Delivering the apprenticeship",
+                "summary": "Covers data protection and apprenticeship completion certificates.",
                 "updates-section": [
                     {
                         "content": "Restructure: the ‘starting, participating, completing and leaving’ section has been incorporated into sections elsewhere (including redundancy, certification, where training stops, what is an apprenticeship)."
@@ -3010,6 +3018,7 @@
             {
                 "id": "changes-circumstances",
                 "title": "Changes in circumstances",
+                "summary": "Covers changes of provider and changes in the apprentice’s personal or employment circumstances including breaks in learning. Explains what effect (if any) there is on apprenticeship funding following a change in circumstances.",
                 "updates": [
                     {
                         "title": "Redundancy",
@@ -3488,6 +3497,7 @@
             {
                 "id": "european-social-fund",
                 "title": "ESF (European Social Fund) match funding requirements",
+                "summary": "Applies to providers who have a contract with us to deliver training to employers who do not pay the levy - such providers may be accessing funding that can be used as match funding for the European Social Fund (ESF).",
                 "updates-section": [
                     {
                         "content": "Section inserted on European Social Fund (ESF), outlining the requirements for ESF match funding."
@@ -3569,6 +3579,7 @@
             {
                 "id": "evidence-requirements",
                 "title": "Evidence requirements",
+                "summary": "A list of the evidence that must be held and maintained by providers for each apprenticeship.",
                 "updates": [
                     {
                         "title": "Evidence pack",
@@ -4146,6 +4157,7 @@
             {
                 "id": "annex-a",
                 "title": "Annex A: Eligibility criteria (who we fund)",
+                "summary": "Details of who may be eligible for apprenticeship funding. Includes residency, citizenship, age criteria.",
                 "updates": [
                     {
                         "content": "Restructure: all residency information now sits in this annex. The section has also been restricted for ease of understanding and reference."
@@ -4631,6 +4643,7 @@
             {
                 "id": "glossary",
                 "title": "Glossary",
+                "summary": "Definitions of the terms used throughout the document.",
                 "updates": [
                     {
                         "content": "Restructure: all content previously in the terminology section has been added to the glossary, including: account, apprentice, delivery subcontractor, framework, funding agreement, government-employer co- investment, provider, standard, this document, and training."

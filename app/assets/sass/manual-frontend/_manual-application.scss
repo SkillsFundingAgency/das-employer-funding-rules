@@ -236,6 +236,11 @@ header .gem-c-metadata {
       @extend %govuk-heading-m;
       font-weight: bold;
     }
+    .section-title-with-summary {
+      @extend %govuk-heading-m;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
 
     .summary {
       @include govuk-font($size: 24);

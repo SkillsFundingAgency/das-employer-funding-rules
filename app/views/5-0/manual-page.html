@@ -62,9 +62,14 @@
     <article aria-labelledby="manual-title" id="content">
         <div class="manual-body">
             <article aria-labelledby="section-title">
-                <h1 id="section-title" class="section-title">
+                <h1 id="section-title" class="section-title {% if section.summary %}section-title-with-summary{% endif %}">
                     {{section.title|safe}}
                 </h1>
+                {% if section.summary %}
+                <p class="summary">
+                    {{section.summary|safe}}
+                </p>
+                {% endif %}
 
                 <!-- FILTER -->
 
