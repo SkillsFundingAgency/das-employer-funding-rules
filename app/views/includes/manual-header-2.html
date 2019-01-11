@@ -21,10 +21,29 @@
 </div>
 <header aria-labelledby="manual-title" class="">
     <div class="primary">
+        <!-- for h1 -->
+        <!--  -->
         <h1 id="manual-title" {% if _manualSubTitle != '' %}style="padding-bottom:10px"{% endif %}>{{_thisManual.title|safe}}</h1>
-        <h2 class="govuk-heading-m" style="color:white">{{_thisManual.date|safe}}, {{_thisManual.version|lower|safe}}</h2>
+        <h2 class="govuk-heading-m" style="color:white">{{_thisManual.date|safe}}</h2>
+        <!-- <h2 class="govuk-heading-m" style="color:white">{{_thisManual.version|safe}} (latest) for {{_thisManual.date|safe}}</h2>
+        <p><a href="#">see other versions</a></p> -->
         <div class="gem-c-metadata" data-module="gem-toggle">
             <dl>
+                <!-- <dt class="gem-c-metadata__term">Date:</dt>
+                <dd class="gem-c-metadata__definition">
+                    {{_thisManual.date|safe}}
+                </dd> -->
+                <dt class="gem-c-metadata__term">Version:</dt>
+                <dd class="gem-c-metadata__definition">
+                    {{_thisManual.version|safe}} (latest), <a href="#">see all versions</a>
+                    <!-- {{_thisManual.version|safe}} of 6, <a href="#">see all versions</a> -->
+                </dd>
+                <!-- <dt class="gem-c-metadata__term">
+                    <br>
+                </dt>
+                <dd class="gem-c-metadata__definition">
+                    <br>
+                </dd> -->
                 <dt class="gem-c-metadata__term">From:</dt>
                 <dd class="gem-c-metadata__definition">
                     <a href="#">Education and Skills Funding Agency</a>
