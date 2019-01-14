@@ -1,0 +1,251 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Manual
+{% endblock %}
+
+{% set _thisManualType = myData.manuals[myData.manual].type %}
+{% set _thisManual = myData.manuals[myData.manual].content %}
+
+{% set _filterState = myData.updatesFilterOn %}
+
+{% block pageStyles %}
+<style>
+    /* hiding parts */
+    .hide-non-updated .section-contains-no-updates {
+        display: none;
+    }
+    /* showing updates */
+    .updates,
+    .update-tag {
+        display: none;
+        /* margin-top:0.5em; */
+    }
+    .show-updates .updates {
+        display: block;
+    }
+    .show-updates .update-tag {
+        display: inline-block;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+    
+    {% include "../includes/manual-header-2.html" %}
+      
+    <ol class="breadcrumb-trail">
+        <li class="no-separator">Contents</li>
+    </ol>
+      
+    <article aria-labelledby="manual-title" id="content">
+        <div class="manual-body">
+            
+            <!-- <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds" > -->
+                    <div class="govuk-inset-text">
+                        <!-- <p class="govuk-body"> -->
+                            <a href="rules-list" class="govuk-link govuk-link--no-visited-state">View the rules in alternative formats (including PDF)</a> which you can download, print and view offline.
+                        <!-- </p> -->
+                    </div>
+                <!-- </div>
+            </div> -->
+
+            <p class="govuk-body"><a href="https://www.gov.uk/email-signup/?topic=/education/apprenticeships-funding" class="govuk-link govuk-link--no-visited-state">Sign up for email alerts</a> for changes to the apprenticeships funding topic page.</p>
+
+            {% set _manualHasUpdates = false %}
+            {% for section in _thisManual.sections %}
+                {% if section["updates-section"] %}
+                    {% set _sectionHasUpdates = true %}
+                {% endif %}
+                {% for subsection in section.subsections %}
+                    {% for part in subsection.parts %}
+                        {% if part.updates %}
+                            {% set _manualHasUpdates = true %}
+                        {% endif %}
+                        {% for subpart in part.subparts %}
+                            {% if subpart.updates %}
+                                {% set _manualHasUpdates = true %}
+                            {% endif %}
+                            {% for subsubpart in subpart.subsubparts %}
+                                {% if subsubpart.updates %}
+                                    {% set _manualHasUpdates = true %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+
+            <!-- NEW -->
+            <!-- <p>_manualHasUpdates = {{_manualHasUpdates}}</p>
+            <p>myData.updatesFilter = {{myData.updatesFilter}}</p> -->
+
+            {% if _manualHasUpdates and myData.updatesFilter == "true" %}
+            <br>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds" >
+                    <!-- <div class="govuk-form-group"> -->
+                        <form method="GET" action="manual-home">
+                            <fieldset class="govuk-fieldset" >
+                                <div class="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item" >
+                                        <input class="govuk-checkboxes__input" id="version-1" {% if _filterState == 'true' %}checked{% endif %} name="filter" type="checkbox" value="version1">
+                                        <label class="govuk-label govuk-checkboxes__label" for="version-1">
+                                        Show only sections with content updates in 2018
+                                        </label>
+                                    </div>
+                                    <div class="filtered-message call-to-action" style="margin-bottom:0">
+                                        <p class="govuk-body govuk-!-font-weight-bol">You are viewing only a selection of the contents.</p>
+                                        <p class="govuk-body govuk-!-font-weight-bold"><a href="#" class="clear-filter govuk-link govuk-link--no-visited-state">Remove filter</a> to see all.</p>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <!-- <div class="updates call-to-action" style="margin-bottom: 0">
+                            <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
+                                Edited in 2018
+                            </strong>
+                            <br><br><p class="govuk-body">These sections have had updates in 2018.</p>
+                        </div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+            {% endif %}
+
+            <ol class="section-list">
+                {% for section in _thisManual.sections %}
+
+                    {% set _sectionClasses = "section-contains-no-updates" %}
+                    {% set _sectionHasUpdates = false %}
+                    {% if section["updates-section"] %}
+                        {% set _sectionHasUpdates = true %}
+                    {% endif %}
+                    {% for subsection in section.subsections %}
+                        {% if subsection.updates %}
+                            {% set _sectionHasUpdates = true %}
+                        {% endif %}
+                        {% for part in subsection.parts %}
+                            {% if part.updates %}
+                                {% set _sectionClasses = "" %}
+                                {% set _sectionHasUpdates = true %}
+                            {% endif %}
+                            {% for subpart in part.subparts %}
+                                {% if subpart.updates %}
+                                    {% set _sectionClasses = "" %}
+                                    {% set _sectionHasUpdates = true %}
+                                {% endif %}
+                                {% for subsubpart in subpart.subsubparts %}
+                                    {% if subsubpart.updates %}
+                                        {% set _sectionClasses = "" %}
+                                        {% set _sectionHasUpdates = true %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endfor %}
+
+                <li class=" {{_sectionClasses}} ">
+                    <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}&updatesFilterOn=false">
+                        <span class="subsection-title-text">{{section.title|safe}}</span>
+                        {% if section.summary %}
+                        <span class="subsection-summary">
+                            {{section.summary|safe}}
+                        </span>
+                        {% endif %}
+                        <strong class="update-tag govuk-tag" style="margin-right: 5px; background: #005ea5">
+                            Edited in 2018
+                        </strong>
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+            
+        </div>
+    </article>
+            
+    <div class="print-page">
+        <a onclick="window.print();return false;" href="#">Print this page</a>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+$(document).ready(function(){
+    var _checkFilters = $("input[name='filter']")
+    var _rulesContainer = $("#manuals-frontend")
+    var _filteredMessage = $(".filtered-message").hide()
+    var _clearFilter = $(".clear-filter")
+    // var _showUpdates = $(".show-updates")
+    var _openAll = $(".js-collection-controls").children().first()
+    var _sectionsWithNoUpdates = $(".section-contains-no-updates")
+    var _sectionLinks = $(".section-list a")
+
+    _clearFilter.click(function (e){
+        _checkFilters.each(function( index ) {
+            $(this).prop("checked", false).attr("checked", false).removeAttr("checked")
+        })
+        _checkFilters.trigger("change")
+        e.preventDefault();
+    })
+
+    // on load
+    toggleFilter()
+    // on change
+    _checkFilters.change(function(){
+        toggleFilter()
+    });
+
+    function toggleFilter(){
+        var _filtered = false
+        _rulesContainer.removeClass("show-updates")
+        _rulesContainer.removeClass("hide-non-updated")
+        _checkFilters.each(function( index ) {
+            var _thisCheck = this,
+                _checked = _thisCheck.checked,
+                _thisID = _thisCheck.id
+            _rulesContainer.removeClass("show-part-"+_thisID)
+                
+            if(_checked){
+                _openAll.trigger("click")
+                _rulesContainer.addClass("show-part-"+_thisID)
+                _filtered = true
+                _filteredMessage.show()
+                // _showUpdates.hide()
+                // hide sections
+                // _sectionsWithNoUpdates.parent().hide()
+            } else {
+                // _showUpdates.show()
+                _filteredMessage.hide()
+                // show sections
+                // _sectionsWithNoUpdates.parent().show()
+            }
+
+        });
+        // update query string
+        _sectionLinks.each(function( index ) {
+            var _thisLink = $(this),
+                _thisHREF = _thisLink.attr('href'),
+                _newHREF = _thisHREF
+            if(_thisHREF.indexOf('updatesFilterOn=false') != -1){
+                _newHREF = _thisHREF.replace("updatesFilterOn=false", "updatesFilterOn="+_filtered);
+            } else if(_thisHREF.indexOf('updatesFilterOn=true') != -1){
+                _newHREF = _thisHREF.replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
+            }
+            _thisLink.attr('href',_newHREF)
+        })
+
+        if(_filtered == true) {
+            _rulesContainer.addClass("show-updates")
+            _rulesContainer.addClass("hide-non-updated")
+        }
+    }
+
+});
+</script>
+{% endblock %}
