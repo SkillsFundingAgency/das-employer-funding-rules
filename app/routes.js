@@ -9,9 +9,10 @@ var _myData = {
         "providers-manual-original": require(__dirname + '/data/providers-manual-original.json'),
         "providers-manual-2": require(__dirname + '/data/providers-manual-2.json'),
         "providers-manual-3": require(__dirname + '/data/providers-manual-3.json'),
-        "employers-manual-original": require(__dirname + '/data/employers-manual-original.json')
+        "employers-manual-original": require(__dirname + '/data/employers-manual-original.json'),
+        "employers-manual-2": require(__dirname + '/data/employers-manual-2.json')
     },
-    "latestEmployerManual": "employers-manual-original",
+    "latestEmployerManual": "employers-manual-2",
     "latestProviderManual": "providers-manual-3"
 }
 

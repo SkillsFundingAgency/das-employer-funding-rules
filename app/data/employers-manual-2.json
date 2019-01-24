@@ -1,7 +1,7 @@
 {
-    "id": "employers-manual-original",
+    "id": "employers-manual-2",
     "type": "employer",
-    "name": "Employers - original",
+    "name": "Employers - 2",
     "content": {
         "title": "Apprenticeship funding: rules and guidance for employers",
         "date": "August 2018 to July 2019",
@@ -12,7 +12,8 @@
         "sections": [
             {
                 "id": "intro-and-purpose",
-                "title": "Introduction and purpose of the document",
+                "title": "Introduction",
+                "summary": "What these rules cover, why you should read them and definitions of some of the terms we use.",
                 "subsections": [
                     {
                         "type": "main",
@@ -55,7 +56,8 @@
             },
             {
                 "id": "employers-apprenticeships-things-check",
-                "title": "Employers and apprenticeships: things to check",
+                "title": "Things to check",
+                "summary": "What sort of criteria your apprentice must meet before the apprenticeship starts as well as evidence and checks to complete over the course of the apprenticeship.",
                 "subsections": [
                     {
                         "type": "main",
@@ -66,6 +68,7 @@
             {
                 "id": "what-is-apprenticeship",
                 "title": "What is an apprenticeship?",
+                "summary": "What you, your provider and apprentices should expect from an apprenticeship. Includes information about contracts, pay and training.",
                 "updates": [
                     {
                         "content": "Restructure: changes made for ease of understanding, including incorporation of ‘commitment statement’ into this section."
@@ -554,6 +557,7 @@
             {
                 "id": "who-can-be-funded",
                 "title": "Who can be funded?",
+                "summary": "How to work out if an individual is eligible for apprenticeship funding. Includes information on additional financial support for learners with learning difficulties.",
                 "updates": [
                     {
                         "rule": "E55.4",
@@ -766,7 +770,8 @@
             },
             {
                 "id": "what-can-be-funded",
-                "title": "What can be funded? ",
+                "title": "Which costs are funded?",
+                "summary": "Which costs can and cannot be paid for with apprenticeship funds. Includes information on: support for care leavers, end-point assessments and English and maths training.",
                 "updates": [
                     {
                         "title": "Eligible costs",
@@ -1477,7 +1482,8 @@
             },
             {
                 "id": "contracting-subcontracting",
-                "title": "Contracting and subcontracting ",
+                "title": "Contracting and subcontracting",
+                "summary": "Information on the agreement between you and your main provider, including requirements around subcontractors and detail on dispute resolution.",
                 "updates": [
                     {
                         "title": "Agreeing use of subcontractors with employers",
@@ -1615,6 +1621,7 @@
             {
                 "id": "paying-for-an-apprenticeship",
                 "title": "Paying for an apprenticeship",
+                "summary": "Information on when we will make payments to the provider, reporting requirements and agreeing a price. Includes information on accounting for prior learning, co-investment and apprenticeship service accounts and VAT.",
                 "subsections": [
                     {
                         "type": "main",
@@ -1666,7 +1673,8 @@
             },
             {
                 "id": "apprenticeships-funded-by-transfer-of-levy-funds",
-                "title": "Apprenticeships funded by transfer of levy funds",
+                "title": "Apprenticeships funded by transfers of levy funds",
+                "summary": "The rules that apply when you send or receive (transfer) apprenticeship levy funds, monitoring and what to do when the total cost of training cannot be covered by a transfer.",
                 "subsections": [
                     {
                         "type": "subsection",
@@ -1703,6 +1711,7 @@
             {
                 "id": "changes-in-circumstances",
                 "title": "Changes in circumstances",
+                "summary": "Information on which changes may affect your agreement with your provider. Explains what effect (if any) these changes have on apprenticeship funding and training, and what actions you and your provider may need to take.",
                 "subsections": [
                     {
                         "type": "main",
@@ -1725,6 +1734,7 @@
             {
                 "id": "annex-a-eligibility-criteria",
                 "title": "Annex A: Eligibility criteria (who we fund)",
+                "summary": "Information on who may be eligible for apprenticeship funding. Includes residency, citizenship and age criteria.",
                 "subsections": [
                     {
                         "type": "main",
@@ -1801,6 +1811,7 @@
             {
                 "id": "glossary",
                 "title": "Glossary",
+                "summary": "Definitions of the terms we use.",
                 "subsections": [
                     {
                         "type": "main",
