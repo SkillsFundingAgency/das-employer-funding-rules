@@ -8,14 +8,15 @@ module.exports = function (router,_myData) {
         //req.session.myData.version = version
         req.session.myData.manual = req.session.myData.latestProviderManual
         req.session.myData.manualpage = "intro-and-purpose"
-        req.session.myData.updatesFilter = "true"
+        req.session.myData.updatesFilter = "false"
         req.session.myData.updatesFilterOn = "false"
         req.session.myData.startFrom = "manual-home"
-        req.session.myData.emChart = "false"
+        req.session.myData.emChart = "textflow"
         req.session.myData.svgflow = "false"
-        req.session.myData.textflow = "false"
+        req.session.myData.textflow = "true"
         req.session.myData.emailUpdates = "1"
         req.session.myData.useLatestManual = "false"
+        req.session.myData.header = "standard"
     }
 
     //generic.js contains wildcard get and post requests. Useful for setting session data that we want available on any other routes file. also, so we dont have duplicate wildcard requests on individual routes files that might conflict with each other.
@@ -61,13 +62,16 @@ module.exports = function (router,_myData) {
         switch(req.session.myData.emChart) {
             case "svgflow":
                 req.session.myData.svgflow = "true"
+                req.session.myData.textflow = "false"
                 break;
             case "textflow":
                 req.session.myData.textflow = "true"
+                req.session.myData.svgflow = "false"
                 break;
             default:
         }
         req.session.myData.emailUpdates = req.query.emailUpdates || req.session.myData.emailUpdates
+        req.session.myData.header = req.query.header || req.session.myData.header
 
         next()
     });
@@ -96,6 +100,8 @@ module.exports = function (router,_myData) {
         req.session.myData.startFrom = req.body.manualSetupStartFrom
         //Updates Filter
         req.session.myData.updatesFilter = req.body.manualSetupContextualUpdates
+        //Header
+        req.session.myData.header = req.body.manualSetupHeader
         
         //Flow chart - english maths
         req.session.myData.emChart = req.body.manualSetupEngMathsChart

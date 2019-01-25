@@ -223,7 +223,7 @@
               Guidance
             </p>
             <h1 class="gem-c-title__text gem-c-title__text--long">
-              Apprenticeship funding and performance management rules, August 2018 to July 2019
+              Apprenticeship funding and performance management rules - August 2018 to July 2019
             </h1>
           </div>
         </div>
@@ -295,6 +295,8 @@
                     {% set _providerManual = myData.manuals[myData.manual].id %}
                   {% endif %}
                 {% endif %}
+                {% set _providerManualContent = myData.manuals[_providerManual].content %}
+                {% set _providerManualTitle = _providerManualContent.title|safe + " - " + _providerManualContent.date|safe + " (" + _providerManualContent.version|safe|lower + ")" %}
                 
                 <section class="attachment embedded" id="attachment_2875833">
                   <div class="attachment-thumb">
@@ -302,7 +304,11 @@
                         alt="" src="/public/images/pub-cover-html.png"></a>
                   </div>
                   <div class="attachment-details">
-                    <h2 class="title"><a href="manual-home?manual={{_providerManual}}">Apprenticeship funding rules for training providers, August 2018 to July 2019</a></h2>
+                    <h2 class="title">
+                      <a href="manual-home?manual={{_providerManual}}">
+                        {{_providerManualTitle}}
+                      </a>
+                    </h2>
                     <p class="metadata">
                       <span class="type">HTML</span>
                     </p>
@@ -313,7 +319,7 @@
                       <a aria-hidden="true" class="thumbnail" href="#"><img alt="" src="/public/images/thumbnail_1819_Employer_Rules_v1.0.png"></a>
                     </div>
                     <div class="attachment-details">
-                      <h2 class="title"><a aria-describedby="attachment-2875834-accessibility-help" href="/public/downloads/1819_Provider_Rules_v1.0.pdf">PDF: Apprenticeship funding rules for training providers, August 2018 to July 2019</a></h2>
+                      <h2 class="title"><a aria-describedby="attachment-2875834-accessibility-help" href="/public/downloads/1819_Provider_Rules_v1.0.pdf">PDF: {{_providerManualTitle}}</a></h2>
                       <p class="metadata">
                         <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">2.3MB</span>,
                         <span class="page-length">72 pages</span>
@@ -329,7 +335,6 @@
                           version of this document in a more accessible format, please email <a href="#">sde.servicedesk@education.gov.uk</a>.
                           Please tell us what format you need. It will help us if you say what assistive technology you
                           use.
-  
                         </p>
                       </div>
                     </div>
@@ -340,8 +345,9 @@
                       <a aria-hidden="true" class="thumbnail" href="#"><img alt="" src="/public/images/thumbnail_1819_Employer_Rules_v1.0.png"></a>
                     </div>
                     <div class="attachment-details">
-                      <h2 class="title"><a href="#">
-                        PDF: Apprenticeship performance-management rules for training providers, August 2018 to July 2019
+                      <h2 class="title">
+                        <a href="#">
+                          PDF: Apprenticeship performance-management rules for training providers - August 2018 to July 2019 (version 1)
                         </a></h2>
                       <p class="metadata">
                         <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">633KB</span>,
@@ -362,11 +368,11 @@
                         </div>
   
                     </div>
-                  </section>
+                </section>
 
                 <h2 class="gem-c-heading  gem-c-heading--mobile-top-margin  " id="documents-title">
-                    Employers
-                  </h2>
+                  Employers
+                </h2>
 
                 <!-- EMPLOYERS -->
                 {% set _employerManual = myData.latestEmployerManual %}
@@ -375,6 +381,8 @@
                     {% set _employerManual = myData.manuals[myData.manual].id %}
                   {% endif %}
                 {% endif %}
+                {% set _employerManualContent = myData.manuals[_employerManual].content %}
+                {% set _employerManualTitle = _employerManualContent.title|safe + " - " + _employerManualContent.date|safe + " (" + _employerManualContent.version|safe|lower + ")" %}
 
                 <section class="attachment embedded" id="attachment_2875831">
                   <div class="attachment-thumb">
@@ -382,7 +390,7 @@
                         alt="" src="/public/images/pub-cover-html.png"></a>
                   </div>
                   <div class="attachment-details">
-                    <h2 class="title"><a href="manual-home?manual={{_employerManual}}">Apprenticeship funding rules for employers, August 2018 to July 2019</a></h2>
+                    <h2 class="title"><a href="manual-home?manual={{_employerManual}}">{{_employerManualTitle}}</a></h2>
                     <p class="metadata">
                       <span class="type">HTML</span>
                     </p>
@@ -395,7 +403,7 @@
                     </div>
                     <div class="attachment-details">
                       <h2 class="title"><a aria-describedby="attachment-2875834-accessibility-help" href="/public/downloads/1819_Employer_Rules_v1.0.pdf">
-                        PDF: Apprenticeship funding rules for employers, August 2018 to July 2019
+                        PDF: {{_employerManualTitle}}
                       </a></h2>
                       <p class="metadata">
                         <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">2.3MB</span>,
@@ -429,7 +437,7 @@
                   <div class="attachment-details">
                     <h2 class="title">
                       <a href="#">
-                        PDF: Apprenticeship funding rules for employer-providers, August 2018 to July 2019
+                        PDF: Apprenticeship funding rules for employer-providers - August 2018 to July 2019 (version 1)
                       </a>
                     </h2>
                     <p class="metadata">

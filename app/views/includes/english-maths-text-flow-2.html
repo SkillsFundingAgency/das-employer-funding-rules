@@ -1,0 +1,63 @@
+{% set _endPointOne = "They must get the minimum required standards in English and maths." %}
+
+<div class="call-to-action">
+        <h3 class="govuk-heading-m">Find out what English and maths training your apprentice should do</h3>
+        <ol class="govuk-list govuk-list--number govuk-!-font-size-24">
+            <li style="margin-bottom:20px">
+                <span class="">Does the apprentice have at least Level 2 English and maths?</span><br>
+                This is the same as grade E or 2** at GCSE.
+                <ul class="govuk-list govuk-list--bullet">
+                    <li class="yes">
+                        Yes: They do not need to do any more English or maths training.
+                    </li>
+                    <li class="no">
+                        No: <span class="govuk-!-font-weight-bold">Continue to question 2</span>.
+                    </li>
+                </ul>
+            </li>
+            <li style="margin-bottom:20px">If you answered ‘no’ to question 1, do the apprentice’s English and maths qualifications meet the standard or framework of their apprenticeship?
+                <ul class="govuk-list govuk-list--bullet">
+                    <li class="yes">
+                        Yes: They must also do Level 2 English and maths.
+                    </li>
+                    <li class="no">No: <span class="govuk-!-font-weight-bold">Continue to question 3</span>.
+                    </li>
+                </ul>
+            </li>
+            <li style="margin-bottom:20px">If you answered ‘no’ to question 2, does the apprentice have a special educational need, learning difficulty or disability?
+                <ul class="govuk-list govuk-list--bullet">
+                    <li class="yes">
+                        Yes: <span class="govuk-!-font-weight-bold">Continue to question 4</span>.
+                    </li>
+                    <li class="no">
+                        No: <span class="govuk-!-font-weight-bold">Continue to question 5</span>.
+                    </li>
+                </ul>
+            </li>
+            <li style="margin-bottom:20px">If you answered ‘yes’ to question 3, will the apprentice be able to get the minimum requirement in English and maths?
+                <ul class="govuk-list govuk-list--bullet">
+                    <li class="yes">Yes: {{_endPointOne}}
+                    </li>
+                    <li class="no">No: We’ll fund functional English and maths Level 2 for the apprentice. They must get at least entry Level 3 functional English and maths.
+                    </li>
+                </ul>
+            </li>
+            <li style="margin-bottom:20px">If you answered ‘no’ to question 3, does the apprentice have at least approved Level 1 English and maths?
+                <ul class="govuk-list govuk-list--bullet">
+                    <li class="yes">Yes: {{_endPointOne}}
+                    </li>
+                    <li class="no">No: <span class="govuk-!-font-weight-bold">Continue to question 6</span>.
+                    </li>
+                </ul>
+            </li>
+            <li style="margin-bottom:20px">If you answered ‘no’ to question 5, is the apprentice working below Level 1?
+                
+                <ul class="govuk-list govuk-list--bullet">
+                    <li class="yes">Yes: They must get Level 1 and 2 in English and maths. We may fund these qualifications, based on an assessment of the apprentice. {{_endPointOne}}
+                    </li>
+                    <li class="no">No: They must do Level 2 English and maths (which we’ll fund). If they cannot achieve this, they must get Level 1 English and maths (which we will not fund). They must get the minimum required standards in English and maths.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>

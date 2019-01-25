@@ -49,7 +49,12 @@
 
 <div id="manuals-frontend" class="manuals-frontend-body inner-block">
     
-    {% include "../includes/manual-header-2.html" %}
+    {% if myData.header == "altered" %}
+        {% include "../includes/manual-header-2.html" %}
+    {% else %}
+        {% set _manualHeaderTitle = _thisManual.title|safe + " - " + _thisManual.date|safe + " (" + _thisManual.version|safe|lower + ")"  %}
+        {% include "../includes/manual-header.html" %}
+    {% endif %}
       
     <ol class="breadcrumb-trail">
         <li><a href="manual-home?manual={{myData.manual}}&updatesFilterOn=false">Contents</a></li>
@@ -194,14 +199,14 @@
                                 {% if subsection.id == "support-english-maths-training" %}
                                     <!-- Flow chart -->
                                     {% if myData.svgflow == "true" %}
-                                        <h3 class="govuk-heading-s">Check what English and maths training an apprentice should undertake.</h3>
+                                        <h3 class="govuk-heading-m">Find out what English and maths training your apprentice should do</h3>
                                         <div style="margin-bottom:20px">
                                             {% include "../includes/english-maths-flow-fixed.svg" %}
                                         </div>
                                     {% endif %}
                                     <!-- Text decision tree -->
                                     {% if myData.textflow == "true" %}
-                                        {% include "../includes/english-maths-text-flow.html" %}
+                                        {% include "../includes/english-maths-text-flow-2.html" %}
                                     {% endif %}
                                 {% endif %}
             

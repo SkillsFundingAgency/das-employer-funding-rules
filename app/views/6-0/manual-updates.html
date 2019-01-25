@@ -11,7 +11,12 @@ GOV.UK Manual
 
 <div id="manuals-frontend" class="manuals-frontend-body inner-block">
 
-    {% include "../includes/manual-header-2.html" %}
+    {% if myData.header == "altered" %}
+        {% include "../includes/manual-header-2.html" %}
+    {% else %}
+        {% set _manualHeaderTitle = _thisManual.title|safe + " - " + _thisManual.date|safe + " (" + _thisManual.version|safe|lower + ")"  %}
+        {% include "../includes/manual-header.html" %}
+    {% endif %}
 
     <ol class="breadcrumb-trail">
         <li class="no-separator"><a href="manual-home?manual={{myData.manual}}">Contents</a></li>

@@ -1,12 +1,14 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Manual</h1>
+    </div>
+</div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <form method="POST">
-
-            <h1 class="govuk-heading-l">Manual</h1>
             <fieldset>
 
                 <!-- TODO different settings  for employer and provider -->
@@ -59,6 +61,17 @@
                     </select>
                 </div>
 
+                <!-- Start from -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualSetupHeader">
+                        Header version
+                    </label>
+                    <select class="govuk-select" id="manualSetupHeader" name="manualSetupHeader" data-option="manualSetupHeader">
+                        <option {% if myData.header == 'standard' %}selected{% endif %} value="standard">Standard</option>
+                        <option {% if myData.header == 'altered' %}selected{% endif %} value="altered">Altered</option>
+                    </select>
+                </div>
+
                 <p class="govuk-body" id="start-url" style="display:none">
                     <a href="#" role="button" draggable="false" class="govuk-button">Start manual prototype</a>
                 </p>
@@ -83,6 +96,9 @@
                 <li><a href="subscribe-email?emailUpdates=4" class="govuk-link govuk-link--no-visited-state">Email with same update to more than 1 manual</a></li>
             </ul>
         </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% include "includes/manual-data-notes.html" %}
     </div>
 </div>
 
@@ -117,8 +133,9 @@ $(document).ready(function(){
             _urlmanual = (!_useLatestManual ? ("&manual=" + _options.filter("#manualSetupManual").val()) : ""),
             _urlupdatesFilter = "&updatesFilter=" + _options.filter("#manualSetupContextualUpdates").val(),
             _urlemChart = "&emChart=" + _options.filter("#manualSetupEngMathsChart").val(),
+            _urlheader = "&header=" + _options.filter("#manualSetupHeader").val(),
             _urlReset = "&resetSession=true",
-            _urlPageQueries = _urlPage + _urlstartFrom + _urlmanual + _urlupdatesFilter + _urlemChart + _urlReset;
+            _urlPageQueries = _urlPage + _urlstartFrom + _urlmanual + _urlupdatesFilter + _urlemChart + _urlheader + _urlReset;
 
         var _startURLText = _urlVersion + _urlPageQueries,
             _startURLHREF =  _urlPageQueries;
