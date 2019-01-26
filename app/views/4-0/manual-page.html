@@ -210,7 +210,7 @@
                                     {% if myData.svgflow == "true" %}
                                         <h3 class="govuk-heading-s">Check what English and maths training an apprentice should undertake.</h3>
                                         <div style="margin-bottom:20px">
-                                            {% include "../includes/english-maths-flow-fixed.svg" %}
+                                            {% include "../includes/english-maths-flow-fixed.html" %}
                                         </div>
                                     {% endif %}
                                     <!-- Text decision tree -->
@@ -253,6 +253,8 @@
                                     {% else %}
                                         {% if part.type == "header" %}
                                             <h3 class="govuk-heading-m">{{part.content|safe|trim}}</h3>
+                                        {% elif part.type == "flow" %}
+                                            <!-- nothing -->
                                         {% elif part.type == "block" %}
                                             <h3 class="govuk-heading-s">{{part.title|safe}}</h3>
                                             <p class="govuk-body">

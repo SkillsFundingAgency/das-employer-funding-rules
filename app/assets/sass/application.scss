@@ -19,6 +19,7 @@ $govuk-global-styles: true;
 @import 'manual-frontend/manual-application-print';
 
 /* SVG */
+// Note: we are using Option 4 from these guidelines; https://css-tricks.com/scale-svg/#article-header-id-10
 .svg-1-container {
     position: relative; 
     height: 0; 
@@ -50,4 +51,11 @@ $govuk-global-styles: true;
 .svg-1 g g:hover rect {
     stroke-width: 4px;
     cursor: pointer;
+}
+.svg-2 g g:hover path,
+.svg-2 g g:hover rect {
+    stroke-width: 6px;
+}
+.svg-1 .larger-text-2 {
+    font-size: 21px;
 }
