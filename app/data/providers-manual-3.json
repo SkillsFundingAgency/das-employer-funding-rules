@@ -1723,6 +1723,9 @@
                                 ]
                             },
                             {
+                                "type": "flow"
+                            },
+                            {
                                 "id": "126",
                                 "content": "Where an apprentice does not already hold an approved level 2 qualification in English and maths we will provide additional funding, at a set single rate, for that apprentice to achieve up to an approved level 2 qualification in English and maths.",
                                 "updates": [

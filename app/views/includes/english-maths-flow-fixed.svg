@@ -1,232 +1,234 @@
-<svg class="svg-1" xmlns="http://www.w3.org/2000/svg" 
-    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-0.5 -0.5 1004 1364" content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.1 Safari/605.1.15&quot; version=&quot;9.4.7&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram id=&quot;" style="background-color: rgb(255, 255, 255);">
-    <defs/>
+<div class="svg-1-container" style="margin-bottom:40px; padding-bottom: 134%">
+    <svg class="svg-1" xmlns="http://www.w3.org/2000/svg" 
+        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1004 1364" content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.1 Safari/605.1.15&quot; version=&quot;9.4.7&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram id=&quot;" style="background-color: rgb(255, 255, 255);">
+        <defs/>
 
-    <!-- 1 -->
-    <g role="listitem">
-        <rect x="262" y="1" width="220" height="120" fill="#FFF" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-        <text>
-            <tspan x="287" y="42">Do they have at least</tspan>
-            <tspan x="317" y="67">level 2 English </tspan>
-            <tspan x="327" y="92">and maths?</tspan>
-        </text>
-        <g><!-- Yes -->
-            <rect x="262" y="121" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="304" y="147">Yes</text>
-            <path d="M 317 160.5 L 317 190.5 Q 317 200.5 307 200.5 L 122 200.5 Q 112 200.5 112 210.5 L 112 228.26" fill="none" stroke="#006435" stroke-width="2" stroke-miterlimit="10" />
-            <path d="M 112 238.26 L 107 228.26 L 117 228.26 Z" fill="#006435" stroke="#006435" stroke-width="2" stroke-miterlimit="10" />
-        </g>
-        <g><!-- No -->
-            <rect x="372" y="121" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="414" y="147" >No</text>
-            <path d="M 427 160.5 L 427 190.5 Q 427 200.5 417 200.5 L 382 200.5 Q 372 200.5 372 210.5 L 372 230.26" fill="none" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
-            <path d="M 372 238.26 L 368 230.26 L 376 230.26 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" />
-        </g>
-    </g>
-
-    <!-- 2 -->
-    <g>
-        <rect x="2" y="241" width="220" height="160" rx="16" ry="16" fill="#bfd8cc" stroke="#006435" stroke-width="4" />
-        <text class="larger-text">
-            <tspan x="34" y="301">They do not require</tspan>
-            <tspan x="38" y="326">English and maths</tspan>
-            <tspan x="74" y="351">training.</tspan>
-        </text>
-    </g>
-    
-    <!--3-->
-    <g> 
-        <rect x="262" y="241" width="220" height="120" fill="#FFF" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-        <text>
-            <tspan x="284" y="271">Does their English and</tspan>
-            <tspan x="290" y="296">maths&nbsp;qualifications</tspan>
-            <tspan x="294" y="321">satisfy the standard</tspan>
-            <tspan x="312" y="346">or framework?</tspan>
-        </text>
-        <!-- Yes -->
-        <g>
-            <path d="M 317 400.5 L 317 430.5 Q 317 440.5 307 440.5 L 122 440.5 Q 112 440.5 112 450.5 L 112 468.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-            <path d="M 112 478.26 L 107 468.26 L 117 468.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-            <rect x="262" y="361" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="304" y="387">Yes</text>
-        </g>
-        <!-- No -->
-        <g>
-            <path d="M 427 400.5 L 427 430.5 Q 427 440.5 417 440.5 L 382 440.5 Q 372 440.5 372 450.5 L 372 470.26" fill="none" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
-            <path d="M 372 478.26 L 368 470.26 L 376 470.26 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" />
-            <rect x="372" y="361" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="414" y="387" >No</text>
-        </g>
-    </g>
-
-    <!-- 4 -->
-    <g>
-        <rect x="2" y="481" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" />
-        <text class="larger-text">
-            <tspan x="52" y="556">Level 2 English</tspan>
-            <tspan x="68" y="581">and maths.</tspan>
-        </text>
-    </g>
-
-    <!-- 5 -->
-    <g>
-        <rect x="262" y="481" width="220" height="120" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-        <text class="larger-text">
-            <tspan x="312" y="509">Do they have a</tspan>
-            <tspan x="270" y="534">special educational need,</tspan>
-            <tspan x="293" y="559">learning difficulty or</tspan>
-            <tspan x="332" y="584">disability?</tspan>
-        </text>   
-        <g>
-            <path d="M 317 640.5 L 317 670.5 Q 317 680.5 327 680.5 L 362 680.5 Q 372 680.5 372 690.5 L 372 710.26" fill="none" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
-            <path d="M 372 718.26 L 368 710.26 L 376 710.26 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" />
-            <rect x="262" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="304" y="627">Yes</text>
-        </g>     
-        <g>
-            <path d="M 482 620.5 L 492 620.5 Q 502 620.5 502 610.5 L 502 550.5 Q 502 540.5 506.88 540.5 L 511.76 540.5" fill="none" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
-            <path d="M 519.76 540.5 L 511.76 544.5 L 511.76 536.5 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" />
-            <rect x="372" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="414" y="627">No</text>
-        </g>                                            
-    </g>
-
-    <!-- 6 -->
-    <g>
-        <rect x="522" y="481" width="220" height="120" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-        <text class="larger-text">
-            <tspan x="560" y="509">Are they operating</tspan>
-            <tspan x="540" y="534">below level 1 AND they</tspan>
-            <tspan x="542" y="559">do not have level 1 or 2</tspan>
-            <tspan x="557" y="584">English and maths?</tspan>
-        </text>  
-        <g>
-            <path d="M 577 640.5 L 577 670.5 Q 577 680.5 587 680.5 L 622 680.5 Q 632 680.5 632 690.5 L 632 708.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
-            <path d="M 632 718.26 L 627 708.26 L 637 708.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-            <rect x="522" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="564" y="627">Yes</text>
-        </g>
-        <g>
-            <path d="M 742 620.5 L 752 620.5 Q 762 620.5 762 610.5 L 762 550.5 Q 762 540.5 766.88 540.5 L 771.76 540.5" fill="none" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
-            <path d="M 779.76 540.5 L 771.76 544.5 L 771.76 536.5 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" />
-            <rect x="632" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="674" y="627">No</text>
-        </g>
-    </g>
-
-    <!-- 7 -->
-    <g>
-        <rect x="782" y="481" width="220" height="120" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-        <text class="larger-text">
-            <tspan x="820" y="509">Are they operating</tspan>
-            <tspan x="822" y="534">below level 1 AND</tspan>
-            <tspan x="832" y="559">have approved</tspan>
-            <tspan x="832" y="584">qualifications?</tspan>
-        </text>  
-        <g>
-            <path d="M 837 640.5 L 837 670.5 Q 837 680.5 827 680.5 L 772 680.5 Q 762 680.5 762 690.5 L 762 948.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
-            <path d="M 762 958.26 L 757 948.26 L 767 948.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-            <rect x="782" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="824" y="627">Yes</text>
-        </g>
-        <g>
-            <path d="M 947 640.5 L 947 670.5 Q 947 680.5 937 680.5 L 902 680.5 Q 892 680.5 892 690.5 L 892 708.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
-            <path d="M 892 718.26 L 887 708.26 L 897 708.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-            <rect x="892" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="934" y="627">No</text>
-        </g>
-    </g>
-
-    <!-- 8 -->
-    <g>
-        <rect x="262" y="721" width="220" height="120" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-        <text class="larger-text">
-            <tspan x="276" y="749">Will they not be able to</tspan>
-            <tspan x="277" y="774">achieve English and/or</tspan>
-            <tspan x="276" y="799">maths to the minimum</tspan>
-            <tspan x="352" y="824">level?</tspan>
-        </text> 
-        <g>
-            <path d="M 317 880.5 L 317 910.5 Q 317 920.5 327 920.5 L 362 920.5 Q 372 920.5 372 930.5 L 372 948.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
-            <path d="M 372 958.26 L 367 948.26 L 377 948.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-            <rect x="262" y="841" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="304" y="867">Yes</text>
-        </g> 
-        <g>
-            <path d="M 427 880.5 L 427 910.5 Q 427 920.5 437 920.5 L 752 920.5 Q 762 920.5 762 930.5 L 762 948.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-            <path d="M 762 958.26 L 757 948.26 L 767 948.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-            <rect x="372" y="841" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-            <text x="414" y="867">No</text>
-        </g>
-    </g>
-
-    <!-- 9 -->
-    <g>
-        <g>
-            <rect x="522" y="721" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="none" />
-            <text class="larger-text">
-                <tspan x="548" y="746">Must achieve level 1</tspan>
-                <tspan x="554" y="771">English and maths</tspan>
-                <tspan x="552" y="796">which we may fund.</tspan>
-                <tspan x="552" y="821">Then, study toward</tspan>
-                <tspan x="547" y="846">level 2 which we may</tspan>
-                <tspan x="592" y="871">also fund.</tspan>
-            </text>    
-            <path d="M 632 880.5 L 632 910.5 Q 632 920.5 642 920.5 L 752 920.5 Q 762 920.5 762 930.5 L 762 948.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
-            <path d="M 762 958.26 L 757 948.26 L 767 948.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-        </g>                                         
-    </g>
-
-    <!-- 10 -->
-    <g>
-        <g>
-            <rect x="782" y="721" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="none" />
-            <text class="larger-text">
-                <tspan x="802" y="746">Must study for level 2</tspan>
-                <tspan x="804" y="771">English and maths. If</tspan>
-                <tspan x="810" y="796">not achieved, must</tspan>
-                <tspan x="802" y="821">achieve level 1 English</tspan>
-                <tspan x="812" y="846">and maths which we</tspan>
-                <tspan x="842" y="871">will not fund.</tspan>
+        <!-- 1 -->
+        <g role="listitem">
+            <rect x="262" y="1" width="220" height="120" fill="#FFF" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+            <text>
+                <tspan x="287" y="42">Do they have at least</tspan>
+                <tspan x="317" y="67">level 2 English </tspan>
+                <tspan x="327" y="92">and maths?</tspan>
             </text>
-            <path d="M 892 880.5 L 892 910.5 Q 892 920.5 882 920.5 L 772 920.5 Q 762 920.5 762 930.5 L 762 948.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-            <path d="M 762 958.26 L 757 948.26 L 767 948.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+            <g><!-- Yes -->
+                <rect x="262" y="121" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="304" y="147">Yes</text>
+                <path d="M 317 160.5 L 317 190.5 Q 317 200.5 307 200.5 L 122 200.5 Q 112 200.5 112 210.5 L 112 228.26" fill="none" stroke="#006435" stroke-width="2" stroke-miterlimit="10" />
+                <path d="M 112 238.26 L 107 228.26 L 117 228.26 Z" fill="#006435" stroke="#006435" stroke-width="2" stroke-miterlimit="10" />
+            </g>
+            <g><!-- No -->
+                <rect x="372" y="121" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="414" y="147" >No</text>
+                <path d="M 427 160.5 L 427 190.5 Q 427 200.5 417 200.5 L 382 200.5 Q 372 200.5 372 210.5 L 372 230.26" fill="none" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
+                <path d="M 372 238.26 L 368 230.26 L 376 230.26 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" />
+            </g>
         </g>
-    </g>
 
-    <!-- 11 -->
-    <g>
+        <!-- 2 -->
         <g>
-            <rect x="262" y="961" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="none" />
+            <rect x="2" y="241" width="220" height="160" rx="16" ry="16" fill="#bfd8cc" stroke="#006435" stroke-width="4" />
             <text class="larger-text">
-                <tspan x="276" y="1011">We will fund functional</tspan>
-                <tspan x="302" y="1036">level English and</tspan>
-                <tspan x="276" y="1061">maths below level 2 if it</tspan>
-                <tspan x="330" y="1086">is required.</tspan>
-            </text> 
-            <path d="M 372 1120.5 L 372 1188.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
-            <path d="M 372 1198.26 L 367 1188.26 L 377 1188.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <tspan x="34" y="301">They do not require</tspan>
+                <tspan x="38" y="326">English and maths</tspan>
+                <tspan x="74" y="351">training.</tspan>
+            </text>
         </g>
-    </g>
+        
+        <!--3-->
+        <g> 
+            <rect x="262" y="241" width="220" height="120" fill="#FFF" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+            <text>
+                <tspan x="284" y="271">Does their English and</tspan>
+                <tspan x="290" y="296">maths&nbsp;qualifications</tspan>
+                <tspan x="294" y="321">satisfy the standard</tspan>
+                <tspan x="312" y="346">or framework?</tspan>
+            </text>
+            <!-- Yes -->
+            <g>
+                <path d="M 317 400.5 L 317 430.5 Q 317 440.5 307 440.5 L 122 440.5 Q 112 440.5 112 450.5 L 112 468.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <path d="M 112 478.26 L 107 468.26 L 117 468.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <rect x="262" y="361" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="304" y="387">Yes</text>
+            </g>
+            <!-- No -->
+            <g>
+                <path d="M 427 400.5 L 427 430.5 Q 427 440.5 417 440.5 L 382 440.5 Q 372 440.5 372 450.5 L 372 470.26" fill="none" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
+                <path d="M 372 478.26 L 368 470.26 L 376 470.26 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" />
+                <rect x="372" y="361" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="414" y="387" >No</text>
+            </g>
+        </g>
 
-    <!-- 12 -->
-    <g>
-        <rect x="652" y="961" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" />
-        <text class="larger-text">
-            <tspan x="687" y="1021">Minimum required</tspan>
-            <tspan x="678" y="1046">standards in English</tspan>
-            <tspan x="720" y="1071">and maths.</tspan>
-        </text>      
-    </g>
+        <!-- 4 -->
+        <g>
+            <rect x="2" y="481" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" />
+            <text class="larger-text">
+                <tspan x="52" y="556">Level 2 English</tspan>
+                <tspan x="68" y="581">and maths.</tspan>
+            </text>
+        </g>
 
-    <!-- 13 -->
-    <g>
-        <rect x="262" y="1201" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" />
-        <text class="larger-text">
-            <tspan x="322" y="1261">Entry level 3</tspan>
-            <tspan x="302" y="1286">functional English</tspan>
-            <tspan x="332" y="1311">and maths.</tspan>
-        </text>                                                     
-    </g>
-    
-</svg>
+        <!-- 5 -->
+        <g>
+            <rect x="262" y="481" width="220" height="120" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+            <text class="larger-text">
+                <tspan x="312" y="509">Do they have a</tspan>
+                <tspan x="270" y="534">special educational need,</tspan>
+                <tspan x="293" y="559">learning difficulty or</tspan>
+                <tspan x="332" y="584">disability?</tspan>
+            </text>   
+            <g>
+                <path d="M 317 640.5 L 317 670.5 Q 317 680.5 327 680.5 L 362 680.5 Q 372 680.5 372 690.5 L 372 710.26" fill="none" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
+                <path d="M 372 718.26 L 368 710.26 L 376 710.26 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" />
+                <rect x="262" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="304" y="627">Yes</text>
+            </g>     
+            <g>
+                <path d="M 482 620.5 L 492 620.5 Q 502 620.5 502 610.5 L 502 550.5 Q 502 540.5 506.88 540.5 L 511.76 540.5" fill="none" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
+                <path d="M 519.76 540.5 L 511.76 544.5 L 511.76 536.5 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" />
+                <rect x="372" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="414" y="627">No</text>
+            </g>                                            
+        </g>
+
+        <!-- 6 -->
+        <g>
+            <rect x="522" y="481" width="220" height="120" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+            <text class="larger-text">
+                <tspan x="560" y="509">Are they operating</tspan>
+                <tspan x="540" y="534">below level 1 AND they</tspan>
+                <tspan x="542" y="559">do not have level 1 or 2</tspan>
+                <tspan x="557" y="584">English and maths?</tspan>
+            </text>  
+            <g>
+                <path d="M 577 640.5 L 577 670.5 Q 577 680.5 587 680.5 L 622 680.5 Q 632 680.5 632 690.5 L 632 708.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
+                <path d="M 632 718.26 L 627 708.26 L 637 708.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <rect x="522" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="564" y="627">Yes</text>
+            </g>
+            <g>
+                <path d="M 742 620.5 L 752 620.5 Q 762 620.5 762 610.5 L 762 550.5 Q 762 540.5 766.88 540.5 L 771.76 540.5" fill="none" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
+                <path d="M 779.76 540.5 L 771.76 544.5 L 771.76 536.5 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="2" stroke-miterlimit="10" />
+                <rect x="632" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="674" y="627">No</text>
+            </g>
+        </g>
+
+        <!-- 7 -->
+        <g>
+            <rect x="782" y="481" width="220" height="120" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+            <text class="larger-text">
+                <tspan x="820" y="509">Are they operating</tspan>
+                <tspan x="822" y="534">below level 1 AND</tspan>
+                <tspan x="832" y="559">have approved</tspan>
+                <tspan x="832" y="584">qualifications?</tspan>
+            </text>  
+            <g>
+                <path d="M 837 640.5 L 837 670.5 Q 837 680.5 827 680.5 L 772 680.5 Q 762 680.5 762 690.5 L 762 948.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
+                <path d="M 762 958.26 L 757 948.26 L 767 948.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <rect x="782" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="824" y="627">Yes</text>
+            </g>
+            <g>
+                <path d="M 947 640.5 L 947 670.5 Q 947 680.5 937 680.5 L 902 680.5 Q 892 680.5 892 690.5 L 892 708.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
+                <path d="M 892 718.26 L 887 708.26 L 897 708.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <rect x="892" y="601" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="934" y="627">No</text>
+            </g>
+        </g>
+
+        <!-- 8 -->
+        <g>
+            <rect x="262" y="721" width="220" height="120" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+            <text class="larger-text">
+                <tspan x="276" y="749">Will they not be able to</tspan>
+                <tspan x="277" y="774">achieve English and/or</tspan>
+                <tspan x="276" y="799">maths to the minimum</tspan>
+                <tspan x="352" y="824">level?</tspan>
+            </text> 
+            <g>
+                <path d="M 317 880.5 L 317 910.5 Q 317 920.5 327 920.5 L 362 920.5 Q 372 920.5 372 930.5 L 372 948.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
+                <path d="M 372 958.26 L 367 948.26 L 377 948.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <rect x="262" y="841" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="304" y="867">Yes</text>
+            </g> 
+            <g>
+                <path d="M 427 880.5 L 427 910.5 Q 427 920.5 437 920.5 L 752 920.5 Q 762 920.5 762 930.5 L 762 948.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <path d="M 762 958.26 L 757 948.26 L 767 948.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <rect x="372" y="841" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
+                <text x="414" y="867">No</text>
+            </g>
+        </g>
+
+        <!-- 9 -->
+        <g>
+            <g>
+                <rect x="522" y="721" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="none" />
+                <text class="larger-text">
+                    <tspan x="548" y="746">Must achieve level 1</tspan>
+                    <tspan x="554" y="771">English and maths</tspan>
+                    <tspan x="552" y="796">which we may fund.</tspan>
+                    <tspan x="552" y="821">Then, study toward</tspan>
+                    <tspan x="547" y="846">level 2 which we may</tspan>
+                    <tspan x="592" y="871">also fund.</tspan>
+                </text>    
+                <path d="M 632 880.5 L 632 910.5 Q 632 920.5 642 920.5 L 752 920.5 Q 762 920.5 762 930.5 L 762 948.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 2" />
+                <path d="M 762 958.26 L 757 948.26 L 767 948.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+            </g>                                         
+        </g>
+
+        <!-- 10 -->
+        <g>
+            <g>
+                <rect x="782" y="721" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="none" />
+                <text class="larger-text">
+                    <tspan x="802" y="746">Must study for level 2</tspan>
+                    <tspan x="804" y="771">English and maths. If</tspan>
+                    <tspan x="810" y="796">not achieved, must</tspan>
+                    <tspan x="802" y="821">achieve level 1 English</tspan>
+                    <tspan x="812" y="846">and maths which we</tspan>
+                    <tspan x="842" y="871">will not fund.</tspan>
+                </text>
+                <path d="M 892 880.5 L 892 910.5 Q 892 920.5 882 920.5 L 772 920.5 Q 762 920.5 762 930.5 L 762 948.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <path d="M 762 958.26 L 757 948.26 L 767 948.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+            </g>
+        </g>
+
+        <!-- 11 -->
+        <g>
+            <g>
+                <rect x="262" y="961" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="none" />
+                <text class="larger-text">
+                    <tspan x="276" y="1011">We will fund functional</tspan>
+                    <tspan x="302" y="1036">level English and</tspan>
+                    <tspan x="276" y="1061">maths below level 2 if it</tspan>
+                    <tspan x="330" y="1086">is required.</tspan>
+                </text> 
+                <path d="M 372 1120.5 L 372 1188.26" fill="none" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+                <path d="M 372 1198.26 L 367 1188.26 L 377 1188.26 Z" fill="#005ea5" stroke="#005ea5" stroke-width="2" stroke-miterlimit="10" />
+            </g>
+        </g>
+
+        <!-- 12 -->
+        <g>
+            <rect x="652" y="961" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" />
+            <text class="larger-text">
+                <tspan x="687" y="1021">Minimum required</tspan>
+                <tspan x="678" y="1046">standards in English</tspan>
+                <tspan x="720" y="1071">and maths.</tspan>
+            </text>      
+        </g>
+
+        <!-- 13 -->
+        <g>
+            <rect x="262" y="1201" width="220" height="160" rx="16" ry="16" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" />
+            <text class="larger-text">
+                <tspan x="322" y="1261">Entry level 3</tspan>
+                <tspan x="302" y="1286">functional English</tspan>
+                <tspan x="332" y="1311">and maths.</tspan>
+            </text>                                                     
+        </g>
+        
+    </svg>
+</div>

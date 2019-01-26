@@ -195,20 +195,6 @@
                                         {% endfor %}
                                     </div>
                                 {% endif %}
-
-                                {% if subsection.id == "support-english-maths-training" %}
-                                    <!-- Flow chart -->
-                                    {% if myData.svgflow == "true" %}
-                                        <h3 class="govuk-heading-m">Find out what English and maths training your apprentice should do</h3>
-                                        <div style="margin-bottom:20px">
-                                            {% include "../includes/english-maths-flow-fixed.svg" %}
-                                        </div>
-                                    {% endif %}
-                                    <!-- Text decision tree -->
-                                    {% if myData.textflow == "true" %}
-                                        {% include "../includes/english-maths-text-flow-2.html" %}
-                                    {% endif %}
-                                {% endif %}
             
                                 <!-- Parts e.g. 19 -->
                                 {% for part in subsection.parts %}
@@ -244,6 +230,18 @@
                                     {% else %}
                                         {% if part.type == "header" %}
                                             <h3 class="govuk-heading-m">{{part.content|safe|trim}}</h3>
+                                        {% elif part.type == "flow" %}
+                                            {% if subsection.id == "support-english-maths-training" %}
+                                                <!-- Flow chart -->
+                                                {% if myData.svgflow == "true" %}
+                                                    <h3 class="govuk-heading-m">Find out what English and maths training your apprentice should do</h3>
+                                                    {% include "../includes/english-maths-flow-fixed.svg" %}
+                                                {% endif %}
+                                                <!-- Text decision tree -->
+                                                {% if myData.textflow == "true" %}
+                                                    {% include "../includes/english-maths-text-flow-2.html" %}
+                                                {% endif %}
+                                            {% endif %}
                                         {% elif part.type == "block" %}
                                             <h3 class="govuk-heading-s">{{part.title|safe}}</h3>
                                             <p class="govuk-body">

@@ -1403,6 +1403,9 @@
                         "title": "Support for English and maths training",
                         "parts":[
                             {
+                                "type": "flow"
+                            },
+                            {
                                 "id": "123",
                                 "content": "English and maths are essential to supporting longer-term career prospects. This is why all apprentices must be supported to gain these essential skills and secure recognised qualifications."
                             },
