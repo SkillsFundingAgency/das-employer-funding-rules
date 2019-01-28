@@ -59,3 +59,6 @@ $govuk-global-styles: true;
 .svg-1 .larger-text-2 {
     font-size: 21px;
 }
+.svg-1 .secondary-colour {
+    fill: $govuk-secondary-text-colour;
+}
