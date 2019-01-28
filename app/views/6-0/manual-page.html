@@ -80,9 +80,9 @@
                     {% set _sectionHasUpdates = true %}
                 {% endif %}
                 {% for subsection in section.subsections %}
-                    {% if subsection.updates %}
+                {#{% if subsection.updates %}
                         {% set _sectionHasUpdates = true %}
-                    {% endif %}
+                    {% endif %}#}
                     {% for part in subsection.parts %}
                         {% if part.updates %}
                             {% set _sectionHasUpdates = true %}
@@ -153,9 +153,9 @@
 
                                 <!-- Classes for if section contains updates -->
                                 {% set _subsectionClasses = "section-contains-no-updates" %}
-                                {% if subsection.updates %}
+                                {#{% if subsection.updates %}
                                     {% set _subsectionClasses = "" %}
-                                {% endif %}
+                                {% endif %}#}
                                 {% for part in subsection.parts %}
                                     {% if part.updates %}
                                         {% set _subsectionClasses = "" %}
@@ -182,7 +182,7 @@
                                 </h2>
 
                                 <!-- subsection level updates -->
-                                {% if subsection.updates %}
+                                {# {% if subsection.updates %}
                                     <div class="updates call-to-action" style="margin-bottom: 1em">
                                         <!-- <div class="govuk-inset-text" style="padding-top: 0"> -->
                                         {% for update in subsection.updates %}
@@ -194,7 +194,7 @@
                                             {% endif %}
                                         {% endfor %}
                                     </div>
-                                {% endif %}
+                                {% endif %}#}
             
                                 <!-- Parts e.g. 19 -->
                                 {% for part in subsection.parts %}

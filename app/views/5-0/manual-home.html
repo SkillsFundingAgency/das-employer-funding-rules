@@ -124,9 +124,9 @@
                         {% set _sectionHasUpdates = true %}
                     {% endif %}
                     {% for subsection in section.subsections %}
-                        {% if subsection.updates %}
+                    {#{% if subsection.updates %}
                             {% set _sectionHasUpdates = true %}
-                        {% endif %}
+                        {% endif %}#}
                         {% for part in subsection.parts %}
                             {% if part.updates %}
                                 {% set _sectionClasses = "" %}
