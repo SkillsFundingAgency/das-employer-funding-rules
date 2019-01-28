@@ -5,7 +5,7 @@
     "content": {
         "title": "Apprenticeship funding: rules and guidance for employers",
         "date": "August 2018 to July 2019",
-        "version": "Version 1",
+        "version": "Version 2",
         "version-date": "July 2018",
         "interest": "",
         "intro": "This document sets out the guidance that applies to all employers participating in the apprenticeship programme. It includes the funding rules, which apply to all levy-paying employers participating in the apprenticeship programme through a digital account on the apprenticeship service.",
@@ -157,6 +157,23 @@
                         "type": "subsection",
                         "id": "job-with-training",
                         "title": "A job with training",
+                        "updates": [
+                            {
+                                "content": "Restructure: changes made for ease of understanding, including incorporation of ‘commitment statement’ into this section."
+                            }, 
+                            {
+                                "title": "A job with training",
+                                "content": "New terminology: a job with training replaces the term genuine job."
+                            }, 
+                            {
+                                "rule": "E9-14",
+                                "content": "Clarification: what a ‘job with training’ should be."
+                            },
+                            {
+                                "rule": "17/18 v4 E27-28",
+                                "content": "Rule change: the requirement for the apprentice to stay with the employer after the apprenticeship has been achieved has been removed."
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "9",
@@ -198,6 +215,13 @@
                         "type": "subsection",
                         "id": "employment-contract",
                         "title": "Employment contract",
+                        "updates": [
+                            {
+                                "rule": "E15",
+                                "title": "Employment contract",
+                                "content": "Restructure: of the section on the apprentice’s contract of service and relevant exceptions."
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "15",
@@ -238,6 +262,25 @@
                         "type": "subsection",
                         "id": "off-the-job-training",
                         "title": "Off-the-job training ",
+                        "updates": [
+                            {
+                                "rule": "E19",
+                                "title": "Off-the-job training",
+                                "content": "Clarification: off-the-job training is a statutory requirement for an English apprenticeship."
+                            },
+                            {
+                                "rule": "E23",
+                                "content": "Clarification: that 20% off-the-job training should cover the planned duration of the training period within the apprenticeship, which for standards is the practical period (which ends at the gateway for end-point assessment (called the final day))."
+                            },
+                            {
+                                "rule": "E24",
+                                "content": "New rule: statutory leave should be deducted when calculating the 20% off-the- job requirement for all apprentices who begin their programme from 1 August 2018."
+                            },
+                            {
+                                "rule": "E25",
+                                "content": "Clarification: planned off-the-job training must be set out in the apprentice’s commitment statement and it should be clear which components have been used to calculate the 20% requirement."
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "18",
@@ -321,6 +364,21 @@
                         "type": "subsection",
                         "id": "apprenticeship-agreement-employer-apprentice",
                         "title": "Apprenticeship agreement between the employer and the apprentice ",
+                        "updates": [
+                            {
+                                "title": "The apprenticeship agreement between the employer and apprentice",
+                                "rule": "E30.2",
+                                "content": "Clarification: reference included to relevant legislation on the apprenticeship agreement for frameworks."
+                            },
+                            {
+                                "rule": "E30.3",
+                                "content": "Clarification: a new apprenticeship agreement template will shortly be available on GOV.UK at the link given. NOTE: The sector will be notified through ‘Update’ when the new template is available."
+                            },
+                            {
+                                "rule": "E33",
+                                "content": "Clarification: the start date in the apprenticeship agreement must align with the start date in the commitment statement."
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "30",
@@ -358,6 +416,16 @@
                         "type": "subsection",
                         "id": "commitment-statement",
                         "title": "The commitment statement between the employer, apprentice and main provider ",
+                        "updates": [
+                            {
+                                "title": "The commitment statement between the employer, apprentice and main provider",
+                                "content": "Restructure: The commitment statement section has been brought forward into the ‘What is an apprenticeship’ section."
+                            }, 
+                            {
+                                "rule": "E36.5, E36.6",
+                                "content": "Clarification: that information pertaining to the 20% requirement must be on the commitment statement and it must be clear what components have been used towards the calculation and their source of funding."
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "34",
@@ -443,6 +511,21 @@
                         "type": "subsection",
                         "id": "duration-employment-hours",
                         "title": "Apprenticeship duration and employment hours ",
+                        "updates": [
+                            {
+                                "rule": "E37",
+                                "title": "Apprenticeship duration and employment hours",
+                                "content": "Clarification: the minimum duration terminology has changed from one year to 12 months to reflect the language used in legislation. Examples are given of this rule in practice."
+                            },
+                            {
+                                "rule": "E46",
+                                "content": "Clarification: where an apprentice temporarily works part-time, the apprenticeship agreement must be extended."
+                            },
+                            {
+                                "rule": "E52",
+                                "content": "Restructure: where an apprentice starts a new apprenticeship, time spent on the previous apprenticeship does not apply in meeting the minimum duration requirements. The exceptions to this rule are listed."
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "37",
@@ -598,6 +681,15 @@
                 "subsections": [
                     {
                         "type": "main",
+                        "updates": [
+                            {
+                                "rule": "E55.4",
+                                "content": "Clarification: change of ‘direct cost’ to ‘cost’. Apprentice must not be asked to contribute to cost of training or end-point assessment."
+                            },
+                            {
+                                "content": "Restructure: moved details on residency criteria to Annex A."
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "54",
@@ -670,6 +762,13 @@
                     {
                         "type": "subsection",
                         "title": "Individuals who are not eligible for funding",
+                        "updates": [
+                            {
+                                "rule": "E62",
+                                "title": "Individuals who are not eligible for funding",
+                                "content": "Restructure: existing rules grouped under new section title."
+                            }
+                        ],
                         "id": "individuals-not-eligible",
                         "parts": [
                             {
@@ -711,6 +810,27 @@
                     {
                         "type": "subsection",
                         "title": "Apprentices who need access to learning support",
+                        "updates": [
+                            {
+                                "title": "Apprentices who need access to learning support",
+                                "content": "Section retitled ‘Apprentices who need access to Learning Support’."
+                            },
+                            {
+                                "content": "Clarification: rule restructured for ease of understanding. Learning support is available to put in place reasonable adjustments to support apprentices to continue and complete their apprenticeship.",
+                                "rule": "E63"
+                            },
+                            {
+                                "content": "Clarification: who is eligible for learning support, now includes individuals who do not have a diagnosis but for whom the provider has identified and evidenced a learning need.",
+                                "rule": "E63"
+                            },
+                            {
+                                "content": "Clarification: learning support must not be used to deal with everyday difficulties not directly associated with an apprenticeship. If an apprentice needs help at work they may be able to get help from Access to Work.",
+                                "rule": "E64"
+                            },
+                            {
+                                "content": "Rule change: removal of previous requirements regarding education, health and care (EHC) plan. This no longer affects eligibility."
+                            }
+                        ],
                         "id": "apprentices-need-access-learning-support",
                         "parts": [
                             {
@@ -726,6 +846,12 @@
                     {
                         "type": "subsection",
                         "title": "Apprenticeship training agency (ATA)",
+                        "updates": [
+                            {
+                                "title": "Apprenticeship training agency (ATA)",
+                                "content": "Restructure: information moved from ineligible costs section to ATA section."
+                            }
+                        ],
                         "id": "apprenticeship-training-agency",
                         "parts": [
                             {
@@ -897,6 +1023,21 @@
                         "type": "subsection",
                         "id": "eligible-costs",
                         "title": "Eligible costs",
+                        "updates": [
+                            {
+                                "title": "Eligible costs",
+                                "content": "Clarification: distance and online learning have been replaced by the terms self- directed distance learning and interactive online learning (virtual classrooms).",
+                                "rule": "E77.4"
+                            },
+                            {
+                                "content": "Clarification: that the time spent by managers / employees mentoring apprentices is an eligible cost but only where this directly linked to the apprenticeship and not to line management responsibilities.",
+                                "rule": "E77.7"
+                            },
+                            {
+                                "content": "Clarification: that for accommodation of any nature to be funded it must be a mandatory requirement of the apprenticeship standard that would apply equally to all apprentices following that standard.",
+                                "rule": "E77.10"
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "74",
@@ -978,6 +1119,29 @@
                         "type": "subsection",
                         "id": "ineligible-costs",
                         "title": "Ineligible costs",
+                        "updates": [
+                            {
+                                "title": "Ineligible costs",
+                                "content": "Clarification: induction refers to provider induction.",
+                                "rule": "E81.1"
+                            },
+                            {
+                                "content": "Clarification: as the ongoing development of existing materials is an ineligible cost, this is to make it clear therefore that the cost associated with the creation of original teaching materials relating to a new offer/standard is eligible.",
+                                "rule": "E81.5"
+                            },
+                            {
+                                "content": "Clarification: the reference to distance learning has been updated to self-directed distance learning.",
+                                "rule": "E81.6"
+                            },
+                            {
+                                "content": "'New rule: confirmation that student membership fees, even where linked to mandatory qualifications, are an ineligible cost.",
+                                "rule": "E81.10"
+                            },
+                            {
+                                "content": "Clarification: inducements must not be paid to any other party in relation to the apprenticeship programme.",
+                                "rule": "E82"
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "81",
@@ -1067,6 +1231,21 @@
                         "type": "subsection",
                         "id": "additional-payments",
                         "title": "Additional payments",
+                        "updates": [
+                            {
+                                "title": "Additional payments",
+                                "content": "New rule: before the provider can claim for any additional payments, they must have evidence that the apprentice is eligible. This information must be kept in the evidence pack.",
+                                "rule": "E85"
+                            },
+                            {
+                                "content": "New rule: where payments are generated for apprentices who are care leavers or have an EHC plan, a training provider must include the apprentice’s consent to inform their employer they have an EHC plan. Further a provider must confirm the apprentice’s status (and record this in the evidence pack) through evidence of a EHC plan or a letter / email from a local authority appointed Personal Advisor to confirm an individual is a care leaver.",
+                                "rule": "E86"
+                            },
+                            {
+                                "content": "Policy: recognising that many providers still deliver frameworks to 16 to 18 year olds, we are maintaining the 20% transitional uplift for 16 to 18 year olds or eligible 19 to 24 year olds. This measure is being extended and will be kept under review ahead of 2020.",
+                                "rule": "E89"
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "83",
@@ -1150,6 +1329,21 @@
                         "type": "subsection",
                         "id": "care-leavers-bursary",
                         "title": "Care leavers bursary",
+                        "updates": [
+                            {
+                                "title": "Care leavers bursary",
+                                "content": "New policy/section: the payment of a bursary (£1,000) to 16 to 24-year olds if they have been in the care of the local authority. This is to ensure care leavers, who face additional financial barriers, are able to access apprenticeships.",
+                                "rule": "E91"
+                            },
+                            {
+                                "content": "New rule: the bursary is a one-off payment. It is the responsibility of provider to ensure apprentice has not previously received this payment.",
+                                "rule": "E93"
+                            },
+                            {
+                                "content": "New rule: Payment will be generated 60 days after the apprentice starts where the bursary is claimed; they must pass this to the apprentice within 30 days of receipt.",
+                                "rule": "E92"
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "91",
@@ -1212,6 +1406,37 @@
                         "type": "subsection",
                         "id": "support-english-maths-training",
                         "title": "Support for English and maths training",
+                        "updates": [
+                            {
+                                "title": "Support for English and maths training",
+                                "content": "Restructure: this section has been restructured further for ease of understanding and further clarification.",
+                                "rule": "E98–118"
+                            },
+                            {
+                                "content": "Clarification: an introduction to clarify the underpinning policy behind English and maths.",
+                                "rule": "E98"
+                            },
+                            {
+                                "content": "Restructure: new section explaining achievement levels for English and maths requirements.",
+                                "rule": "E99-100"
+                            },
+                            {
+                                "content": "Restructure: revised acceptable equivalents for English and maths for apprenticeship standards are set out in a published list on GOV.UK (this will be in place when the rules are published on 1 August 2018.",
+                                "rule": "E101"
+                            },
+                            {
+                                "content": "Restructure: new section explaining what we will fund, including exceptional circumstances (such as re-takes).",
+                                "rule": "E101-110"
+                            },
+                            {
+                                "content": "Restructure: section outlining the judgement of an apprentice’s current level.",
+                                "rule": "E111"
+                            },
+                            {
+                                "content": "Restructure: section on the exceptions to the regular English and maths minimum requirements.",
+                                "rule": "E112-118"
+                            }
+                        ],
                         "parts": [
                             {
                                 "type": "flow"
@@ -1410,6 +1635,37 @@
                         "type": "subsection",
                         "id": "end-point-assessments",
                         "title": "End-point assessments ",
+                        "updates": [
+                            {
+                                "title": "End-point assessment",
+                                "content": "Clarification: previous rule (P128) split for ease of understanding.",
+                                "rule": "E119, 120"
+                            },
+                            {
+                                "content": "Clarification: their employer in consultation with the main provider is content they have attained sufficient skills, knowledge and behaviours to successfully complete the apprenticeship.",
+                                "rule": "E121.3"
+                            },
+                            {
+                                "content": "Clarification: previous rule (P129) split up into bulleted list for ease of understanding.",
+                                "rule": "E123"
+                            },
+                            {
+                                "content": "Clarification: to reflect the position for standards with more than one gateway.",
+                                "rule": "E123"
+                            },
+                            {
+                                "content": "Clarification: the end-point assessment organisation for an integrated degree standard may also be the training provider, although the assessment must be conducted by someone who has not been involved in the delivery of the apprenticeship.",
+                                "rule": "E125"
+                            },
+                            {
+                                "content": "Clarification: the main provider must lead the relationship with the end-point assessment organisation including where the delivery of apprenticeship training is subcontracted.",
+                                "rule": "E126"
+                            },
+                            {
+                                "content": "Clarification: to reflect the role of the Institute for Apprenticeships.",
+                                "rule": "E127"
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "119",
