@@ -1,0 +1,391 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Manual
+{% endblock %}
+
+{% block pageStyles %}
+<style>
+    .svg-container svg,
+    .html-container,
+    .flow-chart {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .svg-container-2 p {
+        margin-bottom: 0;
+    }
+
+    
+    .decision-tree {
+    list-style: none;
+    margin: 1em 0;
+    padding: 0
+}
+
+.decision-tree > li {
+    border: 1px solid #999;
+    border-top: none
+}
+
+.decision-tree > li > span {
+    display: block;
+    padding: 1em .5em
+}
+
+.decision-tree > li:first-child {
+    border-top: 1px solid #999
+}
+
+.decision-tree > li > ul {
+    padding: 0;
+    list-style: none;
+    border-top: 1px dotted #aaa
+}
+
+.decision-tree > li > ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.decision-tree > li > ul > li {
+    text-indent: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    padding: .5em
+}
+
+.decision-tree > li > ul > li {
+    -webkit-flex-basis: 40%;
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%
+}
+
+.decision-tree > li > ul > li:nth-child(odd) {
+    -webkit-flex-basis: 60%;
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%
+}
+
+.decision-tree > li > ul > li:nth-child(odd):last-child {
+    display: block;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%
+}
+
+.decision-tree > li > ul > li ul {
+    padding: 0;
+    margin: 0
+}
+
+.decision-tree > li > ul > li li {
+    padding: 0;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #888;
+    list-style: none
+}
+
+.decision-tree > li > ul > li li > em {
+    display: block;
+    padding-left: 1.5em;
+    position: relative;
+    margin-top: .25em;
+    font-style: normal
+}
+
+.decision-tree > li > ul > li li > em:before {
+    position: absolute;
+    content: '';
+    top: .2em;
+    margin-left: -1.5em
+}
+
+.decision-tree > li > ul > li li:last-child {
+    border-bottom-style: none;
+    padding-bottom: 0;
+    margin-bottom: 0
+}
+
+.decision-tree .yes {
+    /* background-color: #bfd8cc; */
+    border-bottom: none
+}
+.decision-tree .done {
+    background-color: #bfd8cc;
+}
+.decision-tree .done-2 {
+    background-color: #bfd7e8;
+}
+
+.decision-tree .yes li {
+    list-style: disc;
+    /* margin-left: 1em */
+}
+
+.decision-tree .yes li:only-child {
+    list-style: none
+}
+
+.decision-tree .no {
+    border-right: 1px dotted #aaa;
+    /* background-color: #bfd7e8; */
+    border-bottom: none;
+    position: relative
+}
+
+/* .decision-tree .no:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(119, 119, 119, 0);
+    border-top-color: #ebc3c7;
+    border-width: 1em;
+    margin-left: -.5em;
+    z-index: 500
+} */
+
+/* .decision-tree .no:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(119, 119, 119, 0);
+    border-top-color: #999;
+    border-width: 1.2em;
+    margin-left: -.7em;
+    z-index: 400
+} */
+
+
+
+/* call to action */
+.call-to-action {
+    margin: 2em 0;
+    background-color: #dee0e2;
+    padding: 2em;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <!-- <div class="govuk-grid-column-two-thirds"> -->
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">Check what English and maths training an apprentice should undertake.</h1>
+
+        <!-- Decision tree -->
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    text based decision trees <br>(diffcult to represent a flow chart that has multiple paths)
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+
+                <!-- Styled like w3 -->
+                <ol class="decision-tree ">
+                    <li><span class="govuk-!-font-weight-bold ">1. Do they have at least level 2 English and maths?</span>
+                        <ul class="">
+                            <li class=" done yes"><span class="govuk-!-font-weight-bold">Yes:</span>
+                                <br>They do not require English and maths training.
+                            </li>
+                            <li class="no"><span class="govuk-!-font-weight-bold">No:</span>
+                                <br>Continue
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="govuk-!-font-weight-bold">2. Does their English and maths qualifications satisfy the standard or framework?</span>
+                        <ul class="">
+                            <li class="yes done"><span class="govuk-!-font-weight-bold">Yes:</span>
+                                <br>Level 2 English and maths.
+                            </li>
+                            <li class="no"><span class="govuk-!-font-weight-bold">No:</span>
+                                <br>Continue
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="govuk-!-font-weight-bold">3. Do they have a special educational need, learning difficulty or disability?</span>
+                        <ul class="">
+                            <li class="yes"><span class="govuk-!-font-weight-bold">Yes:</span>
+                                <br>Continue to 4
+                            </li>
+                            <li class="no"><span class="govuk-!-font-weight-bold">No:</span>
+                                <br>Continue to 5
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="govuk-!-font-weight-bold">4. Will they not be able to achieve English and/or maths to the minimum level?</span>
+                        <ul class="">
+                            <li class="yes done"><span class="govuk-!-font-weight-bold">Yes:</span>
+                                <br>We will fund functional level English and maths below level 2 if it is required.
+                                <br>Entry level 3 functional English and maths.
+                            </li>
+                            <li class="no done-2"><span class="govuk-!-font-weight-bold">No:</span>
+                                <br>Minimum required standards in English and maths.
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="govuk-!-font-weight-bold">5. Are they operating below level 1 AND they do not have level 1 or 2 English and maths?
+                        </span>
+                        <ul class="">
+                            <li class="yes done"><span class="govuk-!-font-weight-bold">Yes:</span>
+                                <br>Must achieve level 1 English and maths which we may fund. Then, study toward level 2 which we may also fund.
+                                <br>Minimum required standards in English and maths.
+                            </li>
+                            <li class="no"><span class="govuk-!-font-weight-bold">No:</span>
+                                <br>Continue
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="govuk-!-font-weight-bold">6. Are they operating below level 1 AND have approved qualifications?
+                        </span>
+                        <ul class="">
+                            <li class="yes done"><span class="govuk-!-font-weight-bold">Yes:</span>
+                                <br>Minimum required standards in English and maths
+                            </li>
+                            <li class="no done-2"><span class="govuk-!-font-weight-bold">No:</span>
+                                <br>Must study for level 2 English and maths. If not achieved, must achieve level 1 English and maths which we will not fund
+                                <br>Minimum required standards in English and maths
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <br><br>
+
+                <!-- Text decision tree -->
+                <div class="call-to-action">
+                    <ol class="govuk-list govuk-list--number govuk-body-l">
+                        <li>Does the apprentice have English and Maths at level 2 or higher?
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>Yes: You’re good to go. <span class="govuk-!-font-weight-bold">End</span>.
+                                </li>
+                                <li>No: Additional funding is available to help the apprentice to receive training for and then achieve up to level 2 English and maths. What we will fund can be determined from the following paragraphs. <span class="govuk-!-font-weight-bold">Go to 2</span>.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Do the apprentice’s English and maths quals. Satisfy the requirements of the standard framework?
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                    Yes: The apprentice should be working towards level 2 English and maths, for which we provide funding. <span class="govuk-!-font-weight-bold">End</span>
+                                </li>
+                                <li>
+                                    No: <span class="govuk-!-font-weight-bold">Go to 3</span>.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Does the apprentice have a SEN/ disability/learning difficulty that affects their ability to achieve the minimum English and maths requirement?
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                    Yes: We will fund functional level English and maths below level 2 on a case-by-case basis. See Pxyz to Pabc for details of the conditions and what evidence you need to record. <span class="govuk-!-font-weight-bold">End</span>
+                                </li>
+                                <li>
+                                    No: <span class="govuk-!-font-weight-bold">Go to 5</span>.
+                                </li>
+                            </ul>
+                        </li> 
+                        <li>
+                            Is the apprentice operating below level 1?
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                    Yes:
+                                </li>
+                                <li>
+                                    No:
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Does the apprentice have no approved English and maths quals?
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                    Yes:
+                                </li>
+                                <li>
+                                    No:
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+        </details>
+        
+        <!-- svg -->
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    svg (auto generated then fixed manually)
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                {% include "../includes/english-maths-flow-fixed.html" %}
+            </div>
+        </details>
+
+        <!-- svg auto  -->
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    svg (auto generated)
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="svg-container">
+                    {% include "../includes/english-maths-flow.svg" %}
+                    {% include "../includes/english-maths.svg" %}
+                </div>
+            </div>
+        </details>
+
+        <!-- jpg -->
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    jpegs
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <img class="flow-chart" alt="Determine English and maths training - flow chart" src="/public/images/english-maths-flow-3.jpg">
+                <img class="flow-chart" alt="Determine English and maths training - flow chart" src="/public/images/english-maths-flow-2.jpg">
+                <img class="flow-chart" alt="Determine English and maths training - flow chart" src="/public/images/english-maths-flow.jpg">
+            </div>
+        </details>
+
+        <!-- html viewer  -->
+        <h2 class="govuk-heading-s">html draw.io viewer (requires javascript)</h2>
+        {% include "../includes/english-maths.html" %}
+
+    </div>
+</div>
+
+{% endblock %}

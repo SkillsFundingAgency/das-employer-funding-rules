@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Manual
+{% endblock %}
+
+{% set _thisManualType = myData.manuals[myData.manual].type %}
+{% set _thisManual = myData.manuals[myData.manual].content %}
+
+{% block content %}
+
+<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+
+    {% if myData.header == "altered" %}
+        {% include "../includes/manual-header-2.html" %}
+    {% else %}
+        {% set _manualHeaderTitle = _thisManual.title|safe + " - " + _thisManual.date|safe + " (" + _thisManual.version|safe|lower + ")"  %}
+        {% include "../includes/manual-header.html" %}
+    {% endif %}
+
+    <ol class="breadcrumb-trail">
+        <li class="no-separator"><a href="manual-home?manual={{myData.manual}}">Contents</a></li>
+    </ol>
+
+    <article aria-labelledby="manual-title" id="content">
+        <div class="manual-body">
+            <article aria-labelledby="section-title">
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 id="section-title" class="section-title">
+                            Updates: {{_manualHeaderTitle}}
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
+                    <p class="section-title govuk-!-font-weight-regular">2018</p>
+                    <div class="collapsible-subsections">
+                        <div class="gem-c-govspeak govuk-govspeak ">
+                            <h2>
+                                31 July 2018
+                            </h2>
+                            <p class="govuk-!-font-size-24">These are the amendments that were made to {{_thisManual.title}} August 2017 to July 2018.</p>
+                            <br>
+                            <dl class="updates-list">
+                                {% for section in _thisManual.sections %}
+                                    {% for update in section.updates %}
+                                    <dt>
+                                        {% if loop.index == 1 %}
+                                        <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">{{section.title}}</a>
+                                        <br><br>
+                                        {% endif %}
+                                        {% if update.title %}
+                                        <span class="govuk-!-font-weight-bold">{{update.title}}</span><br><br>
+                                        {% endif %}
+                                    </dt>
+                                    <dd id="{{update.rule}}">
+                                        {% if update.rule %}<span class="">{{update.rule}}</span> - {% endif %}
+                                        {{update.content}}
+                                    </dd>
+                                    {% endfor %}
+                                {% endfor %}
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </article>
+
+    <!-- <div class="download-manual">
+        <p class="govuk-body"><a href="manual-pdf?manual={{myData.manual}}" target="_blank" class="govuk-link govuk-link--no-visited-state">Download this manual (PDF, 250KB)</a></p>
+        <p class="govuk-body">If you would like this manual in another format please email <a href="#">email address here</a>.</p>
+    </div> -->
+
+    <div class="print-page">
+        <a onclick="window.print();return false;" href="#">Print this page</a>
+    </div>
+</div>
+
+{% endblock %}
