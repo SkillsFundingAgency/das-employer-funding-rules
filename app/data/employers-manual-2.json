@@ -69,6 +69,11 @@
                 "id": "what-is-apprenticeship",
                 "title": "What is an apprenticeship?",
                 "summary": "What you, your provider and apprentices should expect from an apprenticeship. Includes information about contracts, pay and training.",
+                "updates-section": [
+                    {
+                        "content": "Restructure: changes made for ease of understanding, including incorporation of ‘commitment statement’ into this section."
+                    }
+                ],
                 "updates": [
                     {
                         "content": "Restructure: changes made for ease of understanding, including incorporation of ‘commitment statement’ into this section."
@@ -177,15 +182,30 @@
                         "parts": [
                             {
                                 "id": "9",
-                                "content": "An apprenticeship is a job with an accompanying skills development programme. The job must have a productive purpose and should provide the apprentice with the opportunity to gain the knowledge, skills and behaviours needed to achieve the apprenticeship. "
+                                "content": "An apprenticeship is a job with an accompanying skills development programme. The job must have a productive purpose and should provide the apprentice with the opportunity to gain the knowledge, skills and behaviours needed to achieve the apprenticeship. ",
+                                "updates": [
+                                    {
+                                        "content": "Clarification: what a ‘job with training’ should be."
+                                    }
+                                ]
                             },
                             {
                                 "id": "10",
-                                "content": "Through their apprenticeship, apprentices will gain the technical knowledge, practical experience and wider skills they need for their immediate job and future career. The apprentice gains this through a wide mix of learning in the workplace, formal off-the-job training and the opportunity to practise these new skills in a real work environment. "
+                                "content": "Through their apprenticeship, apprentices will gain the technical knowledge, practical experience and wider skills they need for their immediate job and future career. The apprentice gains this through a wide mix of learning in the workplace, formal off-the-job training and the opportunity to practise these new skills in a real work environment. ",
+                                "updates": [
+                                    {
+                                        "content": "Clarification: what a ‘job with training’ should be."
+                                    }
+                                ]
                             },
                             {
                                 "id": "11",
                                 "content": "You and the main provider must be satisfied that the apprenticeship is the most appropriate learning programme for the individual and have evidence (to be kept by the main provider) that it is either: ",
+                                "updates": [
+                                    {
+                                        "content": "Clarification: what a ‘job with training’ should be."
+                                    }
+                                ],
                                 "subparts": [
                                     {
                                         "id": "11.1",
@@ -199,15 +219,30 @@
                             },
                             {
                                 "id": "12",
-                                "content": "You must provide the apprentice with appropriate support and supervision to carry out their job role. "
+                                "content": "You must provide the apprentice with appropriate support and supervision to carry out their job role. ",
+                                "updates": [
+                                    {
+                                        "content": "Clarification: what a ‘job with training’ should be."
+                                    }
+                                ]
                             },
                             {
                                 "id": "13",
-                                "content": "<a class='govuk-link' href='https://www.gov.uk/recruit-apprentice'>Recruit an apprentice</a> is a free tool to help you to recruit new apprentices into your business. It is not mandatory to use this service. "
+                                "content": "<a class='govuk-link' href='https://www.gov.uk/recruit-apprentice'>Recruit an apprentice</a> is a free tool to help you to recruit new apprentices into your business. It is not mandatory to use this service. ",
+                                "updates": [
+                                    {
+                                        "content": "Clarification: what a ‘job with training’ should be."
+                                    }
+                                ]
                             },
                             {
                                 "id": "14",
-                                "content": "Where a main provider advertises on your behalf, on recruit an apprentice, it should be clear in the advert how many hours the apprentice will be expected to work per week for the role and how long the apprenticeship will last. This must meet the minimum duration requirement (see paragraphs E37 to E53). "
+                                "content": "Where a main provider advertises on your behalf, on recruit an apprentice, it should be clear in the advert how many hours the apprentice will be expected to work per week for the role and how long the apprenticeship will last. This must meet the minimum duration requirement (see paragraphs E37 to E53). ",
+                                "updates": [
+                                    {
+                                        "content": "Clarification: what a ‘job with training’ should be."
+                                    }
+                                ]
                             }
                         ]
                     },

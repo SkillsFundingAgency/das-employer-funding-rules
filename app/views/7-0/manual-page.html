@@ -31,7 +31,8 @@
     }
 
     /* showing updates */
-    .updates {
+    .updates,
+    .updates-2 {
         display: none;
     }
     .show-updates .updates {
@@ -41,13 +42,22 @@
     .updates .call-to-action {
         margin: 0;
     }
+
+    /* Always on version */
+    .updates-2 .govuk-inset-text {
+        /* margin-top: 15px; */
+    }
+    .show-updates-2 .updates-2 {
+        display: block;
+    }
+
 </style>
 {% endblock %}
 
 
 {% block content %}
 
-<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+<div id="manuals-frontend" class="manuals-frontend-body inner-block {% if myData.updatesFilter == 'alwayson' %}show-updates-2{% endif %}">
     
     {% if myData.header == "altered" %}
         {% include "../includes/manual-header-2.html" %}
@@ -113,7 +123,7 @@
                                 <div class="govuk-checkboxes__item" >
                                     <input class="govuk-checkboxes__input" id="version-1" name="filter" {% if _filterState == 'true' %}checked{% endif %} type="checkbox" value="version1">
                                     <label class="govuk-label govuk-checkboxes__label" for="version-1">
-                                    Show only content updated in 2018
+                                    Show only content updated in {{_thisManual.version|safe|lower}}
                                     </label>
                                 </div>
                                 <div class="filtered-message call-to-action" style="margin-bottom:0">
@@ -127,22 +137,39 @@
                 </div>
                 {% endif %}
 
+                <!-- SECTION updates -->
                 {% if section["updates-section"] %}
-                <div class="updates govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds" >
-                        <div class=" updates call-to-action" style="margin-top:1em">
-                            <!-- <p class="govuk-body  govuk-!-font-weight-bold">{{section.title|safe}}</p> -->
-                            {% for update in section["updates-section"] %}
-                                <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
-                                    {{update.type or "edited"}} in 2018
-                                </strong>
-                                {% if update.content %}
-                                <br><br><p class="govuk-body">{{update.content|trim|safe}}</p>
-                                {% endif %}
-                            {% endfor %}
+                    <!-- CHECKBOX VERSION -->
+                    <div class="updates govuk-grid-row">
+                        <div class="govuk-grid-column-two-thirds" >
+                            <div class=" updates call-to-action" style="margin-top:1em">
+                                <!-- <p class="govuk-body  govuk-!-font-weight-bold">{{section.title|safe}}</p> -->
+                                {% for update in section["updates-section"] %}
+                                    <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
+                                        {{update.type or "edited"}} in 2018
+                                    </strong>
+                                    {% if update.content %}
+                                    <br><br><p class="govuk-body">{{update.content|trim|safe}}</p>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <!-- ALWAYS ON VERSION -->
+                    <!-- <div class="updates-2 govuk-grid-row">
+                        <div class="govuk-grid-column-two-thirds" >
+                            <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
+                                {{update.type or "updated"}} in {{_thisManual.version|safe|lower}}
+                            </strong>
+                            <div class="govuk-inset-text" style="margin-top:1em">
+                                {% for update in section["updates-section"] %}
+                                    {% if update.content %}
+                                    <p class="govuk-body">{{update.content|trim|safe}}</p>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div> -->
                 {% endif %}
 
                 <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
@@ -183,16 +210,26 @@
 
                                 <!-- subsection level updates -->
                                 {% if subsection.updates %}
-                                    <div class="updates call-to-action" style="margin-bottom: 1em">
-                                        <!-- <div class="govuk-inset-text" style="padding-top: 0"> -->
-                                        {% for update in subsection.updates %}
-                                            <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
-                                                {{update.type or "edited"}} in 2018
-                                            </strong>
-                                            {% if update.content %}
-                                            <br><br><p class="govuk-body">{{update.content|trim|safe}}</p>
-                                            {% endif %}
-                                        {% endfor %}
+
+                                    <!-- CHECKBOX VERSION -->
+                                    <!-- removed -->
+
+                                    <!-- ALWAYS ON VERSION -->
+                                    <div class="updates-2">
+                                        <div class="call-to-action">
+                                            <!-- <p class="govuk-body"><strong class="govuk-tag">Updated</strong></p> -->
+                                            <h3 class="govuk-heading-s">Latest updates:</h3>
+                                            <ul class="govuk-list govuk-list--bullet">
+                                            {% for update in subsection.updates %}
+                                                <li class="govuk-body">
+                                                    {% if update.rule %}<span class="govuk-!-font-weight-bold">{{update.rule|safe}}</span> - {% endif %}
+                                                    {% if update.content %}
+                                                    {{update.content|trim|safe}}
+                                                    {% endif %}
+                                                </li>
+                                            {% endfor %}
+                                            </ul>
+                                        </div>
                                     </div>
                                 {% endif %}
             
@@ -250,7 +287,6 @@
                                             <!-- TODO render table from page 61 here -->
                                         {% elif part.type == "intro" %}
                                             <div class="call-to-action">
-                                            <!-- <div class="govuk-inset-text"> -->
                                                 <p class="govuk-body">{{part.content|safe|trim}}</p>
                                                 <!-- CLOSE TAG FURTHER DOWN AFTER SUBPARTS -->
                                         {% elif part.type == "additional" %}
@@ -267,8 +303,8 @@
                                             <h3 class="govuk-heading-s">{{_rulePrefix}}{{part.id|safe}}</h3> 
 
                                             {% if part.updates %}
+                                                <!-- CHECKBOX VERSION -->
                                                 <div class="updates call-to-action">
-                                                    <!-- <div class="govuk-inset-text" style="padding-top: 0"> -->
                                                     {% for update in part.updates %}
                                                         <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
                                                             {{update.type or "edited"}} in 2018
@@ -278,6 +314,19 @@
                                                         {% endif %}
                                                     {% endfor %}
                                                 </div>
+                                                <!-- ALWAYS ON VERSION -->
+                                                <!-- <div class="updates-2">
+                                                    <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
+                                                        {{update.type or "updated"}} in {{_thisManual.version|safe|lower}}
+                                                    </strong>
+                                                    <div class="govuk-inset-text">
+                                                        {% for update in part.updates %}
+                                                            {% if update.content %}
+                                                            <p class="govuk-body">{{update.content|trim|safe}}</p>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                </div> -->
                                             {% endif %}
 
                                             <p class="govuk-body">{{part.content|safe|trim}}</span></p>
@@ -319,7 +368,10 @@
                                             {% else %}
                                                 <li>
                                                     <h3 class="govuk-heading-s">{{_rulePrefix}}{{subpart.id|safe}}</h3>
+                                                    
+                                                    <!-- UPDATES -->
                                                     {% if subpart.updates %}
+                                                        <!-- CHECKBOX VERSION -->
                                                         <div class="updates call-to-action">
                                                             <!-- <div class="govuk-inset-text" style="padding-top: 0"> -->
                                                             {% for update in subpart.updates %}
@@ -331,7 +383,21 @@
                                                                 {% endif %}
                                                             {% endfor %}
                                                         </div>
+                                                        <!-- ALWAYS ON VERSION -->
+                                                        <!-- <div class="updates-2">
+                                                            <strong class="govuk-tag" style="margin-right: 5px; background: #005ea5">
+                                                                {{update.type or "updated"}} in {{_thisManual.version|safe|lower}}
+                                                            </strong>
+                                                            <div class="govuk-inset-text">
+                                                                {% for update in subpart.updates %}
+                                                                    {% if update.content %}
+                                                                    <p class="govuk-body">{{update.content|trim|safe}}</p>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                            </div>
+                                                        </div> -->
                                                     {% endif %}
+
                                                     <p class="govuk-body">{{subpart.content|safe|trim}}</span></p>
                                                 </li>
                                             {% endif %}
@@ -426,79 +492,79 @@
 {% block pageScripts %}
 <script>
 $(document).ready(function(){
-    var _checkFilters = $("input[name='filter']")
-    var _rulesContainer = $("#manuals-frontend")
-    var _filteredMessage = $(".filtered-message").hide()
-    var _clearFilter = $(".clear-filter")
-    var _showUpdates = $(".show-updates")
-    var _openAll = $(".js-collection-controls").children().first()
-    var _sectionsWithNoUpdates = $(".section-contains-no-updates")
-    var _breadcrumbLink = $(".breadcrumb-trail a")
+    if({{myData.updatesFilter == "true"}}){
+        var _checkFilters = $("input[name='filter']")
+        var _rulesContainer = $("#manuals-frontend")
+        var _filteredMessage = $(".filtered-message").hide()
+        var _clearFilter = $(".clear-filter")
+        var _showUpdates = $(".show-updates")
+        var _openAll = $(".js-collection-controls").children().first()
+        var _sectionsWithNoUpdates = $(".section-contains-no-updates")
+        var _breadcrumbLink = $(".breadcrumb-trail a")
 
-    _showUpdates.click(function (e){
-        _checkFilters.each(function( index ) {
-            $(this).prop('checked', true).attr('checked', 'checked');
+        _showUpdates.click(function (e){
+            _checkFilters.each(function( index ) {
+                $(this).prop('checked', true).attr('checked', 'checked');
+            })
+            _checkFilters.trigger("change")
+            e.preventDefault();
         })
-        _checkFilters.trigger("change")
-        e.preventDefault();
-    })
 
-    _clearFilter.click(function (e){
-        _checkFilters.each(function( index ) {
-            $(this).prop("checked", false).attr("checked", false).removeAttr("checked")
+        _clearFilter.click(function (e){
+            _checkFilters.each(function( index ) {
+                $(this).prop("checked", false).attr("checked", false).removeAttr("checked")
+            })
+            _checkFilters.trigger("change")
+            e.preventDefault();
         })
-        _checkFilters.trigger("change")
-        e.preventDefault();
-    })
 
-    toggleFilter()
-    _checkFilters.change(function(){
         toggleFilter()
-    });
-
-    function toggleFilter(){
-        var _filtered = false
-        _rulesContainer.removeClass("show-updates")
-        _rulesContainer.removeClass("hide-non-updated")
-        _checkFilters.each(function( index ) {
-            var _thisCheck = this,
-                _checked = _thisCheck.checked,
-                _thisID = _thisCheck.id
-            _rulesContainer.removeClass("show-part-"+_thisID)
-                
-            if(_checked){
-                _openAll.trigger("click")
-                _rulesContainer.addClass("show-part-"+_thisID)
-                _filtered = true
-                _filteredMessage.show()
-                _showUpdates.hide()
-                // hide sections
-                _sectionsWithNoUpdates.parent().hide()
-            } else {
-                _showUpdates.show()
-                _filteredMessage.hide()
-                // show sections
-                _sectionsWithNoUpdates.parent().show()
-            }
-
+        _checkFilters.change(function(){
+            toggleFilter()
         });
-        // update breadcrumb link
-        var _breadcrumbHREF = _breadcrumbLink.attr('href'),
-            _newHREF = _breadcrumbHREF
-        if(_breadcrumbHREF.indexOf('updatesFilterOn=false') != -1){
-            _newHREF = _breadcrumbHREF.replace("updatesFilterOn=false", "updatesFilterOn="+_filtered);
-        } else if(_breadcrumbHREF.indexOf('updatesFilterOn=true') != -1){
-            _newHREF = _breadcrumbHREF.replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
-        }
-        _breadcrumbLink.attr('href',_newHREF)
 
-        if(_filtered == true) {
-            _rulesContainer.addClass("show-updates")
-            _rulesContainer.addClass("hide-non-updated")
+        function toggleFilter(){
+            var _filtered = false
+            _rulesContainer.removeClass("show-updates")
+            _rulesContainer.removeClass("hide-non-updated")
+            _checkFilters.each(function( index ) {
+                var _thisCheck = this,
+                    _checked = _thisCheck.checked,
+                    _thisID = _thisCheck.id
+                _rulesContainer.removeClass("show-part-"+_thisID)
+                    
+                if(_checked){
+                    _openAll.trigger("click")
+                    _rulesContainer.addClass("show-part-"+_thisID)
+                    _filtered = true
+                    _filteredMessage.show()
+                    _showUpdates.hide()
+                    // hide sections
+                    _sectionsWithNoUpdates.parent().hide()
+                } else {
+                    _showUpdates.show()
+                    _filteredMessage.hide()
+                    // show sections
+                    _sectionsWithNoUpdates.parent().show()
+                }
+
+            });
+            // update breadcrumb link
+            var _breadcrumbHREF = _breadcrumbLink.attr('href'),
+                _newHREF = _breadcrumbHREF
+            if(_breadcrumbHREF.indexOf('updatesFilterOn=false') != -1){
+                _newHREF = _breadcrumbHREF.replace("updatesFilterOn=false", "updatesFilterOn="+_filtered);
+            } else if(_breadcrumbHREF.indexOf('updatesFilterOn=true') != -1){
+                _newHREF = _breadcrumbHREF.replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
+            }
+            _breadcrumbLink.attr('href',_newHREF)
+
+            if(_filtered == true) {
+                _rulesContainer.addClass("show-updates")
+                _rulesContainer.addClass("hide-non-updated")
+            }
         }
     }
-
-
 
 });
 </script>

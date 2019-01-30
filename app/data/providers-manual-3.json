@@ -2856,10 +2856,6 @@
                             {
                                 "rule": "P193",
                                 "content": "Clarification: funding method for apprenticeships is determined at the start of the apprenticeship."
-                            },
-                            {
-                                "content": "Clarification: the funding bands, and standards and frameworks placed within them, may be subject to change.",
-                                "rule": "P194.4"
                             }
                         ],
                         "parts": [
@@ -2879,6 +2875,12 @@
                         "id": "price-apprenticeship",
                         "type": "subsection",
                         "title": "The price of an apprenticeship",
+                        "updates": [
+                            {
+                                "content": "Clarification: the funding bands, and standards and frameworks placed within them, may be subject to change.",
+                                "rule": "P194.4"
+                            }
+                        ],
                         "parts": [
                             {
                                 "id": "194",

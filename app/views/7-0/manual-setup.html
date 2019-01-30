@@ -53,11 +53,12 @@
                 <!-- contextual updates filter -->
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="manualSetupContextualUpdates">
-                        Contextual updates filter
+                        Contextual updates
                     </label>
                     <select class="govuk-select" id="manualSetupContextualUpdates" name="manualSetupContextualUpdates" data-option="manualSetupContextualUpdates">
                         <option {% if myData.updatesFilter == 'false' %}selected{% endif %} value="false">None</option>
-                        <option {% if myData.updatesFilter == 'true' %}selected{% endif %} value="true">On (if data available)</option>
+                        <option {% if myData.updatesFilter == 'alwayson' %}selected{% endif %} value="alwayson">Always visible</option>
+                        <option {% if myData.updatesFilter == 'true' %}selected{% endif %} value="true">Checkbox filter</option>
                     </select>
                 </div>
 

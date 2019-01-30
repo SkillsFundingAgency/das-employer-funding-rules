@@ -19,7 +19,7 @@
     .updates,
     .update-tag {
         display: none;
-        /* margin-top:0.5em; */
+        margin-top: 5px;
     }
     .show-updates .updates {
         display: block;
@@ -27,12 +27,24 @@
     .show-updates .update-tag {
         display: inline-block;
     }
+
+    /* always on */
+    /* .updates-list { 
+        display: none;
+    }
+    .show-updates-2 .updates-list {
+        display: block;
+    } */
+    .show-updates-2 .update-tag {
+        display: inline-block;
+    }
+
 </style>
 {% endblock %}
 
 {% block content %}
 
-<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+<div id="manuals-frontend" class="manuals-frontend-body inner-block {% if myData.updatesFilter == 'alwayson' %}show-updates-2{% endif %}">
     
 
     {% if myData.header == "altered" %}
@@ -49,26 +61,11 @@
     <article aria-labelledby="manual-title" id="content">
         <div class="manual-body">
             
-            <!-- <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds" > -->
-                    <div class="govuk-inset-text">
-                        <!-- <p class="govuk-body"> -->
-                            <a href="rules-list" class="govuk-link govuk-link--no-visited-state">View the rules in alternative formats (including PDF)</a> which you can download, print and view offline.
-                        <!-- </p> -->
-                    </div>
-                <!-- </div>
-            </div> -->
+            <div class="govuk-inset-text">
+                <a href="rules-list" class="govuk-link govuk-link--no-visited-state">View the rules in alternative formats (including PDF)</a> which you can download, print and view offline.
+            </div>
 
             <p class="govuk-body"><a href="https://www.gov.uk/email-signup/?topic=/education/apprenticeships-funding" class="govuk-link govuk-link--no-visited-state">Sign up for email alerts</a> for changes to the apprenticeships funding topic page.</p>
-
-            <!-- <p class="govuk-body">
-                <a class="app-c-email-link dont-print" href="https://www.gov.uk/email-signup/?topic=/education/apprenticeships-funding">
-                    <svg class="app-c-email-link__icon" xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 459.334 459.334">
-                    <path fill="black" d="M177.216 404.514c-.001.12-.009.239-.009.359 0 30.078 24.383 54.461 54.461 54.461s54.461-24.383 54.461-54.461c0-.12-.008-.239-.009-.359H175.216zM403.549 336.438l-49.015-72.002v-89.83c0-60.581-43.144-111.079-100.381-122.459V24.485C254.152 10.963 243.19 0 229.667 0s-24.485 10.963-24.485 24.485v27.663c-57.237 11.381-100.381 61.879-100.381 122.459v89.83l-49.015 72.002a24.76 24.76 0 0 0 20.468 38.693H383.08a24.761 24.761 0 0 0 20.469-38.694z"></path>
-                    </svg>
-                    Sign up for updates to the 'Apprenticeships funding' topic page
-                </a>
-            </p> -->
 
             {% set _manualHasUpdates = false %}
             {% for section in _thisManual.sections %}
@@ -76,6 +73,9 @@
                     {% set _sectionHasUpdates = true %}
                 {% endif %}
                 {% for subsection in section.subsections %}
+                {#{% if subsection.updates %}
+                        {% set _manualHasUpdates = true %}
+                    {% endif %}#}
                     {% for part in subsection.parts %}
                         {% if part.updates %}
                             {% set _manualHasUpdates = true %}
@@ -94,12 +94,20 @@
                 {% endfor %}
             {% endfor %}
 
-            <!-- NEW -->
-            <!-- <p>_manualHasUpdates = {{_manualHasUpdates}}</p>
-            <p>myData.updatesFilter = {{myData.updatesFilter}}</p> -->
+            <!-- ALWAYS ON VERSION -->
+            <!-- <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                    Sections that were updated for this version
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    [list of chapters here]
+                </div>
+            </details> -->
 
+            <!-- Updates Filter Checkbox -->
             {% if _manualHasUpdates and myData.updatesFilter == "true" %}
-            <br>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds" >
                     <!-- <div class="govuk-form-group"> -->
@@ -136,12 +144,14 @@
                     {% set _sectionClasses = "section-contains-no-updates" %}
                     {% set _sectionHasUpdates = false %}
                     {% if section["updates-section"] %}
+                        {% set _sectionClasses = "" %}
                         {% set _sectionHasUpdates = true %}
                     {% endif %}
                     {% for subsection in section.subsections %}
-                        {% if subsection.updates %}
+                    {#{% if subsection.updates %}
+                            {% set _sectionClasses = "" %}
                             {% set _sectionHasUpdates = true %}
-                        {% endif %}
+                        {% endif %}#}
                         {% for part in subsection.parts %}
                             {% if part.updates %}
                                 {% set _sectionClasses = "" %}
@@ -170,9 +180,13 @@
                             {{section.summary|safe}}
                         </span>
                         {% endif %}
-                        <strong class="update-tag govuk-tag" style="margin-top: 5px; margin-right: 5px; background: #005ea5">
-                            Edited in 2018
+
+                        {% if _sectionHasUpdates %}
+                        <strong class="update-tag govuk-tag" >
+                            Updated
                         </strong>
+                        {% endif %}
+
                     </a>
                 </li>
                 {% endfor %}
@@ -192,75 +206,76 @@
 {% block pageScripts %}
 <script>
 $(document).ready(function(){
-    var _checkFilters = $("input[name='filter']")
-    var _rulesContainer = $("#manuals-frontend")
-    var _filteredMessage = $(".filtered-message").hide()
-    var _clearFilter = $(".clear-filter")
-    // var _showUpdates = $(".show-updates")
-    var _openAll = $(".js-collection-controls").children().first()
-    var _sectionsWithNoUpdates = $(".section-contains-no-updates")
-    var _sectionLinks = $(".section-list a")
+    if({{myData.updatesFilter == "true"}}){
+        var _checkFilters = $("input[name='filter']")
+        var _rulesContainer = $("#manuals-frontend")
+        var _filteredMessage = $(".filtered-message").hide()
+        var _clearFilter = $(".clear-filter")
+        // var _showUpdates = $(".show-updates")
+        var _openAll = $(".js-collection-controls").children().first()
+        var _sectionsWithNoUpdates = $(".section-contains-no-updates")
+        var _sectionLinks = $(".section-list a")
 
-    _clearFilter.click(function (e){
-        _checkFilters.each(function( index ) {
-            $(this).prop("checked", false).attr("checked", false).removeAttr("checked")
+        _clearFilter.click(function (e){
+            _checkFilters.each(function( index ) {
+                $(this).prop("checked", false).attr("checked", false).removeAttr("checked")
+            })
+            _checkFilters.trigger("change")
+            e.preventDefault();
         })
-        _checkFilters.trigger("change")
-        e.preventDefault();
-    })
 
-    // on load
-    toggleFilter()
-    // on change
-    _checkFilters.change(function(){
+        // on load
         toggleFilter()
-    });
-
-    function toggleFilter(){
-        var _filtered = false
-        _rulesContainer.removeClass("show-updates")
-        _rulesContainer.removeClass("hide-non-updated")
-        _checkFilters.each(function( index ) {
-            var _thisCheck = this,
-                _checked = _thisCheck.checked,
-                _thisID = _thisCheck.id
-            _rulesContainer.removeClass("show-part-"+_thisID)
-                
-            if(_checked){
-                _openAll.trigger("click")
-                _rulesContainer.addClass("show-part-"+_thisID)
-                _filtered = true
-                _filteredMessage.show()
-                // _showUpdates.hide()
-                // hide sections
-                // _sectionsWithNoUpdates.parent().hide()
-            } else {
-                // _showUpdates.show()
-                _filteredMessage.hide()
-                // show sections
-                // _sectionsWithNoUpdates.parent().show()
-            }
-
+        // on change
+        _checkFilters.change(function(){
+            toggleFilter()
         });
-        // update query string
-        _sectionLinks.each(function( index ) {
-            var _thisLink = $(this),
-                _thisHREF = _thisLink.attr('href'),
-                _newHREF = _thisHREF
-            if(_thisHREF.indexOf('updatesFilterOn=false') != -1){
-                _newHREF = _thisHREF.replace("updatesFilterOn=false", "updatesFilterOn="+_filtered);
-            } else if(_thisHREF.indexOf('updatesFilterOn=true') != -1){
-                _newHREF = _thisHREF.replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
-            }
-            _thisLink.attr('href',_newHREF)
-        })
 
-        if(_filtered == true) {
-            _rulesContainer.addClass("show-updates")
-            _rulesContainer.addClass("hide-non-updated")
+        function toggleFilter(){
+            var _filtered = false
+            _rulesContainer.removeClass("show-updates")
+            _rulesContainer.removeClass("hide-non-updated")
+            _checkFilters.each(function( index ) {
+                var _thisCheck = this,
+                    _checked = _thisCheck.checked,
+                    _thisID = _thisCheck.id
+                _rulesContainer.removeClass("show-part-"+_thisID)
+                    
+                if(_checked){
+                    _openAll.trigger("click")
+                    _rulesContainer.addClass("show-part-"+_thisID)
+                    _filtered = true
+                    _filteredMessage.show()
+                    // _showUpdates.hide()
+                    // hide sections
+                    // _sectionsWithNoUpdates.parent().hide()
+                } else {
+                    // _showUpdates.show()
+                    _filteredMessage.hide()
+                    // show sections
+                    // _sectionsWithNoUpdates.parent().show()
+                }
+
+            });
+            // update query string
+            _sectionLinks.each(function( index ) {
+                var _thisLink = $(this),
+                    _thisHREF = _thisLink.attr('href'),
+                    _newHREF = _thisHREF
+                if(_thisHREF.indexOf('updatesFilterOn=false') != -1){
+                    _newHREF = _thisHREF.replace("updatesFilterOn=false", "updatesFilterOn="+_filtered);
+                } else if(_thisHREF.indexOf('updatesFilterOn=true') != -1){
+                    _newHREF = _thisHREF.replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
+                }
+                _thisLink.attr('href',_newHREF)
+            })
+
+            if(_filtered == true) {
+                _rulesContainer.addClass("show-updates")
+                _rulesContainer.addClass("hide-non-updated")
+            }
         }
     }
-
 });
 </script>
 {% endblock %}
