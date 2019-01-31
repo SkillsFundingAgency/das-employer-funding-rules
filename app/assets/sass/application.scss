@@ -62,3 +62,25 @@ $govuk-global-styles: true;
 .svg-1 .secondary-colour {
     fill: $govuk-secondary-text-colour;
 }
+
+// call to action
+@include govuk-media-query($from: tablet) {
+    .call-to-action p {
+    margin: 0;
+    }
+}
+.call-to-action {
+    margin: 2em 0;
+    background-color: #dee0e2;
+    padding: 2em
+}
+
+.call-to-action:first-child {
+    margin-top: 0
+}
+
+.call-to-action p:last-child, 
+.call-to-action ul:last-child,
+.call-to-action ol:last-child {
+    margin-bottom: 0
+}

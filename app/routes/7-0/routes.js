@@ -72,12 +72,19 @@ module.exports = function (router,_myData) {
         }
         req.session.myData.emailUpdates = req.query.emailUpdates || req.session.myData.emailUpdates
         req.session.myData.header = req.query.header || req.session.myData.header
+        req.session.myData.include = req.query.include || req.session.myData.include
 
         next()
     });
 
     router.get('/' + version + '/index', function (req, res) {
         res.render(version + '/index', {
+            myData:req.session.myData
+        });
+    });
+
+    router.get('/' + version + '/wrapper', function (req, res) {
+        res.render(version + '/wrapper', {
             myData:req.session.myData
         });
     });
