@@ -50,7 +50,7 @@
     {% if myData.header == "altered" %}
         {% include "../includes/manual-header-2.html" %}
     {% else %}
-        {% set _manualHeaderTitle = _thisManual.title|safe + " - " + _thisManual.date|safe + " (" + _thisManual.version|safe|lower + ")"  %}
+        {% set _manualHeaderTitle = _thisManual.title|safe + " - " + _thisManual.date|safe  %}
         {% include "../includes/manual-header.html" %}
     {% endif %}
       
