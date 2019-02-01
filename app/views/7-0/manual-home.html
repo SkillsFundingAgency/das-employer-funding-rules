@@ -73,9 +73,13 @@
                     {% set _sectionHasUpdates = true %}
                 {% endif %}
                 {% for subsection in section.subsections %}
-                {#{% if subsection.updates %}
+
+                {% if myData.updatesFilter == 'alwayson' %}
+                    {% if subsection.updates %}
                         {% set _manualHasUpdates = true %}
-                    {% endif %}#}
+                    {% endif %}
+                {% endif %}
+
                     {% for part in subsection.parts %}
                         {% if part.updates %}
                             {% set _manualHasUpdates = true %}
@@ -148,10 +152,14 @@
                         {% set _sectionHasUpdates = true %}
                     {% endif %}
                     {% for subsection in section.subsections %}
-                    {#{% if subsection.updates %}
+
+                    {% if myData.updatesFilter == 'alwayson' %}
+                        {% if subsection.updates %}
                             {% set _sectionClasses = "" %}
                             {% set _sectionHasUpdates = true %}
-                        {% endif %}#}
+                        {% endif %}
+                    {% endif %}
+
                         {% for part in subsection.parts %}
                             {% if part.updates %}
                                 {% set _sectionClasses = "" %}

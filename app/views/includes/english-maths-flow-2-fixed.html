@@ -1,246 +1,385 @@
 <h3 class="govuk-heading-m">Find out what English and maths training your apprentice should do</h3>
 <div class="svg-1-container" style="margin-bottom:40px; padding-bottom: 168%">
-    <svg class="svg-1 svg-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1004 1683" content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.1 Safari/605.1.15&quot; version=&quot;9.4.7&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram id=&quot;"
-        style="background-color: rgb(255, 255, 255);">
-        <defs />
+    <svg class="svg-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1004 1683" content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.1 Safari/605.1.15&quot; version=&quot;9.4.7&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram id=&quot;" >
+    <defs />
 
-        <!-- 1 -->
-        <g role="listitem">
-            <rect x="262" y="1" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-            <text>
-                <tspan x="290" y="24">Does the apprentice</tspan>
-                <tspan x="292" y="49">have at least Level 2</tspan>
-                <tspan x="292" y="74">English and maths?</tspan>
-                <!-- style="color: rgb(99 , 99 , 99)" -->
-            </text>
-            <text class="secondary-colour">
-                <tspan x="294" y="99">This is the same as</tspan>
-                <tspan x="289" y="124">at least grade E or 2 </tspan>
-                <tspan x="340" y="149">at GCSE.</tspan>
-            </text>
-            <!-- Yes 1 -->
-            <g>
-                <rect x="262" y="161" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-                <text x="304" y="187">Yes</text>
-                <path d="M 261.5 180.5 L 121.5 180.5 Q 111.5 180.5 111.5 190.5 L 111.5 1416.53" fill="none" stroke="#006435" stroke-width="4" stroke-miterlimit="10"  />
-                <path d="M 111.5 1428.53 L 105.5 1416.53 L 117.5 1416.53 Z" fill="#006435" stroke="#006435" stroke-width="4" stroke-miterlimit="10"  />
+    <!-- 
+
+    - List and listitem skeleton
+    - role="img" on rect
+    - <title> element inside the rect
+    - aria-hidden="true" on tspans
+    - <g role="list" wrapping yes/no's
+    - class="block" on <g role="listitem" question
+    - class="end" on end blocks
+    - <a xlink:href="#em-1-answers"> around question linking to answers list
+    - <a xlink:href="#em-end-4"> around answer linking to next box
+
+    - Question 1: inside each title, what about yes/nop and end?
+
+    - Skip/go to question after each answer/before arrow
+
+    -->
+
+        <g role="list">
+
+            <!-- 1 -->
+            <g role="listitem" class="block" >
+                <a xlink:href="#em-answers-1" >
+                    <rect role="img" x="262" y="1" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                        <title>Question 1: Does the apprentice have at least Level 2 English and maths? This is the same as at least grade E or 2 at GCSE.</title>
+                    </rect>
+                    <text aria-hidden="true">
+                        <tspan aria-hidden="true" x="290" y="24">Does the apprentice</tspan>
+                        <tspan aria-hidden="true" x="292" y="49">have at least Level 2</tspan>
+                        <tspan aria-hidden="true" x="292" y="74">English and maths?</tspan>
+                    </text>
+                    <text aria-hidden="true" class="secondary-colour">
+                        <tspan aria-hidden="true" x="294" y="99">This is the same as</tspan>
+                        <tspan aria-hidden="true" x="289" y="124">at least grade E or 2 </tspan>
+                        <tspan aria-hidden="true" x="340" y="149">at GCSE.</tspan>
+                    </text>
+                </a>
+                <g role="list" id="em-answers-1">
+                    <!-- Yes 1 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-end-4">
+                            <rect role="img" x="262" y="161" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>Yes</title>
+                            </rect>
+                            <text aria-hidden="true" x="304" y="187">Yes</text>
+
+                            <path class="arrowline" d="M 261.5 180.5 L 121.5 180.5 Q 111.5 180.5 111.5 190.5 L 111.5 1416.53" fill="none" stroke="#006435" stroke-width="4" stroke-miterlimit="10"  />
+                            <path d="M 111.5 1428.53 L 105.5 1416.53 L 117.5 1416.53 Z" fill="#006435" stroke="#006435" stroke-width="4" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                    <!-- No 1 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-question-2">
+                            <rect role="img" x="372" y="161" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>No: continue to question 2</title>
+                            </rect>
+                            <text aria-hidden="true" x="414" y="187">No</text>
+
+                            <path class="arrowline" d="M 426.5 200.5 L 426.5 230.5 Q 426.5 240.5 416.5 240.5 L 381.5 240.5 Q 371.5 240.5 371.5 250.5 L 371.5 268.15" fill="none" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="3 3"  />
+                            <path d="M 371.5 277.15 L 367 268.15 L 376 268.15 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                </g>
             </g>
-            <!-- No 1 -->
-            <g>
-                <rect x="372" y="161" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-                <text x="414" y="187">No</text>
-                <path d="M 426.5 200.5 L 426.5 230.5 Q 426.5 240.5 416.5 240.5 L 381.5 240.5 Q 371.5 240.5 371.5 250.5 L 371.5 268.15" fill="none" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="3 3"  />
-                <path d="M 371.5 277.15 L 367 268.15 L 376 268.15 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10"  />
+
+            <!-- 2 -->
+            <g role="listitem" class="block" id="em-question-2">
+                <a xlink:href="#em-answers-2" >
+                    <rect role="img" x="262" y="281" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                        <title>Question 2: Do the apprentice’s English and maths qualifications meet the standard or framework of their apprenticeship?</title>
+                    </rect>
+                    <text aria-hidden="true">
+                        <tspan aria-hidden="true" x="294" y="316">Do the apprentice’s </tspan>
+                        <tspan aria-hidden="true" x="298" y="341">English and maths </tspan>
+                        <tspan aria-hidden="true" x="280" y="366">qualifications meet the </tspan>
+                        <tspan aria-hidden="true" x="282" y="391">standard or framework </tspan>
+                        <tspan aria-hidden="true" x="278" y="416">of their apprenticeship?</tspan>
+                    </text>
+                </a>
+                <g role="list" id="em-answers-2">
+                    <!-- Yes 2 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-end-5">
+                            <rect role="img" x="262" y="441" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>Yes</title>
+                            </rect>
+                            <text aria-hidden="true" x="304" y="467">Yes</text>
+
+                            <path class="arrowline" d="M 261.5 460.5 L 231.5 460.5 Q 221.5 460.5 221.5 470.5 L 221.5 1350.5 Q 221.5 1360.5 231.5 1360.5 L 361.5 1360.5 Q 371.5 1360.5 371.5 1370.5 L 371.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                            <path d="M 371.5 1428.53 L 365.5 1416.53 L 377.5 1416.53 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                    <!-- No 2 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-question-3">
+                            <rect role="img" x="372" y="441" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>No: continue to question 3</title>
+                            </rect>
+                            <text aria-hidden="true" x="414" y="467">No</text>
+
+                            <path class="arrowline" d="M 426.5 480.5 L 426.5 548.15" fill="none" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="3 3"  />
+                            <path d="M 426.5 557.15 L 422 548.15 L 431 548.15 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                </g>
+
             </g>
-        </g>
 
-        <!-- 2 -->
-        <g role="listitem">
-            <rect x="262" y="281" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-            <text>
-                <tspan x="294" y="316">Do the apprentice’s </tspan>
-                <tspan x="298" y="341">English and maths </tspan>
-                <tspan x="280" y="366">qualifications meet the </tspan>
-                <tspan x="282" y="391">standard or framework </tspan>
-                <tspan x="278" y="416">of their apprenticeship?</tspan>
-            </text>
-            <!-- Yes 2 -->
-            <g>
-                <rect x="262" y="441" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-                <text x="304" y="467">Yes</text>
-                <path d="M 261.5 460.5 L 231.5 460.5 Q 221.5 460.5 221.5 470.5 L 221.5 1350.5 Q 221.5 1360.5 231.5 1360.5 L 361.5 1360.5 Q 371.5 1360.5 371.5 1370.5 L 371.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
-                <path d="M 371.5 1428.53 L 365.5 1416.53 L 377.5 1416.53 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+            <!-- 3 -->
+            <g role="listitem" class="block" id="em-question-3">
+                <a xlink:href="#em-answers-3" >
+                    <rect role="img" x="262" y="561" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                        <title>Question 3: Does the apprentice have a special educational need, learning difficulty or disability?</title>
+                    </rect>
+                    <text aria-hidden="true">
+                        <tspan aria-hidden="true" x="290" y="595">Does the apprentice </tspan>
+                        <tspan aria-hidden="true" x="318" y="620">have a special </tspan>
+                        <tspan aria-hidden="true" x="302" y="645">educational need, </tspan>
+                        <tspan aria-hidden="true" x="292" y="670">learning difficulty or </tspan>
+                        <tspan aria-hidden="true" x="332" y="695">disability?</tspan>
+                    </text>
+                </a>
+                <g role="list" id="em-answers-3">
+                    <!-- Yes 3 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-question-4">
+                            <rect role="img" x="262" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>Yes: continue to question 4</title>
+                            </rect>
+                            <text aria-hidden="true" x="304" y="747">Yes</text>
+
+                            <path class="arrowline" d="M 316.5 760.5 L 316.5 828.15" fill="none" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="3 3"  />
+                            <path d="M 316.5 837.15 L 312 828.15 L 321 828.15 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                    <!-- No 3 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-question-5">
+                            <rect role="img" x="372" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>No: skip to question 5</title>
+                            </rect>
+                            <text aria-hidden="true" x="414" y="747">No</text>
+
+                            <path class="arrowline" d="M 481.5 740.5 L 491.5 740.5 Q 501.5 740.5 501.5 730.5 L 501.5 650.5 Q 501.5 640.5 505.32 640.5 L 509.15 640.5" fill="none" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="3 3"  />
+                            <path d="M 518.15 640.5 L 509.15 645 L 509.15 636 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                </g>
             </g>
-            <!-- No 2 -->
-            <g>
-                <rect x="372" y="441" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-                <text x="414" y="467">No</text>
-                <path d="M 426.5 480.5 L 426.5 548.15" fill="none" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="3 3"  />
-                <path d="M 426.5 557.15 L 422 548.15 L 431 548.15 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10"  />
+
+            <!-- 4 -->
+            <g role="listitem" class="block" id="em-question-4">
+                <a xlink:href="#em-answers-4">
+                    <rect role="img" x="262" y="841" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" >
+                        <title>Question 4: Will the apprentice be able to get the minimum requirement in English and maths?</title>
+                    </rect>
+                    <text aria-hidden="true">
+                        <tspan aria-hidden="true" x="282" y="892">Will the apprentice be </tspan>
+                        <tspan aria-hidden="true" x="314" y="917">able to get the </tspan>
+                        <tspan aria-hidden="true" x="284" y="942">minimum requirement </tspan>
+                        <tspan aria-hidden="true" x="288" y="967">in English and maths?</tspan>
+                    </text>
+                </a>
+                <g role="list" id="em-answers-4">
+                    <!-- No 4 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-end-1">
+                            <rect role="img" x="262" y="1001" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>No</title>
+                            </rect>
+                            <text aria-hidden="true" x="305" y="1026">No</text>
+
+                            <path class="arrowline" d="M 316.5 1040.5 L 316.5 1104.03" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="4 4"  />
+                            <path d="M 316.5 1116.03 L 310.5 1104.03 L 322.5 1104.03 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                    <!-- Yes 4 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-end-7">
+                            <rect role="img" x="372" y="1001" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>Yes</title>
+                            </rect>
+                            <text aria-hidden="true" x="413" y="1026">Yes</text>
+
+                            <path class="arrowline" d="M 426.5 1040.5 L 426.5 1070.5 Q 426.5 1080.5 436.5 1080.5 L 881.5 1080.5 Q 891.5 1080.5 891.5 1090.5 L 891.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                            <path d="M 891.5 1428.53 L 885.5 1416.53 L 897.5 1416.53 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                </g>
             </g>
-        </g>
 
-        <!-- 3 -->
-        <g role="listitem">
-            <rect x="262" y="561" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-            <text>
-                <tspan x="290" y="595">Does the apprentice </tspan>
-                <tspan x="318" y="620">have a special </tspan>
-                <tspan x="302" y="645">educational need, </tspan>
-                <tspan x="292" y="670">learning difficulty or </tspan>
-                <tspan x="332" y="695">disability?</tspan>
-            </text>
-            <!-- Yes 3 -->
-            <g>
-                <rect x="262" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-                <text x="304" y="747">Yes</text>
-                <path d="M 316.5 760.5 L 316.5 828.15" fill="none" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="3 3"  />
-                <path d="M 316.5 837.15 L 312 828.15 L 321 828.15 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10"  />
+            <!-- 5 -->
+            <g role="listitem" class="block" id="em-question-5">
+                <a xlink:href="#em-answers-5">
+                    <rect role="img" x="522" y="561" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                        <title>Question 5: Does the apprentice have at least approved Level 1 English and maths?</title>
+                    </rect>
+                    <text aria-hidden="true">
+                        <tspan aria-hidden="true" x="550" y="610">Does the apprentice </tspan>
+                        <tspan aria-hidden="true" x="542" y="635">have at least approved </tspan>
+                        <tspan aria-hidden="true" x="560" y="660">Level 1 English and </tspan>
+                        <tspan aria-hidden="true" x="605" y="685">maths?</tspan>
+                    </text>
+                </a>
+                <g role="list" id="em-answers-5">
+                    <!-- Yes 5 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-end-7">
+                            <rect role="img" x="522" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>Yes</title>
+                            </rect>
+                            <text aria-hidden="true" x="562" y="747">Yes</text>
+
+                            <path class="arrowline" d="M 576.5 760.5 L 576.5 790.5 Q 576.5 800.5 566.5 800.5 L 511.5 800.5 Q 501.5 800.5 501.5 810.5 L 501.5 1070.5 Q 501.5 1080.5 511.5 1080.5 L 881.5 1080.5 Q 891.5 1080.5 891.5 1090.5 L 891.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="4 4"  />
+                            <path d="M 891.5 1428.53 L 885.5 1416.53 L 897.5 1416.53 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                    <!-- No 5 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-question-6">
+                            <rect role="img" x="632" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>No: go to question 6</title>
+                            </rect>
+                            <text aria-hidden="true" x="674" y="747">No</text>
+
+                            <path class="arrowline" d="M 741.5 740.5 L 751.5 740.5 Q 761.5 740.5 761.5 730.5 L 761.5 650.5 Q 761.5 640.5 765.32 640.5 L 769.15 640.5" fill="none" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="3 3"  />
+                            <path d="M 778.15 640.5 L 769.15 645 L 769.15 636 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                </g>
             </g>
-            <!-- No 3 -->
-            <g>
-                <rect x="372" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-                <text x="414" y="747">No</text>
-                <path d="M 481.5 740.5 L 491.5 740.5 Q 501.5 740.5 501.5 730.5 L 501.5 650.5 Q 501.5 640.5 505.32 640.5 L 509.15 640.5" fill="none" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="3 3"  />
-                <path d="M 518.15 640.5 L 509.15 645 L 509.15 636 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10"  />
+
+            <!-- 6 -->
+            <g role="listitem" class="block" id="em-question-6">
+                <a xlink:href="#em-answers-6">
+                    <rect role="img" x="782" y="561" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                        <title>Question 6: Is the apprentice working below Level 1?</title>
+                    </rect>
+                    <text aria-hidden="true">
+                        <tspan aria-hidden="true" x="824" y="635">Is the apprentice </tspan>
+                        <tspan aria-hidden="true" x="800" y="660">working below Level 1?</tspan>
+                    </text>
+                </a>
+                <g role="list" id="em-answers-6">
+                    <!-- Yes 6  -->
+                    <g role="listitem">
+                        <a xlink:href="#em-end-2">
+                            <rect role="img" x="782" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>Yes</title>
+                            </rect>
+                            <text aria-hidden="true" x="822" y="747">Yes</text>
+
+                            <path class="arrowline" d="M 836.5 760.5 L 836.5 790.5 Q 836.5 800.5 826.5 800.5 L 641.5 800.5 Q 631.5 800.5 631.5 810.5 L 631.5 824.03" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="4 4"  />
+                            <path d="M 631.5 836.03 L 625.5 824.03 L 637.5 824.03 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                    <!-- No 6 -->
+                    <g role="listitem">
+                        <a xlink:href="#em-end-3">
+                            <rect role="img" x="892" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2">
+                                <title>No</title>
+                            </rect>
+                            <text aria-hidden="true" x="934" y="747">No</text>
+
+                            <path class="arrowline" d="M 946.5 760.5 L 946.5 824.03" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="4 4"  />
+                            <path d="M 946.5 836.03 L 940.5 824.03 L 952.5 824.03 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                        </a>
+                    </g>
+                </g>
             </g>
-        </g>
 
-        <!-- 4 -->
-        <g role="listitem">
-            <rect x="262" y="841" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-            <text>
-                <tspan x="282" y="892">Will the apprentice be </tspan>
-                <tspan x="314" y="917">able to get the </tspan>
-                <tspan x="284" y="942">minimum requirement </tspan>
-                <tspan x="288" y="967">in English and maths?</tspan>
-            </text>
-            <!-- No 4 -->
-            <g>
-                <rect x="262" y="1001" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-                <text x="305" y="1026">No</text>
-                <path d="M 316.5 1040.5 L 316.5 1104.03" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="4 4"  />
-                <path d="M 316.5 1116.03 L 310.5 1104.03 L 322.5 1104.03 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+            <!-- 7 - End 1 -->
+            <g role="listitem" class="block end" id="em-end-1" >
+                <a xlink:href="#em-end-6">
+                    <rect role="img" x="262" y="1121" width="220" height="200" rx="20" ry="20" fill="#bfd7e8" stroke="none">
+                        <title>We’ll fund functional English and maths Level 2 for the apprentice.</title>
+                    </rect>
+                    <text aria-hidden="true">
+                        <tspan aria-hidden="true" x="286" y="1194">We’ll fund functional </tspan>
+                        <tspan aria-hidden="true" x="278" y="1219">English and maths Level </tspan>
+                        <tspan aria-hidden="true" x="293" y="1244">2 for the apprentice.</tspan>
+                    </text>
+                    <path class="arrowline" d="M 426.5 1320.5 L 426.5 1370.5 Q 426.5 1380.5 436.5 1380.5 L 621.5 1380.5 Q 631.5 1380.5 631.5 1390.5 L 631.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                    <path d="M 631.5 1428.53 L 625.5 1416.53 L 637.5 1416.53 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                </a>
             </g>
-            <!-- Yes 4 -->
-            <g>
-                <rect x="372" y="1001" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-                <text x="413" y="1026">Yes</text>
-                <path d="M 426.5 1040.5 L 426.5 1070.5 Q 426.5 1080.5 436.5 1080.5 L 881.5 1080.5 Q 891.5 1080.5 891.5 1090.5 L 891.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+
+            <!-- 8 - End 2 -->
+            <g role="listitem" class="block end" id="em-end-2" >
+                <a xlink:href="#em-end-7">
+                    <rect role="img" x="522" y="841" width="220" height="200" rx="20" ry="20" fill="#bfd7e8" stroke="none" >
+                        <title>They must get Level 1 and 2 in English and maths. We may fund these qualifications, based on an assessment of the apprentice.</title>
+                    </rect>
+                    <text aria-hidden="true">
+                        <tspan aria-hidden="true" x="546" y="870">They must get Level 1 </tspan>
+                        <tspan aria-hidden="true" x="550" y="895">and 2 in English and </tspan>
+                        <tspan aria-hidden="true" x="548" y="920">maths. We may fund </tspan>
+                        <tspan aria-hidden="true" x="550" y="945">these qualifications, </tspan>
+                        <tspan aria-hidden="true" x="580" y="970">based on an </tspan>
+                        <tspan aria-hidden="true" x="556" y="995">assessment of the </tspan>
+                        <tspan aria-hidden="true" x="584" y="1020">apprentice.</tspan>
+                    </text>
+                    <path class="arrowline" d="M 631.5 1040.5 L 631.5 1070.5 Q 631.5 1080.5 641.5 1080.5 L 881.5 1080.5 Q 891.5 1080.5 891.5 1090.5 L 891.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="4 4"  />
+                    <path d="M 891.5 1428.53 L 885.5 1416.53 L 897.5 1416.53 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                </a>
             </g>
-        </g>
 
-        <!-- 5 -->
-        <g role="listitem">
-            <rect x="522" y="561" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-            <text>
-                <tspan x="550" y="610">Does the apprentice </tspan>
-                <tspan x="542" y="635">have at least approved </tspan>
-                <tspan x="560" y="660">Level 1 English and </tspan>
-                <tspan x="605" y="685">maths?</tspan>
-            </text>
-            <!-- Yes 5 -->
-            <g>
-                <rect x="522" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-                <text x="562" y="747">Yes</text>
-                <path d="M 576.5 760.5 L 576.5 790.5 Q 576.5 800.5 566.5 800.5 L 511.5 800.5 Q 501.5 800.5 501.5 810.5 L 501.5 1070.5 Q 501.5 1080.5 511.5 1080.5 L 881.5 1080.5 Q 891.5 1080.5 891.5 1090.5 L 891.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="4 4"  />
-                <path d="M 891.5 1428.53 L 885.5 1416.53 L 897.5 1416.53 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+            <!-- 9 - End 3 -->
+            <g role="listitem" class="block end" id="em-end-3" >
+                <a xlink:href="#em-end-7">
+                    <rect role="img" x="782" y="841" width="220" height="200" rx="20" ry="20" fill="#bfd7e8" stroke="none"  >
+                        <title>They must do Level 2 English and maths (which we’ll fund). If they cannot achieve this, they must get Level 1 English and maths (which we will not fund).</title>
+                    </rect>
+                    <text aria-hidden="true">
+                        <tspan aria-hidden="true" x="808" y="870">They must do Level 2 </tspan>
+                        <tspan aria-hidden="true" x="817" y="895">English and maths </tspan>
+                        <tspan aria-hidden="true" x="808" y="920">(which we’ll fund). If </tspan>
+                        <tspan aria-hidden="true" x="810" y="945">they cannot achieve </tspan>
+                        <tspan aria-hidden="true" x="795" y="970">this, they must get Level </tspan>
+                        <tspan aria-hidden="true" x="812" y="995">1 English and maths </tspan>
+                        <tspan aria-hidden="true" x="794" y="1020">(which we will not fund).</tspan>
+                    </text>
+                    <path class="arrowline" d="M 891.5 1040.5 L 891.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" />
+                    <path d="M 891.5 1428.53 L 885.5 1416.53 L 897.5 1416.53 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+                </a>
             </g>
-            <!-- No 5 -->
-            <g>
-                <rect x="632" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-                <text x="674" y="747">No</text>
-                <path d="M 741.5 740.5 L 751.5 740.5 Q 761.5 740.5 761.5 730.5 L 761.5 650.5 Q 761.5 640.5 765.32 640.5 L 769.15 640.5" fill="none" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="3 3"  />
-                <path d="M 778.15 640.5 L 769.15 645 L 769.15 636 Z" fill="#0b0c0c" stroke="#0b0c0c" stroke-width="3" stroke-miterlimit="10"  />
+
+            <!-- 10 - End 4 -->
+            <g role="listitem" class="block end-2" id="em-end-4" >
+                <rect role="img" x="2" y="1441" width="220" height="240" rx="22" ry="22" fill="#bfd8cc" stroke="#006435" stroke-width="4" >
+                    <title>End point 1: They do not need to do any more English or maths training.</title>
+                </rect>
+                <text aria-hidden="true" class="larger-text-2">
+                    <tspan aria-hidden="true" x="25" y="1535">They do not need to </tspan>
+                    <tspan aria-hidden="true" x="23" y="1562">do any more English </tspan>
+                    <tspan aria-hidden="true" x="35" y="1589">or maths training.</tspan>
+                </text>
             </g>
-        </g>
 
-        <!-- 6 -->
-        <g role="listitem">
-            <rect x="782" y="561" width="220" height="160" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2"  />
-            <text>
-                <tspan x="824" y="635">Is the apprentice </tspan>
-                <tspan x="800" y="660">working below Level 1?</tspan>
-            </text>
-            <!-- Yes 6  -->
-            <g>
-                <rect x="782" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-                <text x="822" y="747">Yes</text>
-                <path d="M 836.5 760.5 L 836.5 790.5 Q 836.5 800.5 826.5 800.5 L 641.5 800.5 Q 631.5 800.5 631.5 810.5 L 631.5 824.03" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="4 4"  />
-                <path d="M 631.5 836.03 L 625.5 824.03 L 637.5 824.03 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+            <!-- 11 - End 5 -->
+            <g role="listitem" class="block end-2" id="em-end-5" >
+                <rect role="img" x="262" y="1441" width="220" height="240" rx="22" ry="22" fill="#bfd7e8" stroke="#005ea5" stroke-width="4">
+                    <title>They must also do Level 2 English and maths.</title>
+                </rect>
+                <text aria-hidden="true" class="larger-text-2">
+                    <tspan aria-hidden="true" x="290" y="1535">They must also do </tspan>
+                    <tspan aria-hidden="true" x="285" y="1562">Level 2 English and </tspan>
+                    <tspan aria-hidden="true" x="340" y="1589">maths.</tspan>
+                </text>
             </g>
-            <!-- No 6 -->
-            <g>
-                <rect x="892" y="721" width="110" height="40" fill="#ffffff" stroke="#bfd7e8" stroke-width="2" stroke-dasharray="2 2" />
-                <text x="934" y="747">No</text>
-                <path d="M 946.5 760.5 L 946.5 824.03" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="4 4"  />
-                <path d="M 946.5 836.03 L 940.5 824.03 L 952.5 824.03 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
+
+            <!-- 12 - End 6 -->
+            <g role="listitem" class="block end-2" id="em-end-6" >
+                <rect role="img" x="522" y="1441" width="220" height="240" rx="22" ry="22" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" >
+                    <title>They must get at least entry Level 3 functional English and maths.</title>
+                </rect>
+                <text aria-hidden="true" class="larger-text-2">
+                    <tspan aria-hidden="true" x="554" y="1525">They must get at </tspan>
+                    <tspan aria-hidden="true" x="548" y="1552">least entry Level 3 </tspan>
+                    <tspan aria-hidden="true" x="548" y="1579">functional English </tspan>
+                    <tspan aria-hidden="true" x="584" y="1606">and maths.</tspan>
+                </text>
             </g>
-        </g>
 
-        <!-- 7 - End 1 -->
-        <g role="listitem">
-            <rect x="262" y="1121" width="220" height="200" rx="20" ry="20" fill="#bfd7e8" stroke="none"  />
-            <text>
-                <tspan x="286" y="1194">We’ll fund functional </tspan>
-                <tspan x="278" y="1219">English and maths Level </tspan>
-                <tspan x="293" y="1244">2 for the apprentice.</tspan>
-            </text>
-            <path d="M 426.5 1320.5 L 426.5 1370.5 Q 426.5 1380.5 436.5 1380.5 L 621.5 1380.5 Q 631.5 1380.5 631.5 1390.5 L 631.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
-            <path d="M 631.5 1428.53 L 625.5 1416.53 L 637.5 1416.53 Z" fill="#005ea5" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10"  />
-        </g>
+            <!-- 13 - End 7 -->
+            <g role="listitem" class="block end-2" id="em-end-7" >
+                <rect role="img" x="782" y="1441" width="220" height="240" rx="22" ry="22" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" >
+                    <title>They must get the minimum required standards in English and maths.</title>
+                </rect>
+                <text aria-hidden="true" class="larger-text-2">
+                    <tspan aria-hidden="true" x="810" y="1525">They must get the </tspan>
+                    <tspan aria-hidden="true" x="810" y="1552">minimum required </tspan>
+                    <tspan aria-hidden="true" x="804" y="1579">standards in English </tspan>
+                    <tspan aria-hidden="true" x="842" y="1606">and maths.</tspan>
+                </text>
+            </g>
 
-        <!-- 8 - End 2 -->
-        <g role="listitem">
-            <rect x="522" y="841" width="220" height="200" rx="20" ry="20" fill="#bfd7e8" stroke="none"  />
-            <text>
-                <tspan x="546" y="870">They must get Level 1 </tspan>
-                <tspan x="550" y="895">and 2 in English and </tspan>
-                <tspan x="548" y="920">maths. We may fund </tspan>
-                <tspan x="550" y="945">these qualifications, </tspan>
-                <tspan x="580" y="970">based on an </tspan>
-                <tspan x="556" y="995">assessment of the </tspan>
-                <tspan x="584" y="1020">apprentice.</tspan>
-            </text>
-            <path d="M 631.5 1040.5 L 631.5 1070.5 Q 631.5 1080.5 641.5 1080.5 L 881.5 1080.5 Q 891.5 1080.5 891.5 1090.5 L 891.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="4 4"  />
         </g>
-
-        <!-- 9 - End 3 -->
-        <g role="listitem">
-            <rect x="782" y="841" width="220" height="200" rx="20" ry="20" fill="#bfd7e8" stroke="none"  />
-            <text>
-                <tspan x="808" y="870">They must do Level 2 </tspan>
-                <tspan x="817" y="895">English and maths </tspan>
-                <tspan x="808" y="920">(which we’ll fund). If </tspan>
-                <tspan x="810" y="945">they cannot achieve </tspan>
-                <tspan x="795" y="970">this, they must get Level </tspan>
-                <tspan x="812" y="995">1 English and maths </tspan>
-                <tspan x="794" y="1020">(which we will not fund).</tspan>
-            </text>
-            <path d="M 891.5 1040.5 L 891.5 1416.53" fill="none" stroke="#005ea5" stroke-width="4" stroke-miterlimit="10" />
-        </g>
-
-        <!-- 10 - End 4 -->
-        <g role="listitem">
-            <rect x="2" y="1441" width="220" height="240" rx="22" ry="22" fill="#bfd8cc" stroke="#006435" stroke-width="4" />
-            <text class="larger-text-2">
-                <tspan x="25" y="1535">They do not need to </tspan>
-                <tspan x="23" y="1562">do any more English </tspan>
-                <tspan x="35" y="1589">or maths training.</tspan>
-            </text>
-        </g>
-
-         <!-- 11 - End 5 -->
-         <g role="listitem">
-            <rect x="262" y="1441" width="220" height="240" rx="22" ry="22" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" />
-            <text class="larger-text-2">
-                <tspan x="290" y="1535">They must also do </tspan>
-                <tspan x="285" y="1562">Level 2 English and </tspan>
-                <tspan x="340" y="1589">maths.</tspan>
-            </text>
-        </g>
-
-        <!-- 12 - End 6 -->
-        <g role="listitem">
-            <rect x="522" y="1441" width="220" height="240" rx="22" ry="22" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" />
-            <text class="larger-text-2">
-                <tspan x="554" y="1525">They must get at </tspan>
-                <tspan x="548" y="1552">least entry Level 3 </tspan>
-                <tspan x="548" y="1579">functional English </tspan>
-                <tspan x="584" y="1606">and maths.</tspan>
-            </text>
-        </g>
-
-        <!-- 13 - End 7 -->
-        <g role="listitem">
-            <rect x="782" y="1441" width="220" height="240" rx="22" ry="22" fill="#bfd7e8" stroke="#005ea5" stroke-width="4" />
-            <text class="larger-text-2">
-                <tspan x="810" y="1525">They must get the </tspan>
-                <tspan x="810" y="1552">minimum required </tspan>
-                <tspan x="804" y="1579">standards in English </tspan>
-                <tspan x="842" y="1606">and maths.</tspan>
-            </text>
-        </g>
-
     </svg>
 </div>

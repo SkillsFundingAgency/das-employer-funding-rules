@@ -28,14 +28,16 @@ $govuk-global-styles: true;
     padding-bottom: 100%; 
     /* override this inline for aspect ratio other than square */
 }
-.svg-1 {
+.svg-1,
+.svg-2 {
     position: absolute; 
     height: 100%; 
     width: 100%; 
     left: 0; 
     top: 0;
 }
-.svg-1 text {
+.svg-1 text,
+.svg-2 text {
     color: #0b0c0c;
     font-family: "nta", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -47,21 +49,47 @@ $govuk-global-styles: true;
     margin-top: 0;
     margin-bottom: 0;
 }
+.svg-1 .larger-text-2,
+.svg-2 .larger-text-2 {
+    font-size: 21px;
+}
+.svg-1 .secondary-colour,
+.svg-2 .secondary-colour {
+    fill: $govuk-secondary-text-colour;
+}
+.svg-1-container a {
+    text-decoration: none !important;
+}
+
+// Hovers
+// 1
 .svg-1 g g:hover path,
 .svg-1 g g:hover rect {
     stroke-width: 4px;
     cursor: pointer;
 }
-.svg-2 g g:hover path,
-.svg-2 g g:hover rect {
+// 2
+.svg-2 a:hover path,
+.svg-2 a:hover rect {
+    stroke-width: 5px;
+    stroke-dasharray: 0;
+}
+.svg-2 a:hover path.arrowline {
+    stroke-width: 7px;
+}
+.svg-2 a:hover rect {
     stroke-width: 6px;
 }
-.svg-1 .larger-text-2 {
-    font-size: 21px;
+.svg-2 .end a:hover rect {
+    stroke: #005ea5;
 }
-.svg-1 .secondary-colour {
-    fill: $govuk-secondary-text-colour;
-}
+
+// .svg-2 g.end:hover rect {
+//     stroke: #005ea5;
+// }
+// .svg-2 g.end-2:hover rect {
+//     stroke: black;
+// }
 
 // call to action
 @include govuk-media-query($from: tablet) {
