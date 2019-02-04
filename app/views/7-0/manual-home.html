@@ -50,7 +50,7 @@
     {% if myData.header == "altered" %}
         {% include "../includes/manual-header-2.html" %}
     {% else %}
-        {% set _manualHeaderTitle = _thisManual.title|safe + " - " + _thisManual.date|safe  %}
+        {% set _manualHeaderTitle = _thisManual.title|safe  %}
         {% include "../includes/manual-header.html" %}
     {% endif %}
       
@@ -60,6 +60,15 @@
       
     <article aria-labelledby="manual-title" id="content">
         <div class="manual-body">
+
+            <!-- <p class="summary">
+                These rules only apply to apprenticeships starting on or after 1 August 2018.
+            </p> -->
+
+            <div class="call-to-action">
+                <p class="govuk-body govuk-!-font-weight-bold">These are the latest rules ({{_thisManual.date|safe}})</span></p><br>
+                <p class="govuk-body">If the apprenticeship started before 1 August 2018, <a href="https://www.gov.uk/guidance/sfa-funding-rules" class="govuk-link govuk-link--no-visited-state">view the funding rules for previous years</a>.</p>
+            </div>
             
             <div class="govuk-inset-text">
                 <a href="rules-list" class="govuk-link govuk-link--no-visited-state">View the rules in alternative formats (including PDF)</a> which you can download, print and view offline.
