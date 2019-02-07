@@ -54,7 +54,7 @@ module.exports = function (router,_myData) {
         req.session.myData.updatesFilter = req.query.updatesFilter || req.session.myData.updatesFilter
         req.session.myData.updatesFilterOn = req.query.updatesFilterOn || req.session.myData.updatesFilterOn
         req.session.myData.startFrom = req.query.startFrom || req.session.myData.startFrom
-        if(req.session.myData.startFrom == "google" || req.session.myData.startFrom == "rules-list"){
+        if(req.session.myData.startFrom  == "google" || req.session.myData.startFrom == "rules-list" || req.session.myData.startFrom == "rules-years"){
             req.session.myData.useLatestManual = "true"
         }
         req.session.myData.emChart = req.query.emChart || req.session.myData.emChart
@@ -99,42 +99,6 @@ module.exports = function (router,_myData) {
             myData:req.session.myData
         });
     });
-    router.post('/' + version + '/manual-setup', function (req, res) {
-
-        //Manual Data
-        req.session.myData.manual = req.body.manualSetupManual
-        //Start From
-        req.session.myData.startFrom = req.body.manualSetupStartFrom
-        //Updates Filter
-        req.session.myData.updatesFilter = req.body.manualSetupContextualUpdates
-        //Header
-        req.session.myData.header = req.body.manualSetupHeader
-        
-        //Flow chart - english maths
-        req.session.myData.emChart = req.body.manualSetupEngMathsChart
-        // Legacy visibility of flow chart - english maths
-        switch(req.session.myData.emChart) {
-            case "svgflow":
-                req.session.myData.svgflow = "true"
-                break;
-            case "textflow":
-                req.session.myData.textflow = "true"
-                break;
-            default:
-        }
-
-        var _startFrom = req.session.myData.startFrom
-        switch(_startFrom) {
-            case "google":
-                res.redirect(301, '/' + version + '/google');
-                break;
-            case "manual":
-                res.redirect(301, '/' + version + '/manual-home');
-                break;
-            default:
-                res.redirect(301, '/' + version + '/manual-home');
-        }
-    });
     // Email updates
     router.get('/' + version + '/subscribe-email', function (req, res) {
         res.render(version + '/subscribe-email', {
@@ -144,6 +108,12 @@ module.exports = function (router,_myData) {
     // collections list
     router.get('/' + version + '/rules-list', function (req, res) {
         res.render(version + '/rules-list', {
+            myData:req.session.myData
+        });
+    });
+    // years hub
+    router.get('/' + version + '/rules-years', function (req, res) {
+        res.render(version + '/rules-years', {
             myData:req.session.myData
         });
     });
