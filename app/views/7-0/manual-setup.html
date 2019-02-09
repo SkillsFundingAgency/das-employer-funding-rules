@@ -8,7 +8,7 @@
 </div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form method="POST">
+        <!-- <form method="POST"> -->
             <fieldset>
 
                 <!-- TODO different settings  for employer and provider -->
@@ -20,8 +20,9 @@
                     </label>
                     <select class="govuk-select" id="manualSetupStartFrom" name="manualSetupStartFrom" data-option="manualSetupStartFrom">
                         <option {% if myData.startFrom == 'manual-home' %}selected{% endif %} value="manual-home">Manual homepage</option>
+                        <option {% if myData.startFrom == 'rules-years' %}selected{% endif %} value="rules-years">Year hub</option>
                         <option {% if myData.startFrom == 'google' %}selected{% endif %} value="google">Google</option>
-                        <option {% if myData.startFrom == 'rules-list' %}selected{% endif %} value="rules-list">Collections list</option>
+                        <!-- <option {% if myData.startFrom == 'rules-list' %}selected{% endif %} value="rules-list">Collections list</option> -->
                     </select>
                 </div>
             
@@ -101,7 +102,7 @@
                 <li><a href="wrapper?include=english-maths-flow-2-fixed" class="govuk-link govuk-link--no-visited-state">SVG flow chart - English and Maths</a></li>
                 <li><a href="wrapper?include=english-maths-text-flow-2" class="govuk-link govuk-link--no-visited-state">Text decision tree - English and Maths</a></li>
             </ul>
-        </form>
+        <!-- </form> -->
     </div>
     <div class="govuk-grid-column-one-third">
         {% include "includes/manual-data-notes.html" %}

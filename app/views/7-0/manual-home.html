@@ -53,6 +53,13 @@
         {% set _manualHeaderTitle = _thisManual.title|safe  %}
         {% include "../includes/manual-header.html" %}
     {% endif %}
+
+    {% set _pdfURL = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/733050/1819_Provider_Rules_v1.0.pdf" %}
+    {% if _thisManualType == "employer" %}
+        {% set _pdfURL = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/733034/1819_Employer_Rules_v1.0.pdf" %}
+    {% elif _thisManualType == "employerprovider" %}
+        {% set _pdfURL = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/733056/1819_Employer-Provider_Rules_v1.0.pdf" %}
+    {% endif %}
       
     <ol class="breadcrumb-trail">
         <li class="no-separator">Contents</li>
@@ -67,12 +74,14 @@
 
             <div class="call-to-action">
                 <p class="govuk-body govuk-!-font-weight-bold">These are the latest rules ({{_thisManual.date|safe}})</span></p><br>
-                <p class="govuk-body">If the apprenticeship started before 1 August 2018, <a href="https://www.gov.uk/guidance/sfa-funding-rules" class="govuk-link govuk-link--no-visited-state">view the funding rules for previous years</a>.</p>
+                <p class="govuk-body">If the apprenticeship started before 1 August 2018, <a href="rules-years" class="govuk-link govuk-link--no-visited-state">view the funding rules for previous years</a>.</p>
             </div>
             
-            <div class="govuk-inset-text">
-                <a href="rules-list" class="govuk-link govuk-link--no-visited-state">View the rules in alternative formats (including PDF)</a> which you can download, print and view offline.
-            </div>
+            <!-- <div class="govuk-inset-text">
+                <a href="rules-years" class="govuk-link govuk-link--no-visited-state">View the rules in alternative formats (including PDF)</a> which you can download, print and view offline.
+            </div> -->
+
+            <p class="govuk-body">You can <a href="{{_pdfURL}}" class="govuk-link govuk-link--no-visited-state">download {{_thisManual.title|lower|safe}} (PDF, 89KB)</a>.</p>
 
             <p class="govuk-body"><a href="https://www.gov.uk/email-signup/?topic=/education/apprenticeships-funding" class="govuk-link govuk-link--no-visited-state">Sign up for email alerts</a> for changes to the apprenticeships funding topic page.</p>
 
