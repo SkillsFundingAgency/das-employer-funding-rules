@@ -10,10 +10,12 @@ var _myData = {
         "providers-manual-2": require(__dirname + '/data/providers-manual-2.json'),
         "providers-manual-3": require(__dirname + '/data/providers-manual-3.json'),
         "employers-manual-original": require(__dirname + '/data/employers-manual-original.json'),
-        "employers-manual-2": require(__dirname + '/data/employers-manual-2.json')
+        "employers-manual-2": require(__dirname + '/data/employers-manual-2.json'),
+        "employer-providers-manual-1": require(__dirname + '/data/employer-providers-manual-1.json')
     },
     "latestEmployerManual": "employers-manual-2",
-    "latestProviderManual": "providers-manual-3"
+    "latestProviderManual": "providers-manual-3",
+    "latestEmployerproviderManual": "employer-providers-manual-1"
 }
 
 require('./routes/3-0/routes.js')(router,JSON.parse(JSON.stringify(_myData)));

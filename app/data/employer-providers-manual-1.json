@@ -1,0 +1,86 @@
+{
+    "id": "employer-providers-manual-1",
+    "type": "employerprovider",
+    "name": "Employer-providers - 1",
+    "content": {
+        "title": "Apprenticeship funding rules for employer-providers",
+        "date": "August 2018 to July 2019",
+        "version": "Version 2",
+        "version-date": "July 2018",
+        "interest": "",
+        "intro": "",
+        "sections": [
+            {
+                "id": "intro-and-purpose",
+                "title": "Introduction",
+                "range": "1 to 16",
+                "summary": "What these rules cover, why you should read them and definitions of some of the terms we use."
+            },
+            {
+                "id": "what-apprenticeship",
+                "title": "What is an apprenticeship?",
+                "range": "17 to 61",
+                "summary": "What employers, providers and apprentices should expect from an apprenticeship. Includes information about contracts, pay and training."
+            },
+            {
+                "id": "who-can-funded",
+                "title": "Who can be funded?",
+                "range": "62 to 81",
+                "summary": "How to work out if an individual is eligible for apprenticeship funding. Includes information on additional financial support for learners with learning difficulties."
+            },
+            {
+                "id": "what-can-funded",
+                "title": "Which costs are funded?",
+                "range": "82 to 141",
+                "summary": "Which costs can and cannot be paid for with apprenticeship funds. Includes information on: support for care leavers, end-point assessments and English and maths training."
+            },
+            {
+                "id": "contracting-subcontracting",
+                "title": "Contracting and subcontracting",
+                "range": "142 to 172",
+                "summary": "The responsibilities of employer-providers and their subcontractors. Includes information on subcontracting to providers who are not on the Register of Approved Training Providers (RoATP)."
+            },
+            {
+                "id": "paying-apprenticeship",
+                "title": "Paying for an apprenticeship",
+                "range": "173 to 211",
+                "summary": "When providers will receive payments, reporting requirements and agreeing a price. Includes information on accounting for prior learning, employer contributions (co-investment) and VAT."
+            },
+            {
+                "id": "apprenticeships-funded-transfers",
+                "title": "Apprenticeships funded by transfers of levy funds",
+                "range": "212 to 240",
+                "summary": "Information on sending and receiving (transferring) apprenticeship levy funds."
+            },
+            {
+                "id": "delivering-the-apprenticeship",
+                "title": "Delivering the apprenticeship",
+                "range": "241 to 245",
+                "summary": "Information on data protection and apprenticeship completion certificates."
+            },
+            {
+                "id": "changes-circumstances",
+                "title": "Changes in circumstances",
+                "range": "246 to 266",
+                "summary": "Information on changes of provider and changes in an apprentice’s personal or employment circumstances (including breaks in learning). Explains what effect (if any) there is on apprenticeship funding following a change in circumstances."
+            },
+            {
+                "id": "evidence-requirements",
+                "title": "Evidence requirements",
+                "range": "267 to 287",
+                "summary": "A list of the evidence that must be held and maintained for each apprenticeship."
+            },
+            {
+                "id": "annex-a",
+                "title": "Annex A: Eligibility criteria (who we fund)",
+                "range": "288 to 318",
+                "summary": "Information on who may be eligible for apprenticeship funding. Includes residency, citizenship and age criteria."
+            },
+            {
+                "id": "glossary",
+                "title": "Glossary",
+                "summary": "Definitions of the terms we use."
+            }
+        ]
+    }
+}

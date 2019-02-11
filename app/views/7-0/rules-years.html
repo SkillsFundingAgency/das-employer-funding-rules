@@ -273,6 +273,11 @@
                                 {% if myData.useLatestManual == "false" and myData.manuals[myData.manual].type == "provider" %}
                                     {% set _providerManual = myData.manuals[myData.manual].id %}
                                 {% endif %}
+                                <!-- Employer-provider manual ID -->
+                                {% set _employerproviderManual = myData.latestEmployerproviderManual %}
+                                {% if myData.useLatestManual == "false" and myData.manuals[myData.manual].type == "employerprovider" %}
+                                    {% set _employerproviderManual = myData.manuals[myData.manual].id %}
+                                {% endif %}
 
                                 <p class="govuk-body">The 2018 to 2019 rules apply to apprenticeships starting on or after 1 August 2018.</p>
 
@@ -280,12 +285,12 @@
                                 <ul class="govuk-list " >
                                     <li><a href="manual-home?manual={{_providerManual}}">training providers</a></li>
                                     <li><a href="manual-home?manual={{_employerManual}}">employers</a></li>
-                                    <li><a href="#">employer-providers</a></li>
+                                    <li><a href="manual-home?manual={{_employerproviderManual}}">employer-providers</a></li>
                                 </ul>
 
                                 <h3 class="gem-c-heading  gem-c-heading--mobile-top-margin" id="other">
-                                       Other information
-                                    </h3>
+                                    Other information
+                                </h3>
 
                                 <p>You can <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/733046/Apps_1819_PM_rules_.pdf">download apprenticeship performance management rules for training providers (PDF, 633KB)</a>.</p>
 <hr>

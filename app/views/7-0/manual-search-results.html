@@ -52,7 +52,7 @@ GOV.UK Manual
                             {% for section in _thisManual.sections %}
                                 {% if section.id == result.id %}
                                 <li>
-                                    <h3><a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}">{{section.title|safe}}</a></h3>
+                                    <h3><a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}">{{section.title|safe}}{% if section.range %} ({{section.range|safe}}){% endif %}</a></h3>
                                     {% if section.summary %}
                                     <p>
                                         {{section.summary|safe}}

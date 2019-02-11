@@ -13,6 +13,7 @@
             {
                 "id": "intro-and-purpose",
                 "title": "Introduction",
+                "range": "1 to 8",
                 "summary": "What these rules cover, why you should read them and definitions of some of the terms we use.",
                 "subsections": [
                     {
@@ -68,7 +69,8 @@
             {
                 "id": "what-is-apprenticeship",
                 "title": "What is an apprenticeship?",
-                "summary": "What you, your provider and apprentices should expect from an apprenticeship. Includes information about contracts, pay and training.",
+                "range": "9 to 53",
+                "summary": "What employers, providers and apprentices should expect from an apprenticeship. Includes information about contracts, pay and training.",
                 "updates-section": [
                     {
                         "content": "Restructure: changes made for ease of understanding, including incorporation of ‘commitment statement’ into this section."
@@ -675,6 +677,7 @@
             {
                 "id": "who-can-be-funded",
                 "title": "Who can be funded?",
+                "range": "62 to 81",
                 "summary": "How to work out if an individual is eligible for apprenticeship funding. Includes information on additional financial support for learners with learning difficulties.",
                 "updates": [
                     {
@@ -932,6 +935,7 @@
             {
                 "id": "what-can-be-funded",
                 "title": "Which costs are funded?",
+                "range": "74 to 129",
                 "summary": "Which costs can and cannot be paid for with apprenticeship funds. Includes information on: support for care leavers, end-point assessments and English and maths training.",
                 "updates": [
                     {
@@ -1777,7 +1781,8 @@
             {
                 "id": "contracting-subcontracting",
                 "title": "Contracting and subcontracting",
-                "summary": "Information on the agreement between you and your main provider, including requirements around subcontractors and detail on dispute resolution.",
+                "range": "130 to 140",
+                "summary": "The agreement between employers and their main provider. Includes information on: requirements for subcontractors and dispute resolution.",
                 "updates": [
                     {
                         "title": "Agreeing use of subcontractors with employers",
@@ -1915,7 +1920,8 @@
             {
                 "id": "paying-for-an-apprenticeship",
                 "title": "Paying for an apprenticeship",
-                "summary": "Information on when we will make payments to the provider, reporting requirements and agreeing a price. Includes information on accounting for prior learning, co-investment and apprenticeship service accounts and VAT.",
+                "range": "141 to 176",
+                "summary": "When providers will receive payments, reporting requirements and agreeing a price. Includes information on accounting for prior learning, employer contributions (co-investment) and VAT.",
                 "subsections": [
                     {
                         "type": "main",
@@ -1968,7 +1974,8 @@
             {
                 "id": "apprenticeships-funded-by-transfer-of-levy-funds",
                 "title": "Apprenticeships funded by transfers of levy funds",
-                "summary": "The rules that apply when you send or receive (transfer) apprenticeship levy funds, monitoring and what to do when the total cost of training cannot be covered by a transfer.",
+                "range": "177 to 211",
+                "summary": "Information on sending and receiving (transferring) apprenticeship levy funds. Includes information on what to do when the total cost cannot be covered by the transfer.",
                 "subsections": [
                     {
                         "type": "subsection",
@@ -2005,7 +2012,8 @@
             {
                 "id": "changes-in-circumstances",
                 "title": "Changes in circumstances",
-                "summary": "Information on which changes may affect your agreement with your provider. Explains what effect (if any) these changes have on apprenticeship funding and training, and what actions you and your provider may need to take.",
+                "range": "212 to 233",
+                "summary": "Information on changes of provider and changes in an apprentice’s personal or employment circumstances (including breaks in learning). Explains what effect (if any) there is on apprenticeship funding following a change in circumstances.",
                 "subsections": [
                     {
                         "type": "main",
@@ -2028,6 +2036,7 @@
             {
                 "id": "annex-a-eligibility-criteria",
                 "title": "Annex A: Eligibility criteria (who we fund)",
+                "range": "234 to 264",
                 "summary": "Information on who may be eligible for apprenticeship funding. Includes residency, citizenship and age criteria.",
                 "subsections": [
                     {

@@ -200,7 +200,7 @@
 
                 <li class=" {{_sectionClasses}} ">
                     <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}&updatesFilterOn=false">
-                        <span class="subsection-title-text">{{section.title|safe}}</span>
+                        <span class="subsection-title-text">{{section.title|safe}}{% if section.range %} ({{section.range|safe}}){% endif %}</span>
                         {% if section.summary %}
                         <span class="subsection-summary">
                             {{section.summary|safe}}

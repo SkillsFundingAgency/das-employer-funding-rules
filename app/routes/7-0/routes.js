@@ -189,30 +189,32 @@ module.exports = function (router,_myData) {
                 doSearch(section.title,_sectionSearch)
                 doSearch(section.summary,_sectionSearch)
                 // For each 'subsection'
-                section.subsections.forEach(function(subsection) {
-                    doSearch(subsection.title,_sectionSearch)
-                    // For each 'parts'
-                    if("parts" in subsection) {
-                        subsection.parts.forEach(function(part) {
-                            doSearch(part.content,_sectionSearch)
-                            doSearch(part.title,_sectionSearch)
-                            // For each 'subparts'
-                            if("subparts" in part) {
-                                part.subparts.forEach(function(subpart) {
-                                    doSearch(subpart.content,_sectionSearch)
-                                    doSearch(subpart.title,_sectionSearch)
-                                    // For each 'subsubparts'
-                                    if("subsubparts" in subpart) { 
-                                        subpart.subsubparts.forEach(function(subsubpart) {
-                                            doSearch(subsubpart.content,_sectionSearch)
-                                            doSearch(subsubpart.title,_sectionSearch)
-                                        });
-                                    }
-                                });
-                            }
-                        });
-                    }
-                });
+                if("subsections" in section) {
+                    section.subsections.forEach(function(subsection) {
+                        doSearch(subsection.title,_sectionSearch)
+                        // For each 'parts'
+                        if("parts" in subsection) {
+                            subsection.parts.forEach(function(part) {
+                                doSearch(part.content,_sectionSearch)
+                                doSearch(part.title,_sectionSearch)
+                                // For each 'subparts'
+                                if("subparts" in part) {
+                                    part.subparts.forEach(function(subpart) {
+                                        doSearch(subpart.content,_sectionSearch)
+                                        doSearch(subpart.title,_sectionSearch)
+                                        // For each 'subsubparts'
+                                        if("subsubparts" in subpart) { 
+                                            subpart.subsubparts.forEach(function(subsubpart) {
+                                                doSearch(subsubpart.content,_sectionSearch)
+                                                doSearch(subsubpart.title,_sectionSearch)
+                                            });
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
                 _search["results"].push(_sectionSearch)
             });
 

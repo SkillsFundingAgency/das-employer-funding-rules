@@ -61,7 +61,7 @@ GOV.UK Manual
                                                     {% if _titleRendered == false %}
                                                         {% set _titleRendered = true %}
                                                         <br>
-                                                        <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">{{section.title}}</a>
+                                                        <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">{{section.title}}{% if section.range %} ({{section.range|safe}}){% endif %}</a>
                                                         <br><br>
                                                     {% endif %}
 
@@ -105,7 +105,7 @@ GOV.UK Manual
                                                     {% if _titleRendered == false %}
                                                     {% set _titleRendered = true %}
                                                     <br>
-                                                    <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">{{section.title}}</a>
+                                                    <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">{{section.title}}{% if section.range %} ({{section.range|safe}}){% endif %}</a>
                                                     <br><br>
                                                     {% endif %}
 
