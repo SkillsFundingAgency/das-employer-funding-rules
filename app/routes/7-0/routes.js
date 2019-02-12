@@ -10,13 +10,15 @@ module.exports = function (router,_myData) {
         req.session.myData.manualpage = "intro-and-purpose"
         req.session.myData.updatesFilter = "false"
         req.session.myData.updatesFilterOn = "false"
-        req.session.myData.startFrom = "manual-home"
+        req.session.myData.startFrom = "rules-years"
         req.session.myData.emChart = "textflow"
         req.session.myData.svgflow = "false"
         req.session.myData.textflow = "true"
         req.session.myData.emailUpdates = "1"
         req.session.myData.useLatestManual = "false"
         req.session.myData.header = "standard"
+        req.session.myData.yearRangeStart = "2017"
+        req.session.myData.yearRangeEnd = "2018"
     }
 
     //generic.js contains wildcard get and post requests. Useful for setting session data that we want available on any other routes file. also, so we dont have duplicate wildcard requests on individual routes files that might conflict with each other.
@@ -73,6 +75,8 @@ module.exports = function (router,_myData) {
         req.session.myData.emailUpdates = req.query.emailUpdates || req.session.myData.emailUpdates
         req.session.myData.header = req.query.header || req.session.myData.header
         req.session.myData.include = req.query.include || req.session.myData.include
+        req.session.myData.yearRangeStart = req.query.yearRangeStart || req.session.myData.yearRangeStart
+        req.session.myData.yearRangeEnd = req.query.yearRangeEnd || req.session.myData.yearRangeEnd
 
         next()
     });

@@ -4,8 +4,8 @@
 <html lang="en">
 <!--<![endif]-->
 
-{% set _yearRangeStart = "2017" %}
-{% set _yearRangeEnd = "2018" %}
+{% set _yearRangeStart = myData.yearRangeStart %}
+{% set _yearRangeEnd = myData.yearRangeEnd %}
 
 {% set _providerPDF = "" %}
 {% set _employerPDF = "" %}
@@ -56,6 +56,21 @@
     .indexLinks .govuk-link:hover, 
     .indexLinks a:hover {
         color: #2b8cc4;
+    }
+    .call-to-action {
+        margin: 2em 0;
+        background-color: #dee0e2;
+        padding: 2em
+    }
+
+    .call-to-action:first-child {
+        margin-top: 0
+    }
+
+    .call-to-action p:last-child, 
+    .call-to-action ul:last-child,
+    .call-to-action ol:last-child {
+        margin-bottom: 0
     }
     </style>
 </head>
@@ -195,6 +210,12 @@
           </div>
         </div>
         <div class="column-two-thirds">
+
+            <!-- <div class="call-to-action">
+                <p style="font-size: 18px; font-weight: bold; margin-bottom: 15px">These are rules for apprenticeships that started between 1 August 2017 and 31 July 2018.</p>
+                <p style="font-size: 18px; margin-bottom: 15px">There are different funding rules for different apprenticeship start dates. You must follow the funding rules that apply to each apprentice.</p>
+                <p style="font-size: 18px;">For apprenticeships that did not start between 1 August 2017 and 31 July 2018, <a href="rules-years">view other funding rules</a>.</p>
+            </div> -->
 
           <p class="gem-c-lead-paragraph ">
               These rules are for apprenticeships that started between 1 August {{_yearRangeStart}} and 31 July {{_yearRangeEnd}}. 
