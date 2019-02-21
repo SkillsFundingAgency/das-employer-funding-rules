@@ -14,7 +14,7 @@
                 "id": "intro-and-purpose",
                 "title": "Introduction",
                 "range": "1 to 8",
-                "summary": "What these rules cover, why you should read them and definitions of some of the terms we use.",
+                "summary": "What the rules cover and definitions of terms.",
                 "subsections": [
                     {
                         "type": "main",
@@ -58,7 +58,7 @@
             {
                 "id": "employers-apprenticeships-things-check",
                 "title": "Things to check",
-                "summary": "What sort of criteria your apprentice must meet before the apprenticeship starts as well as evidence and checks to complete over the course of the apprenticeship.",
+                "summary": "Checklist for your apprentice before and during the apprenticeship. ",
                 "subsections": [
                     {
                         "type": "main",
@@ -70,7 +70,7 @@
                 "id": "what-is-apprenticeship",
                 "title": "What is an apprenticeship?",
                 "range": "9 to 53",
-                "summary": "What employers, providers and apprentices should expect from an apprenticeship. Includes information about contracts, pay and training.",
+                "summary": "What employers, providers and apprentices can expect from an apprenticeship. Includes contracts, pay and training.",
                 "updates-section": [
                     {
                         "content": "Restructure: changes made for ease of understanding, including incorporation of ‘commitment statement’ into this section."
@@ -678,7 +678,7 @@
                 "id": "who-can-be-funded",
                 "title": "Who can be funded?",
                 "range": "62 to 81",
-                "summary": "How to work out if an individual is eligible for apprenticeship funding. Includes information on additional financial support for learners with learning difficulties.",
+                "summary": "How to work out who can get apprenticeship funding. Includes financial support for apprentices with additional learning needs.",
                 "updates": [
                     {
                         "rule": "E55.4",
@@ -936,7 +936,7 @@
                 "id": "what-can-be-funded",
                 "title": "Which costs are funded?",
                 "range": "74 to 129",
-                "summary": "Which costs can and cannot be paid for with apprenticeship funds. Includes information on: support for care leavers, end-point assessments and English and maths training.",
+                "summary": "What you can pay for with apprenticeship funds. Includes English and maths training, support for care leavers and end-point assessments.",
                 "updates": [
                     {
                         "title": "Eligible costs",
@@ -1782,7 +1782,7 @@
                 "id": "contracting-subcontracting",
                 "title": "Contracting and subcontracting",
                 "range": "130 to 140",
-                "summary": "The agreement between employers and their main provider. Includes information on: requirements for subcontractors and dispute resolution.",
+                "summary": "The agreement between employers and their main provider. Requirements for subcontractors and resolving disputes.",
                 "updates": [
                     {
                         "title": "Agreeing use of subcontractors with employers",
@@ -1921,7 +1921,7 @@
                 "id": "paying-for-an-apprenticeship",
                 "title": "Paying for an apprenticeship",
                 "range": "141 to 176",
-                "summary": "When providers will receive payments, reporting requirements and agreeing a price. Includes information on accounting for prior learning, employer contributions (co-investment) and VAT.",
+                "summary": "When providers will receive payments, reporting requirements and agreeing a price. Includes accounting for prior learning, employer contribution towards training (co-investment) and VAT.",
                 "subsections": [
                     {
                         "type": "main",
@@ -1975,7 +1975,7 @@
                 "id": "apprenticeships-funded-by-transfer-of-levy-funds",
                 "title": "Apprenticeships funded by transfers of levy funds",
                 "range": "177 to 211",
-                "summary": "Information on sending and receiving (transferring) apprenticeship levy funds. Includes information on what to do when the total cost cannot be covered by the transfer.",
+                "summary": "Sending and receiving apprenticeship levy funds. What to do when the total cost is not covered.",
                 "subsections": [
                     {
                         "type": "subsection",
@@ -2013,7 +2013,7 @@
                 "id": "changes-in-circumstances",
                 "title": "Changes in circumstances",
                 "range": "212 to 233",
-                "summary": "Information on changes of provider and changes in an apprentice’s personal or employment circumstances (including breaks in learning). Explains what effect (if any) there is on apprenticeship funding following a change in circumstances.",
+                "summary": "Changes of provider and changes in an apprentice’s personal or employment circumstances. Includes how these changes affect apprenticeship funding.",
                 "subsections": [
                     {
                         "type": "main",
@@ -2037,7 +2037,7 @@
                 "id": "annex-a-eligibility-criteria",
                 "title": "Annex A: Eligibility criteria (who we fund)",
                 "range": "234 to 264",
-                "summary": "Information on who may be eligible for apprenticeship funding. Includes residency, citizenship and age criteria.",
+                "summary": "Who can apply for apprenticeship funding. Includes criteria for residency, citizenship and age.",
                 "subsections": [
                     {
                         "type": "main",
@@ -2114,7 +2114,7 @@
             {
                 "id": "glossary",
                 "title": "Glossary",
-                "summary": "Definitions of the terms we use.",
+                "summary": "Definitions of terms.",
                 "subsections": [
                     {
                         "type": "main",

@@ -14,7 +14,7 @@
                 "id": "intro-and-purpose",
                 "title": "Introduction",
                 "range": "1 to 16",
-                "summary": "What these rules cover, why you should read them and definitions of some of the terms we use.",
+                "summary": "What the rules cover and definitions of terms.",
                 "subsections": [
                     {
                         "type": "main",
@@ -98,7 +98,7 @@
                 "id": "what-apprenticeship",
                 "title": "What is an apprenticeship?",
                 "range": "17 to 61",
-                "summary": "What employers, providers and apprentices should expect from an apprenticeship. Includes information about contracts, pay and training.",
+                "summary": "What employers, providers and apprentices can expect from an apprenticeship. Includes contracts, pay and training.",
                 "footnotes": [
                     {
                         "id": "1",
@@ -515,7 +515,7 @@
                 "id": "who-can-funded",
                 "title": "Who can be funded?",
                 "range": "62 to 89",
-                "summary": "How to work out if an individual is eligible for apprenticeship funding. Includes information on additional financial support for learners with learning difficulties.",
+                "summary": "How to work out who can get apprenticeship funding. Includes financial support for apprentices with additional learning needs.",
                 "updates-section": [
                     {
                         "content": "Restructure: moved details on residency criteria to Annex A.<br><br>Rule change: removal of previous requirements regarding education, health and care (EHC) plan. This no longer affects eligibility."
@@ -913,7 +913,7 @@
                 "id": "what-can-funded",
                 "title": "Which costs are funded?",
                 "range": "90 to 156",
-                "summary": "Which costs can and cannot be paid for with apprenticeship funds. Includes information on: support for care leavers, end-point assessments and English and maths training.",
+                "summary": "What you can pay for with apprenticeship funds. Includes English and maths training, support for care leavers and end-point assessments.",
                 "updates": [
                     {
                         "title": "Eligible costs",
@@ -2072,7 +2072,7 @@
                 "id": "contracting-subcontracting",
                 "title": "Contracting and subcontracting",
                 "range": "157 to 192",
-                "summary": "The responsibilities of providers and their subcontractors. Includes information on subcontracting to providers who are not on the Register of Approved Training Providers (RoATP).",
+                "summary": "Responsibilities of providers and their subcontractors, including when they’re not on the Register of Approved Training Providers (RoATP).",
                 "subsections": [
                     {
                         "id": "main-providers-directly-delivering",
@@ -2425,7 +2425,7 @@
                 "id": "paying-apprenticeship",
                 "title": "Paying for an apprenticeship",
                 "range": "193 to 227",
-                "summary": "When providers will receive payments, reporting requirements and agreeing a price. Includes information on accounting for prior learning, employer contributions (co-investment) and VAT.",
+                "summary": "When providers will receive payments, reporting requirements and agreeing a price. Includes accounting for prior learning, employer contribution towards training (co-investment) and VAT.",
                 "updates": [
                     {
                         "rule": "P193",
@@ -2858,7 +2858,7 @@
                 "id": "apprenticeships-funded-transfers",
                 "title": "Apprenticeships funded by transfers of levy funds",
                 "range": "228 to 237",
-                "summary": "Information on sending and receiving (transferring) apprenticeship levy funds.",
+                "summary": "Sending and receiving apprenticeship levy funds.",
                 "subsections": [
                     {
                         "id": "introduction-providers",
@@ -2920,7 +2920,7 @@
                 "id": "delivering-the-apprenticeship",
                 "title": "Delivering the apprenticeship",
                 "range": "238 to 242",
-                "summary": "Information on data protection and apprenticeship completion certificates.",
+                "summary": "Data protection and apprenticeship completion certificates.",
                 "updates-section": [
                     {
                         "content": "Restructure: the ‘starting, participating, completing and leaving’ section has been incorporated into sections elsewhere (including redundancy, certification, where training stops, what is an apprenticeship)."
@@ -2989,7 +2989,7 @@
                 "id": "changes-circumstances",
                 "title": "Changes in circumstances",
                 "range": "243 to 275",
-                "summary": "Information on changes of provider and changes in an apprentice’s personal or employment circumstances (including breaks in learning). Explains what effect (if any) there is on apprenticeship funding following a change in circumstances.",
+                "summary": "Changes of provider and changes in an apprentice’s personal or employment circumstances. Includes how these changes affect apprenticeship funding.",
                 "updates": [
                     {
                         "title": "Redundancy",
@@ -3480,7 +3480,7 @@
                 "id": "european-social-fund",
                 "title": "ESF (European Social Fund) match funding requirements",
                 "range": "276 to 278",
-                "summary": "Applies to providers who have a contract with us to deliver training to employers who do not pay the levy - these providers may be accessing funding that can be used as match funding for the European Social Fund (ESF).",
+                "summary": "Applies to providers who have a contract to deliver training to employers who don’t pay the levy. These providers may be accessing funding that can be used as match funding for the European Social Fund (ESF).",
                 "subsections": [
                     {
                         "type": "main",
@@ -3552,7 +3552,7 @@
                 "id": "evidence-requirements",
                 "title": "Evidence requirements",
                 "range": "279 to 300",
-                "summary": "A list of the evidence that must be held and maintained for each apprenticeship.",
+                "summary": "Evidence that providers must maintain for each apprenticeship.",
                 "updates": [
                     {
                         "title": "Evidence pack",
@@ -4224,7 +4224,7 @@
                 "id": "annex-a",
                 "title": "Annex A: Eligibility criteria (who we fund)",
                 "range": "301 to 331",
-                "summary": "Information on who may be eligible for apprenticeship funding. Includes residency, citizenship and age criteria.",
+                "summary": "Who can apply for apprenticeship funding. Includes criteria for residency, citizenship and age.",
                 "updates": [
                     {
                         "content": "Restructure: all residency information now sits in this annex. The section has also been restricted for ease of understanding and reference."
@@ -4758,7 +4758,7 @@
             {
                 "id": "glossary",
                 "title": "Glossary",
-                "summary": "Definitions of the terms we use.",
+                "summary": "Definitions of terms.",
                 "updates": [
                     {
                         "content": "Restructure: all content previously in the terminology section has been added to the glossary, including: account, apprentice, delivery subcontractor, framework, funding agreement, government-employer co- investment, provider, standard, this document, and training."
