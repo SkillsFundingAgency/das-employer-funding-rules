@@ -73,6 +73,19 @@
       
     <article aria-labelledby="manual-title" id="content">
         <div class="manual-body">
+            {% if myData.manualpage == "feedback" %}
+            <article aria-labelledby="section-title">
+                <h1 id="section-title" class="section-title section-title-with-summary">
+                    Feedback
+                </h1>
+                <p class="summary">
+                    How to send the Education and Skills Funding Agency (ESFA) comments and suggestions about this manual.
+                </p>
+                <div class="gem-c-govspeak govuk-govspeak">
+                    <!-- <p></p> -->
+                    <p>Please <a href="#feedback">send feedback</a> to help make this manual better.</p>
+                </div>
+            {% else %}
             <article aria-labelledby="section-title">
                 <h1 id="section-title" class="section-title {% if section.summary %}section-title-with-summary{% endif %}">
                     {{section.title|safe}}{% if section.range %} ({{section.range|safe}}){% endif %}
@@ -477,11 +490,12 @@
 
 
             </article>
+            {% endif %}
         </div>
     </article>
             
     <div class="print-page">
-        <a onclick="window.print();return false;" href="#">Print this page</a>
+        <a onclick="window.print();return false;" href="#print">Print this page</a>
     </div>
 </div>
 
