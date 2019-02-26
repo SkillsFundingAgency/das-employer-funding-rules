@@ -57,7 +57,7 @@
 
 {% block content %}
 
-<div id="manuals-frontend" class="manuals-frontend-body inner-block {% if myData.updatesFilter == 'alwayson' %}show-updates-2{% endif %}">
+<div id="manuals-frontend" class="manuals-frontend-body inner-block {% if myData.updatesFilter == 'alwayson' or myData.updatesFilter == 'alwaysonnotags' %}show-updates-2{% endif %}">
     
     {% if myData.header == "altered" %}
         {% include "../includes/manual-header-2.html" %}

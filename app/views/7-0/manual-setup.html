@@ -59,6 +59,7 @@
                     <select class="govuk-select" id="manualSetupContextualUpdates" name="manualSetupContextualUpdates" data-option="manualSetupContextualUpdates">
                         <option {% if myData.updatesFilter == 'false' %}selected{% endif %} value="false">None</option>
                         <option {% if myData.updatesFilter == 'alwayson' %}selected{% endif %} value="alwayson">Always visible</option>
+                        <option {% if myData.updatesFilter == 'alwaysonnotags' %}selected{% endif %} value="alwaysonnotags">Always visible (no blue tags)</option>
                         <option {% if myData.updatesFilter == 'true' %}selected{% endif %} value="true">Checkbox filter</option>
                     </select>
                 </div>
