@@ -7,6 +7,13 @@
 {% set _thisManualType = myData.manuals[myData.manual].type %}
 {% set _thisManual = myData.manuals[myData.manual].content %}
 
+{% set _userType = "training providers" %}
+{% if _thisManualType == "employer" %}
+    {% set _userType = "employers" %}
+{% elif _thisManualType == "employerprovider" %}
+    {% set _userType = "employer-providers" %}
+{% endif %}
+
 {% set _filterState = myData.updatesFilterOn %}
 
 {% block pageStyles %}
@@ -68,9 +75,9 @@
     <article aria-labelledby="manual-title" id="content">
         <div class="manual-body">
 
-            <!-- <p class="summary">
-                These rules only apply to apprenticeships starting on or after 1 August 2018.
-            </p> -->
+            <p class="summary">
+                These apprenticeship funding rules apply to {{_userType}}.
+            </p>
 
             <div class="call-to-action">
                 <p class="govuk-body govuk-!-font-weight-bold">These are the latest rules ({{_thisManual.date|safe}})</span></p><br>
