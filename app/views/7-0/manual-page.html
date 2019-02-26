@@ -379,7 +379,7 @@
                                                 {% endfor %}
                                             {% else %}
                                                 <li>
-                                                    <h3 class="govuk-heading-s">{{_rulePrefix}}{{subpart.id|safe}}</h3>
+                                                    <!-- <h3 class="govuk-heading-s">{{_rulePrefix}}{{subpart.id|safe}}</h3> -->
                                                     
                                                     <!-- UPDATES -->
                                                     {% if subpart.updates %}
@@ -410,7 +410,7 @@
                                                         </div> -->
                                                     {% endif %}
 
-                                                    <p class="govuk-body">{{subpart.content|safe|trim}}</span></p>
+                                                    <p class="govuk-body"><span style="font-weight:bold">{{_rulePrefix}}{{subpart.id|safe}}</span> - {{subpart.content|safe|trim}}</span></p>
                                                 </li>
                                             {% endif %}
 
@@ -440,8 +440,8 @@
                                                                 {% endfor %}
                                                             {% else %}
                                                                 <li>
-                                                                    <h3 class="govuk-heading-s">{{_rulePrefix}}{{subsubpart.id|safe}}</h3>
-                                                                    <p class="govuk-body">{{subsubpart.content|safe|trim}}</span></p>
+                                                                    <!-- <h3 class="govuk-heading-s">{{_rulePrefix}}{{subsubpart.id|safe}}</h3> -->
+                                                                    <p class="govuk-body"><span style="font-weight:bold">{{_rulePrefix}}{{subsubpart.id|safe}}</span> - {{subsubpart.content|safe|trim}}</span></p>
                                                                 </li>
                                                             {% endif %}
                                                         </div>
