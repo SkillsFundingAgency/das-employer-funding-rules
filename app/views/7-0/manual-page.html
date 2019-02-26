@@ -348,7 +348,8 @@
                                     
                                     <!-- Sub Parts e.g. 19.1 -->
                                     {% if part.subparts %}
-                                        <div style="margin-left: 20px">
+                                        <!-- <div style="margin-left: 20px"> -->
+                                        <div>
                                             <ul class='govuk-list govuk-list--bullet'>
                                     {% endif %}
 
@@ -416,7 +417,8 @@
 
                                                 <!-- Sub Sub Parts e.g. 19.1.1 -->
                                                 {% if subpart.subsubparts %}
-                                                    <div style="margin-left: 40px">
+                                                    <!-- <div style="margin-left: 40px"> -->
+                                                    <div style="margin-left: 20px">
                                                         <ul class='govuk-list govuk-list--bullet'>
                                                 {% endif %}
                                                         {% for subsubpart in subpart.subsubparts %}
