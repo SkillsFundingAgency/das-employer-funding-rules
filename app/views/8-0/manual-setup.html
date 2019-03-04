@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Manual setup</h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <!-- <form method="POST"> -->
+            <fieldset>
+
+                <!-- TODO different settings  for employer and provider -->
+
+                <!-- Start from -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualSetupStartFrom">
+                        Start journey from
+                    </label>
+                    <select class="govuk-select" id="manualSetupStartFrom" name="manualSetupStartFrom" data-option="manualSetupStartFrom">
+                        <option {% if myData.startFrom == 'manual-home' %}selected{% endif %} value="manual-home">Manual homepage</option>
+                        <option {% if myData.startFrom == 'rules-years' %}selected{% endif %} value="rules-years">Year hub</option>
+                        <option {% if myData.startFrom == 'google' %}selected{% endif %} value="google">Google</option>
+                        <option {% if myData.startFrom == 'rules-list' %}selected{% endif %} value="rules-list">Collections list (17/18)</option>
+                    </select>
+                </div>
+            
+                <!-- Manual main content -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualSetupManual">
+                        Manual main content
+                    </label>
+                    <select class="govuk-select" id="manualSetupManual" name="manualSetupManual" data-option="manualSetupManual">
+                        {% for key, item in myData.manuals %}
+                        <option {% if myData.manual == key %}selected{% endif %} value="{{key}}">{{item.name}}</option>
+                        {% endfor %}
+                    </select>
+                    <p id="manual-latest-message" class="govuk-body" style="color: red; display: none">Will use latest manual content available</p>
+                </div>
+                
+                <!-- english maths flowchart none/svg/text -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualSetupEngMathsChart">
+                        English and Maths Flow Chart
+                    </label>
+                    <select class="govuk-select" id="manualSetupEngMathsChart" name="manualSetupEngMathsChart" data-option="manualSetupEngMathsChart">
+                        <option {% if myData.emChart == 'false' %}selected{% endif %} value="false">None</option>
+                        <option {% if myData.emChart == 'svgflow' %}selected{% endif %} value="svgflow">Graphical chart (if available)</option>
+                        <option {% if myData.emChart == 'textflow' %}selected{% endif %} value="textflow">Text decision tree (if available)</option>
+                    </select>
+                </div>
+
+                <!-- contextual updates filter -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualSetupContextualUpdates">
+                        Contextual updates
+                    </label>
+                    <select class="govuk-select" id="manualSetupContextualUpdates" name="manualSetupContextualUpdates" data-option="manualSetupContextualUpdates">
+                        <option {% if myData.updatesFilter == 'false' %}selected{% endif %} value="false">None</option>
+                        <option {% if myData.updatesFilter == 'alwayson' %}selected{% endif %} value="alwayson">Always visible</option>
+                        <option {% if myData.updatesFilter == 'alwaysonnotags' %}selected{% endif %} value="alwaysonnotags">Always visible (no blue tags)</option>
+                        <option {% if myData.updatesFilter == 'true' %}selected{% endif %} value="true">Checkbox filter</option>
+                    </select>
+                </div>
+
+                <!-- Start from -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualSetupHeader">
+                        Header version
+                    </label>
+                    <select class="govuk-select" id="manualSetupHeader" name="manualSetupHeader" data-option="manualSetupHeader">
+                        <option {% if myData.header == 'standard' %}selected{% endif %} value="standard">Standard</option>
+                        <option {% if myData.header == 'altered' %}selected{% endif %} value="altered">Altered</option>
+                    </select>
+                </div>
+
+                <p class="govuk-body" id="start-url" style="display:none">
+                    <a href="#" role="button" draggable="false" class="govuk-button">Start manual prototype</a>
+                </p>
+
+                <p class="govuk-body" >
+                    <span class="govuk-!-font-weight-bold">Shareable link:</span><br>
+                    <span class="govuk-body" id="start-url-label" style="display:none"></span>
+                </p>
+
+                <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            </fieldset>
+            <h1 class="govuk-heading-l">Guidance (heavy edit)</h1>
+            <ul class="govuk-list govuk-list--bullet govuk-!-font-size-19 ">
+                <li><a href="guidance?resetSession=true" class="govuk-link govuk-link--no-visited-state">Funding for training apprentices in England</a></li>
+            </ul>
+            <h1 class="govuk-heading-l">Email updates</h1>
+            <ul class="govuk-list govuk-list--bullet govuk-!-font-size-19 ">
+                <li><a href="subscribe-email?emailUpdates=1" class="govuk-link govuk-link--no-visited-state">Email with 1 update</a></li>
+                <li><a href="subscribe-email?emailUpdates=2" class="govuk-link govuk-link--no-visited-state">Email with 2 updates (weekly update)</a></li>
+                <li><a href="subscribe-email?emailUpdates=3" class="govuk-link govuk-link--no-visited-state">Email with different updates to more than 1 manual</a></li>
+                <li><a href="subscribe-email?emailUpdates=4" class="govuk-link govuk-link--no-visited-state">Email with same update to more than 1 manual</a></li>
+            </ul>
+            <h1 class="govuk-heading-l">Flow charts</h1>
+            <ul class="govuk-list govuk-list--bullet govuk-!-font-size-19 ">
+                <li><a href="wrapper?include=english-maths-flow-2-fixed" class="govuk-link govuk-link--no-visited-state">SVG flow chart - English and Maths</a></li>
+                <li><a href="wrapper?include=english-maths-text-flow-2" class="govuk-link govuk-link--no-visited-state">Text decision tree - English and Maths</a></li>
+            </ul>
+        <!-- </form> -->
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% include "includes/manual-data-notes.html" %}
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block pageScripts %}
+<script>
+$(document).ready(function(){
+    var _startURL = $("#start-url a"),
+        _startURLLabel = $("#start-url-label"),
+        _options = $("[data-option]"),
+        _latestMessage = $("#manual-latest-message")
+
+    _options.change(function(){
+
+        //if google or collections selected then hide manual choice
+        var _startFromVal = _options.filter("#manualSetupStartFrom").val(),
+            _useLatestManual = (_startFromVal == "google" || _startFromVal == "rules-list")
+        if(_useLatestManual){
+            _options.filter("#manualSetupManual").hide()
+            _latestMessage.show()
+        } else {
+            _options.filter("#manualSetupManual").show()
+            _latestMessage.hide()
+        }
+
+        //update url text
+        var _urlVersion = "https://employer-funding-rules.herokuapp.com/" + {{myData.version|dump|safe}} + "/",
+            _urlPage = _startFromVal + "?",
+            _urlstartFrom = "&startFrom=" + _startFromVal,
+            _urlmanual = (!_useLatestManual ? ("&manual=" + _options.filter("#manualSetupManual").val()) : ""),
+            _urlupdatesFilter = "&updatesFilter=" + _options.filter("#manualSetupContextualUpdates").val(),
+            _urlemChart = "&emChart=" + _options.filter("#manualSetupEngMathsChart").val(),
+            _urlheader = "&header=" + _options.filter("#manualSetupHeader").val(),
+            _urlReset = "&resetSession=true",
+            _urlPageQueries = _urlPage + _urlstartFrom + _urlmanual + _urlupdatesFilter + _urlemChart + _urlheader + _urlReset;
+
+        var _startURLText = _urlVersion + _urlPageQueries,
+            _startURLHREF =  _urlPageQueries;
+
+        // update label
+        _startURLLabel
+            .text(_startURLText)
+            .hide().fadeIn()
+        //update link
+        _startURL
+            .attr("href", _startURLHREF)
+            .parent().show()
+
+    }).trigger("change");
+    
+});
+</script>
+{% endblock %}

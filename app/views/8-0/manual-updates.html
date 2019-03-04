@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Manual
+{% endblock %}
+
+{% set _thisManualType = myData.manuals[myData.manual].type %}
+{% set _thisManual = myData.manuals[myData.manual].content %}
+
+{% block content %}
+
+<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+
+    {% if myData.header == "altered" %}
+        {% include "../includes/manual-header-2.html" %}
+    {% else %}
+        {% set _manualHeaderTitle = _thisManual.title|safe  %}
+        {% include "../includes/manual-header.html" %}
+    {% endif %}
+
+    <ol class="breadcrumb-trail">
+        <li class="no-separator"><a href="manual-home?manual={{myData.manual}}">Contents</a></li>
+    </ol>
+
+    <article aria-labelledby="manual-title" id="content">
+        <div class="manual-body">
+            <article aria-labelledby="section-title">
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 id="section-title" class="section-title">
+                            Updates: {{_manualHeaderTitle}}
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
+                    <p class="section-title govuk-!-font-weight-regular">2018</p>
+                    <div class="collapsible-subsections">
+                        <div class="gem-c-govspeak govuk-govspeak ">
+                            
+                            <!-- 10 December 2018
+                            August 2018 to July 2019 (version 2) -->
+                            <h2>
+                                10 December 2018
+                            </h2>
+                            <!-- <p class="govuk-!-font-size-24">August 2018 to July 2019</p> -->
+                            <!-- <br> -->
+                            <dl class="updates-list">
+                                {% for section in _thisManual.sections %}
+                                    {% if loop.index % 2 == 0 %}
+                                        {% set _titleRendered = false %}
+                                        {% for subsection in section.subsections %}
+                                            {% set _subTitleRendered = false %}
+                                            {% for update in subsection.updates %}
+                                                {% set _updateIndex = loop.index %}
+                                                {% set _updateLast = loop.last %}
+                                                <dt>
+                                                    
+                                                    <!-- Section title -->
+                                                    {% if _titleRendered == false %}
+                                                        {% set _titleRendered = true %}
+                                                        <br>
+                                                        <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">{{section.title}}{% if section.range %} ({{section.range|safe}}){% endif %}</a>
+                                                        <br><br>
+                                                    {% endif %}
+
+                                                    <!-- Sub section title -->
+                                                    {% if _subTitleRendered == false and subsection.type != "main" %}
+                                                        {% set _subTitleRendered = true %}
+                                                        <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}#{{subsection.id}}" class="govuk-link govuk-link--no-visited-state">
+                                                        <span>{{subsection.title}}</span></a>
+                                                        <br><br>
+                                                    {% endif %}
+
+                                                </dt>
+                                                <dd id="{{update.rule}}">
+                                                    
+                                                        {% if update.rule %}<span class="govuk-!-font-weight-bold">{{update.rule|safe}}</span> - {% endif %}
+                                                        {{update.content|safe}}
+
+                                                </dd>
+                                            {% endfor %}
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                            </dl>
+
+                            <h2>
+                                31 July 2018
+                            </h2>
+                            <!-- <p class="govuk-!-font-size-24">August 2018 to July 2019 (version 1)</p>
+                            <br> -->
+                            <dl class="updates-list">
+                                {% for section in _thisManual.sections %}
+                                    {% if loop.index % 2 != 0 %}
+                                        {% set _titleRendered = false %}
+                                        {% for subsection in section.subsections %}
+                                            {% for update in subsection.updates %}
+                                                {% set _updateIndex = loop.index %}
+                                                {% set _updateLast = loop.last %}
+                                                <dt>
+                                                    
+                                                    <!-- Section title -->
+                                                    {% if _titleRendered == false %}
+                                                    {% set _titleRendered = true %}
+                                                    <br>
+                                                    <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">{{section.title}}{% if section.range %} ({{section.range|safe}}){% endif %}</a>
+                                                    <br><br>
+                                                    {% endif %}
+
+                                                    <!-- Sub section title -->
+                                                    {% if _updateIndex == 1 and subsection.type != "main" %}
+                                                    <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}#{{subsection.id}}" class="govuk-link govuk-link--no-visited-state">
+                                                    <span>{{subsection.title}}</span></a>
+                                                    <br><br>
+                                                    {% endif %}
+
+                                                </dt>
+                                                <dd id="{{update.rule}}">
+                                                    {% if update.rule %}<span class="govuk-!-font-weight-bold">{{update.rule|safe}}</span> - {% endif %}
+                                                    {{update.content|safe}}
+                                                </dd>
+                                            {% endfor %}
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </article>
+
+    <!-- <div class="download-manual">
+        <p class="govuk-body"><a href="manual-pdf?manual={{myData.manual}}" target="_blank" class="govuk-link govuk-link--no-visited-state">Download this manual (PDF, 250KB)</a></p>
+        <p class="govuk-body">If you would like this manual in another format please email <a href="#">email address here</a>.</p>
+    </div> -->
+
+    <div class="print-page">
+        <a onclick="window.print();return false;" href="#">Print this page</a>
+    </div>
+</div>
+
+{% endblock %}

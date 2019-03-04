@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+{% set _yearRangeStart = myData.yearRangeStart %}
+{% set _yearRangeEnd = myData.yearRangeEnd %}
+
+{% set _providerPDF = "" %}
+{% set _employerPDF = "" %}
+{% set _employerproviderPDF = "" %}
+
+<head>
+  <title lang="en">
+    Apprenticeship funding rules {{_yearRangeStart}} to {{_yearRangeEnd}} - GOV.UK
+  </title>
+
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-c0b8ba8b1652aacad298d74f24752260187f538b50c40c2484f7f333cbc3cf2b.css"
+    crossorigin="anonymous" integrity="sha256-wLi6ixZSqsrSmNdPJHUiYBh/U4tQxAwkhPfzM8vDzys=">
+  <!--<![endif]-->
+  <link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/static/govuk-template-print-1076519521c2fffbbf75ab3b0d3b32ee2d96ac7e9778f1cdfac1771eefd1a1c0.css"
+    crossorigin="anonymous" integrity="sha256-EHZRlSHC//u/das7DTsy7i2WrH6XePHN+sF3Hu/RocA=">
+  <link rel="stylesheet" media="all" href="https://assets.publishing.service.gov.uk/static/fonts-e9ec5a5f82e5c2a17927ce356e5a054cb28025ec1547ec5d00f5c98d2ec5e481.css"
+    crossorigin="anonymous" integrity="sha256-6exaX4LlwqF5J841bloFTLKAJewVR+xdAPXJjS7F5IE=">
+  <link rel="shortcut icon" href="https://assets.publishing.service.gov.uk/static/favicon-8d811b8c3badbc0b0e2f6e25d3660a96cc0cca7993e6f32e98785f205fc40907.ico"
+    type="image/x-icon">
+  <link rel="mask-icon" href="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown-de738c3fcce8ce2a91b67e89787090dc24a5cda0275ab6b75f6226c5b9619d3d.svg"
+    color="#0b0c0c">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-180x180-ea1cbb1cbbeddfff275dfa6e8e46b84cd530892df79dc4882a8f99b802b49a90.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-167x167-181e404a50c572923285fb83f0fbd78da6b4e38e3ce52f8e6b8e29da8586450a.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-152x152-02457fcdcee8d309276305af2233d41bfb8fd055e855727d355e61bce7ffa9bb.png">
+  <link rel="apple-touch-icon" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-a318f305290c523aed80082456175b46c95350c0eeac93f42e78a71c7a55544e.png">
+  <meta name="theme-color" content="#0b0c0c">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-5c3d985d43c06c7c5efa157f99dcc22b3b62fcc9944669d4237fc2b78793baf2.css"
+    crossorigin="anonymous" integrity="sha256-XD2YXUPAbHxe+hV/mdzCKzti/MmURmnUI3/Ct4eTuvI=">
+  <link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/static/core-layout-print-9a2de3ce1590c8ca478a6f7edf5a2e4bad0c6291b1dd4a6e7ca85f653d9591b4.css"
+    crossorigin="anonymous" integrity="sha256-mi3jzhWQyMpHim9+31ouS60MYpGx3UpufKhfZT2VkbQ=">
+  <meta property="og:image" content="https://assets.publishing.service.gov.uk/static/opengraph-image-a1f7d89ffd0782738b1aeb0da37842d8bd0addbd724b8e58c3edbc7287cc11de.png">
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/government-frontend/application-b6ad63f5aadc34d97304be8af907320307342bb63840a5e70b20e4c7ce2d3c18.css"
+    crossorigin="anonymous" integrity="sha256-tq1j9arcNNlzBL6K+QcyAwc0K7Y4QKXnCyDkx84tPBg=">
+  <!--<![endif]-->
+  <link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/government-frontend/print-a9af06f0e0ff57a3916f6700715b87afc2f8c596fc6b03aa7b8ef4cbb8bdbb58.css"
+    crossorigin="anonymous" integrity="sha256-qa8G8OD/V6ORb2cAcVuHr8L4xZb8awOqe470y7i9u1g=">
+ 
+  <meta name="govuk:rendering-application" content="government-frontend">
+  <style>
+    .indexLinks .govuk-link:visited, 
+    .indexLinks a:visited {
+        color: #005ea5;
+    }
+    .indexLinks .govuk-link:hover, 
+    .indexLinks a:hover {
+        color: #2b8cc4;
+    }
+    .call-to-action {
+        margin: 2em 0;
+        background-color: #dee0e2;
+        padding: 2em
+    }
+
+    .call-to-action:first-child {
+        margin-top: 0
+    }
+
+    .call-to-action p:last-child, 
+    .call-to-action ul:last-child,
+    .call-to-action ol:last-child {
+        margin-bottom: 0
+    }
+    </style>
+</head>
+
+<body class=''>
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+
+
+  <div id="skiplink-container">
+    <div>
+      <a href="#content" class="skiplink">Skip to main content</a>
+    </div>
+  </div>
+
+  <!-- <div id="global-cookie-message">
+        <p>GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></p>
+    </div> -->
+
+  <header role="banner" id="global-header" class=" with-proposition">
+    <div class="header-wrapper">
+      <div class="header-global">
+        <div class="header-logo">
+          <a href="/" title="Go to the GOV.UK homepage" id="logo" class="content" data-module="track-click"
+            data-track-category="homeLinkClicked" data-track-action="homeHeader">
+            <img src="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown_invert_trans-203e1db49d3eff430d7dc450ce723c1002542fe1d2bce661b6d8571f14c1043c.png"
+              width="36" height="32" alt=""> GOV.UK
+          </a>
+        </div>
+        <a href="#search" class="search-toggle js-header-toggle">Search</a>
+
+        <form id="search" class="site-search" role="search">
+          <div class="content">
+            <label for="site-search-text">Search</label>
+            <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
+            <input class="submit" type="submit" value="Search">
+          </div>
+        </form>
+
+      </div>
+
+      <div class="header-proposition">
+        <div class="content">
+          <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+          <nav id="proposition-menu" class="no-proposition-name gem-c-government-navigation">
+            <ul id="proposition-links">
+              <li>
+                <a class="" href="#organisations">
+                  Departments
+                </a>
+              </li>
+              <li>
+                <a class="" href="#world">
+                  Worldwide
+                </a>
+              </li>
+              <li>
+                <a class="" href="#how-government-works">
+                  How government works
+                </a>
+              </li>
+              <li>
+                <a class="" href="#get-involved">
+                  Get involved
+                </a>
+              </li>
+              <li class="clear-child">
+                <a class="active" href="#publications">
+                  Publications
+                </a>
+              </li>
+              <li>
+                <a class="" href="#publications">
+                  Consultations
+                </a>
+              </li>
+              <li>
+                <a class="" href="#statistics">
+                  Statistics
+                </a>
+              </li>
+              <li>
+                <a class="" href="#announcements">
+                  Announcements
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="user-satisfaction-survey-container"></div>
+
+
+  <div id="global-header-bar"></div>
+
+  <div id="wrapper" class="direction-ltr">
+
+      <!-- <div class="full-page-width-wrapper">     
+          <div class="gem-c-phase-banner govuk-phase-banner">
+              <p class="govuk-phase-banner__content">
+                  <strong class="govuk-tag govuk-phase-banner__content__tag" style="margin-right: 10px">beta</strong>
+                  <span class="govuk-phase-banner__text">Complete our quick 5-question survey to <a target="_blank" href="#">help us improve our content</a>.</span>
+              </p>
+          </div>
+      </div> -->
+
+    <div class="gem-c-contextual-breadcrumbs">
+      <!-- Rendering taxonomy breadcrumbs because the page is tagged to live taxons -->
+      <div class="gem-c-breadcrumbs govuk-breadcrumbs " data-module="track-click">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item" aria-current="false">
+            <a data-track-category="homeLinkClicked" class="govuk-breadcrumbs__link" aria-current="false" href="#">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="false">
+            <a data-track-action="2" data-track-label="/education"
+              data-track-options='{"dimension28":"5","dimension29":"Education, training and skills"}' class="govuk-breadcrumbs__link"
+              aria-current="false" href="#">Education, training and skills</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="false">
+            <a class="govuk-breadcrumbs__link" aria-current="false" href="#">Further and higher education, skills and vocational training</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="false">
+            <a class="govuk-breadcrumbs__link" aria-current="false" href="#">Further education funding</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="false">
+            <a class="govuk-breadcrumbs__link" aria-current="false" href="rules-years">Apprenticeship funding rules</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <main role="main" id="content" class="publication indexLinks" lang="en">
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <div class="gem-c-title gem-c-title--margin-bottom-5">
+            <p class="gem-c-title__context">
+              Guidance
+            </p>
+            <h1 class="gem-c-title__text gem-c-title__text--long">
+              Apprenticeship funding rules - {{_yearRangeStart}} to {{_yearRangeEnd}}
+            </h1>
+          </div>
+        </div>
+        <div class="column-two-thirds">
+
+          <p class="gem-c-lead-paragraph ">
+              These rules are for apprenticeships that started between 1 August {{_yearRangeStart}} and 31 July {{_yearRangeEnd}}.
+          </p>
+          <p class="gem-c-lead-paragraph ">
+            You can <a href="rules-years">view rules that apply to other apprenticeship start dates</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="metadata-logo-wrapper">
+          <div class="column-two-thirds metadata-column">
+            <div class="app-c-publisher-metadata">
+              <div class="app-c-published-dates ">
+                Published 19 June {{_yearRangeEnd}}
+                <br>Last updated 9 August {{_yearRangeEnd}}
+                — <a href="#history">see all updates</a>
+              </div>
+
+              <div class="app-c-publisher-metadata__other">
+                <dl data-module="track-click">
+                  <dt class="app-c-publisher-metadata__term">
+                    From:
+                  </dt>
+                  <dd class="app-c-publisher-metadata__definition" data-module="gem-toggle">
+                    <span class="app-c-publisher-metadata__definition-sentence">
+                      <a href="#">Education and Skills Funding Agency</a>
+                    </span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+
+          </div>
+          <div class="column-one-third">
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="column-two-thirds responsive-bottom-margin">
+          <div class="app-c-important-metadata app-c-important-metadata--bottom-margin">
+            <dl data-module="track-click">
+              <dt class="app-c-important-metadata__term">Applies to: </dt>
+              <dd class="app-c-important-metadata__definition">England</dd>
+            </dl>
+          </div>
+          <div class="responsive-bottom-margin">
+           
+            <div aria-labelledby="documents-title">
+              <div class="gem-c-govspeak govuk-govspeak direction-ltr">
+
+
+                <!-- EMPLOYERS -->
+
+                <h2 class="gem-c-heading  gem-c-heading--mobile-top-margin  " id="documents-title">
+                  Employers
+                </h2>
+
+                <section class="attachment embedded" id="attachment_2875834">
+                    <div class="attachment-thumb">
+                      <a aria-hidden="true" class="thumbnail" href="{{_employerPDF}}"><img alt="" src="/public/images/thumbnail_1819_Employer_Rules_v1.0.png"></a>
+                    </div>
+                    <div class="attachment-details">
+                      <h2 class="title"><a aria-describedby="attachment-2875834-accessibility-help" href="{{_employerPDF}}">Apprenticeship funding rules for employers - {{_yearRangeStart}} to {{_yearRangeEnd}}</a></h2>
+                      <p class="metadata">
+                        <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">2.3MB</span>,
+                        <span class="page-length">72 pages</span>
+                      </p>
+  
+                      <div data-module="toggle" class="accessibility-warning" id="attachment-2875834-accessibility-help">
+                        <h2>This file may not be suitable for users of assistive technology.
+                          <a class="toggler" href="#attachment-2875834-accessibility-request" data-controls="attachment-2875834-accessibility-request"
+                            data-expanded="false">Request an accessible format.</a>
+                        </h2>
+                        <p id="attachment-2875834-accessibility-request" class="js-hidden">
+                          If you use assistive technology (such as a screen reader) and need a
+                          version of this document in a more accessible format, please email <a href="#">sde.servicedesk@education.gov.uk</a>.
+                          Please tell us what format you need. It will help us if you say what assistive technology you
+                          use.
+                        </p>
+                      </div>
+                    </div>
+                </section>
+                
+
+                <h2 class="gem-c-heading  gem-c-heading--mobile-top-margin  " id="documents-title">
+                    Employer-providers
+                  </h2>
+
+                  <section class="attachment embedded" id="attachment_2875834">
+                      <div class="attachment-thumb">
+                        <a aria-hidden="true" class="thumbnail" href="{{_employerprovidersPDF}}"><img alt="" src="/public/images/thumbnail_1819_Employer_Rules_v1.0.png"></a>
+                      </div>
+                      <div class="attachment-details">
+                        <h2 class="title"><a aria-describedby="attachment-2875834-accessibility-help" href="{{_employerprovidersPDF}}">Apprenticeship funding rules for employer-providers - {{_yearRangeStart}} to {{_yearRangeEnd}}</a></h2>
+                        <p class="metadata">
+                          <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">2.3MB</span>,
+                          <span class="page-length">72 pages</span>
+                        </p>
+    
+                        <div data-module="toggle" class="accessibility-warning" id="attachment-2875834-accessibility-help">
+                          <h2>This file may not be suitable for users of assistive technology.
+                            <a class="toggler" href="#attachment-2875834-accessibility-request" data-controls="attachment-2875834-accessibility-request"
+                              data-expanded="false">Request an accessible format.</a>
+                          </h2>
+                          <p id="attachment-2875834-accessibility-request" class="js-hidden">
+                            If you use assistive technology (such as a screen reader) and need a
+                            version of this document in a more accessible format, please email <a href="#">sde.servicedesk@education.gov.uk</a>.
+                            Please tell us what format you need. It will help us if you say what assistive technology you
+                            use.
+                          </p>
+                        </div>
+                      </div>
+                  </section>
+
+
+                <h2 class="gem-c-heading  gem-c-heading--mobile-top-margin  " id="documents-title">
+                    Training providers
+                  </h2>
+  
+                  <!-- PROVIDERS -->
+                  <section class="attachment embedded" id="attachment_2875834">
+                      <div class="attachment-thumb">
+                        <a aria-hidden="true" class="thumbnail" href="{{_providerPDF}}"><img alt="" src="/public/images/thumbnail_1819_Employer_Rules_v1.0.png"></a>
+                      </div>
+                      <div class="attachment-details">
+                        <h2 class="title"><a aria-describedby="attachment-2875834-accessibility-help" href="{{_providerPDF}}">Apprenticeship funding rules for training providers - {{_yearRangeStart}} to {{_yearRangeEnd}}</a></h2>
+                        <p class="metadata">
+                          <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">2.3MB</span>,
+                          <span class="page-length">72 pages</span>
+                        </p>
+    
+                        <div data-module="toggle" class="accessibility-warning" id="attachment-2875834-accessibility-help">
+                          <h2>This file may not be suitable for users of assistive technology.
+                            <a class="toggler" href="#attachment-2875834-accessibility-request" data-controls="attachment-2875834-accessibility-request"
+                              data-expanded="false">Request an accessible format.</a>
+                          </h2>
+                          <p id="attachment-2875834-accessibility-request" class="js-hidden">
+                            If you use assistive technology (such as a screen reader) and need a
+                            version of this document in a more accessible format, please email <a href="#">sde.servicedesk@education.gov.uk</a>.
+                            Please tell us what format you need. It will help us if you say what assistive technology you
+                            use.
+                          </p>
+                        </div>
+                      </div>
+                  </section>
+
+                  <h2 class="gem-c-heading  gem-c-heading--mobile-top-margin  " id="documents-title">
+                      Other information
+                    </h2>
+
+                  <section class="attachment embedded" id="attachment_2701269">
+                      <div class="attachment-thumb">
+                          <a aria-hidden="true" class="thumbnail" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/697128/Summary_of_changes.pdf"><img alt="" src="/public/images/thumbnail_1819_Employer_Rules_v1.0.png"></a>
+                      </div>
+                      <div class="attachment-details">
+                        <h2 class="title"><a aria-describedby="attachment-2701269-accessibility-help" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/697128/Summary_of_changes.pdf">Updates to the apprenticeship funding rules {{_yearRangeStart}} to {{_yearRangeEnd}}</a></h2>
+                        <p class="metadata">
+                            <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">111KB</span>, <span class="page-length">8 pages</span>
+                        </p>
+                    
+                    
+                          <div data-module="toggle" class="accessibility-warning" id="attachment-2701269-accessibility-help">
+                            <h2>This file may not be suitable for users of assistive technology.
+                              <a class="toggler" href="#attachment-2701269-accessibility-request" data-controls="attachment-2701269-accessibility-request" data-expanded="false" role="button" aria-controls="attachment-2701269-accessibility-request" aria-expanded="false">Request an accessible format.</a>
+                            </h2>
+                            <p id="attachment-2701269-accessibility-request" class="js-hidden" aria-live="polite" role="region">
+                              If you use assistive technology (such as a screen reader) and need a
+                    version of this document in a more accessible format, please email <a href="#">info@sfa.bis.gov.uk</a>.
+                    Please tell us what format you need. It will help us if you say what assistive technology you use.
+                    
+                            </p>
+                          </div>
+                      </div>
+                    </section>
+
+                <h2 class="gem-d-heading  gem-c-heading--mobile-top-margin  " id="documents-title">
+                    Help and support
+                </h2>
+                <h3 class="gem-d-heading  gem-c-heading--mobile-top-margin  " >
+                    Training providers
+                </h3>
+                
+                <p>For help and support you can:</p>
+                <ul>
+                  <li>email us at <a href="mailto:SDE.servicedesk@education.gov.uk">SDE.servicedesk@education.gov.uk</a></li>
+                  <li>phone us on 0370 267 000</li>
+                  <li>contact your provider management advisor </li>
+                </ul>
+
+                <h3 class="gem-d-heading  gem-c-heading--mobile-top-margin  " >
+                    Employers
+                </h3>
+                <p>For help and support, phone us on 0800 015 0600. </p>
+                
+
+
+
+
+
+                
+
+
+              </div>
+            </div>
+        
+          </div>
+
+          <div class="app-c-published-dates app-c-published-dates--history" id="history" data-module="toggle">
+            Published 19 June {{_yearRangeStart}}
+            <br>Last updated 9 August {{_yearRangeStart}}
+            <a href="#full-history" class="app-c-published-dates__toggle" data-controls="full-history" data-expanded="false"
+              data-toggled-text="- hide all updates">+ show all updates</a>
+            <div class="app-c-published-dates__change-history js-hidden" id="full-history">
+              <ol>
+                <li class="app-c-published-dates__change-item">
+                  <time class="app-c-published-dates__change-date timestamp" >9
+                    August {{_yearRangeStart}}</time>
+                  We have published the apprenticeships performance-management rules for August {{_yearRangeStart}} to March {{_yearRangeEnd}}.
+                </li>
+                <li class="app-c-published-dates__change-item">
+                  <time class="app-c-published-dates__change-date timestamp" >31
+                    July {{_yearRangeStart}}</time>
+                  We have published updated {{_yearRangeStart}} to {{_yearRangeEnd}} apprenticeship funding rules.
+                </li>
+                <li class="app-c-published-dates__change-item">
+                  <time class="app-c-published-dates__change-date timestamp" >19
+                    June {{_yearRangeStart}}</time>
+                  First published.
+                </li>
+              </ol>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="column-one-third">
+
+          <div class="gem-c-contextual-sidebar">
+
+            <!-- Rendering taxonomy sidebar because the page is tagged to live taxons -->
+            <!-- <aside class="gem-c-taxonomy-navigation" data-module="track-click" role="complementary">
+              
+              
+              <h2 class="gem-c-taxonomy-navigation__heading">Related content</h2>
+              <div data-track-count="sidebarTaxonSection">
+                <h3 class="gem-c-taxonomy-navigation__heading">
+                  <a class="gem-c-taxonomy-navigation__link" href="https://www.gov.uk/education/apprenticeships-funding">Apprenticeships funding</a>
+                </h3>
+
+                <p class="gem-c-taxonomy-navigation__taxon-description">
+                  Register of training providers, how funding works for employers, legal agreement, grants, check
+                  employers' eligibility.
+                </p>
+
+              </div>
+              <div data-track-count="sidebarTaxonSection">
+                <h3 class="gem-c-taxonomy-navigation__heading">
+                  <a class="gem-c-taxonomy-navigation__link" href="#">Hiring and training an apprentice</a>
+                </h3>
+
+                <p class="gem-c-taxonomy-navigation__taxon-description">
+                  Become a training provider, recruitment and funding guidance, standards and assessment plans, how to
+                  register.
+                </p>
+
+              </div>
+
+              <div>
+                <h3 class="gem-c-taxonomy-navigation__section-heading">
+                  Collection
+                </h3>
+                <nav class="gem-c-taxonomy-navigation__navigation" data-module="gem-toggle" role="navigation">
+                  <ul class="gem-c-taxonomy-navigation__list">
+                    <li><a class="gem-c-taxonomy-navigation__section-link" href="#">ESFA: funding rates and formula</a></li>
+                  </ul>
+                </nav>
+              </div>
+
+
+            </aside> -->
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <div class="gem-c-feedback gem-c-feedback--top-margin" data-module="feedback">
+      <div class="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt" tabindex="-1">
+        <div class="gem-c-feedback__js-prompt-questions js-prompt-questions">
+          <h2 class="gem-c-feedback__prompt-question">Is this page useful?</h2>
+
+          <a class="gem-c-feedback__prompt-link" data-track-category="yesNoFeedbackForm" data-track-action="ffMaybeClick"
+            aria-expanded="false" role="button" style="display: none;" hidden="hidden" aria-hidden="true" href="#">
+            Maybe
+          </a>
+          <a class="gem-c-feedback__prompt-link gem-c-feedback__prompt-link--useful js-page-is-useful"
+            data-track-category="yesNoFeedbackForm" data-track-action="ffYesClick" aria-expanded="false" role="button"
+            href="#">
+            Yes <span class="visually-hidden">this page is useful</span>
+          </a>
+          <a class="gem-c-feedback__prompt-link js-toggle-form js-page-is-not-useful" data-track-category="yesNoFeedbackForm"
+            data-track-action="ffNoClick" aria-controls="page-is-not-useful" aria-expanded="false" role="button" href="#">
+            No <span class="visually-hidden">this page is not useful</span>
+          </a>
+          <a class="gem-c-feedback__prompt-link gem-c-feedback__prompt-link--wrong js-toggle-form js-something-is-wrong"
+            data-track-category="Onsite Feedback" data-track-action="GOV.UK Open Form" aria-controls="something-is-wrong"
+            aria-expanded="false" role="button" href="#">
+            Is there anything wrong with this page?
+          </a>
+        </div>
+
+        <div class="gem-c-feedback__prompt-success js-prompt-success js-hidden" tabindex="-1">
+          Thank you for your feedback
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <footer class="group js-footer" id="footer" role="contentinfo">
+
+    <div class="footer-wrapper">
+      <div class="footer-categories">
+        <div class="footer-explore">
+          <h2>Services and information</h2>
+
+          <ul>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#births-deaths-marriages">Births, deaths, marriages and care</a></li>
+            <li><a href="#business">Business and self-employed</a></li>
+            <li><a href="#childcare-parenting">Childcare and parenting</a></li>
+            <li><a href="#citizenship">Citizenship and living in the UK</a></li>
+            <li><a href="#justice">Crime, justice and the law</a></li>
+            <li><a href="#disabilities">Disabled people</a></li>
+            <li><a href="#driving">Driving and transport</a></li>
+          </ul>
+          <ul>
+            <li><a href="#education">Education and learning</a></li>
+            <li><a href="#employing-people">Employing people</a></li>
+            <li><a href="#environment-countryside">Environment and countryside</a></li>
+            <li><a href="#housing-local-services">Housing and local services</a></li>
+            <li><a href="#tax">Money and tax</a></li>
+            <li><a href="#abroad">Passports, travel and living abroad</a></li>
+            <li><a href="#visas-immigration">Visas and immigration</a></li>
+            <li><a href="#working">Working, jobs and pensions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-inside-government">
+          <h2>Departments and policy</h2>
+
+          <ul>
+            <li><a href="#how-government-works">How government works</a></li>
+            <li><a href="#organisations">Departments</a></li>
+            <li><a href="#world">Worldwide</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#">Announcements</a></li>
+          </ul>
+        </div>
+        <hr>
+      </div>
+
+
+      <div class="footer-meta">
+        <div class="footer-meta-inner">
+          <h2 class="visuallyhidden">Support links</h2>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms and conditions</a></li>
+            <li><a href="#" lang="cy" hreflang="cy">Rhestr o Wasanaethau Cymraeg</a></li>
+            <li>Built by the <a href="#">Government Digital Service</a>
+            </li>
+          </ul>
+
+
+
+          <div class="open-government-licence">
+            <p class="logo"><a href="#" rel="license">Open Government Licence</a></p>
+            <p>All content is available under the <a href="#" rel="license">Open Government Licence v3.0</a>, except
+              where otherwise stated</p>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <a href="#">© Crown copyright</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="global-app-error" class="app-error hidden"></div>
+
+  <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
+</body>
+
+</html>
