@@ -246,6 +246,9 @@
                             data-module="track-click">
                             <h2 class="gem-c-contents-list__title">Contents</h2>
                             <ol class="gem-c-contents-list__list">
+                                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed ">
+                                            <a class="gem-c-contents-list__link " href="#feedback">Feedback</a>
+                                        </li>
                                 <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed ">
                                     <a class="gem-c-contents-list__link " href="#latest">The latest rules (2018 to 2019)</a>
                                 </li>
@@ -266,13 +269,22 @@
                         <div aria-labelledby="documents-title">
                             <div class="gem-c-govspeak govuk-govspeak direction-ltr">
 
-                                <div class="call-to-action">
+                                <!-- <div class="call-to-action">
                                     <p class="govuk-body">There are different funding rules for different apprenticeship start dates. You must follow the funding rules that apply to each apprentice.</p>
-                                </div>
+                                </div> -->
+                                <h2 class="gem-c-heading  gem-c-heading--mobile-top-margin  " id="feedback">
+                                    Feedback
+                                </h2>
+                                <!-- <div class="call-to-action"> -->
+                                    <p><a href="https://www.smartsurvey.co.uk/s/fundingrules/">Complete our survey</a> to help us make the funding rules clearer.</p>
+                                <!-- </div> -->
 
                                 <h2 class="gem-c-heading  gem-c-heading--mobile-top-margin  " id="latest">
                                     The latest rules (2018 to 2019)
                                 </h2>
+                                <div class="call-to-action">
+                                    <p class="govuk-body">There are different funding rules for different apprenticeship start dates. You must follow the funding rules that apply to each apprentice.</p>
+                                </div>
 
                                 <!-- Employer manual ID -->
                                 {% set _employerManual = myData.latestEmployerManual %}
@@ -294,17 +306,30 @@
 
                                 <p class="govuk-body">You can view the apprenticeship funding rules for:</p>
                                 <ul class="govuk-list " >
-                                    <li><a href="manual-home?manual={{_providerManual}}">training providers</a></li>
                                     <li><a href="manual-home?manual={{_employerManual}}">employers</a></li>
                                     <li><a href="manual-home?manual={{_employerproviderManual}}">employer-providers</a></li>
+                                    <li><a href="manual-home?manual={{_providerManual}}">training providers</a></li>
                                 </ul>
 
                                 <h3 class="gem-c-heading  gem-c-heading--mobile-top-margin" id="other">
                                     Other information
                                 </h3>
 
-                                <p>You can <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/733046/Apps_1819_PM_rules_.pdf">download apprenticeship performance management rules for training providers (PDF, 633KB)</a>.</p>
-<hr>
+                                <p>You can view:</p>
+                                <ul class="govuk-list govuk-list--bullet">
+                                    <li>
+                                        <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/733046/Apps_1819_PM_rules_.pdf">
+                                            apprenticeship performance management rules for training providers (PDF, 640KB)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/733046/Apps_1819_PM_rules_.pdf">
+                                            updates to the apprenticeship funding rules 2018 to 2019 (PDF, 500KB)
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <hr>
 
                                 <!-- <details class="govuk-details">
                                     <summary class="govuk-details__summary">
@@ -321,18 +346,99 @@
                                     </div>
                                 </details> -->
 
-                                <h3 class="gem-c-heading  gem-c-heading--mobile-top-margin" id="2017">
+                                <h2 class="gem-c-heading  gem-c-heading--mobile-top-margin" id="2017">
                                     2017 to 2018 rules
-                                </h3>
-                                <p class="govuk-body">For apprenticeships that started between 1 August 2017 and 31 July 2018, you must follow the <a href="rules-list?yearRangeStart=2017&yearRangeEnd=2018">2017 to 2018 funding rules</a>.</p>
+                                </h2>
+                                
+                                <p class="govuk-body">The 2017 to 2018 rules apply to apprenticeships that started between 1 August 2017 and 31 July 2018.</p>
+                                <p class="govuk-body">You can view:</p>
 
-                                <h3 class="gem-c-heading  gem-c-heading--mobile-top-margin" id="2016">
+                                <ul class="govuk-list govuk-list--bullet">
+                                    <li>
+                                        <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/706505/Employer_rules_v3.pdf">
+                                            apprenticeship funding rules for employers (PDF, 640KB)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/706506/Employer_provider_v3.pdf">
+                                            apprenticeship funding rules for employer-providers (PDF, 640KB)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/706507/Provider_v6.pdf">
+                                            apprenticeship funding rules for training providers (PDF, 640KB)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/611724/Subcontracting_addendum__003_.pdf">
+                                            apprenticeship funding and performance management rules - addendum 1 (PDF, 640KB)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/697128/Summary_of_changes.pdf">
+                                            updates to the apprenticeship funding rules 2017 to 2018 (PDF, 640KB)
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <h2 class="gem-c-heading  gem-c-heading--mobile-top-margin" id="2016">
                                     2016 to 2017 rules
-                                </h3>
-                                <p class="govuk-body">For apprenticeships that started between 1 August 2016 and 31 July 2017, you must follow the <a href="https://www.gov.uk/government/collections/sfa-funding-rules-2016-to-2017">2016 to 2017 funding rules</a>.</p>
+                                </h2>
 
-                                <h3 class="gem-c-heading  gem-c-heading--mobile-top-margin" id="previous">Previous rules</h3>
+                                <ul class="govuk-list govuk-list--bullet">
+                                        <li>
+                                            <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/604976/SFA_common_and_performance_management_funding_rules_2016_to_2017_V3.pdf">
+                                                Skills Funding Agency: common and performance-management funding rules 2016 to 2017 (PDF, 640KB)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/611725/Apprenticeships_common_funding_and_pm_rules_2016_to_2017_V5.pdf">
+                                                Apprenticeships: common funding and performance-management rules 2016 to 2017 (PDF, 640KB)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/595360/Apprenticeship_Framework_Funding_Rules_2016_to_2017_V4.pdf">
+                                                Apprenticeship frameworks funding and AGE performance-management rules 2016 to 2017 (PDF, 640KB)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/604972/Apprenticeship_standards_funding_rules_2016_to_2017_v2_FINAL.pdf">
+                                                Apprenticeship standards funding rules 2016 to 2017 (PDF, 640KB)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/604968/HEI_funding_rules.pdf">
+                                                Apprenticeship funding rules for higher education institutions (PDF, 640KB)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/545722/Adult_education_budget_funding_and_performance_management_rules_2016_to_2017_V3.pdf">
+                                                Adult education budget funding and performance-management rules 2016 to 2017 (PDF, 640KB)
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                <h2 class="gem-c-heading  gem-c-heading--mobile-top-margin" id="previous">Previous rules</h2>
                                 <p class="govuk-body">For apprenticeships that started before 1 August 2016, <a href="https://www.gov.uk/guidance/sfa-funding-rules">view previous funding rules</a>.</p>
+
+                                <h2 class="gem-d-heading  gem-c-heading--mobile-top-margin  " id="documents-title">
+                                        Help and support
+                                    </h2>
+                                    <h3 class="gem-d-heading  gem-c-heading--mobile-top-margin  " >
+                                        Training providers
+                                    </h3>
+                                    
+                                    <p>For help and support you can:</p>
+                                    <ul>
+                                      <li>email us at <a href="mailto:SDE.servicedesk@education.gov.uk">SDE.servicedesk@education.gov.uk</a></li>
+                                      <li>phone us on 0370 267 000</li>
+                                      <li>contact your provider management advisor </li>
+                                    </ul>
+                    
+                                    <h3 class="gem-d-heading  gem-c-heading--mobile-top-margin  " >
+                                        Employers
+                                    </h3>
+                                    <p>For help and support, phone us on 0800 015 0600. </p>
 
                             </div>
                         </div>
