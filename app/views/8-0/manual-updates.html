@@ -52,7 +52,11 @@ GOV.UK Manual
                                         {% if section.changenote %}
                                             {{section.changenote|safe}}
                                         {% else %}
-                                            New section added.
+                                            {% if loop.index == 2 or loop.index == 5 or loop.index == 6 or loop.index == 9 %}
+                                            Changes made to some of the rules. Online version of the rules created.
+                                            {% else %}
+                                            Online version of the rules created.
+                                            {% endif %}
                                         {% endif %}
                                     </dd>
                                 {% endfor %}
