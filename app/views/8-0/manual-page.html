@@ -94,6 +94,32 @@
                     <h3 class="govuk-heading-m">Employers</h3>
                     <p class="govuk-body">For help and support, phone us on 0800 015 0600.</p>
                 </div>
+            {% elif myData.manualpage == "updates" %}
+            <article aria-labelledby="section-title">
+                <h1 id="section-title" class="section-title section-title-with-summary">
+                    Updates since 1 August 2018
+                </h1>
+                <p class="summary">
+                    See a list of all updates that we have made to the rules since 1 August 2018.
+                </p>
+                <!-- <div class="gem-c-govspeak govuk-govspeak">
+                    <h2 class="govuk-heading-s">Chapter name</h2>
+                </div> -->
+                <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
+                    <div class="collapsible-subsections">
+                        <div class="gem-c-govspeak govuk-govspeak parts-container">
+                            <h2 id="{{subsection.id}}" class="">
+                                Chapter name with updates
+                            </h2>
+                            <p>some</p>
+                            <h2 id="{{subsection.id}}" class="">
+                                    Chapter name with updates
+                                </h2>
+                                <p>some other</p>
+                        </div>
+                    </div>
+                </div>
+
             {% else %}
             <article aria-labelledby="section-title">
                 <h1 id="section-title" class="section-title {% if section.summary %}section-title-with-summary{% endif %}">

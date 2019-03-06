@@ -64,7 +64,18 @@
                     </select>
                 </div>
 
-                <!-- Start from -->
+                <!-- Updates chapter -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="manualUpdatesChapter">
+                        Updates chapter
+                    </label>
+                    <select class="govuk-select" id="manualUpdatesChapter" name="manualUpdatesChapter" data-option="manualUpdatesChapter">
+                        <option {% if myData.updatesChapter == 'false' %}selected{% endif %} value="false">Do not include</option>
+                        <option {% if myData.updatesChapter == 'true' %}selected{% endif %} value="true">Include</option>
+                    </select>
+                </div>
+
+                <!-- Header type -->
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="manualSetupHeader">
                         Header version
@@ -142,8 +153,9 @@ $(document).ready(function(){
             _urlupdatesFilter = "&updatesFilter=" + _options.filter("#manualSetupContextualUpdates").val(),
             _urlemChart = "&emChart=" + _options.filter("#manualSetupEngMathsChart").val(),
             _urlheader = "&header=" + _options.filter("#manualSetupHeader").val(),
+            _urlupdatesChapter = "&updatesChapter=" + _options.filter("#manualUpdatesChapter").val(),
             _urlReset = "&resetSession=true",
-            _urlPageQueries = _urlPage + _urlstartFrom + _urlmanual + _urlupdatesFilter + _urlemChart + _urlheader + _urlReset;
+            _urlPageQueries = _urlPage + _urlstartFrom + _urlmanual + _urlupdatesFilter + _urlemChart + _urlheader + _urlupdatesChapter + _urlReset;
 
         var _startURLText = _urlVersion + _urlPageQueries,
             _startURLHREF =  _urlPageQueries;

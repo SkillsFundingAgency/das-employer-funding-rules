@@ -19,6 +19,7 @@ module.exports = function (router,_myData) {
         req.session.myData.header = "standard"
         req.session.myData.yearRangeStart = "2017"
         req.session.myData.yearRangeEnd = "2018"
+        req.session.myData.updatesChapter = "false"
     }
 
 
@@ -82,6 +83,7 @@ module.exports = function (router,_myData) {
         req.session.myData.include = req.query.include || req.session.myData.include
         req.session.myData.yearRangeStart = req.query.yearRangeStart || req.session.myData.yearRangeStart
         req.session.myData.yearRangeEnd = req.query.yearRangeEnd || req.session.myData.yearRangeEnd
+        req.session.myData.updatesChapter = req.query.updatesChapter || req.session.myData.updatesChapter
 
         next()
     });

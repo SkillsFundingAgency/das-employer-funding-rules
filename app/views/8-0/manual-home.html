@@ -168,6 +168,16 @@
             {% endif %}
 
             <ol class="section-list">
+                {% if myData.updatesChapter == "true" %}
+                <li class="section-contains-no-updates">
+                    <a class="" href="manual-page?manual={{myData.manual}}&manualpage=updates&updatesFilterOn=false">
+                        <span class="subsection-title-text">Updates since 1 August 2018</span>
+                        <span class="subsection-summary">
+                            See a list of all updates that we have made to the rules since 1 August 2018.
+                        </span>
+                    </a>
+                </li>
+                {% endif %}
                 {% for section in _thisManual.sections %}
 
                     {% set _sectionClasses = "section-contains-no-updates" %}
