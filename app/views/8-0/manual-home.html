@@ -76,7 +76,11 @@
         <div class="manual-body">
 
             <p class="summary">
-                These apprenticeship funding rules apply to {{_userType}}.
+                {% if _userType == "employers" %}
+                    These apprenticeship funding rules and guidance apply to {{_userType}}.
+                {% else %}
+                    These apprenticeship funding rules apply to {{_userType}}.
+                {% endif %}
             </p>
 
             <div class="call-to-action">
