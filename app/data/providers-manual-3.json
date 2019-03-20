@@ -4758,7 +4758,7 @@
             {
                 "id": "glossary",
                 "title": "Glossary",
-                "titleglindex": "Index",
+                "titleglindex": "Glossary and index",
                 "summary": "Definitions of terms.",
                 "summaryglindex": "An A to Z index and definitions of topics covered by apprenticeship funding rules.",
                 "updates": [
@@ -5096,7 +5096,8 @@
                                 "content": "An <a class='govuk-link' href='https://www.gov.uk/take-on-an-apprentice/apprenticeship-agreement'>apprenticeship agreement</a> is between an employer and an apprentice, either in accordance with the Apprenticeships, Skills, Children and Learning Act 2009 sections 32 to 36 (for frameworks) or section A1 (for standards – an approved English apprenticeship agreement)."
                             },
                             {
-                                "title": "(The) Apprenticeship service",
+                                "title": "Apprenticeship service",
+                                "prefix": "(The) ",
                                 "content": "The <a class='govuk-link' href='https://manage-apprenticeships.service.gov.uk/'>digital interface</a> to services designed to support the uptake of apprenticeships. The service is aimed primarily at employers who engage with main providers and apprenticeship assessment organisations to deliver and facilitate the apprenticeship programme. It allows employers to choose, and pay for, the apprenticeship training that they want and will support the uptake of apprenticeships. The service contains information coming from a range of different sources, including main providers."
                             },
                             {
@@ -5129,7 +5130,8 @@
                             },
                             {
                                 "title": "Delivery subcontractor",
-                                "content": "Delivery subcontractors are any organisation contracted through a main provider or employer-provider to deliver apprenticeship off-the- job training, English or maths or planned on-programme assessment. This excludes end-point assessment organisations; end-point assessment organisations are not delivery subcontractors. It also excludes subcontractors you use for different services, including help with marketing or data management, as well as those who deliver training to an apprentice that is in addition to the apprenticeship and not funded through this route."
+                                "content": "Delivery subcontractors are any organisation contracted through a main provider or employer-provider to deliver apprenticeship off-the- job training, English or maths or planned on-programme assessment. This excludes end-point assessment organisations; end-point assessment organisations are not delivery subcontractors. It also excludes subcontractors you use for different services, including help with marketing or data management, as well as those who deliver training to an apprentice that is in addition to the apprenticeship and not funded through this route.",
+                                "seealso": "Subcontractor"
                             },
                             {
                                 "title": "Distance learning",
@@ -5202,7 +5204,8 @@
                                 "content": "An apprenticeship where the main learning is at level 4 or above (including higher education qualifications)."
                             },
                             {
-                                "title": "(The) Hub",
+                                "title": "Hub",
+                                "prefix": "(The) ",
                                 "content": "<a class='govuk-link' href='https://hub.fasst.org.uk/Pages/default.aspx'>The hub</a> provides online services including the return of your ILR and completed EAS. You can also search all learning aims, components of qualifications, apprenticeship frameworks and standards along with their validity and funding details."
                             },
                             {

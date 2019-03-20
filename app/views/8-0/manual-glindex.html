@@ -31,7 +31,7 @@
       
     <ol class="breadcrumb-trail">
         <li><a href="manual-home?manual={{myData.manual}}&updatesFilterOn=false">Contents</a></li>
-        <li class="last-child">Glossary</li>
+        <li class="last-child">Glossary and index</li>
     </ol>
       
     <article aria-labelledby="manual-title" id="content">
@@ -56,25 +56,73 @@
 
                             {% for subsection in section.subsections %}
 
-                                <!-- Sub section heading -->
-                                <h2 id="{{subsection.id}}" class="{{_subsectionClasses}}">
-                                    Index
-                                </h2>
+                                {% set _firstList = "true" %}
+                                {% set _prevInitial = "" %}
             
-                                <!-- Parts -->
-                                <ul class="govuk-list govuk-list--bullet">
+                                <!-- Letter groups -->
+
                                 {% for part in subsection.partsglindex %}
-                                    <li class="govuk-body">
-                                        {% if part.type == "see" %}
-                                            {{part.title|safe}} <span style="font-weight:bold;">see</span> {{part.see|safe}}
-                                        {% else %}
-                                            <span style="">{{part.title|safe}}</span> <a href="#">{{_rulePrefix}}32 to {{_rulePrefix}}56</a><br>
-                                            <!-- {{part.content|safe|trim}} -->
+
+                                    {% set _title = part.title %}
+                                    {% set _thisInitial = part.title|truncate(1,true,"") %}
+
+                                    {% if _thisInitial != _prevInitial %}
+
+                                        <!-- end previous list -->
+                                        {% if _firstList == "false" %}
+                                            <!-- </ul> -->
                                         {% endif %}
-                                    </li>
+                                        {% set _firstList = "false" %}
+
+                                        <!-- new letter rendered (_thisInitial) -->
+                                        <h2 id="{{_thisInitial}}" >
+                                            {{_thisInitial}}
+                                        </h2>
+
+                                        <!-- new list starts -->
+                                        <!-- <ul class="govuk-list govuk-list--bullet"> -->
+
+                                    {% endif %}
+
+                                    {% set _prevInitial = _thisInitial %}
+
+                                        {% if part.type == "see" %}
+                                            <h3 class="govuk-heading-s" class="govuk-body" id="{{_title | replace(' ', '-')}}">
+                                                {% if part.prefix %}{{part.prefix|safe}}{% endif %}{{_title}}
+                                            </h3>
+                                            <p class="govuk-body"><span style="">See</span> <span style=""><a href="#{{part.see | replace(' ', '-')}}" class="govuk-link govuk-link--no-visited-state">{{part.see|safe}}</a></span></p>
+                                        {% else %}
+                                            <h3 class="govuk-heading-s" class="govuk-body" id="{{_title | replace(' ', '-')}}">
+                                                {% if part.prefix %}{{part.prefix|safe}}{% endif %}{{_title}}</span><span style="font-weight: normal"> - <a href="#" class="govuk-link govuk-link--no-visited-state">{{_rulePrefix}}32 to {{_rulePrefix}}56</a>, <a href="#" class="govuk-link govuk-link--no-visited-state">{{_rulePrefix}}78</a> and <a href="#" class="govuk-link govuk-link--no-visited-state">{{_rulePrefix}}83</a></span>
+                                            </h3>
+                                            
+                                            <!-- See also -->
+                                            {% if part.seealso %}<p class="govuk-body"><span style="">See also</span> <span style=""><a href="#{{part.seealso | replace(' ', '-')}}" class="govuk-link govuk-link--no-visited-state">{{part.seealso|safe}}</a></span></p>{% endif %}
+
+                                            <p class="govuk-body">{{part.content|safe|trim}}</p>
+                                            {% if part.subparts %}
+                                            <ul class='govuk-list govuk-list--bullet'>
+                                            {% endif %}
+                                            {% for subpart in part.subparts %}
+                                                {% if subpart.type == "list" %}
+                                                    {% for listitem in subpart.content %}
+                                                    <li>{{listitem|safe|trim}}</li>
+                                                    {% endfor %}
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if part.subparts %}
+                                            </ul>
+                                            {% endif %}
+                                        {% endif %}
+
+                                    <!-- end final list -->
+                                    {% if loop.last %}
+                                        <!-- </ul> -->
+                                    {% endif %}
+
+
                                 {% endfor %}
-                                </ul>
-            
+
                             {% endfor %}
 
                         </div>
