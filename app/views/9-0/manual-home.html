@@ -223,23 +223,32 @@
                         {% endfor %}
                     {% endfor %}
 
-                <li class=" {{_sectionClasses}} ">
-                    <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}&updatesFilterOn=false">
-                        <span class="subsection-title-text">{{section.title|safe}}{% if section.range %} ({{section.range|safe}}){% endif %}</span>
-                        {% if section.summary %}
-                        <span class="subsection-summary">
-                            {{section.summary|safe}}
-                        </span>
+                    <li class=" {{_sectionClasses}} ">
+                        {% set _url = "manual-page" %}
+                        {% set _title = section.title %}
+                        {% set _summary = section.summary %}
+                        {% if section.titleglindex%}
+                            {% set _url = "manual-glindex" %}
+                            {% set _title = section.titleglindex %}
+                            {% set _summary = section.summaryglindex %}
                         {% endif %}
+                        <a class="" href="{{_url}}?manual={{myData.manual}}&manualpage={{section.id}}&updatesFilterOn=false">
+                            <span class="subsection-title-text">{{_title}}{% if section.range %} ({{section.range}}){% endif %}</span>
+                            {% if section.summary %}
+                            <span class="subsection-summary">
+                                {{_summary}}
+                            </span>
+                            {% endif %}
 
-                        {% if _sectionHasUpdates %}
-                        <strong class="update-tag govuk-tag" >
-                            Updated
-                        </strong>
-                        {% endif %}
+                            {% if _sectionHasUpdates %}
+                            <strong class="update-tag govuk-tag" >
+                                Updated
+                            </strong>
+                            {% endif %}
 
-                    </a>
-                </li>
+                        </a>
+                    </li>
+
                 {% endfor %}
                 <li class="section-contains-no-updates">
                     <a class="" href="manual-page?manual={{myData.manual}}&manualpage=feedback&updatesFilterOn=false">
