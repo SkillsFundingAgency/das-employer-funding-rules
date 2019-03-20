@@ -1,8 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-// Add your routes here - above the module.exports line
-
 var _myData = {
     "manuals":
     {
@@ -17,6 +15,28 @@ var _myData = {
     "latestProviderManual": "providers-manual-3",
     "latestEmployerproviderManual": "employer-providers-manual-1"
 }
+
+// Sort GLINDEXES
+Object.keys(_myData.manuals).map(function(manual, index) {
+    _myData.manuals[manual].content.sections.forEach(function(section) {
+        if(section.id == "glossary" && "subsections" in section) {
+            section.subsections.forEach(function(subsection) {
+                if(subsection.partsglindex){
+                    subsection.partsglindex.sort(function(a,b){
+                        var returnValue = 0;
+                        //Sort on title A-Z
+                        if(b.title.toUpperCase() > a.title.toUpperCase()){
+                            returnValue = -1
+                        } else if(a.title.toUpperCase() > b.title.toUpperCase()){
+                            returnValue = 1
+                        }
+                        return returnValue;
+                    })
+                }
+            });
+        }
+    });
+});
 
 require('./routes/3-0/routes.js')(router,JSON.parse(JSON.stringify(_myData)));
 require('./routes/4-0/routes.js')(router,JSON.parse(JSON.stringify(_myData)));

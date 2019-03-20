@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Manual
+{% endblock %}
+
+{% set _thisManualType = myData.manuals[myData.manual].type %}
+{% set _thisManual = myData.manuals[myData.manual].content %}
+{% set section = {} %}
+{% for _section in _thisManual.sections %}
+    {% if myData.manualpage == _section.id %}
+        {% set section = _section %}
+    {% endif %}
+{% endfor %}
+
+{% set _rulePrefix = "P" %}
+{% if _thisManualType == "employer" %}
+    {% set _rulePrefix = "E" %}
+{% endif %}
+
+{% block content %}
+
+<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+    
+    {% if myData.header == "altered" %}
+        {% include "../includes/manual-header-2.html" %}
+    {% else %}
+        {% set _manualHeaderTitle = _thisManual.title|safe %}
+        {% include "../includes/manual-header.html" %}
+    {% endif %}
+      
+    <ol class="breadcrumb-trail">
+        <li><a href="manual-home?manual={{myData.manual}}&updatesFilterOn=false">Contents</a></li>
+        <li class="last-child">Glossary</li>
+    </ol>
+      
+    <article aria-labelledby="manual-title" id="content">
+        <div class="manual-body">
+            <article aria-labelledby="section-title">
+                <h1 id="section-title" class="section-title {% if section.summary %}section-title-with-summary{% endif %}">
+                    {{section.titleglindex|safe}}
+                </h1>
+                {% if section.summary %}
+                <p class="summary">
+                    {{section.summaryglindex|safe}}
+                </p>
+                {% endif %}
+
+                <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
+                    <div class="collapsible-subsections">
+                        <div class="gem-c-govspeak govuk-govspeak parts-container">
+
+                            <div class="call-to-action">
+                                <p><a rel="external" href="https://www.smartsurvey.co.uk/s/2CJEQ/">Complete our survey</a> to help us make the funding rules clearer.</p>
+                            </div>
+
+                            {% for subsection in section.subsections %}
+
+                                <!-- Sub section heading -->
+                                <h2 id="{{subsection.id}}" class="{{_subsectionClasses}}">
+                                    Index
+                                </h2>
+            
+                                <!-- Parts -->
+                                <ul class="govuk-list govuk-list--bullet">
+                                {% for part in subsection.partsglindex %}
+                                    <li class="govuk-body">
+                                        {% if part.type == "see" %}
+                                            {{part.title|safe}} <span style="font-weight:bold;">see</span> {{part.see|safe}}
+                                        {% else %}
+                                            <span style="">{{part.title|safe}}</span> <a href="#">{{_rulePrefix}}32 to {{_rulePrefix}}56</a><br>
+                                            <!-- {{part.content|safe|trim}} -->
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                                </ul>
+            
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </article>
+        </div>
+    </article>
+            
+    <div class="print-page">
+        <a onclick="window.print();return false;" href="#print">Print this page</a>
+    </div>
+</div>
+
+{% endblock %}

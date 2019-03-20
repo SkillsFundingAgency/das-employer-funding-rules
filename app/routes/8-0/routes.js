@@ -148,6 +148,16 @@ module.exports = function (router,_myData) {
         fireSearch(req,res,req.session.myData.manual)
         res.redirect(301, '/' + version + '/manual-search-results');
     });
+    // manual glindex
+    router.get('/' + version + '/manual-glindex', function (req, res) {
+        res.render(version + '/manual-glindex', {
+            myData:req.session.myData
+        });
+    });
+    router.post('/' + version + '/manual-glindex', function (req, res) {
+        fireSearch(req,res,req.session.myData.manual)
+        res.redirect(301, '/' + version + '/manual-search-results');
+    });
     // manual pdf
     router.get('/' + version + '/manual-pdf', function (req, res) {
         res.render(version + '/manual-pdf', {

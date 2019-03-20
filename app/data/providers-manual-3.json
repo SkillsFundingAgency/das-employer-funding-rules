@@ -4758,7 +4758,9 @@
             {
                 "id": "glossary",
                 "title": "Glossary",
+                "titleglindex": "Index",
                 "summary": "Definitions of terms.",
+                "summaryglindex": "An A to Z index and definitions of topics covered by apprenticeship funding rules.",
                 "updates": [
                     {
                         "content": "Restructure: all content previously in the terminology section has been added to the glossary, including: account, apprentice, delivery subcontractor, framework, funding agreement, government-employer co- investment, provider, standard, this document, and training."
@@ -5053,6 +5055,253 @@
                             },
                             {
                                 "type": "glossary",
+                                "title": "Zero-hour contracts",
+                                "content": "Contracts which do not specify a set number of hours for the employee."
+                            }
+                        ],
+                        "partsglindex": [
+                            {
+                                "title": "Atest",
+                                "type": "see",
+                                "see": "Distance learning"
+                            },
+                            {
+                                "title": "Btest",
+                                "type": "see",
+                                "see": "Personal learning record (PLR)"
+                            },
+                            {
+                                "title": "Ctest",
+                                "type": "see",
+                                "see": "Training"
+                            },
+                            {
+                                "title": "Account",
+                                "content": "An employer’s account or apprenticeship service account is part of the apprenticeship service that will allow employers to view the funds that they have available to direct us to pay for their chosen apprenticeship training and assessment in England."
+                            },
+                            {
+                                "title": "Account",
+                                "content": "An employer’s account or apprenticeship service account is part of the apprenticeship service that will allow employers to view the funds that they have available to direct us to pay for their chosen apprenticeship training and assessment in England."
+                            },
+                            {
+                                "title": "Apprentice",
+                                "content": "An apprentice is an individual who receives apprenticeship training and, where applicable, end-point assessment through an apprenticeship framework or standard funded by us."
+                            },
+                            {
+                                "title": "Apprenticeship",
+                                "content": "An apprenticeship is a job with an accompanying skills development programme. This includes the training and (where required) end- point assessment for an employee as part of a job with an accompanying skills development programme. The full definitions of (i) an English apprenticeship (frameworks) and (ii) an approved English apprenticeship (standards) can be found in Part 1 of the <a class='govuk-link' href='https://www.legislation.gov.uk/ukpga/2009/22/contents'>Apprenticeships, Skills, Children and Learning Act 2009</a>."
+                            },
+                            {
+                                "title": "Apprenticeship agreement",
+                                "content": "An <a class='govuk-link' href='https://www.gov.uk/take-on-an-apprentice/apprenticeship-agreement'>apprenticeship agreement</a> is between an employer and an apprentice, either in accordance with the Apprenticeships, Skills, Children and Learning Act 2009 sections 32 to 36 (for frameworks) or section A1 (for standards – an approved English apprenticeship agreement)."
+                            },
+                            {
+                                "title": "(The) Apprenticeship service",
+                                "content": "The <a class='govuk-link' href='https://manage-apprenticeships.service.gov.uk/'>digital interface</a> to services designed to support the uptake of apprenticeships. The service is aimed primarily at employers who engage with main providers and apprenticeship assessment organisations to deliver and facilitate the apprenticeship programme. It allows employers to choose, and pay for, the apprenticeship training that they want and will support the uptake of apprenticeships. The service contains information coming from a range of different sources, including main providers."
+                            },
+                            {
+                                "title": "Apprenticeship service account",
+                                "content": "The area on the apprenticeship service where employers can manage their funding and apprentices, view their account balance and plan their spending."
+                            },
+                            {
+                                "title": "Apprenticeship training agency (ATA)",
+                                "content": "An organisation whose main business is employing apprentices who are made available to employers for a fee."
+                            },
+                            {
+                                "title": "Apprenticeship levy",
+                                "content": "The apprenticeship levy will be a levy on UK employers to fund new apprenticeships. In England, control of apprenticeship funding will be put in the hands of employers through the apprenticeship service. The levy will be charged at a rate of 0.5% of an employer’s pay bill. Each employer will receive an allowance of £15,000 to offset against their levy payment."
+                            },
+                            {
+                                "title": "Break in learning",
+                                "content": "This is a break in training where an individual is not continuing with their apprenticeship but has told the employer beforehand that they intend to resume their apprenticeship in the future."
+                            },
+                            {
+                                "title": "Commitment statement",
+                                "content": "A statement held by the main provider, the apprentice and their employer. The commitment statement sets out how the apprentice will be supported to successful achievement of the apprenticeship. It must be signed by the apprentice, their employer and the main provider, and all three parties must retain a current signed and dated version."
+                            },
+                            {
+                                "title": "Contract for service",
+                                "content": "A contract between a contractor and a client."
+                            },
+                            {
+                                "title": "Contract of service",
+                                "content": "A contract between an employee and employer."
+                            },
+                            {
+                                "title": "Delivery subcontractor",
+                                "content": "Delivery subcontractors are any organisation contracted through a main provider or employer-provider to deliver apprenticeship off-the- job training, English or maths or planned on-programme assessment. This excludes end-point assessment organisations; end-point assessment organisations are not delivery subcontractors. It also excludes subcontractors you use for different services, including help with marketing or data management, as well as those who deliver training to an apprentice that is in addition to the apprenticeship and not funded through this route."
+                            },
+                            {
+                                "title": "Distance learning",
+                                "content": "Learning delivered remotely (not face-to-face). This could include, but is not limited to, e-learning and webinars."
+                            },
+                            {
+                                "title": "Earnings adjustment statement (EAS)",
+                                "content": "The <a class='govuk-link' href='https://www.gov.uk/government/publications/earnings-adjustment-statement-eas-2017-to-2018'>earnings adjustment statement</a> is how main providers claim funding that cannot be claimed through the individualised learner record."
+                            },
+                            {
+                                "title": "Employed",
+                                "content": "An individual who has a contract of service. This does not include individuals who are self-employed."
+                            },
+                            {
+                                "title": "Employer",
+                                "content": "We use the term ‘employer’ to mean an organisation that has a contract of service and an apprenticeship agreement with an apprentice. This can include an apprenticeship training agency (ATA). This may also include a company or charity whose PAYE scheme the employer has connected to their apprenticeship service account in accordance with HMRC’s definition of <a class='govuk-link href='https://www.gov.uk/hmrc-internal-manuals/apprenticeship-levy/alm10200'>connected companies and charities</a>. All references to an ‘employer’ are in relation to the whole organisation and not individual sites or locations, groups, and companies linked by directors."
+                            },
+                            {
+                                "title": "Employer-provider",
+                                "content": "Any organisation who delivers some, or all, of the ‘off-the-job’ training element of an apprenticeship to their own staff and holds a contract with us through which we directly route funds from their apprenticeship service account or government-employer co-investment. The employer-provider will have overall responsibility for the training and on-programme assessment conducted by themselves, their delivery subcontractors and will have a contractual relationship for the end-point assessment conducted by an end-point assessment organisation. The payment for the end-point assessment is through the employer-provider."
+                            },
+                            {
+                                "title": "End-point assessment organisation",
+                                "content": "End-point assessment organisation are organisations on the <a class='govuk-link' href='https://www.gov.uk/government/collections/register-of-apprentice-assessment-organisations'>Register of End-Point Assessment Organisations</a>. End-point assessment organisations are selected by the employer. You and the end-point assessment organisation will need a form of contract in writing in order for them to be paid for delivering the end-point assessment as part of the agreed apprenticeship programme."
+                            },
+                            {
+                                "title": "Evidence pack",
+                                "content": "A collection of documents and information brought together to form a single point of reference relating to the learning that is taking place. This provides the evidence to prove that the apprentice exists and is eligible for funding, and for the learning to be provided."
+                            },
+                            {
+                                "title": "Exceptional learning support (ELS)",
+                                "content": "<a class='govuk-link' href='https://www.gov.uk/government/publications/exceptional-learning-support-cost-form'>Exceptional learning support</a> is when the needs of the apprentice are over £19,000 in a single year."
+                            },
+                            {
+                                "title": "Final day",
+                                "content": "The date entered onto the <a class='govuk-link' href='https://www.gov.uk/government/publications/ilr-specification-validation-rules-and-appendices-2018-to-2019'>ILR</a> when the apprentice is expected to complete the practical period of their apprenticeship. This is the end of the training period and does not include end-point assessment (for standards)."
+                            },
+                            {
+                                "title": "Framework",
+                                "content": "The term framework (sometimes referred to as apprenticeship framework) covers the apprenticeship frameworks which are available for delivery. The legislation relating to frameworks (English apprenticeships) has been repealed but saved until frameworks have been phased out (Deregulation Act 2015 (Commencement No. 1 and Transitional Saving Provisions) Order 2015)."
+                            },
+                            {
+                                "title": "Functional skills",
+                                "content": "Applied practical skills in English, maths and ICT that provide the individual with the essential knowledge, skills and understanding to enable them to operate effectively and independently in life and work."
+                            },
+                            {
+                                "title": "Funding agreement",
+                                "content": "Throughout this document the term ‘funding agreement’ is used to include:",
+                                "subparts": [
+                                    {
+                                        "type": "list",
+                                        "content": [
+                                            "<a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-funding-legal-agreement-for-training-providers'>the apprenticeship levy provider funding agreement</a>;",
+                                            "the contract for services between the employer and main provider;",
+                                            "<a class='govuk-link' href='https://www.gov.uk/government/publications/esfa-funding-agreements-and-contracts-2017-to-2018'>the contract for services – apprenticeships</a> (between the ESFA and main providers delivering apprenticeships to non-levy- paying employers)."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Gateway requirements",
+                                "content": "These are requirements set out in the assessment plan that must be met by the apprentice prior to undertaking end-point assessment of the apprenticeship standard. They will include the completion of English and maths qualifications (where applicable) and completion of any on-programme mandatory qualifications (where applicable) along with satisfactory evidence (as determined by the employer, in consultation with the main provider) that the apprentice has achieved the necessary knowledge, skills and behaviours set out in the standard."
+                            },
+                            {
+                                "title": "Government- employer co- investment",
+                                "content": "Government-employer co-investment is funding that is not paid for from an employer’s apprenticeship service account (because the employer does not pay the levy or has insufficient levy funds in their apprenticeship service account). Employers will need to make a mandatory co-investment with the government."
+                            },
+                            {
+                                "title": "Higher and degree apprenticeships",
+                                "content": "An apprenticeship where the main learning is at level 4 or above (including higher education qualifications)."
+                            },
+                            {
+                                "title": "(The) Hub",
+                                "content": "<a class='govuk-link' href='https://hub.fasst.org.uk/Pages/default.aspx'>The hub</a> provides online services including the return of your ILR and completed EAS. You can also search all learning aims, components of qualifications, apprenticeship frameworks and standards along with their validity and funding details."
+                            },
+                            {
+                                "title": "Immigration permission",
+                                "content": "The permissions, or otherwise, granted by the government of the United Kingdom for an individual to reside here."
+                            },
+                            {
+                                "title": "Individualised learner record (ILR)",
+                                "content": "The primary data collection requested from training providers for further education and work-based learning in England. The data is used widely, most notably by the government, to monitor policy implementation and the performance of the sector. It is also used by organisations that allocate funding for further education."
+                            },
+                            {
+                                "title": "Integrated standard",
+                                "content": "An integrated standard is where the end-point assessment is incorporated into the main learning aim (usually a degree or other full higher education qualification). In these cases, there is no need for an additional independent assessment."
+                            },
+                            {
+                                "title": "Learning",
+                                "content": "The term learning in this document, when used, is interchangeable with training."
+                            },
+                            {
+                                "title": "Levy-paying employer",
+                                "content": "An employer with an annual pay bill of over £3 million."
+                            },
+                            {
+                                "title": "Licence to practise",
+                                "content": "Where it is a legal (or statutory) requirement for all practitioners to obtain a licence which confirms the licence holder meets prescribed standards of competence, including situations in which it is unlawful to carry out a specified range of activities for pay without first having obtained a licence."
+                            },
+                            {
+                                "title": "Levy-paying employer",
+                                "content": "An employer with an annual pay bill of over £3 million."
+                            },
+                            {
+                                "title": "Licence to practise",
+                                "content": "Where it is a legal (or statutory) requirement for all practitioners to obtain a licence which confirms the licence holder meets prescribed standards of competence, including situations in which it is unlawful to carry out a specified range of activities for pay without first having obtained a licence."
+                            },
+                            {
+                                "title": "Main provider",
+                                "content": "Any organisation holding a contract with us through which we directly route funds from an employer’s apprenticeship service account or government-employer co-investment. The main provider will have the overall responsibility for the training and on-programme assessment conducted by themselves and their delivery subcontractors, and have a contractual relationship on behalf of the employer for the end-point assessment conducted by an end-point assessment organisation. The payment for the end-point assessment organisation is through the main provider."
+                            },
+                            {
+                                "title": "Mentoring",
+                                "content": "To include in off-the-job training, mentoring must impart new learning to the apprentice directly linked to the achievement of the apprenticeship by a more senior or experienced member of staff. This does not include general line management. The apprentice must not be doing productive work."
+                            },
+                            {
+                                "title": "Ordinarily resident",
+                                "content": "For funding purposes, a person who normally lives in the country, is allowed to live there by law, and return there after temporary trips outside the country. Temporary absences from a country due to the learner or a relevant family member working or travelling abroad would be discounted when considering ordinary residency."
+                            },
+                            {
+                                "title": "Personal learning record (PLR)",
+                                "content": "The <a class='govuk-link' href='https://www.gov.uk/government/publications/learning-records-service-the-plr-for-learners-and-parents' >personal learning record</a> (PLR) allows individual apprentices access to their past and current achievement records. These can be shared with schools, colleges, further education training providers, universities or employers when making an application to further their education, training and employment."
+                            },
+                            {
+                                "title": "Practical period",
+                                "content": "The period for which the employer and apprentice agree that the apprentice will work and receive training under their approved English apprenticeship agreement. It does not include end-point assessment (for standards)."
+                            },
+                            {
+                                "title": "Register of Apprenticeship Training Providers",
+                                "content": "From May 2017, levied employers will be able to choose a main provider from a new register, the <a class='govuk-link' href='https://www.gov.uk/guidance/register-of-apprenticeship-training-providers'>Register of Apprenticeship Training Providers</a> (RoATP). The register will encourage diversity and competition in the training provider market, supporting quality and employer choice. To be added to the register, organisations must pass tests on due diligence, financial health, and tests on quality, capacity and capability."
+                            },
+                            {
+                                "title": "Register of End-Point Assessment Organisations",
+                                "content": "A <a class='govuk-link' href='https://www.gov.uk/government/collections/register-of-apprentice-assessment-organisations'>Register of End-Point Assessment Organisations</a> from which an employer can select an organisation (to be contracted by a main provider) to deliver the end-point assessment as part of the employer’s agreed apprenticeship programme."
+                            },
+                            {
+                                "title": "Self-directed distance learning",
+                                "content": "This is where the apprentice is working alone with on-line material. The material is not delivered in real time and there is no interactive support."
+                            },
+                            {
+                                "title": "Standard",
+                                "content": "We use the terms ‘standard’ and ‘apprenticeship standard’ to cover the apprenticeship standards which have been approved and published by the Institute for Apprenticeships. Apprentices can only be enrolled against an apprenticeship standard once it is identified as ‘approved for delivery’ on the <a class='govuk-link' href='https://www.instituteforapprenticeships.org/apprenticeship-standards/'>Institute for Apprenticeships</a> website. The Deregulation Act 2015, the Enterprise Act 2016 and the Technical and Further Education Act 2017 inserted the statutory provisions relating to standards (approved English apprenticeships), and the Institute for Apprenticeships and its functions, into ASCLA 2009."
+                            },
+                            {
+                                "title": "Start of learning",
+                                "content": "The date on which learning begins. We do not consider enrolment, induction, diagnostic assessment or prior assessment to be part of learning."
+                            },
+                            {
+                                "title": "Subcontractor",
+                                "content": "A legal entity that has a contractual relationship with a main provider to deliver apprenticeship training funded by us."
+                            },
+                            {
+                                "title": "This document",
+                                "content": "This document refers to the <a class='govuk-link' href='https://www.gov.uk/government/publications/apprenticeship-funding-rules-2018-to-2019'>Apprenticeship Funding Rules for Main Providers</a> August 2018 to July 2019."
+                            },
+                            {
+                                "title": "Training",
+                                "content": "We use the term training to mean the delivery of training and on- programme assessment by a main provider or any organisation contracted to a main provider for this purpose."
+                            },
+                            {
+                                "title": "Training provider",
+                                "content": "Term training provider refers to any organisation on the Register of Apprenticeship Training Providers and appointed by an employer and/or holding a current funding agreement with us or contracted through a main provider for the delivery of training and on- programme assessment, as part of the employer’s agreed apprenticeship programme. This includes companies, charities, bodies, colleges, universities, sole traders, and other types of legal entity, including those who are in the same group as, or are associated with, the main provider. This excludes individuals who are self-employed or supplied by an employment agency and who are working under the main provider’s direction and control, in the same way as an employee."
+                            },
+                            {
+                                "title": "Unique learner number",
+                                "content": "A 10-digit number used to match a learner's achievement to their personal learning record (PLR)."
+                            },
+                            {
+                                "title": "Written agreement",
+                                "content": "The main provider must have a written agreement in place with the assessment organisation and make payment to them for conducting the end-point assessment. The written agreement must set out the arrangements for end-point assessment including arrangements for any re-takes and the transaction of payments."
+                            },
+                            {
                                 "title": "Zero-hour contracts",
                                 "content": "Contracts which do not specify a set number of hours for the employee."
                             }
