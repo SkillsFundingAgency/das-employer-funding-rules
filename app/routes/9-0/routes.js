@@ -240,8 +240,8 @@ module.exports = function (router,_myData) {
                                 doSearch(partglindex.title,_sectionSearch)
                                 doSearch(partglindex.content,_sectionSearch)
                                 // For each 'subparts'
-                                if("subparts" in part) {
-                                    part.subparts.forEach(function(subpart) {
+                                if("subparts" in partglindex) {
+                                    partglindex.subparts.forEach(function(subpart) {
                                         doSearch(subpart.content,_sectionSearch)
                                     });
                                 }
