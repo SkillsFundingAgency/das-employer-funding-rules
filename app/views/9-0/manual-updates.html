@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Manual
+{% endblock %}
+
+{% set _thisManualType = myData.manuals[myData.manual].type %}
+{% set _thisManual = myData.manuals[myData.manual].content %}
+
+{% block content %}
+
+<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+
+    {% if myData.header == "altered" %}
+        {% include "../includes/manual-header-2.html" %}
+    {% else %}
+        {% set _manualHeaderTitle = _thisManual.title|safe  %}
+        {% include "../includes/manual-header.html" %}
+    {% endif %}
+
+    <ol class="breadcrumb-trail">
+        <li class="no-separator"><a href="manual-home?manual={{myData.manual}}">Contents</a></li>
+    </ol>
+
+    <article aria-labelledby="manual-title" id="content">
+        <div class="manual-body">
+            <article aria-labelledby="section-title">
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 id="section-title" class="section-title">
+                            Updates: {{_manualHeaderTitle}}
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
+                    <p class="section-title govuk-!-font-weight-regular">2019</p>
+                    <div class="collapsible-subsections">
+                        <div class="gem-c-govspeak govuk-govspeak ">
+                            
+                            <h2>
+                                15 March 2019
+                            </h2>
+                            <dl class="updates-list">
+                                {% for section in _thisManual.sections %}
+                                    <dt>
+                                        <!-- Section title -->
+                                        <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state ">{{section.title}}{% if section.range %} ({{section.range|safe}}){% endif %}</a>
+                                    </dt>
+                                    <dd>
+                                        {% if section.changenote %}
+                                            {{section.changenote|safe}}
+                                        {% else %}
+                                            {% if loop.index == 2 or loop.index == 5 or loop.index == 6 or loop.index == 9 %}
+                                            Changes made to some of the rules. Online version of the rules created.
+                                            {% else %}
+                                            Online version of the rules created.
+                                            {% endif %}
+                                        {% endif %}
+                                    </dd>
+                                {% endfor %}
+                            </dl>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </article>
+
+    <!-- <div class="download-manual">
+        <p class="govuk-body"><a href="manual-pdf?manual={{myData.manual}}" target="_blank" class="govuk-link govuk-link--no-visited-state">Download this manual (PDF, 250KB)</a></p>
+        <p class="govuk-body">If you would like this manual in another format please email <a href="#">email address here</a>.</p>
+    </div> -->
+
+    <div class="print-page">
+        <a onclick="window.print();return false;" href="#">Print this page</a>
+    </div>
+</div>
+
+{% endblock %}
