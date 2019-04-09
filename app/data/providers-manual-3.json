@@ -4861,7 +4861,7 @@
                             {
                                 "type": "glossary",
                                 "title": "Employer",
-                                "content": "We use the term ‘employer’ to mean an organisation that has a contract of service and an apprenticeship agreement with an apprentice. This can include an apprenticeship training agency (ATA). This may also include a company or charity whose PAYE scheme the employer has connected to their apprenticeship service account in accordance with HMRC’s definition of <a class='govuk-link href='https://www.gov.uk/hmrc-internal-manuals/apprenticeship-levy/alm10200'>connected companies and charities</a>. All references to an ‘employer’ are in relation to the whole organisation and not individual sites or locations, groups, and companies linked by directors."
+                                "content": "We use the term ‘employer’ to mean an organisation that has a contract of service and an apprenticeship agreement with an apprentice. This can include an apprenticeship training agency (ATA). This may also include a company or charity whose PAYE scheme the employer has connected to their apprenticeship service account in accordance with HMRC’s definition of <a class='govuk-link' href='https://www.gov.uk/hmrc-internal-manuals/apprenticeship-levy/alm10200'>connected companies and charities</a>. All references to an ‘employer’ are in relation to the whole organisation and not individual sites or locations, groups, and companies linked by directors."
                             },
                             {
                                 "type": "glossary",
@@ -4952,16 +4952,6 @@
                                 "type": "glossary",
                                 "title": "Learning",
                                 "content": "The term learning in this document, when used, is interchangeable with training."
-                            },
-                            {
-                                "type": "glossary",
-                                "title": "Levy-paying employer",
-                                "content": "An employer with an annual pay bill of over £3 million."
-                            },
-                            {
-                                "type": "glossary",
-                                "title": "Licence to practise",
-                                "content": "Where it is a legal (or statutory) requirement for all practitioners to obtain a licence which confirms the licence holder meets prescribed standards of competence, including situations in which it is unlawful to carry out a specified range of activities for pay without first having obtained a licence."
                             },
                             {
                                 "type": "glossary",
