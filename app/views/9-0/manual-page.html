@@ -482,7 +482,7 @@
                                                             {% set _subsubPartClasses = "" %}
                                                         {% endif %}
 
-                                                        <div class=" subsubpart {{_subsubPartClasses}} ">
+                                                        <div class=" subsubpart {{_subsubPartClasses}} " id="{{subsubpart.id|safe | replace('.', '-')}}">
                                                             {% if subsubpart.type == "list" %}
                                                                 <!-- LIST ARRAY -->
                                                                 {% for listitem in subsubpart.content %}
