@@ -90,7 +90,7 @@
                     <p class="govuk-body">For help and support you can:</p>
                     <ul class="govuk-list govuk-list--bullet">
                         <li>email us at <a href="mailto:SDE.servicedesk@education.gov.uk">SDE.servicedesk@education.gov.uk </a> </li>
-                        <li>phone us on 0370 267 000</li>
+                        <li>phone us on 0370 267 0001</li>
                         <li>contact your provider management advisor </li>
                     </ul>
                     <h3 class="govuk-heading-m">Employers</h3>
@@ -319,7 +319,7 @@
                                     {% endfor %}
 
 
-                                    <div class=" part {{_partClasses}} ">
+                                    <div class=" part {{_partClasses}} " id="{{part.id|safe | replace('.', '-')}}">
 
                                     {% if section.id == "glossary" %}
                                         <h3 class="govuk-heading-s">{{part.title|safe}}</h3>
@@ -419,7 +419,7 @@
                                             {% endif %}
                                         {% endfor %}
                                         
-                                        <div class=" subpart {{_subPartClasses}}" >
+                                        <div class=" subpart {{_subPartClasses}}" id="{{subpart.id|safe | replace('.', '-')}}" >
                                         
                                             {% if subpart.type == "list" %}
                                                 <!-- LIST ARRAY -->
@@ -620,7 +620,7 @@ $(document).ready(function(){
                 _newHREF = _breadcrumbHREF.replace("updatesFilterOn=true", "updatesFilterOn="+_filtered);
             }
             _breadcrumbLink.attr('href',_newHREF)
-
+            
             if(_filtered == true) {
                 _rulesContainer.addClass("show-updates")
                 _rulesContainer.addClass("hide-non-updated")

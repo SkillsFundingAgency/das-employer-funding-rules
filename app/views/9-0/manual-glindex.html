@@ -65,6 +65,9 @@
 
                                     {% set _title = part.title %}
                                     {% set _thisInitial = part.title|truncate(1,true,"") %}
+                                    {% if part.sortoverride %}
+                                        {% set _thisInitial = part.sortoverride|truncate(1,true,"") %}
+                                    {% endif %}
 
                                     {% if _thisInitial != _prevInitial %}
 
@@ -87,32 +90,51 @@
                                     {% set _prevInitial = _thisInitial %}
 
                                         {% if part.type == "see" %}
+
+                                            <!-- See -->
                                             <h3 class="govuk-heading-s" class="govuk-body" id="{{_title | replace(' ', '-')}}">
                                                 {% if part.prefix %}{{part.prefix|safe}}{% endif %}{{_title}}
                                             </h3>
-                                            <p class="govuk-body"><span style="">See</span> <span style=""><a href="#{{part.see | replace(' ', '-')}}" class="govuk-link govuk-link--no-visited-state">{{part.see|safe}}</a></span></p>
+                                            <p class="govuk-body"><span>See</span> {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span><a href="#{{_see | replace(' ', '-')}}" class="govuk-link govuk-link--no-visited-state">{{_see|safe}}</a></span>{% endfor %}</p>
+
                                         {% else %}
                                             <h3 class="govuk-heading-s" class="govuk-body" id="{{_title | replace(' ', '-')}}">
-                                                {% if part.prefix %}{{part.prefix|safe}}{% endif %}{{_title}}</span><span style="font-weight: normal"> - <a href="#" class="govuk-link govuk-link--no-visited-state">{{_rulePrefix}}32 to {{_rulePrefix}}56</a>, <a href="#" class="govuk-link govuk-link--no-visited-state">{{_rulePrefix}}78</a> and <a href="#" class="govuk-link govuk-link--no-visited-state">{{_rulePrefix}}83</a></span>
+                                                {% if part.prefix %}{{part.prefix|safe}}{% endif %}{{_title}}</span>
+                                                
+                                                <!-- Cross refs (code all on 1 line otherwise a space will be rendered before the comma) -->
+                                                {% if part.crossrefs %}{% for _crossref in part.crossrefs %}{% set _crossrefText = _rulePrefix + _crossref.ref %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false' %}{% if _crossref.type == "section" %}{% for section in _thisManual.sections %}{% if section.id == _crossref.sectionid %}{% set _crossrefText = section.title %}{% if section.range %}{% set _crossrefText = section.title + ' (' + section.range + ')' %}{% endif %}{% endif %}{% endfor %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false#' + _crossref.ref|replace('.', '-') %}{% endif %}{% if loop.first == true %}<span style="font-weight: normal"> - {% endif %}{% if part.crossrefs.length > 1 and loop.first == false %}{% if loop.last %} and {% else %}, {% endif %}{% endif %}<span><a href="{{_crossrefLink}}" class="govuk-link govuk-link--no-visited-state">{{_crossrefText}}</a></span>{% if loop.last == true %}</span>{% endif %}{% endfor %}{% endif %}
+                                                <!-- Cross refs END -->
+
                                             </h3>
-                                            
-                                            <!-- See also -->
-                                            {% if part.seealso %}<p class="govuk-body"><span style="">See also</span> <span style=""><a href="#{{part.seealso | replace(' ', '-')}}" class="govuk-link govuk-link--no-visited-state">{{part.seealso|safe}}</a></span></p>{% endif %}
 
                                             <p class="govuk-body">{{part.content|safe|trim}}</p>
+
+                                            <!-- TODO how to handle subparts conten below the lists e.g. Apprentice rate -->
+                                            
                                             {% if part.subparts %}
-                                            <ul class='govuk-list govuk-list--bullet'>
+                                                {% for _subpart in part.subparts %}
+                                                    {% if _subpart.type == "list" %}
+                                                    <ul class='govuk-list govuk-list--bullet'>
+                                                    {% endif %}
+                                                {% for _item in _subpart.content %}
+                                                    {% if _subpart.type == "list" %}
+                                                    <li>{{_item|safe|trim}}</li>
+                                                    {% else %}
+                                                    <p class="govuk-body">{{_item|safe|trim}}</p>
+                                                    {% endif %}
+                                                {% endfor %}
+
+                                                    {% if _subpart.type == "list" %}
+                                                    </ul>
+                                                    {% endif %}
+                                                {% endfor %}
                                             {% endif %}
-                                            {% for subpart in part.subparts %}
-                                                {% if subpart.type == "list" %}
-                                                    {% for listitem in subpart.content %}
-                                                    <li>{{listitem|safe|trim}}</li>
-                                                    {% endfor %}
-                                                {% endif %}
-                                            {% endfor %}
-                                            {% if part.subparts %}
-                                            </ul>
+
+                                            <!-- See also -->
+                                            {% if part.seealso %}
+                                            <p class="govuk-body"><span>See also</span> {% for _seealso in part.seealso %}{% if part.seealso.length > 1 and loop.first == false %}{% if loop.last %} and {% else %}, {% endif %}{% endif %}<span><a href="#{{_seealso | replace(' ', '-')}}" class="govuk-link govuk-link--no-visited-state">{{_seealso|safe}}</a></span>{% endfor %}</p>
                                             {% endif %}
+
                                         {% endif %}
 
                                     <!-- end final list -->

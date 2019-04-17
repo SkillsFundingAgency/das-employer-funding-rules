@@ -17,26 +17,50 @@ var _myData = {
 }
 
 // Sort GLINDEXES
+
 Object.keys(_myData.manuals).map(function(manual, index) {
     _myData.manuals[manual].content.sections.forEach(function(section) {
         if(section.id == "glossary" && "subsections" in section) {
             section.subsections.forEach(function(subsection) {
                 if(subsection.partsglindex){
+
+                    //Standard - Sort on title A-Z
+                    // subsection.partsglindex.sort(function(a,b){
+                    //     var returnValue = 0;
+                    //     if(b.title.toUpperCase() > a.title.toUpperCase()){
+                    //         returnValue = -1
+                    //     } else if(a.title.toUpperCase() > b.title.toUpperCase()){
+                    //         returnValue = 1
+                    //     }
+                    //     return returnValue;
+                    // })
+
+                    //Special - Sort on title A-Z but special characters appear first
                     subsection.partsglindex.sort(function(a,b){
-                        var returnValue = 0;
-                        //Sort on title A-Z
-                        if(b.title.toUpperCase() > a.title.toUpperCase()){
-                            returnValue = -1
-                        } else if(a.title.toUpperCase() > b.title.toUpperCase()){
-                            returnValue = 1
+                        var alphabet = '*!@_.()#^&%-=+01234567989ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+                            _a_string = (a.sortoverride) ? (a.sortoverride) : (a.title),
+                            _b_string = (b.sortoverride) ? (b.sortoverride) : (b.title)
+                        var index_a = alphabet.indexOf(_a_string.toUpperCase()[0]),
+                            index_b = alphabet.indexOf(_b_string.toUpperCase()[0]);
+                        if (index_a === index_b) {
+                            // same first character, sort regular
+                            if (_a_string.toUpperCase() < _b_string.toUpperCase()) {
+                                return -1;
+                            } else if (_a_string.toUpperCase() > _b_string.toUpperCase()) {
+                                return 1;
+                            }
+                            return 0;
+                        } else {
+                            return index_a - index_b;
                         }
-                        return returnValue;
                     })
+
                 }
             });
         }
     });
 });
+
 
 require('./routes/3-0/routes.js')(router,JSON.parse(JSON.stringify(_myData)));
 require('./routes/4-0/routes.js')(router,JSON.parse(JSON.stringify(_myData)));

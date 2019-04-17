@@ -242,7 +242,14 @@ module.exports = function (router,_myData) {
                                 // For each 'subparts'
                                 if("subparts" in partglindex) {
                                     partglindex.subparts.forEach(function(subpart) {
-                                        doSearch(subpart.content,_sectionSearch)
+                                        // For each content part in subparts (if array)
+                                        if(Array.isArray(subpart.content)){
+                                            subpart.content.forEach(function(_contentItem){
+                                                doSearch(_contentItem,_sectionSearch)
+                                            })
+                                        } else {
+                                            doSearch(subpart.content,_sectionSearch)
+                                        }
                                     });
                                 }
                             });
