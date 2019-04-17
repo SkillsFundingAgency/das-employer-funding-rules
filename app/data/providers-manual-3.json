@@ -1630,57 +1630,49 @@
                         "id": "support-english-maths-training",
                         "type": "subsection",
                         "title": "Support for English and maths training",
-                        "updates": [
-                            {
-                                "title": "Support for English and maths training",
-                                "content": "Restructure: this section has been restructured further for ease of understanding and further clarification.",
-                                "rule": "P123–143"
-                            },
-                            {
-                                "content": "Clarification: an introduction to clarify the underpinning policy behind English and maths.",
-                                "rule": "P123"
-                            },
-                            {
-                                "content": "Restructure: new section explaining achievement levels for English and maths requirements.",
-                                "rule": "P124-125"
-                            },
-                            {
-                                "content": "Restructure: revised acceptable equivalents for English and maths for apprenticeship standards are set out in a published list on GOV.UK (this will be in place when the rules are published on 1 August 2018.",
-                                "rule": "P126"
-                            },
-                            {
-                                "content": "Restructure: new section explaining what we will fund, including exceptional circumstances (such as re-takes).",
-                                "rule": "P126-135"
-                            },
-                            {
-                                "content": "Restructure: section outlining the judgement of an apprentice’s current level.",
-                                "rule": "P136"
-                            },
-                            {
-                                "content": "Restructure: section on the exceptions to the regular English and maths minimum requirements.",
-                                "rule": "P137-143"
-                            }
-                        ],
                         "parts":[
-                            {
-                                "type": "intro",
-                                "content": "English and maths are essential to supporting longer-term career prospects. This is why all apprentices must be supported to gain these essential skills and secure recognised qualifications.",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "We want as many apprentices as possible to achieve level 2 English and maths.",
-                                            "We expect all apprentices to who do not have level 2 in English and maths to work towards and take the assessment for the achievement of level 2 in these subjects."
-                                        ]
-                                    }
-                                ]
-                            },
                             {
                                 "type": "flow"
                             },
                             {
+                                "id": "123",
+                                "content": "English and maths are essential to supporting longer-term career prospects. This is why all apprentices must be supported to gain these essential skills and secure recognised qualifications."
+                            },
+                            {
+                                "id": "achievement-levels",
+                                "type": "header",
+                                "content": "Achievement levels"
+                            },
+                            {
+                                "id": "124",
+                                "content": "As part of our ambition for a world-class technical education system and in line with recommendations from independent experts, progression towards and attainment of, approved level 2 English and maths qualifications is an important part of the apprenticeship programme. For those undertaking a level 3 or higher apprenticeship, it is a requirement that they should hold or achieve an approved level 2 in both subjects before they can successfully complete the apprenticeship."
+                            },
+                            {
+                                "id": "125",
+                                "content": "For apprentices undertaking a level 2 apprenticeship:",
+                                "subparts":[
+                                    {
+                                        "id": "125.1",
+                                        "content": "We want as many apprentices as possible to achieve level 2 English and maths and we expect all apprentices to work towards level 2 in these subjects and to take the assessment for the achievement of level 2. We recognise that for some a level 2 may be difficult to achieve. In these circumstances, we will accept achievement of level 1 English and maths as sufficient for the successful completion of their apprenticeship, except where the framework or standard specifies a higher level of English and/or maths must be achieved."
+                                    },
+                                    {
+                                        "id": "125.2",
+                                        "content": "For individuals with special educational needs, learning difficulties or disabilities, who struggle to achieve the regular English and/or maths minimum requirement due to the nature of their difficulty or disability, we will accept achievement of entry level 3 functional skills in English and/or maths (see paragraphs P137 to P143 below)."
+                                    },
+                                    {
+                                        "id": "125.3",
+                                        "content": "You should make every effort to enable apprentices with special educational needs, learning difficulties or disabilities to achieve the minimum English and maths requirements of the specific apprenticeship (as set out in paragraphs P124 to P136). This includes appropriate use of access arrangements, reasonable adjustments and other approved qualifications that are detailed in the <a class='govuk-link' href='https://www.gov.uk/government/publications/qualifications-getting-approval-for-funding'>2018 to 2018 list of qualifications in the English and maths legal entitlement offer</a>."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "what-we-will-fund",
+                                "type": "header",
+                                "content": "What we will fund"
+                            },
+                            {
                                 "id": "126",
-                                "content": "Where an apprentice does not already hold an approved level 2 qualification in English and maths we will provide additional funding, at a set single rate, for that apprentice to achieve up to an approved level 2 qualification in English and maths.",
+                                "content": "We will fund an apprentice to achieve up to an approved level 2 qualification in English and maths where they do not already hold a suitable equivalent qualification. Acceptable equivalents are set out in a published list on <a class='govuk-link' href='https://www.gov.uk/government/publications/qualifications-getting-approval-for-funding'>GOV.UK</a> called ‘Acceptable current and prior equivalent qualifications for English and maths minimum requirements in apprenticeship standards at level 2 and above’.",
                                 "updates": [
                                     {
                                         "content": "Restructure: revised acceptable equivalents for English and maths for apprenticeship standards are set out in a published list on GOV.UK (this will be in place when the rules are published on 1 August 2018."
@@ -1688,167 +1680,106 @@
                                 ]
                             },
                             {
-                                "type": "additional",
-                                "title": "What is the additional funding for English and maths?",
-                                "content": "The additional funding for English and maths is:",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "Available even if the minimum required level of English and maths specified in the standard or framework is lower than level 2",
-                                            "In addition to any other apprenticeship funding we may provide. ",
-                                            "Not deducted from the employer’s apprenticeship service account ",
-                                            "Not dependent on employer co-investment",
-                                            "Provided at set rates (see HERE_XXX for the funding rates)."
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
                                 "id": "127",
-                                "content": "Apprentices must achieve or surpass the minimum required level of English and maths specified in the framework or standard before they can successfully complete their apprenticeship except in the following circumstances:",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "Apprentices undertaking a level 3 or higher apprenticeship must hold or achieve an approved level 2 in both English and maths before they can successfully complete the apprenticeship.",
-                                            "Individuals with special educational needs, learning difficulties or disabilities who struggle to achieve the regular English and/or maths minimum requirement due to the nature of their difficulty or disability (see paragraphs P137 to P143 below)."
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "additional",
-                                "title": "Where to find requirements for frameworks and standards",
-                                "content": "Requirements for frameworks and standards can be found HERE XXX.<br><br>Acceptable equivalents for qualifications are set out in a published list on GOV.UK called 'Acceptable current and prior equivalent qualifications for English and maths minimum requirements in apprenticeship standards at level 2 and above.'"
-                            },
-                            {
-                                "id": "further-conditions-english-maths-funding",
-                                "type": "header",
-                                "content": "Further conditions for additional English and maths funding"
+                                "content": "The ESFA will pay you for this at the single rate set by us for each eligible qualification undertaken. It will not be deducted from the employer’s apprenticeship service account or require employer co-investment."
                             },
                             {
                                 "id": "128",
-                                "content": "If the apprentice is made redundant, they are allowed to continue with their English and/or maths up to and including level 2. You can continue to claim funds at the published apprenticeship English and maths rates."
+                                "content": "You can claim funding for apprentices who have not previously attained a GCSE grade A* to C (or 9 to 4) in English or maths (or both) on the day they start the following qualifications:",
+                                "subparts":[
+                                    {
+                                        "id": "128.1",
+                                        "content": "GCSE English language or maths (or both); or"
+                                    },
+                                    {
+                                        "id": "128.2",
+                                        "content": "Functional skills English or maths at level 2 (or both)."
+                                    }
+                                ]
                             },
                             {
                                 "id": "129",
-                                "content": "You must not claim funding from the adult education budget for English or maths undertaken by an apprentice."
+                                "content": "For level 2 apprenticeships, where a level 2 qualification in English or maths is not required for the apprenticeship and the apprentice does not already hold the acceptable qualifications for their framework or standard, then main providers should adopt the following approach and can claim funding for an apprentice in the following scenarios:",
+                                "subparts":[
+                                    {
+                                        "id": "129.1",
+                                        "content": "Where the apprentice holds neither level 1 nor level 2 approved qualifications and is judged by the main provider to be working below level 1 standard in English/maths:<br><br>Apprentices must study towards and achieve English and maths qualifications of at least level 1 (functional skills level 1 or GCSE grade E or 2), and start, study towards and take the assessments for level 2 qualifications in these subjects. The apprentice is not required to achieve level 2 qualifications in order to successfully complete their apprenticeship. These requirements must be fulfilled before the apprentice takes the end- point assessment or achieves an apprenticeship framework.<br><br>Main providers must also ensure that any level 1 training and assessments are taken at an early enough stage in the apprenticeship to allow sufficient time for an apprentice to study towards and take the assessments for the level 2 qualification, after a level 1 has been achieved. Where the apprentice does not achieve the level 2, main providers can claim only for the training given."
+                                    },
+                                    {
+                                        "id": "129.2",
+                                        "content": "Where the apprentice does not already hold approved level 1 qualifications, but is judged by the main provider to be working at level 1 standard in English/maths:<br><br>Apprentices must start, continue to study and take the assessment for level 2 English and maths (functional skills level 2 or GCSE). If they do not achieve a level 2, you must then ensure they take the assessment for level 1 maths and/or English – this is because they must secure the level 1 qualification in order to complete their apprenticeship.<br><br>You must ensure that any level 2 training and assessments are taken at an early enough stage in the apprenticeship to allow time for the apprentice to take the level 1 assessment if they first do not achieve the level 2. In this scenario we will not fund costs for level 1 training and assessment. These requirements must be fulfilled before the apprentice takes the end-point assessment or achieves an apprenticeship framework."
+                                    },
+                                    {
+                                        "id": "129.3",
+                                        "content": "Where the apprentice already holds approved level 1 qualifications:<br><br>Apprentices must start, continue to study and take the assessments for a level 2 English and/or maths (functional skills level 2 or GCSE). This requirement must be fulfilled before the apprentice takes the end-point assessment or achieves an apprenticeship framework."
+                                    }
+                                ]
                             },
                             {
                                 "id": "130",
-                                "content": "Any English and/or maths requirements for the achievement of an apprenticeship standard or framework not set in paras aaa to bbb must be funded from an employer’s apprenticeship service account or through government-employer co-investment."
+                                "content": "We will fund functional skills English and/or maths at level 1 or below where you (or a subcontractor) has conducted an initial assessment that shows the apprentice needs to study at a lower level before being able to achieve their level 2. The apprentice must be judged to be below level 1 to be funded for a level 1 qualification."
                             },
                             {
                                 "id": "131",
-                                "content": "You must provide evidence of prior attainment of English and maths. Guidance for obtaining acceptable evidence is provided in the evidence pack [LINK XXX].<br><br>Where the apprentice holds an approved qualification but cannot provide evidence of that qualification, the rules in P129.2 apply. "
+                                "content": "In exceptional circumstances, we will fund:",
+                                "subparts":[
+                                    {
+                                        "id": "131.1",
+                                        "content": "re-takes of English and/or maths qualifications where apprentices receive further teaching to achieve the required English and/or maths functional skills qualification; and"
+                                    },
+                                    {
+                                        "id": "131.2",
+                                        "content": "<a class='govuk-link' href='https://www.gov.uk/government/publications/qualifications-getting-approval-for-funding'>other approved qualifications</a> (including components, where applicable) where an apprentice will need significant, additional numeracy and literacy support that is not met through immediate entry onto a GCSE or functional skills course."
+                                    }
+                                ]
                             },
                             {
                                 "id": "132",
-                                "content": "If an apprentice does not have acceptable evidence of previous attainment of English and/or maths you should carry out a judgement of their current level. You must use current assessment tools based on the national literacy and numeracy standards and core curriculum to do this."
-                            },{
-                                "type": "intro",
-                                "content": "Where the apprentice does not already hold the English and maths at level 2 or above, the additional funding will be provided subject to the conditions in the relevant section below:",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "Apprentices holding level 1 English and/or maths ",
-                                            "Apprentices operating at level 1, but without approved English and/or maths qualifications",
-                                            "Apprentices operating below level 1 English and/or maths",
-                                            "Apprentices without approved English and/or maths qualifications",
-                                           " Apprentices with special educational needs, learning difficulties or disabilities that affect achievement of the English and/or maths minimum requirement "
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "header",
-                                "id": "apprentices-holding-level-1",
-                                "content": "Apprentices holding level 1 English and/or maths"
+                                "content": "If the apprentice is made redundant, they are allowed to continue with their English and/or maths up to and including level 2. You can continue to claim funds at the published apprenticeship English and maths rates."
                             },
                             {
                                 "id": "133",
-                                "content": "Where the apprentice already holds approved level 1 qualifications:",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "The apprentice must start, continue to study and take the assessments for a level 2 English and/or maths (functional skills level 2 or GCSE), which we will fund. "
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "additional",
-                                "title": "When the requirement must be fulfilled ",
-                                "content": "This requirement must be fulfilled before the apprentice takes the end-point assessment or achieves an apprenticeship framework."
-                            },
-                            {
-                                "type": "header",
-                                "id": "apprentices-holding-level-1-without-approved-english",
-                                "content": "Apprentices operating at level 1, but without approved English and/or maths qualifications (or cannot offer proof of their qualifications)"
+                                "content": "You must not claim funding from the adult education budget for English or maths undertaken by an apprentice."
                             },
                             {
                                 "id": "134",
-                                "content": "Where the apprentice does not already hold approved level 1 qualifications, but is judged by the main provider to be working at level 1 standard in English/maths:",
-                                "subparts":[
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "The apprentice must start, continue to study and then take the assessment for level 2 English and maths (functional skills level 2 or GCSE), which we will fund.",
-                                            "If the apprentice does not achieve a level 2, the apprentice must still achieve level 1 English and maths to complete their apprenticeship. You must ensure they take the assessment for level 1 English and/or maths. In this scenario we will not fund costs for level 1 training and assessment. " ,
-                                            "You must ensure that any level 2 training and assessments are taken at an early enough stage in the apprenticeship to allow time for the apprentice to take the level 1 assessment if they first do not achieve the level 2. "
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "header",
-                                "id": "apprentices-operating-below-level-1",
-                                "content": "Apprentices operating below level 1 English and/or maths"
+                                "content": "Any English and/or maths requirements for the achievement of an apprenticeship standard or framework not set out above must be funded from an employer’s apprenticeship service account or through government-employer co-investment."
                             },
                             {
                                 "id": "135",
-                                "content": "Where the apprentice holds neither level 1 nor level 2 approved qualifications and is judged by the main provider to be working below level 1 standard in English/maths:",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "The apprentices must study towards and achieve English and maths qualifications of at least level 1 (functional skills level 1 or GCSE grade E or 2)",
-                                            "The apprentice must also start, study towards and take the assessments for level 2 qualifications in these subjects." ,
-                                            "These requirements must be fulfilled before the apprentice takes the end-point assessment or achieves an apprenticeship framework, therefore main providers must ensure that any level 1 training and assessments are taken at an early enough stage in the apprenticeship to allow sufficient time for an apprentice to study towards and take the assessments for the level 2 qualification, after a level 1 has been achieved. ",
-                                            "Where the apprentice does not achieve a level 2, main providers can claim only for the training given."
-                                        ]
-                                    }
-                                ]
+                                "content": "You must provide evidence of prior attainment of English and maths. Guidance for obtaining acceptable evidence is provided in the evidence pack."
                             },
                             {
-                                "type": "additional",
-                                "title": "Does the apprentice need to achieve level 2 qualifications?",
-                                "content": "The apprentice is not required to achieve level 2 qualifications in order to successfully complete their apprenticeship unless specifically stated in the standard or framework. "
+                                "id": "judgement-apprentices-current-level",
+                                "type": "header",
+                                "content": "Judgement of an apprentice’s current level"
                             },
                             {
                                 "id": "136",
-                                "content": "You can claim funding for apprentices who have not previously attained a GCSE grade A* to C (or 9 to 4) in English or maths (or both) level 2 English and maths on the day they start the following qualifications:",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "GCSE English language or maths (or both); or",
-                                            "Functional skills English or maths at level 2 (or both)"
-                                        ]
-                                    }
-                                ]
+                                "content": "If an apprentice does not have acceptable evidence of previous attainment of English and/or maths you should carry out a judgement of their current level. You must use current assessment tools based on the national literacy and numeracy standards and core curriculum to do this."
                             },
                             {
+                                "id": "exceptions-english-maths-minimum-requirements",
                                 "type": "header",
-                                "id": "apprentices-without-approved",
-                                "content": "Apprentices without approved English and/or maths qualifications"
+                                "content": "Exceptions to the regular English and maths minimum requirements, for people with special educational needs, learning difficulties or disabilities"
                             },
                             {
                                 "id": "137",
-                                "content": "For level 2 apprenticeships where a level 2 qualification in English or maths is not required for the apprenticeship and the apprentice does not already hold acceptable qualifications for their framework or standard, then main providers should adopt the following approach and can claim funding for an apprentice in the following scenarios:",
+                                "content": "Individuals should be considered on a case-by-case basis and should satisfy all of the following conditions:",
+                                "subparts":[
+                                    {
+                                        "id": "137.1",
+                                        "content": "You and the employer expect the apprentice to achieve all other aspects of the apprenticeship requirements, become occupationally competent and achieve entry level 3 functional skills in the adjusted subject(s) before the end of their apprenticeship."
+                                    },
+                                    {
+                                        "id": "137.2",
+                                        "content": "The apprentice has either an existing or previously issued education, health and care (EHC) plan, a statement of special educational need (SEN) or a learning difficulty assessment (LDA)."
+                                    },
+                                    {
+                                        "id": "137.3",
+                                        "content": "You hold or have conducted an evidenced judgement demonstrating that even with support, reasonable adjustments and stepping stone qualifications, the apprentice will not be able to achieve English and/or maths to the minimum level within the timeframe projected for them to complete all the occupational elements. This would apply to both frameworks and standards."
+                                    }
+                                ],
                                 "updates": [
                                     {
                                         "content": "Restructure: section on the exceptions to the regular English and maths minimum requirements."
@@ -1857,101 +1788,53 @@
                             },
                             {
                                 "id": "138",
-                                "content": "We will fund functional skills English and/or maths at level 1 or below where:",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "you (or a subcontractor) have conducted an initial assessment that shows the apprentice needs to study at a lower level before being able to achieve their level 2. The apprentice must be judged to be below level 1 to be funded for a level 1 qualification."
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "id": "139",
-                                "content": "Retakes: We will fund re-takes of English and/or maths qualifications in exceptional circumstances and only if:",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "The apprentice requires further teaching to achieve the required English and/or maths functional skills qualification"
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "id": "140",
-                                "content": "We will fund other approved qualifications (including components, where applicable) in exceptional circumstances and where:",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                           " The apprentice will need significant, additional numeracy and literacy support that is not met through immediate entry onto a GCSE or functional skills course."
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "header",
-                                "id": "apprentices-with-special-educational-needs",
-                                "content": "Apprentices with special educational needs, learning difficulties or disabilities that affect achievement of the English and/or maths minimum requirement"
-                            },
-                            {
-                                "type": "intro",
-                                "content": "You should make every effort to enable apprentices with special educational needs, learning difficulties or disabilities to achieve the minimum English and maths requirements of the specific apprenticeship as set out in paragraphs P124 to P136). This includes appropriate use of access arrangements, reasonable adjustments and other approved qualifications that are detailed in the 2018 to 2019 list of qualifications in the English and maths legal entitlement offer."
-                            },
-                            {
-                                "id": "141",
-                                "content": "Individuals should be assessed on a case-by-case basis and should satisfy all of the following conditions:",
-                                "subparts": [
-                                    {
-                                        "type": "list",
-                                        "content": [
-                                            "You and the employer expect the apprentice to achieve all other aspects of the apprenticeship requirements, become occupationally competent and achieve entry level 3 functional skills in the adjusted subject(s) before the end of their apprenticeship.",
-                                            "The apprentice has either an existing or previously issued education, health and care (EHC) plan, a statement of special educational need (SEN) or a learning difficulty assessment (LDA).",
-                                            "You hold or have conducted an evidenced judgement demonstrating that even with support, reasonable adjustments and stepping stone qualifications, the apprentice will not be able to achieve English and/or maths to the minimum level within the timeframe projected for them to complete all the occupational elements. This would apply to both frameworks and standards."
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "id": "142",
                                 "content": "Depending on the apprentice’s individual circumstances and outcome of your judgement, this exception may apply to either English and maths (or both). If the exception applies to only one subject, the regular requirements for the non-adjusted subject will apply."
                             },
                             {
-                                "id": "143",
+                                "id": "139",
                                 "content": "Although the apprentice will be exempt from the regular English and/or maths minimum requirements, main providers must plan and evidence how the apprentice will access further literacy and numeracy development, including level 1 and level 2 courses, as part of their overall training provision, if appropriate."
                             },
                             {
-                                "id": "144",
+                                "id": "140",
                                 "content": "The judgement must be formal and structured and conducted by an appropriate professional associated with the main provider (or subcontractor), such as the head of SEN or student support. It must be conducted within eight weeks of an apprentice beginning their apprenticeship and must include:",
-                                "subparts": [
+                                "subparts":[
                                     {
-                                        "type": "list",
-                                        "content": [
-                                            "judgement of the apprentice’s current English and maths ability.",
-                                            "Information on how the learning difficulty or disability affects the apprentice’s English and maths abilities and a clear indication of whether one or both English and maths are affected.",
-                                            "Assessment of the apprentice’s ability to meet the regular English and maths requirements even with appropriate support in place.",
-                                            "Creation of a recommended learning plan to enable the apprentice to achieve entry-level 3 functional skills in the adjusted subject(s) and, where appropriate, to continue to build on their literacy and numeracy skills by accessing further courses; and",
-                                            "copies of an education, health and care (EHC) plan, a statement of special educational need (SEN) or a learning difficulty assessment (LDA)."
-                                        ]
+                                        "id": "140.1",
+                                        "content": "judgement of the apprentice’s current English and maths ability;"
+                                    },
+                                    {
+                                        "id": "140.2",
+                                        "content": "information on how the learning difficulty or disability affects the apprentice’s English and maths abilities and a clear indication of whether one or both English and maths are affected;"
+                                    },
+                                    {
+                                        "id": "140.3",
+                                        "content": "judgement of the apprentice’s ability to meet the regular English and maths requirements even with appropriate support in place;"
+                                    },
+                                    {
+                                        "id": "140.4",
+                                        "content": "creation of a recommended learning plan to enable the apprentice to achieve entry-level 3 functional skills in the adjusted subject(s) and, where appropriate, to continue to build on their literacy and numeracy skills by accessing further courses; and"
+                                    },
+                                    {
+                                        "id": "140.5",
+                                        "content": "copies of an education, health and care (EHC) plan, a statement of special educational need (SEN) or a learning difficulty assessment (LDA)."
                                     }
                                 ]
                             },
                             {
-                                "id": "145",
+                                "id": "141",
                                 "content": "You must retain all elements of the judgement in the evidence pack."
                             },
                             {
-                                "id": "146",
+                                "id": "142",
                                 "content": "If the apprentice disagrees with the judgement outcome, you must provide a facility for the apprentice to request a second opinion. You must ensure that a second SEN professional independently reviews the outcome. You may determine the format of the review process."
                             },
                             {
-                                "id": "147",
-                                "content": "Where the apprentice needs to change to entry level 3 for English and/or maths due to their disability or learning difficulty the main provider should record this in the ILR as a change in the usual way."
+                                "id": "143",
+                                "content": "Where the apprentice needs to change to entry level 3 for English and/or maths due to their disability or learning difficulty, the main provider should record this in the ILR as a change in the usual way."
                             }
                         ]
                     },
+
                     {
                         "id": "end-point-assessments",
                         "type": "subsection",
