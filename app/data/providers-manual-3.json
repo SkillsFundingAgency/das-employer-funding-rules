@@ -4960,14 +4960,14 @@
                                 "title": "20% off-the-job",
                                 "type": "see",
                                 "see": [
-                                    "Off-the-job training"
+                                    "Off-the-job (OTJ) training"
                                 ]
                             },
                             {
                                 "title": "20% rule",
                                 "type": "see",
                                 "see": [
-                                    "Off-the-job training"
+                                    "Off-the-job (OTJ) training"
                                 ]
                             },
                             {
@@ -5008,14 +5008,14 @@
                                 "title": "Account",
                                 "type": "see",
                                 "see": [
-                                    "Apprenticeship service (digital account)"
+                                    "Apprenticeship service digital account"
                                 ]
                             },
                             {
                                 "title": "Additional financial support",
                                 "type": "see",
                                 "see": [
-                                    "Additional learning support"
+                                    "Additional learning support (ALS)"
                                 ]
                             },
                             {
@@ -5058,7 +5058,7 @@
                             {
                                 "title": "ALS",
                                 "see": [
-                                    "Additional learning support"
+                                    "Additional learning support (ALS)"
                                 ],
                                 "type": "see"
                             },
@@ -5086,7 +5086,7 @@
                                     "Annual leave",
                                     "Employee",
                                     "National Minimum Wage",
-                                    "Off-the-job training"
+                                    "Off-the-job (OTJ) training"
                                 ]
                             },
                             {
@@ -5217,7 +5217,7 @@
                                 "title": "Block release",
                                 "content": "When an individual takes a period of time off work to study at college or university.",
                                 "seealso": [
-                                    "Off-the-job training"
+                                    "Off-the-job (OTJ) training"
                                 ]
                             },
                             {
@@ -5239,14 +5239,14 @@
                                 "content": "15 minimum standards that apprentices must achieve for specific job roles in the health and social care sector. We treat this as a Licence to practise.",
                                 "seealso": [
                                     "Licence to practice",
-                                    "Standards"
+                                    "Standard"
                                 ]
                             },
                             {
                                 "title": "Care leaver",
                                 "content": "An individual aged 16-24 who has left the care of their Local Authority.",
                                 "seealso": [
-                                    "Care leaver bursary"
+                                    "Care leavers bursary"
                                 ]
                             },
                             {
@@ -5343,14 +5343,14 @@
                             {
                                 "title": "DAS account",
                                 "see": [
-                                    "Apprenticeship service (digital account)"
+                                    "Apprenticeship service digital account"
                                 ],
                                 "type": "see"
                             },
                             {
                                 "title": "Digital account",
                                 "see": [
-                                    "Apprenticeship service (digital account)"
+                                    "Apprenticeship service digital account"
                                 ],
                                 "type": "see"
                             },
@@ -5387,7 +5387,7 @@
                             {
                                 "title": "Employer account",
                                 "see": [
-                                    "Apprenticeship service (digital account)"
+                                    "Apprenticeship service digital account"
                                 ],
                                 "type": "see"
                             },
@@ -5706,14 +5706,14 @@
                                 "type": "see",
                                 "see": [
                                     "Annual leave",
-                                    "Off-the-job training"
+                                    "Off-the-job (OTJ) training"
                                 ]
                             },
                             {
                                 "title": "Time out",
                                 "type": "see",
                                 "see": [
-                                    "Off-the-job training"
+                                    "Off-the-job (OTJ) training"
                                 ]
                             },
                             {
@@ -5743,7 +5743,7 @@
                                 "title": "Wage",
                                 "type": "see",
                                 "see": [
-                                    "Apprenticeship rate",
+                                    "Apprentice rate",
                                     "National Minimum Wage"
                                 ]
                             },
