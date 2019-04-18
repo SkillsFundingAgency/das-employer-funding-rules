@@ -5307,44 +5307,6 @@
                                     "Apprenticeship service digital account",
                                     "Co-investment rate",
                                     "Non-levy paying employer"
-                                ],
-                                "crossrefs": [
-                                    {
-                                        "sectionid": "apprenticeships-funded-transfers",
-                                        "type": "section"
-                                    },
-                                    {
-                                        "sectionid": "annex-a",
-                                        "type": "section"
-                                    },
-                                    {
-                                        "sectionid": "changes-circumstances",
-                                        "type": "section"
-                                    },
-                                    {
-                                        "sectionid": "evidence-requirements",
-                                        "type": "section"
-                                    },
-                                    {
-                                        "sectionid": "intro-and-purpose",
-                                        "type": "section"
-                                    },
-                                    {
-                                        "sectionid": "paying-apprenticeship",
-                                        "type": "section"
-                                    },
-                                    {
-                                        "sectionid": "what-can-funded",
-                                        "type": "section"
-                                    },
-                                    {
-                                        "sectionid": "what-apprenticeship",
-                                        "type": "section"
-                                    },
-                                    {
-                                        "sectionid": "who-can-funded",
-                                        "type": "section"
-                                    }
                                 ]
                             },
                             {
@@ -5417,7 +5379,6 @@
                             },
                             {
                                 "title": "Employer-provider",
-                                "sortoverride": "Employer a",
                                 "content": "Any organisation who delivers some, or all, of the ‘off-the-job’ training element of an apprenticeship to their own staff and holds a contract with us through which we directly route funds from their apprenticeship service account or government-employer co-investment. The employer-provider will have overall responsibility for the training and on-programme assessment conducted by themselves, their delivery subcontractors and will have a contractual relationship for the end-point assessment conducted by an end-point assessment organisation. The payment for the end-point assessment is through the employer-provider.",
                                 "seealso": [
                                     "Off-the-job (OTJ) training"
