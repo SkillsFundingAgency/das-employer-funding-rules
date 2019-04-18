@@ -56,7 +56,6 @@
 
                             {% for subsection in section.subsections %}
 
-                                {% set _firstList = "true" %}
                                 {% set _prevInitial = "" %}
             
                                 <!-- Letter groups -->
@@ -69,22 +68,18 @@
                                         {% set _thisInitial = part.sortoverride|truncate(1,true,"") %}
                                     {% endif %}
 
-                                    {% if _thisInitial != _prevInitial %}
-
-                                        <!-- end previous list -->
-                                        {% if _firstList == "false" %}
-                                            <!-- </ul> -->
-                                        {% endif %}
-                                        {% set _firstList = "false" %}
-
-                                        <!-- new letter rendered (_thisInitial) -->
+                                    {% if loop.first == true and part.isAtoZ == false %}
+                                        <!-- Number range -->
                                         <h2 id="{{_thisInitial}}" >
-                                            {{_thisInitial}}
+                                            0-9
                                         </h2>
-
-                                        <!-- new list starts -->
-                                        <!-- <ul class="govuk-list govuk-list--bullet"> -->
-
+                                    {% else %}
+                                        {% if _thisInitial != _prevInitial and part.isAtoZ == true %}
+                                            <!-- new letter rendered (_thisInitial) -->
+                                            <h2 id="{{_thisInitial}}" >
+                                                {{_thisInitial}}
+                                            </h2>
+                                        {% endif %}
                                     {% endif %}
 
                                     {% set _prevInitial = _thisInitial %}
@@ -136,17 +131,8 @@
                                             {% endif %}
 
                                         {% endif %}
-
-                                    <!-- end final list -->
-                                    {% if loop.last %}
-                                        <!-- </ul> -->
-                                    {% endif %}
-
-
                                 {% endfor %}
-
                             {% endfor %}
-
                         </div>
                     </div>
                 </div>

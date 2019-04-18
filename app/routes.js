@@ -16,14 +16,27 @@ var _myData = {
     "latestEmployerproviderManual": "employer-providers-manual-1"
 }
 
-// Sort GLINDEXES
-
+//GLINDEX STUFF
 Object.keys(_myData.manuals).map(function(manual, index) {
     _myData.manuals[manual].content.sections.forEach(function(section) {
         if(section.id == "glossary" && "subsections" in section) {
             section.subsections.forEach(function(subsection) {
                 if(subsection.partsglindex){
 
+                    subsection.partsglindex.forEach(function(_glindexpart) {
+                        var _initial = (_glindexpart.sortoverride) ? (_glindexpart.sortoverride.charAt(0)) : (_glindexpart.title.charAt(0))
+                        if(_initial.toLowerCase() != _initial.toUpperCase()){
+                            // Letter
+                            _glindexpart.isAtoZ = true
+                        } else {
+                            //NOT letter
+                            _glindexpart.isAtoZ = false
+                        }
+                    });
+
+                    // for each part check if number or not
+
+                    // Sort GLINDEXES
                     //Standard - Sort on title A-Z
                     // subsection.partsglindex.sort(function(a,b){
                     //     var returnValue = 0;
@@ -34,7 +47,6 @@ Object.keys(_myData.manuals).map(function(manual, index) {
                     //     }
                     //     return returnValue;
                     // })
-
                     //Special - Sort on title A-Z but special characters appear first
                     subsection.partsglindex.sort(function(a,b){
                         var alphabet = '*!@_.()#^&%-=+01234567989ABCDEFGHIJKLMNOPQRSTUVWXYZ',
