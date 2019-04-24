@@ -29,7 +29,8 @@ $govuk-global-styles: true;
     /* override this inline for aspect ratio other than square */
 }
 .svg-1,
-.svg-2 {
+.svg-2,
+.svg-3 {
     position: absolute; 
     height: 100%; 
     width: 100%; 
@@ -37,7 +38,8 @@ $govuk-global-styles: true;
     top: 0;
 }
 .svg-1 text,
-.svg-2 text {
+.svg-2 text,
+.svg-3 text {
     color: #0b0c0c;
     font-family: "nta", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -50,11 +52,13 @@ $govuk-global-styles: true;
     margin-bottom: 0;
 }
 .svg-1 .larger-text-2,
-.svg-2 .larger-text-2 {
+.svg-2 .larger-text-2,
+.svg-3 .larger-text-2 {
     font-size: 21px;
 }
 .svg-1 .secondary-colour,
-.svg-2 .secondary-colour {
+.svg-2 .secondary-colour,
+.svg-3 .secondary-colour {
     fill: $govuk-secondary-text-colour;
 }
 .svg-1-container a {
@@ -62,13 +66,13 @@ $govuk-global-styles: true;
 }
 
 // Hovers
-// 1
+/////////////////////////////////////////////   1   ////////////////////////////////////////////
 .svg-1 g g:hover path,
 .svg-1 g g:hover rect {
     stroke-width: 4px;
     cursor: pointer;
 }
-// 2
+/////////////////////////////////////////////   2   ////////////////////////////////////////////
 .svg-2 a:hover path,
 .svg-2 a:hover rect {
     stroke-width: 5px;
@@ -83,13 +87,36 @@ $govuk-global-styles: true;
 .svg-2 .end a:hover rect {
     stroke: #005ea5;
 }
-
 // .svg-2 g.end:hover rect {
 //     stroke: #005ea5;
 // }
 // .svg-2 g.end-2:hover rect {
 //     stroke: black;
 // }
+/////////////////////////////////////////////   3   ////////////////////////////////////////////
+
+
+.svg-3 a:hover rect,
+.svg-3 a:hover + g.line path {
+    stroke-width: 5px;
+    stroke-dasharray: 0;
+    // stroke: #2b8cc4; light blue
+}
+.svg-3 a:hover + g.line path.arrowline {
+    stroke-width: 7px;
+}
+.svg-3 a:hover + g.line path.arrowhead {
+    // fill: #2b8cc4;
+}
+.svg-3 a:hover rect {
+    stroke-width: 6px;
+    // outline: 6px solid #005ea5;
+}
+.svg-3 a.end:hover rect {
+    stroke: #005ea5;
+    // stroke: #2b8cc4;
+}
+
 
 // call to action
 @include govuk-media-query($from: tablet) {
