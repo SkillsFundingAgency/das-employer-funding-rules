@@ -11,8 +11,9 @@ module.exports = function (router,_myData) {
         req.session.myData.updatesFilter = "alwaysonnotags"
         req.session.myData.updatesFilterOn = "false"
         req.session.myData.startFrom = "rules-years"
-        req.session.myData.emChart = "svgflow"
-        req.session.myData.svgflow = "true"
+        req.session.myData.emChart = "pngflow"
+        req.session.myData.svgflow = "false"
+        req.session.myData.pngflow = "true"
         req.session.myData.textflow = "false"
         req.session.myData.emailUpdates = "1"
         req.session.myData.useLatestManual = "false"
@@ -54,6 +55,7 @@ module.exports = function (router,_myData) {
         req.session.myData.manual = req.query.manual || req.session.myData.manual
         req.session.myData.manualpage = req.query.manualpage || req.session.myData.manualpage
         req.session.myData.svgflow = req.query.svgflow || req.session.myData.svgflow
+        req.session.myData.pngflow = req.query.pngflow || req.session.myData.pngflow
         req.session.myData.textflow = req.query.textflow || req.session.myData.textflow
         req.session.myData.updatesFilter = req.query.updatesFilter || req.session.myData.updatesFilter
         req.session.myData.updatesFilterOn = req.query.updatesFilterOn || req.session.myData.updatesFilterOn
@@ -64,17 +66,25 @@ module.exports = function (router,_myData) {
         req.session.myData.emChart = req.query.emChart || req.session.myData.emChart
         // Legacy visibility of flow chart - english maths
         switch(req.session.myData.emChart) {
+            case "pngflow":
+                req.session.myData.svgflow = "false"
+                req.session.myData.pngflow = "true"
+                req.session.myData.textflow = "false"
+                break;
             case "svgflow":
                 req.session.myData.svgflow = "true"
+                req.session.myData.pngflow = "false"
                 req.session.myData.textflow = "false"
                 break;
             case "textflow":
                 req.session.myData.textflow = "true"
                 req.session.myData.svgflow = "false"
+                req.session.myData.pngflow = "false"
                 break;
             case "false":
                 req.session.myData.textflow = "false"
                 req.session.myData.svgflow = "false"
+                req.session.myData.pngflow = "false"
                 break;
             default:
         }
