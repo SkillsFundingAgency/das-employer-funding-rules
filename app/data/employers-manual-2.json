@@ -2027,9 +2027,13 @@
                     },
                     {
                         "type": "subsection",
-                        "id": "summary-of-action-following-a-change-in-circumstances",
+                        "id": "summary-action-following-change-circumstances",
                         "title": "Summary of action following a change in circumstances",
-                        "parts": []
+                        "parts": [
+                            {
+                                "type": "flow"
+                            }
+                        ]
                     }
                 ]
             },

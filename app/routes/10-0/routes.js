@@ -12,9 +12,7 @@ module.exports = function (router,_myData) {
         req.session.myData.updatesFilterOn = "false"
         req.session.myData.startFrom = "rules-years"
         req.session.myData.emChart = "pngflow"
-        req.session.myData.svgflow = "false"
-        req.session.myData.pngflow = "true"
-        req.session.myData.textflow = "false"
+        req.session.myData.chocChart = "pngflow"
         req.session.myData.emailUpdates = "1"
         req.session.myData.useLatestManual = "false"
         req.session.myData.header = "standard"
@@ -22,6 +20,10 @@ module.exports = function (router,_myData) {
         req.session.myData.yearRangeEnd = "2018"
         req.session.myData.updatesChapter = "false"
         req.session.myData.preview = "true"
+        //legacy for english maths chart
+        req.session.myData.svgflow = "false"
+        req.session.myData.pngflow = "true"
+        req.session.myData.textflow = "false"
     }
 
 
@@ -89,6 +91,7 @@ module.exports = function (router,_myData) {
                 break;
             default:
         }
+        req.session.myData.chocChart = req.query.chocChart || req.session.myData.chocChart
         req.session.myData.emailUpdates = req.query.emailUpdates || req.session.myData.emailUpdates
         req.session.myData.header = req.query.header || req.session.myData.header
         req.session.myData.include = req.query.include || req.session.myData.include

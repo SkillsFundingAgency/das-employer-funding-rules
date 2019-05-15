@@ -3106,6 +3106,9 @@
                         ],
                         "parts": [
                             {
+                                "type": "flow"
+                            },
+                            {
                                 "type": "header",
                                 "content": "Actions to take when there is a change in price where the employer negotiates a revised training or assessment cost, or the assessment cost is added after the start of the programme"
                             },

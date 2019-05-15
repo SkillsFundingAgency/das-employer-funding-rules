@@ -63,6 +63,19 @@
                     </select>
                 </div>
 
+                <!-- change of circs flowchart none/svg/text -->
+                <div class="govuk-form-group">
+                        <label class="govuk-label" for="manualSetupChangeCircsChart">
+                            Change of circumstances Flow Chart
+                        </label>
+                        <select class="govuk-select" id="manualSetupChangeCircsChart" name="manualSetupChangeCircsChart" data-option="manualSetupChangeCircsChart">
+                            <option {% if myData.chocChart == 'false' %}selected{% endif %} value="false">None</option>
+                            <option {% if myData.chocChart == 'pngflow' %}selected{% endif %} value="pngflow">Graphical chart (PNG)</option>
+                            <!-- <option {% if myData.emChart == 'svgflow' %}selected{% endif %} value="svgflow">Graphical chart (SVG)</option> -->
+                            <!-- <option {% if myData.emChart == 'textflow' %}selected{% endif %} value="textflow">Text decision tree (if available)</option> -->
+                        </select>
+                    </div>
+
                 <!-- contextual updates filter -->
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="manualSetupContextualUpdates">
@@ -124,6 +137,7 @@
             <h1 class="govuk-heading-l">Flow charts</h1>
             <ul class="govuk-list govuk-list--bullet govuk-!-font-size-19 ">
                 <li><a href="/public/images/english-maths-flow-5.png" class="govuk-link govuk-link--no-visited-state">PNG flow chart - English and Maths</a></li>
+                <li><a href="/public/images/change-of-circs-1.png" class="govuk-link govuk-link--no-visited-state">PNG flow chart - Change of circumstances</a></li>
             </ul>
         <!-- </form> -->
     </div>
@@ -163,11 +177,12 @@ $(document).ready(function(){
             _urlmanual = (!_useLatestManual ? ("&manual=" + _options.filter("#manualSetupManual").val()) : ""),
             _urlupdatesFilter = "&updatesFilter=" + _options.filter("#manualSetupContextualUpdates").val(),
             _urlemChart = "&emChart=" + _options.filter("#manualSetupEngMathsChart").val(),
+            _urlchocChart = "&chocChart=" + _options.filter("#manualSetupChangeCircsChart").val(),
             _urlpreview = "&preview=" + _options.filter("#manualPreview").val(),
             _urlheader = "&header=" + _options.filter("#manualSetupHeader").val(),
             _urlupdatesChapter = "&updatesChapter=" + _options.filter("#manualUpdatesChapter").val(),
             _urlReset = "&resetSession=true",
-            _urlPageQueries = _urlPage + _urlstartFrom + _urlmanual + _urlupdatesFilter + _urlemChart + _urlpreview + _urlheader + _urlupdatesChapter + _urlReset;
+            _urlPageQueries = _urlPage + _urlstartFrom + _urlmanual + _urlupdatesFilter + _urlemChart + _urlchocChart + _urlpreview + _urlheader + _urlupdatesChapter + _urlReset;
 
         var _startURLText = _urlVersion + _urlPageQueries,
             _startURLHREF =  _urlPageQueries;

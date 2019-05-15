@@ -328,6 +328,7 @@
                                         {% if part.type == "header" %}
                                             <h3 class="govuk-heading-m">{{part.content|safe|trim}}</h3>
                                         {% elif part.type == "flow" %}
+                                            <!-- English Maths flowchart -->
                                             {% if subsection.id == "support-english-maths-training" %}
                                                 <!-- Flow chart SVG -->
                                                 {% if myData.svgflow == "true" %}
@@ -335,11 +336,16 @@
                                                 {% endif %}
                                                 <!-- Flow chart PNG -->
                                                 {% if myData.pngflow == "true" %}
-                                                    <img class="flow-chart" style="width: auto; height: auto; max-width: 100%;margin-bottom: 30px" alt=”” aria-hidden=”true” src="/public/images/english-maths-flow-5.png">
+                                                    <img class="flow-chart" style="width: auto; height: auto; max-width: 100%; margin-bottom: 30px" alt=”” aria-hidden=”true” src="/public/images/english-maths-flow-5.png">
                                                 {% endif %}
                                                 <!-- Text decision tree -->
                                                 {% if myData.textflow == "true" %}
                                                     {% include "../includes/english-maths-text-flow-2.html" %}
+                                                {% endif %}
+                                            <!-- Change circs flowchart -->
+                                            {% elif subsection.id == "summary-action-following-change-circumstances" %}
+                                                {% if myData.chocChart == "pngflow" %}
+                                                    <img class="flow-chart" style="width: auto; height: auto; max-width: 100%; margin-bottom: 30px" alt=”” aria-hidden=”true” src="/public/images/change-of-circs-1.png">
                                                 {% endif %}
                                             {% endif %}
                                         {% elif part.type == "block" %}
