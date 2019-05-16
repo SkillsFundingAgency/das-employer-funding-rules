@@ -14,6 +14,10 @@
                 "id": "intro-and-purpose",
                 "title": "Introduction",
                 "range": "1 to 16",
+                "rangeObj": {
+                    "start": 1,
+                    "end": 16
+                },
                 "summary": "What the rules cover and definitions of terms.",
                 "subsections": [
                     {
@@ -98,6 +102,10 @@
                 "id": "what-apprenticeship",
                 "title": "What is an apprenticeship?",
                 "range": "17 to 61",
+                "rangeObj": {
+                    "start": 17,
+                    "end": 61
+                },
                 "summary": "What employers, providers and apprentices can expect from an apprenticeship. Includes contracts, pay and training.",
                 "footnotes": [
                     {
@@ -515,6 +523,10 @@
                 "id": "who-can-funded",
                 "title": "Who can be funded?",
                 "range": "62 to 89",
+                "rangeObj": {
+                    "start": 62,
+                    "end": 89
+                },
                 "summary": "How to work out who can get apprenticeship funding. Includes financial support for apprentices with additional learning needs.",
                 "updates-section": [
                     {
@@ -913,6 +925,10 @@
                 "id": "what-can-funded",
                 "title": "Which costs are funded?",
                 "range": "90 to 156",
+                "rangeObj": {
+                    "start": 90,
+                    "end": 156
+                },
                 "summary": "What you can pay for with apprenticeship funds. Includes English and maths training, support for care leavers and end-point assessments.",
                 "updates": [
                     {
@@ -1955,6 +1971,10 @@
                 "id": "contracting-subcontracting",
                 "title": "Contracting and subcontracting",
                 "range": "157 to 192",
+                "rangeObj": {
+                    "start": 157,
+                    "end": 192
+                },
                 "summary": "Responsibilities of providers and their subcontractors, including when they’re not on the Register of Approved Training Providers (RoATP).",
                 "subsections": [
                     {
@@ -2308,6 +2328,10 @@
                 "id": "paying-apprenticeship",
                 "title": "Paying for an apprenticeship",
                 "range": "193 to 227",
+                "rangeObj": {
+                    "start": 193,
+                    "end": 227
+                },
                 "summary": "When providers will receive payments, reporting requirements and agreeing a price. Includes accounting for prior learning, employer contribution towards training (co-investment) and VAT.",
                 "updates": [
                     {
@@ -2741,6 +2765,10 @@
                 "id": "apprenticeships-funded-transfers",
                 "title": "Apprenticeships funded by transfers of levy funds",
                 "range": "228 to 237",
+                "rangeObj": {
+                    "start": 228,
+                    "end": 237
+                },
                 "summary": "Sending and receiving apprenticeship levy funds.",
                 "subsections": [
                     {
@@ -2803,6 +2831,10 @@
                 "id": "delivering-the-apprenticeship",
                 "title": "Delivering the apprenticeship",
                 "range": "238 to 242",
+                "rangeObj": {
+                    "start": 238,
+                    "end": 242
+                },
                 "summary": "Data protection and apprenticeship completion certificates.",
                 "updates-section": [
                     {
@@ -2872,6 +2904,10 @@
                 "id": "changes-circumstances",
                 "title": "Changes in circumstances",
                 "range": "243 to 275",
+                "rangeObj": {
+                    "start": 243,
+                    "end": 275
+                },
                 "summary": "Changes of provider and changes in an apprentice’s personal or employment circumstances. Includes how these changes affect apprenticeship funding.",
                 "updates": [
                     {
@@ -3366,6 +3402,10 @@
                 "id": "european-social-fund",
                 "title": "ESF (European Social Fund) match funding requirements",
                 "range": "276 to 278",
+                "rangeObj": {
+                    "start": 276,
+                    "end": 278
+                },
                 "summary": "Applies to providers who have a contract to deliver training to employers who don’t pay the levy. These providers may be accessing funding that can be used as match funding for the European Social Fund (ESF).",
                 "subsections": [
                     {
@@ -3438,6 +3478,10 @@
                 "id": "evidence-requirements",
                 "title": "Evidence requirements",
                 "range": "279 to 300",
+                "rangeObj": {
+                    "start": 279,
+                    "end": 300
+                },
                 "summary": "Evidence that providers must maintain for each apprenticeship.",
                 "updates": [
                     {
@@ -4110,6 +4154,10 @@
                 "id": "annex-a",
                 "title": "Annex A: Eligibility criteria (who we fund)",
                 "range": "301 to 331",
+                "rangeObj": {
+                    "start": 301,
+                    "end": 331
+                },
                 "summary": "Who can apply for apprenticeship funding. Includes criteria for residency, citizenship and age.",
                 "updates": [
                     {

@@ -14,6 +14,10 @@
                 "id": "intro-and-purpose",
                 "title": "Introduction",
                 "range": "1 to 8",
+                "rangeObj": {
+                    "start": 1,
+                    "end": 8
+                },
                 "summary": "What the rules cover and definitions of terms.",
                 "subsections": [
                     {
@@ -70,6 +74,10 @@
                 "id": "what-is-apprenticeship",
                 "title": "What is an apprenticeship?",
                 "range": "9 to 53",
+                "rangeObj": {
+                    "start": 9,
+                    "end": 53
+                },
                 "summary": "What employers, providers and apprentices can expect from an apprenticeship. Includes contracts, pay and training.",
                 "updates-section": [
                     {
@@ -678,6 +686,10 @@
                 "id": "who-can-be-funded",
                 "title": "Who can be funded?",
                 "range": "62 to 81",
+                "rangeObj": {
+                    "start": 62,
+                    "end": 81
+                },
                 "summary": "How to work out who can get apprenticeship funding. Includes financial support for apprentices with additional learning needs.",
                 "updates": [
                     {
@@ -936,6 +948,10 @@
                 "id": "what-can-be-funded",
                 "title": "Which costs are funded?",
                 "range": "74 to 129",
+                "rangeObj": {
+                    "start": 74,
+                    "end": 129
+                },
                 "summary": "What you can pay for with apprenticeship funds. Includes English and maths training, support for care leavers and end-point assessments.",
                 "updates": [
                     {
@@ -1782,6 +1798,10 @@
                 "id": "contracting-subcontracting",
                 "title": "Contracting and subcontracting",
                 "range": "130 to 140",
+                "rangeObj": {
+                    "start": 130,
+                    "end": 140
+                },
                 "summary": "The agreement between employers and their main provider. Requirements for subcontractors and resolving disputes.",
                 "updates": [
                     {
@@ -1921,6 +1941,10 @@
                 "id": "paying-for-an-apprenticeship",
                 "title": "Paying for an apprenticeship",
                 "range": "141 to 176",
+                "rangeObj": {
+                    "start": 141,
+                    "end": 176
+                },
                 "summary": "When providers will receive payments, reporting requirements and agreeing a price. Includes accounting for prior learning, employer contribution towards training (co-investment) and VAT.",
                 "subsections": [
                     {
@@ -1975,6 +1999,10 @@
                 "id": "apprenticeships-funded-by-transfer-of-levy-funds",
                 "title": "Apprenticeships funded by transfers of levy funds",
                 "range": "177 to 211",
+                "rangeObj": {
+                    "start": 177,
+                    "end": 211
+                },
                 "summary": "Sending and receiving apprenticeship levy funds. What to do when the total cost is not covered.",
                 "subsections": [
                     {
@@ -2013,6 +2041,10 @@
                 "id": "changes-in-circumstances",
                 "title": "Changes in circumstances",
                 "range": "212 to 233",
+                "rangeObj": {
+                    "start": 212,
+                    "end": 233
+                },
                 "summary": "Changes of provider and changes in an apprentice’s personal or employment circumstances. Includes how these changes affect apprenticeship funding.",
                 "subsections": [
                     {
@@ -2041,6 +2073,10 @@
                 "id": "annex-a-eligibility-criteria",
                 "title": "Annex A: Eligibility criteria (who we fund)",
                 "range": "234 to 264",
+                "rangeObj": {
+                    "start": 234,
+                    "end": 264
+                },
                 "summary": "Who can apply for apprenticeship funding. Includes criteria for residency, citizenship and age.",
                 "subsections": [
                     {

@@ -14,66 +14,110 @@
                 "id": "intro-and-purpose",
                 "title": "Introduction",
                 "range": "1 to 16",
+                "rangeObj": {
+                    "start": 1,
+                    "end": 16
+                },
                 "summary": "What the rules cover and definitions of terms."
             },
             {
                 "id": "what-apprenticeship",
                 "title": "What is an apprenticeship?",
                 "range": "17 to 61",
+                "rangeObj": {
+                    "start": 17,
+                    "end": 61
+                },
                 "summary": "What employers, providers and apprentices can expect from an apprenticeship. Includes contracts, pay and training."
             },
             {
                 "id": "who-can-funded",
                 "title": "Who can be funded?",
                 "range": "62 to 81",
+                "rangeObj": {
+                    "start": 62,
+                    "end": 81
+                },
                 "summary": "How to work out who can get apprenticeship funding. Includes financial support for apprentices with additional learning needs."
             },
             {
                 "id": "what-can-funded",
                 "title": "Which costs are funded?",
                 "range": "82 to 141",
+                "rangeObj": {
+                    "start": 82,
+                    "end": 141
+                },
                 "summary": "What you can pay for with apprenticeship funds. Includes English and maths training, support for care leavers and end-point assessments."
             },
             {
                 "id": "contracting-subcontracting",
                 "title": "Contracting and subcontracting",
                 "range": "142 to 172",
+                "rangeObj": {
+                    "start": 142,
+                    "end": 172
+                },
                 "summary": "Responsibilities of employer-providers and their subcontractors. Subcontracting to providers who are not on the Register of Approved Training Providers (RoATP)."
             },
             {
                 "id": "paying-apprenticeship",
                 "title": "Paying for an apprenticeship",
                 "range": "173 to 211",
+                "rangeObj": {
+                    "start": 173,
+                    "end": 211
+                },
                 "summary": "When providers will receive payments, reporting requirements and agreeing a price. Includes accounting for prior learning, employer contribution towards training (co-investment) and VAT."
             },
             {
                 "id": "apprenticeships-funded-transfers",
                 "title": "Apprenticeships funded by transfers of levy funds",
                 "range": "212 to 240",
+                "rangeObj": {
+                    "start": 212,
+                    "end": 240
+                },
                 "summary": "Sending and receiving apprenticeship levy funds."
             },
             {
                 "id": "delivering-the-apprenticeship",
                 "title": "Delivering the apprenticeship",
                 "range": "241 to 245",
+                "rangeObj": {
+                    "start": 241,
+                    "end": 245
+                },
                 "summary": "Data protection and apprenticeship completion certificates."
             },
             {
                 "id": "changes-circumstances",
                 "title": "Changes in circumstances",
                 "range": "246 to 266",
+                "rangeObj": {
+                    "start": 246,
+                    "end": 266
+                },
                 "summary": "Changes of provider and changes in an apprentice’s personal or employment circumstances. Includes how these changes affect apprenticeship funding."
             },
             {
                 "id": "evidence-requirements",
                 "title": "Evidence requirements",
                 "range": "267 to 287",
+                "rangeObj": {
+                    "start": 267,
+                    "end": 287
+                },
                 "summary": "Evidence that providers must maintain for each apprenticeship."
             },
             {
                 "id": "annex-a",
                 "title": "Annex A: Eligibility criteria (who we fund)",
                 "range": "288 to 318",
+                "rangeObj": {
+                    "start": 288,
+                    "end": 318
+                },
                 "summary": "Who can apply for apprenticeship funding. Includes criteria for residency, citizenship and age."
             },
             {

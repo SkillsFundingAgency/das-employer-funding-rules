@@ -14,6 +14,13 @@
     {% set _userType = "employer-providers" %}
 {% endif %}
 
+{% set _rulePrefix = "P" %}
+{% if _thisManualType == "employer" %}
+    {% set _rulePrefix = "E" %}
+{% elif _thisManualType == "employerprovider" %}
+    {% set _rulePrefix = "EP" %}
+{% endif %}
+
 {% set _filterState = myData.updatesFilterOn %}
 
 {% block pageStyles %}
@@ -233,7 +240,7 @@
                             {% set _summary = section.summaryglindex %}
                         {% endif %}
                         <a class="" href="{{_url}}?manual={{myData.manual}}&manualpage={{section.id}}&updatesFilterOn=false">
-                            <span class="subsection-title-text">{{_title}}{% if section.range %} ({{section.range}}){% endif %}</span>
+                            <span class="subsection-title-text">{{_title}}{% if section.rangeObj %} ({{_rulePrefix}}{{section.rangeObj.start}} to {{_rulePrefix}}{{section.rangeObj.end}}){% endif %}</span>
                             {% if section.summary %}
                             <span class="subsection-summary">
                                 {{_summary}}

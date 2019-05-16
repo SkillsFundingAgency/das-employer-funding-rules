@@ -46,7 +46,7 @@ GOV.UK Manual
                                 {% for section in _thisManual.sections %}
                                     <dt>
                                         <!-- Section title -->
-                                        <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state ">{{section.title}}{% if section.range %} ({{section.range|safe}}){% endif %}</a>
+                                        <a href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}" class="govuk-link govuk-link--no-visited-state ">{{section.title}}{% if section.rangeObj %} ({{_rulePrefix}}{{section.rangeObj.start}} to {{_rulePrefix}}{{section.rangeObj.end}}){% endif %}</a>
                                     </dt>
                                     <dd>
                                         {% if section.changenote %}

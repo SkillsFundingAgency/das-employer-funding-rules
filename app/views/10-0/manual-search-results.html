@@ -60,7 +60,7 @@ GOV.UK Manual
                                         {% set _summary = section.summaryglindex %}
                                     {% endif %}
                                 <li>
-                                    <h3><a href="{{_url}}?manual={{myData.manual}}&manualpage={{section.id}}">{{_title}}{% if section.range %} ({{section.range|safe}}){% endif %}</a></h3>
+                                    <h3><a href="{{_url}}?manual={{myData.manual}}&manualpage={{section.id}}">{{_title}}{% if section.rangeObj %} ({{_rulePrefix}}{{section.rangeObj.start}} to {{_rulePrefix}}{{section.rangeObj.end}}){% endif %}</a></h3>
                                     {% if section.summary %}
                                     <p>
                                         {{_summary}}

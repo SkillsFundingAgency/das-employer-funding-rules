@@ -16,6 +16,8 @@
 {% set _rulePrefix = "P" %}
 {% if _thisManualType == "employer" %}
     {% set _rulePrefix = "E" %}
+{% elif _thisManualType == "employerprovider" %}
+    {% set _rulePrefix = "EP" %}
 {% endif %}
 
 {% set _filterState = myData.updatesFilterOn %}
@@ -68,7 +70,7 @@
       
     <ol class="breadcrumb-trail">
         <li><a href="manual-home?manual={{myData.manual}}&updatesFilterOn=false">Contents</a></li>
-        <li class="last-child">{{section.title|safe}}{% if section.range %} ({{section.range|safe}}){% endif %}</li>
+        <li class="last-child">{{section.title|safe}}{% if section.rangeObj %} ({{_rulePrefix}}{{section.rangeObj.start}} to {{_rulePrefix}}{{section.rangeObj.end}}){% endif %}</li>
     </ol>
       
     <article aria-labelledby="manual-title" id="content">
@@ -132,7 +134,7 @@
             {% else %}
             <article aria-labelledby="section-title">
                 <h1 id="section-title" class="section-title {% if section.summary %}section-title-with-summary{% endif %}">
-                    {{section.title|safe}}{% if section.range %} ({{section.range|safe}}){% endif %}
+                    {{section.title|safe}}{% if section.rangeObj %} ({{_rulePrefix}}{{section.rangeObj.start}} to {{_rulePrefix}}{{section.rangeObj.end}}){% endif %}
                 </h1>
                 {% if section.summary %}
                 <p class="summary">
