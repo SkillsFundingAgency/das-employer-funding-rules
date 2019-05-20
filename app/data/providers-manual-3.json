@@ -199,7 +199,7 @@
                             }
                         ]
                     },
-                    {
+                    { 
                         "id": "off-the-job-training",
                         "type": "subsection",
                         "title": "Off-the-job training",
@@ -5046,12 +5046,32 @@
                                     {
                                         "ref": "93.10",
                                         "sectionid": "what-can-funded",
+                                        "subsectionid": "eligible-costs",
                                         "type": "rule"
                                     },
                                     {
                                         "ref": "97.14",
                                         "sectionid": "what-can-funded",
+                                        "subsectionid": "ineligible-costs",
                                         "type": "rule"
+                                    }
+                                ],
+                                "crossrefs2": [
+                                    {
+                                        "rules": [
+                                            "93.10"
+                                        ],
+                                        "sectionid": "what-can-funded",
+                                        "subsectionid": "eligible-costs",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "97.14"
+                                        ],
+                                        "sectionid": "what-can-funded",
+                                        "subsectionid": "ineligible-costs",
+                                        "type": "subsection"
                                     }
                                 ]
                             },
@@ -5087,6 +5107,16 @@
                                         "ref": "78",
                                         "sectionid": "who-can-funded",
                                         "type": "rule"
+                                    }
+                                ],
+                                "crossrefs2": [
+                                    {
+                                        "rules": [
+                                            "78"
+                                        ],
+                                        "sectionid": "who-can-funded",
+                                        "subsectionid": "apprentices-need-access-learning-support",
+                                        "type": "subsection"
                                     }
                                 ]
                             },
@@ -5126,6 +5156,24 @@
                                         "ref": "245",
                                         "sectionid": "changes-circumstances",
                                         "type": "rule"
+                                    }
+                                ],
+                                "crossrefs2": [
+                                    {
+                                        "rules": [
+                                            "32"
+                                        ],
+                                        "sectionid": "what-apprenticeship",
+                                        "subsectionid": "off-the-job-training",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "245"
+                                        ],
+                                        "sectionid": "changes-circumstances",
+                                        "subsectionid": "main",
+                                        "type": "subsection"
                                     }
                                 ]
                             },
@@ -5172,6 +5220,16 @@
                                         "ref": "25",
                                         "sectionid": "what-apprenticeship",
                                         "type": "rule"
+                                    }
+                                ],
+                                "crossrefs2": [
+                                    {
+                                        "rules": [
+                                            "25"
+                                        ],
+                                        "sectionid": "what-apprenticeship",
+                                        "subsectionid": "apprentice-wages",
+                                        "type": "subsection"
                                     }
                                 ]
                             },
@@ -5610,6 +5668,45 @@
                                         "sectionid": "what-can-funded",
                                         "type": "rule"
                                     }
+                                ],
+                                "crossrefs2": [
+                                    {
+                                        "sectionid": "what-apprenticeship",
+                                        "subsectionid": "apprentice-wages",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "26"
+                                        ],
+                                        "sectionid": "what-apprenticeship",
+                                        "subsectionid": "off-the-job-training",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "44.8.2"
+                                        ],
+                                        "sectionid": "what-apprenticeship",
+                                        "subsectionid": "commitment-statement-employer-apprentice-main-provider",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "86"
+                                        ],
+                                        "sectionid": "who-can-funded",
+                                        "subsectionid": "apprenticeship-training-agency",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "97.3"
+                                        ],
+                                        "sectionid": "what-can-funded",
+                                        "subsectionid": "ineligible-costs",
+                                        "type": "subsection"
+                                    }
                                 ]
                             },
                             {
@@ -5662,6 +5759,62 @@
                                         "ref": "285.5",
                                         "sectionid": "evidence-requirements",
                                         "type": "rule"
+                                    },
+                                    {
+                                        "sectionid": "what-apprenticeship",
+                                        "type": "section"
+                                    }
+                                ],
+                                "crossrefs2": [
+                                    {
+                                        "rules": [
+                                            "63.8"
+                                        ],
+                                        "sectionid": "who-can-funded",
+                                        "subsectionid": "main",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "93.1",
+                                            "93.4"
+                                        ],
+                                        "sectionid": "what-can-funded",
+                                        "subsectionid": "eligible-costs",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "97.6"
+                                        ],
+                                        "sectionid": "what-can-funded",
+                                        "subsectionid": "ineligible-costs",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "199",
+                                            "200"
+                                        ],
+                                        "sectionid": "paying-apprenticeship",
+                                        "subsectionid": "accounting-prior-learning",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "284.3"
+                                        ],
+                                        "sectionid": "evidence-requirements",
+                                        "subsectionid": "programme-eligibility",
+                                        "type": "subsection"
+                                    },
+                                    {
+                                        "rules": [
+                                            "285.5"
+                                        ],
+                                        "sectionid": "evidence-requirements",
+                                        "subsectionid": "learner-eligibility",
+                                        "type": "subsection"
                                     },
                                     {
                                         "sectionid": "what-apprenticeship",

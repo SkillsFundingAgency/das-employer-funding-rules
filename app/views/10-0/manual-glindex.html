@@ -16,6 +16,8 @@
 {% set _rulePrefix = "P" %}
 {% if _thisManualType == "employer" %}
     {% set _rulePrefix = "E" %}
+{% elif _thisManualType == "employerprovider" %}
+    {% set _rulePrefix = "EP" %}
 {% endif %}
 
 {% block content %}
@@ -69,7 +71,7 @@
                                     {% endif %}
 
                                     {% if loop.first == true and part.isAtoZ == false %}
-                                        <!-- Number range -->
+                                        <!-- Numbers -->
                                         <h2 id="{{_thisInitial}}" >
                                             0-9
                                         </h2>
@@ -87,24 +89,29 @@
                                         {% if part.type == "see" %}
 
                                             <!-- See -->
-                                            <h3 class="govuk-heading-s" class="govuk-body" id="{{_title | replace(' ', '-')}}">
+                                            <h3 class="govuk-heading-s" class="govuk-body" id="{{_title | replace(' ', '-') | replace('(', '-') | replace(')', '-')}}">
                                                 {% if part.prefix %}{{part.prefix|safe}}{% endif %}{{_title}}
                                             </h3>
-                                            <p class="govuk-body"><span>See</span> {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span><a href="#{{_see | replace(' ', '-')}}" class="govuk-link govuk-link--no-visited-state">{{_see|safe}}</a></span>{% endfor %}</p>
+                                            <!-- <h3 class="govuk-heading-s" class="govuk-body" id="{{_title | replace(' ', '-') | replace('(', '-') | replace(')', '-')}}">
+                                                {% if part.prefix %}{{part.prefix|safe}}{% endif %}{{_title}} <span class="govuk-!-font-weight-regular">(see {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span><a href="#{{_see | replace(' ', '-') | replace('(', '-') | replace(')', '-')}}" class="govuk-link govuk-link--no-visited-state">{{_see|safe}}</a></span>{% endfor %})</span>
+                                            </h3> -->
+                                            <!-- <h3 class="govuk-heading-s" class="govuk-body" id="{{_title | replace(' ', '-') | replace('(', '-') | replace(')', '-')}}">
+                                                {% if part.prefix %}{{part.prefix|safe}}{% endif %}{{_title}} <span class="govuk-!-font-weight-regular">(see {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span>{{_see|safe}}</span>{% endfor %})</span>
+                                            </h3> -->
+                                            <p class="govuk-body"><span>See</span> {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span><a href="#{{_see | replace(' ', '-') | replace('(', '-') | replace(')', '-')}}" class="govuk-link govuk-link--no-visited-state">{{_see|safe}}</a></span>{% endfor %}</p>
+                                            <!-- <p class="govuk-body"><span>See</span> {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span class="govuk-!-font-weight-regular">{{_see|safe}}</span>{% endfor %}</p> -->
 
                                         {% else %}
-                                            <h3 class="govuk-heading-s" class="govuk-body" id="{{_title | replace(' ', '-')}}">
+                                            <h3 class="govuk-heading-s" class="govuk-body" id="{{_title | replace(' ', '-') | replace('(', '-') | replace(')', '-')}}">
                                                 {% if part.prefix %}{{part.prefix|safe}}{% endif %}{{_title}}</span>
 
                                                 <!-- Cross refs (code all on 1 line otherwise a space will be rendered before the comma) -->
-                                                {% if part.crossrefs %}{% for _crossref in part.crossrefs %}{% set _crossrefText = _rulePrefix + _crossref.ref %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false#' + _crossref.ref|replace('.', '-') %}{% if _crossref.type == "section" %}{% set _loopIsFirst = loop.first %}{% for section in _thisManual.sections %}{% if section.id == _crossref.sectionid %}{% set _sectionTitle = section.title %}{% if _loopIsFirst == false %}{% set _sectionTitle = section.title|truncate(1,true,"")|lower + section.title.slice(1) %}{% endif %}{% set _crossrefText = _sectionTitle %}{% if section.range %}{% set _crossrefText = _sectionTitle + ' (' + section.range + ')' %}{% endif %}{% endif %}{% endfor %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false' %}{% elif _crossref.type == "rulerange" %}{% set _crossrefText = _rulePrefix + _crossref.range.start + ' to ' + _rulePrefix + _crossref.range.end %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false#' + _crossref.range.start|replace('.', '-') %}{% endif %}{% if loop.first == true %}<span style="font-weight: normal"> - {% endif %}{% if part.crossrefs.length > 1 and loop.first == false %}{% if loop.last %} and {% else %}, {% endif %}{% endif %}<span><a href="{{_crossrefLink}}" class="govuk-link govuk-link--no-visited-state">{{_crossrefText}}</a></span>{% if loop.last == true %}</span>{% endif %}{% endfor %}{% endif %}
+                                                {% if part.crossrefs %}{% for _crossref in part.crossrefs2 %}{% set _loopIsFirst = loop.first %}{% set _crossrefText = '' %}{% set _crossrefLink = '' %}{% if _crossref.type == "subsection" %}{% for section in _thisManual.sections %}{% if section.id == _crossref.sectionid %}{% set _rules = "" %}{% if _crossref.rules %}{% for rule in _crossref.rules %}{% if _crossref.rules.length > 1 and loop.first == false %}{% if loop.last %}{% set _rules = _rules + " and " %}{% else %}{% set _rules = _rules + ", " %}{% endif %}{% endif %}{% set _rules = _rules + _rulePrefix + rule %}{% endfor %}{% set _rules = ' (' + _rules + ')' %}{% endif %}{% set _subsectionTitle = section.title %}{% set _subsectionid = _crossref.sectionid + "-subsection" %}{% for subsection in section.subsections %}{% if subsection.id == _crossref.subsectionid %}{% set _subsectionTitle = subsection.title %}{% set _subsectionid = _crossref.subsectionid %}{% endif %}{% endfor %}{% if _loopIsFirst == false %}{% set _subsectionTitle = _subsectionTitle|truncate(1,true,"")|lower + _subsectionTitle.slice(1) %}{% endif %}{% set _crossrefText = _subsectionTitle + _rules %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false#' + _subsectionid %}{% endif %}{% endfor %}{% elif _crossref.type == "section" %}{% for section in _thisManual.sections %}{% if section.id == _crossref.sectionid %}{% set _sectionTitle = section.title %}{% if _loopIsFirst == false %}{% set _sectionTitle = section.title|truncate(1,true,"")|lower + section.title.slice(1) %}{% endif %}{% set _crossrefText = _sectionTitle %}{% if section.rangeObj %}{% set _crossrefText = _sectionTitle + ' (' + _rulePrefix + section.rangeObj.start + ' to ' + _rulePrefix + section.rangeObj.end + ')' %}{% endif %}{% endif %}{% endfor %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false' %}{% elif _crossref.type == "rulerange" %}{% set _crossrefText = _rulePrefix + _crossref.range.start + ' to ' + _rulePrefix + _crossref.range.end %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false#' + _crossref.range.start|replace('.', '-') %}{% endif %}{% if loop.first == true %}<span style="font-weight: normal"> - {% endif %}{% if part.crossrefs.length > 1 and loop.first == false %}{% if loop.last %} and {% else %}, {% endif %}{% endif %}<span><a href="{{_crossrefLink}}" class="govuk-link govuk-link--no-visited-state">{{_crossrefText}}</a></span>{% if loop.last == true %}</span>{% endif %}{% endfor %}{% endif %}
                                                 <!-- Cross refs END -->
 
                                             </h3>
 
                                             <p class="govuk-body">{{part.content|safe|trim}}</p>
-
-                                            <!-- TODO how to handle subparts conten below the lists e.g. Apprentice rate -->
                                             
                                             {% if part.subparts %}
                                                 {% for _subpart in part.subparts %}

@@ -262,7 +262,7 @@
                                 {% endfor %}
 
                                 <!-- Sub section heading -->
-                                <h2 id="{{subsection.id}}" class="{{_subsectionClasses}}">
+                                <h2 id="{% if subsection.type == 'main' %}{{section.id}}-subsection{% else %}{{subsection.id}}{% endif %}" class="{{_subsectionClasses}}">
                                     {% if subsection.type != "main" %}
                                         {{subsection.title|safe}}
                                     {% else %}
