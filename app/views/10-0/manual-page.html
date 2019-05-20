@@ -349,6 +349,12 @@
                                                 {% if myData.chocChart == "pngflow" %}
                                                     <img class="flow-chart" style="width: auto; height: auto; max-width: 100%; margin-bottom: 30px" alt=”” aria-hidden=”true” src="/public/images/change-of-circs-1.png">
                                                 {% endif %}
+                                            <!-- recognition of prior learning flowcharts -->
+                                            {% elif subsection.id == "accounting-prior-learning" %}
+                                                {% if myData.recCharts == "pngflow" %}
+                                                    <img class="flow-chart" style="width: auto; height: auto; max-width: 100%; margin-bottom: 30px" alt=”” aria-hidden=”true” src="/public/images/rec-prior-learning-1-1.png">
+                                                    <img class="flow-chart" style="width: auto; height: auto; max-width: 100%; margin-bottom: 30px" alt=”” aria-hidden=”true” src="/public/images/rec-prior-learning-2-1.png">
+                                                {% endif %}
                                             {% endif %}
                                         {% elif part.type == "block" %}
                                             <h3 class="govuk-heading-s">{{part.title|safe}}</h3>

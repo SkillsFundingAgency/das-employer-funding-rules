@@ -2480,6 +2480,9 @@
                         ],
                         "parts": [
                             {
+                                "type": "flow"
+                            },
+                            {
                                 "id": "197",
                                 "content": "Funds must not be used to pay for training for skills, knowledge and behaviours already attained by the apprentice. We may take action to recover apprenticeship funding where this happens.",
                                 "updates": [

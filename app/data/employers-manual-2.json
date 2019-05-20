@@ -1955,11 +1955,15 @@
                         "type": "subsection",
                         "id": "the-price-of-an-apprenticeship",
                         "title": "The price of an apprenticeship",
-                        "parts": []
+                        "parts": [
+                            {
+                                "type": "flow"
+                            }
+                        ]
                     },
                     {
                         "type": "subsection",
-                        "id": "accounting-for-prior-learning",
+                        "id": "accounting-prior-learning",
                         "title": "Accounting for prior learning",
                         "parts": []
                     },
