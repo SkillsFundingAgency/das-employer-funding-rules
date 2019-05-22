@@ -83,7 +83,8 @@
                     </label>
                     <select class="govuk-select" id="manualSetupRecCharts" name="manualSetupRecCharts" data-option="manualSetupRecCharts">
                         <option {% if myData.recCharts == 'false' %}selected{% endif %} value="false">None</option>
-                        <option {% if myData.recCharts == 'pngflow' %}selected{% endif %} value="pngflow">Graphical charts (PNGs)</option>
+                        <option {% if myData.recCharts == 'pngflow' %}selected{% endif %} value="pngflow">Graphical charts (PNGs) - v1</option>
+                        <option {% if myData.recCharts == 'pngflow2' %}selected{% endif %} value="pngflow2">Graphical charts (PNGs) - v2</option>
                         <!-- <option {% if myData.emChart == 'svgflow' %}selected{% endif %} value="svgflow">Graphical chart (SVG)</option> -->
                         <!-- <option {% if myData.emChart == 'textflow' %}selected{% endif %} value="textflow">Text decision tree (if available)</option> -->
                     </select>
