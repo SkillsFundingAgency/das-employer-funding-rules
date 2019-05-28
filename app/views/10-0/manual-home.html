@@ -183,6 +183,8 @@
             {% endif %}
 
             <ol class="section-list">
+
+                <!-- Updates section -->
                 {% if myData.updatesChapter == "true" %}
                 <li class="section-contains-no-updates">
                     <a class="" href="manual-page?manual={{myData.manual}}&manualpage=updates&updatesFilterOn=false">
@@ -193,70 +195,95 @@
                     </a>
                 </li>
                 {% endif %}
+
+                {% set _sectionClasses = "section-contains-no-updates" %}
+                {% set _sectionHasUpdates = false %}
+
+                <!-- Does manual have a glindex? -->
+                {% set _hasGlindex = false %}
+
+                {% for section in _thisManual.sections %}
+                    {% if section.titleglindex %}
+                        {% set _hasGlindex = true %}
+                        <!-- Glindex item -->
+                        <li class=" {{_sectionClasses}} ">
+                            <a class="" href="manual-glindex?manual={{myData.manual}}&manualpage={{section.id}}&updatesFilterOn=false">
+                                <span class="subsection-title-text">{{section.titleglindex}}</span>
+                                {% if section.summary %}
+                                <span class="subsection-summary">
+                                    {{section.summaryglindex}}
+                                </span>
+                                {% endif %}
+                                {% if _sectionHasUpdates %}
+                                <strong class="update-tag govuk-tag" >
+                                    Updated
+                                </strong>
+                                {% endif %}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+
+                <!-- other sections -->
                 {% for section in _thisManual.sections %}
 
-                    {% set _sectionClasses = "section-contains-no-updates" %}
-                    {% set _sectionHasUpdates = false %}
-                    {% if section["updates-section"] %}
-                        {% set _sectionClasses = "" %}
-                        {% set _sectionHasUpdates = true %}
-                    {% endif %}
-                    {% for subsection in section.subsections %}
+                    <!-- Manual has a glidnex and this is NOT a glidnex section -->
+                    {% if section.titleglindex == undefined %}
 
-                    {% if myData.updatesFilter == 'alwayson' %}
-                        {% if subsection.updates %}
+                        {% if section["updates-section"] %}
                             {% set _sectionClasses = "" %}
                             {% set _sectionHasUpdates = true %}
                         {% endif %}
-                    {% endif %}
+                        {% for subsection in section.subsections %}
 
-                        {% for part in subsection.parts %}
-                            {% if part.updates %}
+                        {% if myData.updatesFilter == 'alwayson' %}
+                            {% if subsection.updates %}
                                 {% set _sectionClasses = "" %}
                                 {% set _sectionHasUpdates = true %}
                             {% endif %}
-                            {% for subpart in part.subparts %}
-                                {% if subpart.updates %}
+                        {% endif %}
+
+                            {% for part in subsection.parts %}
+                                {% if part.updates %}
                                     {% set _sectionClasses = "" %}
                                     {% set _sectionHasUpdates = true %}
                                 {% endif %}
-                                {% for subsubpart in subpart.subsubparts %}
-                                    {% if subsubpart.updates %}
+                                {% for subpart in part.subparts %}
+                                    {% if subpart.updates %}
                                         {% set _sectionClasses = "" %}
                                         {% set _sectionHasUpdates = true %}
                                     {% endif %}
+                                    {% for subsubpart in subpart.subsubparts %}
+                                        {% if subsubpart.updates %}
+                                            {% set _sectionClasses = "" %}
+                                            {% set _sectionHasUpdates = true %}
+                                        {% endif %}
+                                    {% endfor %}
                                 {% endfor %}
                             {% endfor %}
                         {% endfor %}
-                    {% endfor %}
 
-                    <li class=" {{_sectionClasses}} ">
-                        {% set _url = "manual-page" %}
-                        {% set _title = section.title %}
-                        {% set _summary = section.summary %}
-                        {% if section.titleglindex %}
-                            {% set _url = "manual-glindex" %}
-                            {% set _title = section.titleglindex %}
-                            {% set _summary = section.summaryglindex %}
-                        {% endif %}
-                        <a class="" href="{{_url}}?manual={{myData.manual}}&manualpage={{section.id}}&updatesFilterOn=false">
-                            <span class="subsection-title-text">{{_title}}{% if section.rangeObj %} ({{_rulePrefix}}{{section.rangeObj.start}} to {{_rulePrefix}}{{section.rangeObj.end}}){% endif %}</span>
-                            {% if section.summary %}
-                            <span class="subsection-summary">
-                                {{_summary}}
-                            </span>
-                            {% endif %}
-
-                            {% if _sectionHasUpdates %}
-                            <strong class="update-tag govuk-tag" >
-                                Updated
-                            </strong>
-                            {% endif %}
-
-                        </a>
-                    </li>
+                        <li class=" {{_sectionClasses}} ">
+                            <a class="" href="manual-page?manual={{myData.manual}}&manualpage={{section.id}}&updatesFilterOn=false">
+                                <span class="subsection-title-text">{{section.title}}{% if section.rangeObj %} ({{_rulePrefix}}{{section.rangeObj.start}} to {{_rulePrefix}}{{section.rangeObj.end}}){% endif %}</span>
+                                {% if section.summary %}
+                                <span class="subsection-summary">
+                                    {{section.summary}}
+                                </span>
+                                {% endif %}
+                                {% if _sectionHasUpdates %}
+                                <strong class="update-tag govuk-tag" >
+                                    Updated
+                                </strong>
+                                {% endif %}
+                            </a>
+                        </li>
+                    
+                    {% endif %}
 
                 {% endfor %}
+
+                <!-- Contact us section -->
                 <li class="section-contains-no-updates">
                     <a class="" href="manual-page?manual={{myData.manual}}&manualpage=feedback&updatesFilterOn=false">
                         <span class="subsection-title-text">Contact us</span>
@@ -265,6 +292,7 @@
                         </span>
                     </a>
                 </li>
+
             </ol>
             
         </div>
