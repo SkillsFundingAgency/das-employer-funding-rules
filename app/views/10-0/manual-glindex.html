@@ -89,7 +89,7 @@
                                         {% if part.type == "see" %}
                                             <!-- See -->
                                             <p class="govuk-body govuk-!-font-weight-bold" id="{{_title | replace(' ', '-') | replace('(', '-') | replace(')', '-')}}">
-                                                {{_title}} <span class="govuk-!-font-weight-regular">see {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span>{{_see|safe}}</span>{% endfor %}</span>
+                                                {{_title}} <span class="govuk-!-font-weight-regular">see the term {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span>{{_see|safe}}</span>{% endfor %}</span>
                                             </p>
                                         {% else %}
 
