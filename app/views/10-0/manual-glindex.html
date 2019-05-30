@@ -89,7 +89,10 @@
                                         {% if part.type == "see" %}
                                             <!-- See -->
                                             <p class="govuk-body govuk-!-font-weight-bold" id="{{_title | replace(' ', '-') | replace('(', '-') | replace(')', '-')}}">
-                                                {{_title}} <span class="govuk-!-font-weight-regular">see the term {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span>{{_see|safe}}</span>{% endfor %}</span>
+                                                {{_title}}
+                                            </p>
+                                            <p class="govuk-body">
+                                                See {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span>‘{{_see|safe}}’</span>{% endfor %}
                                             </p>
                                         {% else %}
 
@@ -140,7 +143,7 @@
 
                                            <!-- See also -->
                                            {% if part.seealso %}
-                                                <p class="govuk-body"><span>See also, the term{% if part.seealso.length > 1 %}s{% endif %} </span>{% for _seealso in part.seealso %}{% if part.seealso.length > 1 and loop.first == false %}{% if loop.last %} and {% else %}, {% endif %}{% endif %}<span>{{_seealso|safe}}</span>{% endfor %}</p>
+                                                <p class="govuk-body"><span>See also </span>{% for _seealso in part.seealso %}{% if part.seealso.length > 1 and loop.first == false %}{% if loop.last %} and {% else %}, {% endif %}{% endif %}<span>‘{{_seealso|safe}}’</span>{% endfor %}</p>
                                            {% endif %}
 
                                         {% endif %}
