@@ -33,18 +33,18 @@
       
     <ol class="breadcrumb-trail">
         <li><a href="manual-home?manual={{myData.manual}}&updatesFilterOn=false">Contents</a></li>
-        <li class="last-child">Glossary and index</li>
+        <li class="last-child">{{section.titleglindex2|safe or section.titleglindex|safe}}</li>
     </ol>
       
     <article aria-labelledby="manual-title" id="content">
         <div class="manual-body">
             <article aria-labelledby="section-title">
                 <h1 id="section-title" class="section-title {% if section.summary %}section-title-with-summary{% endif %}">
-                    {{section.titleglindex|safe}}
+                    {{section.titleglindex2|safe or section.titleglindex|safe}}
                 </h1>
                 {% if section.summary %}
                 <p class="summary">
-                    {{section.summaryglindex|safe}}
+                    {{section.summaryglindex2|safe or section.summaryglindex|safe}}
                 </p>
                 {% endif %}
 

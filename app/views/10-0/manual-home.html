@@ -199,7 +199,7 @@
                 {% set _sectionClasses = "section-contains-no-updates" %}
                 {% set _sectionHasUpdates = false %}
 
-                <!-- Does manual have a glindex? -->
+                <!-- Does manual have a glindex2? -->
                 {% set _hasGlindex = false %}
 
                 {% for section in _thisManual.sections %}
@@ -208,10 +208,10 @@
                         <!-- Glindex item -->
                         <li class=" {{_sectionClasses}} ">
                             <a class="" href="manual-glindex?manual={{myData.manual}}&manualpage={{section.id}}&updatesFilterOn=false">
-                                <span class="subsection-title-text">{{section.titleglindex}}</span>
+                                <span class="subsection-title-text">{{section.titleglindex2 or section.titleglindex}}</span>
                                 {% if section.summary %}
                                 <span class="subsection-summary">
-                                    {{section.summaryglindex}}
+                                    {{section.summaryglindex2 or section.summaryglindex}}
                                 </span>
                                 {% endif %}
                                 {% if _sectionHasUpdates %}
@@ -227,7 +227,7 @@
                 <!-- other sections -->
                 {% for section in _thisManual.sections %}
 
-                    <!-- Manual has a glidnex and this is NOT a glidnex section -->
+                    <!-- Manual has a glindex and this is NOT a glindex section -->
                     {% if section.titleglindex == undefined %}
 
                         {% if section["updates-section"] %}

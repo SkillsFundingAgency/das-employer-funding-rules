@@ -4696,8 +4696,10 @@
                 "id": "glossary",
                 "title": "Glossary",
                 "titleglindex": "Glossary and index",
+                "titleglindex2": "Find rules based on a word or phrase",
                 "summary": "Definitions of terms.",
                 "summaryglindex": "Definitions of terms and where they are referenced in the apprenticeship funding rules.",
+                "summaryglindex2": "An index and glossary with definitions of terms and where they are referenced in the apprenticeship funding rules.",
                 "updates": [
                     {
                         "content": "Restructure: all content previously in the terminology section has been added to the glossary, including: account, apprentice, delivery subcontractor, framework, funding agreement, government-employer co- investment, provider, standard, this document, and training."

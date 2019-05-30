@@ -54,11 +54,17 @@ GOV.UK Manual
                                     {% set _url = "manual-page" %}
                                     {% set _title = section.title %}
                                     {% set _summary = section.summary %}
+
                                     {% if section.titleglindex %}
                                         {% set _url = "manual-glindex" %}
                                         {% set _title = section.titleglindex %}
                                         {% set _summary = section.summaryglindex %}
                                     {% endif %}
+                                    {% if section.titleglindex2 %}
+                                        {% set _title = section.titleglindex2 %}
+                                        {% set _summary = section.summaryglindex2 %}
+                                    {% endif %}
+
                                 <li>
                                     <h3><a href="{{_url}}?manual={{myData.manual}}&manualpage={{section.id}}">{{_title}}{% if section.rangeObj %} ({{_rulePrefix}}{{section.rangeObj.start}} to {{_rulePrefix}}{{section.rangeObj.end}}){% endif %}</a></h3>
                                     {% if section.summary %}
