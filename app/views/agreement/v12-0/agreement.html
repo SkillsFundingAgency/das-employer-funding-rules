@@ -90,7 +90,7 @@ Agreement with the Education and Skills Funding Agency (ESFA)
     <div class="govuk-grid-column-two-thirds">
 
         <!-- Title -->
-        <h1 class="govuk-heading-xl">Agreement with the Education and Skills Funding Agency (ESFA)</h1>
+        <h1 class="govuk-heading-xl">Agreement between {{data['orgName'] or "Assurance Aerospace Ltd" }} and the Education and Skills Funding Agency (ESFA)</h1>
 
         <!-- <p class="govuk-body">{{data['orgName'] or "Assurance Aerospace Ltd" }}</p> -->
         
@@ -99,7 +99,7 @@ Agreement with the Education and Skills Funding Agency (ESFA)
         
         <!-- Notification about version -->
         <!-- <div class="govuk-inset-text"> -->
-            <p class="govuk-body">We updated the agreement on 11 March 2018.</p>
+            <p class="govuk-body">We updated the agreement on 1 May 2018.</p>
         <!-- </div> -->
 
         <!-- <p class="govuk-body">The agreement includes the terms and conditions of:</p> -->
@@ -120,11 +120,11 @@ Agreement with the Education and Skills Funding Agency (ESFA)
         <!-- Key facts -->
         <!-- <h2 class="govuk-heading-m">Key features of the agreement</h2> -->
         <div class="govuk-inset-text">
-                <p class="govuk-body">View the full agreement, share or print it with this link: <a href="agreement-govuk" target="_blank" class="govuk-link govuk-link--no-visited-state">https://www.gov.uk/government/publications/apprenticeship-agreement-for-employers-1-May-2018</a></p>
-            </div>
-        <p class="govuk-body">Key features of the agreement:</p>
+            <p class="govuk-body">View the full agreement, share or print it with the following link: <a href="agreement-govuk" target="_blank" class="govuk-link govuk-link--no-visited-state">https://www.gov.uk/government/publications/agreement-between-an-employer-and-the-education-and-skills-funding-agency-esfa</a></p>
+        </div>
+        <!-- <p class="govuk-body">Key features of the agreement:</p>
         <ul class="govuk-list govuk-list--bullet">
-            <!-- <li>you have read and agree to the <a href="agreement-full">agreement</a></li> -->
+            <li>you have read and agree to the <a href="agreement-full">agreement</a></li>
             <li>using the apprenticeship service</li>
             <li>using government funding to train and assess apprentices</li>
             <li>working with the ESFA</li>
@@ -134,8 +134,29 @@ Agreement with the Education and Skills Funding Agency (ESFA)
             <li>you understand we may ask you to repay any funding if you don’t follow the rules of this agreement</li>
             <li>you understand we may ask you to pay any remaining training if you don’t follow the rules of this agreement </li>
             <li>you must help with the investigation if the ESFA suspects that you are not following this agreement or the funding rules</li>     
-        </ul>
+        </ul> -->
         <!-- <p class="govuk-body">You can also <a href="/accounts/VYJW8B/agreements/MK77WW/agreement-pdf" target="_blank" class="govuk-link">view the agreement in PDF format</a> (400KB, 23 pages).</p> -->
+
+        <h2 class="govuk-heading-m">Key features of the agreement</h2>
+        <p class="govuk-body">The employer must:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>only use the funding in their apprenticeship service account to train and assess apprentices</li>
+            <li>have a ‘contract for services’ with their training providers</li>
+            <li>follow the apprenticeship funding rules</li>
+        </ul>
+        <p class="govuk-body">The ESFA can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>suspend payments, recover funds or close the employer’s account if the employer breaks the agreement</li>
+            <li>change the terms of the agreement and any part of the apprenticeship service</li>
+        </ul>
+
+
+
+
+
+
+
+
         
 
 
@@ -185,7 +206,7 @@ Agreement with the Education and Skills Funding Agency (ESFA)
                 <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                 <strong class="govuk-warning-text__text govuk-!-font-weight-bold">
                   <span class="govuk-warning-text__assistive">Warning</span>
-                  This agreement is legally binding. If you breach it, we could terminate your apprenticeship service account.
+                  The agreement is legally binding. If the employer breaks it, we could close their account and stop them running apprenticeships.
                 </strong>
               </div>
         <!-- <br> -->
@@ -200,14 +221,14 @@ Agreement with the Education and Skills Funding Agency (ESFA)
                         <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                             <h1 class="govuk-fieldset__heading">
-                                Do you accept the agreement?
+                                    Do you accept the agreement?
                             </h1>
                           </legend>
                           <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                             <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="app-1" name="agreementSign" type="radio" value="yes">
                                     <label class="govuk-label govuk-radios__label" for="app-1" style="padding-bottom:0">
-                                        Yes, I accept the agreement
+                                            Yes, I accept the agreement
                                     </label>
                                 </div>
                             <div class="govuk-radios__item">
