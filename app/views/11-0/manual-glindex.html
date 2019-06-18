@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Manual
+{% endblock %}
+
+{% set _thisManualType = myData.manuals[myData.manual].type %}
+{% set _thisManual = myData.manuals[myData.manual].content %}
+{% set section = {} %}
+{% for _section in _thisManual.sections %}
+    {% if myData.manualpage == _section.id %}
+        {% set section = _section %}
+    {% endif %}
+{% endfor %}
+
+{% set _rulePrefix = "P" %}
+{% if _thisManualType == "employer" %}
+    {% set _rulePrefix = "E" %}
+{% elif _thisManualType == "employerprovider" %}
+    {% set _rulePrefix = "EP" %}
+{% endif %}
+
+{% block content %}
+
+<div id="manuals-frontend" class="manuals-frontend-body inner-block">
+    
+    {% if myData.header == "altered" %}
+        {% include "../includes/manual-header-2.html" %}
+    {% else %}
+        {% set _manualHeaderTitle = _thisManual.title|safe %}
+        {% include "../includes/manual-header.html" %}
+    {% endif %}
+      
+    <ol class="breadcrumb-trail">
+        <li><a href="manual-home?manual={{myData.manual}}&updatesFilterOn=false">Contents</a></li>
+        <li class="last-child">{{section.titleglindex2|safe or section.titleglindex|safe}}</li>
+    </ol>
+      
+    <article aria-labelledby="manual-title" id="content">
+        <div class="manual-body">
+            <article aria-labelledby="section-title">
+                <h1 id="section-title" class="section-title {% if section.summary %}section-title-with-summary{% endif %}">
+                    {{section.titleglindex2|safe or section.titleglindex|safe}}
+                </h1>
+                {% if section.summary %}
+                <p class="summary">
+                    {{section.summaryglindex2|safe or section.summaryglindex|safe}}
+                </p>
+                {% endif %}
+
+                <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
+                    <div class="collapsible-subsections">
+                        <div class="gem-c-govspeak govuk-govspeak parts-container">
+
+                            <div class="call-to-action">
+                                <p><a rel="external" href="https://www.smartsurvey.co.uk/s/2CJEQ/">Complete our survey</a> to help us make the funding rules clearer.</p>
+                            </div>
+
+                            {% for subsection in section.subsections %}
+
+                                {% set _prevInitial = "" %}
+            
+                                <!-- Letter groups -->
+
+                                {% for part in subsection.partsglindex %}
+
+                                    {% set _title = part.title %}
+                                    {% set _thisInitial = part.title|truncate(1,true,"") %}
+                                    {% if part.sortoverride %}
+                                        {% set _thisInitial = part.sortoverride|truncate(1,true,"") %}
+                                    {% endif %}
+
+                                    {% if loop.first == true and part.isAtoZ == false %}
+                                        <!-- Numbers -->
+                                        <h2 id="{{_thisInitial}}" >
+                                            0-9
+                                        </h2>
+                                    {% else %}
+                                        {% if _thisInitial != _prevInitial and part.isAtoZ == true %}
+                                            <!-- new letter rendered (_thisInitial) -->
+                                            <h2 id="{{_thisInitial}}" >
+                                                {{_thisInitial}}
+                                            </h2>
+                                        {% endif %}
+                                    {% endif %}
+
+                                    {% set _prevInitial = _thisInitial %}
+
+                                        {% if part.type == "see" %}
+                                            <!-- See -->
+                                            <p class="govuk-body govuk-!-font-weight-bold" id="{{_title | replace(' ', '-') | replace('(', '-') | replace(')', '-')}}">
+                                                {{_title}}
+                                            </p>
+                                            <p class="govuk-body">
+                                                See {% for _see in part.see %}{% if part.see.length > 1 and loop.first == false %}{% if loop.last %} or {% else %}, {% endif %}{% endif %}<span>‘{{_see|safe}}’</span>{% endfor %}
+                                            </p>
+                                        {% else %}
+
+                                            <!-- Title -->
+                                            <p class="govuk-body govuk-!-font-weight-bold" id="{{_title | replace(' ', '-') | replace('(', '-') | replace(')', '-')}}">{{_title}}</p>
+
+                                            <!-- Definition -->
+                                            <p class="govuk-body">{{part.content|safe|trim}}</p>
+                                            {% if part.subparts %}
+                                                {% for _subpart in part.subparts %}
+                                                    {% if _subpart.type == "list" %}
+                                                    <ul class='govuk-list govuk-list--bullet'>
+                                                    {% endif %}
+                                                {% for _item in _subpart.content %}
+                                                    {% if _subpart.type == "list" %}
+                                                    <li>{{_item|safe|trim}}</li>
+                                                    {% else %}
+                                                    <p class="govuk-body">{{_item|safe|trim}}</p>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                    {% if _subpart.type == "list" %}
+                                                    </ul>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% endif %}
+
+                                            <!-- Cross refs -->
+                                            {% if part.crossrefs2 %}
+                                                {% set _singleCrossRef = part.crossrefs2.length == 1 %}
+                                                {% if _singleCrossRef == true %}
+                                                    <p class="govuk-body">View the 
+                                                {% else %}
+                                                    <p class="govuk-body">View the following sections of the funding rules:</p><ul class='govuk-list govuk-list--bullet'>
+                                                {% endif %}
+                                                {% for _crossref in part.crossrefs2 %}
+                                                    {% set _loopIsFirst = loop.first %}{% set _crossrefText = '' %}{% set _crossrefLink = '' %}{% if _crossref.type == "subsection" %}{% for section in _thisManual.sections %}{% if section.id == _crossref.sectionid %}{% set _rules = "" %}{% if _crossref.rules %}{% for rule in _crossref.rules %}{% if _crossref.rules.length > 1 and loop.first == false %}{% if loop.last %}{% set _rules = _rules + " and " %}{% else %}{% set _rules = _rules + ", " %}{% endif %}{% endif %}{% set _rules = _rules + _rulePrefix + rule %}{% endfor %}{% set _rules = ' (' + _rules + ')' %}{% endif %}{% set _subsectionTitle = section.title %}{% set _subsectionid = _crossref.sectionid + "-subsection" %}{% for subsection in section.subsections %}{% if subsection.id == _crossref.subsectionid %}{% set _subsectionTitle = subsection.title %}{% set _subsectionid = _crossref.subsectionid %}{% endif %}{% endfor %}{% set _crossrefText = _subsectionTitle %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false#' + _subsectionid %}{% endif %}{% endfor %}{% elif _crossref.type == "section" %}{% for section in _thisManual.sections %}{% if section.id == _crossref.sectionid %}{% set _sectionTitle = section.title %}{% set _crossrefText = _sectionTitle %}{% if section.rangeObj %}{% set _crossrefText = _sectionTitle + ' (' + _rulePrefix + section.rangeObj.start + ' to ' + _rulePrefix + section.rangeObj.end + ')' %}{% endif %}{% endif %}{% endfor %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false' %}{% elif _crossref.type == "rulerange" %}{% set _crossrefText = _rulePrefix + _crossref.range.start + ' to ' + _rulePrefix + _crossref.range.end %}{% set _crossrefLink = 'manual-page?manual=' + myData.manual + '&manualpage=' + _crossref.sectionid + '&updatesFilterOn=false#' + _crossref.range.start|replace('.', '-') %}{% endif %}
+                                                    {% if _singleCrossRef == true %}
+                                                    <a href="{{_crossrefLink}}" class="govuk-link govuk-link--no-visited-state">{{_crossrefText}}</a> section of the funding rules.</p>
+                                                    {% else %}
+                                                    <li><a href="{{_crossrefLink}}" class="govuk-link govuk-link--no-visited-state">{{_crossrefText}}</a></li>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                {% if _singleCrossRef != true %}
+                                                    </ul>
+                                                {% endif %}
+                                            {% endif %}
+                                            <!-- Cross refs END -->
+
+                                           <!-- See also -->
+                                           {% if part.seealso %}
+                                                <p class="govuk-body"><span>See also </span>{% for _seealso in part.seealso %}{% if part.seealso.length > 1 and loop.first == false %}{% if loop.last %} and {% else %}, {% endif %}{% endif %}<span>‘{{_seealso|safe}}’</span>{% endfor %}</p>
+                                           {% endif %}
+
+                                        {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+
+            </article>
+        </div>
+    </article>
+            
+    <div class="print-page">
+        <a onclick="window.print();return false;" href="#print">Print this page</a>
+    </div>
+</div>
+
+{% endblock %}
