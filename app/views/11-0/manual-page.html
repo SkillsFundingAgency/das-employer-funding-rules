@@ -331,7 +331,7 @@
                                             <h3 class="govuk-heading-m">{{part.content|safe|trim}}</h3>
                                         {% elif part.type == "flow" %}
                                             <!-- English Maths flowchart -->
-                                            {% if subsection.id == "support-english-maths-training" %}
+                                            {% if subsection.id == "flowchart-english-maths-training" %}
                                                 <!-- Flow chart SVG -->
                                                 {% if myData.svgflow == "true" %}
                                                     {% include "../includes/english-maths-flow-3-fixed.html" %}
@@ -345,9 +345,9 @@
                                                     {% include "../includes/english-maths-text-flow-2.html" %}
                                                 {% endif %}
                                             <!-- Change circs flowchart -->
-                                            {% elif subsection.id == "summary-action-following-change-circumstances" %}
+                                            {% elif subsection.id == "flowchart-change-of-circs" %}
                                                 {% if myData.chocChart == "pngflow" %}
-                                                    <img class="flow-chart" style="width: auto; height: auto; max-width: 100%; margin-bottom: 30px" alt=”” aria-hidden=”true” src="/public/images/change-of-circs-2.png">
+                                                    <img class="flow-chart" style="width: auto; height: auto; max-width: 100%; margin-bottom: 30px" alt=”” aria-hidden=”true” src="/public/images/change-of-circs-3.png">
                                                 {% endif %}
                                             <!-- recognition of prior learning flowcharts -->
                                             {% elif subsection.id == "accounting-prior-learning" %}
