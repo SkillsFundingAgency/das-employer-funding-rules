@@ -1460,7 +1460,7 @@
                     {
                         "type": "subsection",
                         "id": "flowchart-english-maths-training",
-                        "title": "Flowchart - Find out what English and maths training your apprentice should do",
+                        "title": "Flow chart: find out what English and maths training your apprentice should do",
                         "parts": [
                             {
                                 "type": "flow"
@@ -2071,7 +2071,7 @@
                     {
                         "type": "subsection",
                         "id": "flowchart-change-of-circs",
-                        "title": "Flowchart - Find out what to do if your apprentice wants to take a break in learning",
+                        "title": "Flow chart: what to do if there is a break in learning, withdrawal or redundancy",
                         "parts": [
                             {
                                 "type": "flow"
