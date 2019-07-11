@@ -119,27 +119,28 @@ Agreement with the Education and Skills Funding Agency (ESFA)
 
         <form>
             <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+                <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                     <h1 class="govuk-fieldset__heading">
-                            Do you accept the agreement?
+                        Do you accept the agreement?
                     </h1>
                     </legend>
                     <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-                    <div class="govuk-radios__item">
+                        <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="app-1" name="agreementSign" type="radio" value="yes">
                             <label class="govuk-label govuk-radios__label" for="app-1" style="padding-bottom:0">
                                     Yes, I have read the agreement and accept it
                             </label>
                         </div>
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="app-4" name="agreementSign" type="radio" value="notYet" data-aria-controls="conditional-app-4">
-                        <label class="govuk-label govuk-radios__label" for="app-4">
-                                I’ll review it later
-                        </label> </div>
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-app-4">
-                        <p class="govuk-body">You can continue registering and accept the agreement later. {{data['orgName'] or "Assurance Aerospace Ltd" }} will not be able to get or reserve funding until you accept.</p>
-                    </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="app-4" name="agreementSign" type="radio" value="notYet" data-aria-controls="conditional-app-4">
+                            <label class="govuk-label govuk-radios__label" for="app-4">
+                                    I’ll review it later
+                            </label> 
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-app-4">
+                            <p class="govuk-body">You can continue registering and accept the agreement later. {{data['orgName'] or "Assurance Aerospace Ltd" }} will not be able to get or reserve funding until you accept.</p>
+                        </div>
                     </div>
                 </fieldset>
                 

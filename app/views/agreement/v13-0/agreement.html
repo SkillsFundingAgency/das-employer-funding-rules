@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Agreement with the Education and Skills Funding Agency (ESFA)
+{% endblock %}
+
+{% if _referrer == "home" %}
+  {% set backLinkHref = "homepage-signAgreement" %}
+{% else %}
+  {% set backLinkHref = "agreement-check" %}
+{% endif %}
+
+{% block beforeContent %}
+{% from "back-link/macro.njk" import govukBackLink %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% set _orgName = data['orgName'] or "ASSURANCE AEROSPACE LTD" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Agreement between {{_orgName}} and the Education and Skills Funding Agency (ESFA)</h1>
+        
+        <p class="govuk-body">We updated the agreement on 1 May 2018.</p>
+    
+        <h2 class="govuk-heading-m">Key features of the agreement</h2>
+        <p class="govuk-body">{{_orgName}} must:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>only use the funding in their apprenticeship service account to train and assess apprentices</li>
+            <li>have a contract with their training providers to train their apprentices</li>
+            <li>follow the apprenticeship funding rules</li>
+        </ul>
+        <p class="govuk-body">The ESFA can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>suspend payments, recover funds or close {{_orgName}}’s account if {{_orgName}} breaks the agreement</li>
+            <li>change any part of the apprenticeship service</li>
+            <li>change the terms of the agreement (we will ask {{_orgName}} to accept the new terms if this happens)</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">The full agreement</h2>
+        <p class="govuk-body">View the full agreement, share or print it with the following link (opens in a new window or tab): <a href="agreement-govuk" target="_blank" class="govuk-link govuk-link--no-visited-state">https://www.gov.uk/government/publications/agreement-between-an-employer-and-the-education-and-skills-funding-agency-esfa</a></p>
+
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text govuk-!-font-weight-bold">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                The agreement is legally binding. If {{_orgName}} breaks it, we could close their account and stop them running apprenticeships.
+            </strong>
+        </div>
+
+        <form>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h1 class="govuk-fieldset__heading">
+                        Do you accept the agreement?
+                    </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-1" name="agreementSign" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="app-1" style="padding-bottom:0">
+                                Yes, I have read the agreement and accept it
+                            </label>
+                        </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-4" name="agreementSign" type="radio" value="government-gateway" aria-describedby="app-4-item-hint">
+                        <label class="govuk-label govuk-radios__label" for="app-4">
+                            I’ll review it later
+                        </label> 
+                        <span id="app-4-item-hint" class="govuk-hint govuk-radios__hint">
+                            You can continue registering and accept the agreement later. {{_orgName}} will not be able to get or reserve funding until you accept.
+                        </span> 
+                    </div>
+                </fieldset>
+                
+            </div>
+        </form>
+
+        <!-- Call to action button -->
+        <button class="govuk-button">Continue</button>
+
+    </div>
+</div>
+
+{% endblock %}

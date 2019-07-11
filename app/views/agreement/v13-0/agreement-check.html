@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Agreement with the Education and Skills Funding Agency (ESFA)
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% set _orgName = data['orgName'] or "ASSURANCE AEROSPACE LTD" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Do you want to review the agreement now?</h1>
+
+        <p class="govuk-body">The agreement is between {{_orgName}} and the ESFA. To get funding it needs to be reviewed and agreed.</p>
+        <p class="govuk-body">You can continue registering without reviewing it now.</p>
+
+        <form>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" >
+                        <!-- aria-describedby="agreement-check-hint" -->
+                    <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            Do you want to complete registration without reviewing the agreement?
+                        </h1>
+                    </legend>
+                    <span id="agreement-check-hint" class="govuk-hint">
+                        You can continue registering without reviewing it.
+                    </span> -->
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="agreement-check-1" name="agreementCheck" type="radio" value="yes" >
+                            <!-- data-aria-controls="conditional-agreement-check-1" -->
+                            <label class="govuk-label govuk-radios__label" for="agreement-check-1">
+                                I'll review it later
+                            </label>
+                            <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-agreement-check-1">
+                                <p class="govuk-body">When you need to get apprenticeship funding you will have to agree to the employer agreement.</p>
+                            </div> -->
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="agreement-check-2" name="agreementCheck" type="radio" value="no" >
+                            <label class="govuk-label govuk-radios__label" for="agreement-check-2">
+                                Review it now
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+
+        <!-- Call to action button -->
+        <button class="govuk-button">Continue</button>
+
+    </div>
+</div>
+
+{% endblock %}
