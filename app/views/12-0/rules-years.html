@@ -271,7 +271,10 @@
 
     <ol class="gem-c-contents-list__list">
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed ">
-          <a class="gem-c-contents-list__link " data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="#the-latest-rules-2018-to-2019" data-track-options='{"dimension29":"The latest rules (2018 to 2019)"}' href="#the-latest-rules-2018-to-2019">The latest rules (2018 to 2019)</a>
+          <a class="gem-c-contents-list__link " data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="#the-latest-rules-2019-to-2020" data-track-options='{"dimension29":"The latest rules (2018 to 2019)"}' href="#the-latest-rules-2019-to-2020">The latest rules (2019 to 2020)</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed ">
+          <a class="gem-c-contents-list__link " data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="#to-2019-rules" data-track-options='{"dimension29":"2018 to 2019 rules"}' href="#the-2018-to-2019-rules">The 2018 to 2019 rules</a>
         </li>
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed ">
           <a class="gem-c-contents-list__link " data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="#to-2018-rules" data-track-options='{"dimension29":"2017 to 2018 rules"}' href="#the-2017-to-2018-rules">The 2017 to 2018 rules</a>
@@ -282,11 +285,6 @@
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed ">
           <a class="gem-c-contents-list__link " data-track-category="contentsClicked" data-track-action="content_item 4" data-track-label="#previous-rules" data-track-options='{"dimension29":"Previous rules"}' href="#previous-rules">Previous rules</a>
         </li>
-        {% if myData.preview == "true" %}
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed ">
-          <a class="gem-c-contents-list__link " data-track-category="contentsClicked" data-track-action="content_item 4" data-track-label="#previous-rules" data-track-options='{"dimension29":"Clarification version of the 2019 to 2020 rules"}' href="#clarification">Clarification version of the 2019 to 2020 rules</a>
-        </li>
-        {% endif %}
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed ">
           <a class="gem-c-contents-list__link " data-track-category="contentsClicked" data-track-action="content_item 5" data-track-label="#help-and-support" data-track-options='{"dimension29":"Help and support"}' href="#help-and-support">Contact us</a>
         </li>
@@ -298,7 +296,7 @@
       
 <div class="gem-c-govspeak govuk-govspeak direction-ltr" data-module="govspeak">
       <div class="govspeak">
-<h2 id="the-latest-rules-2018-to-2019">The latest rules (2018 to 2019)</h2>
+<h2 id="the-latest-rules-2019-to-2020">The latest rules (2019 to 2020)</h2>
 
 <div class="call-to-action">
 <p>There are different funding rules for different apprenticeship start dates. You must follow the funding rules that apply to each apprentice.</p>
@@ -320,42 +318,39 @@
     {% set _employerproviderManual = myData.manuals[myData.manual].id %}
 {% endif %}
 
-<p class="govuk-body">The 2018 to 2019 rules apply to apprenticeships starting between 1 August 2018 and 31 July 2019. View the apprenticeship funding rules for:</p>
-
+{% if myData.noManuals == "true" %}
+<p class="govuk-body">The 2019 to 2020 rules apply to apprenticeships starting between 1 August 2019 and 31 July 2020.</p>
+<p class="govuk-body">View the apprenticeship funding rules for:</p>
+{% else %}
+<p class="govuk-body">The 2019 to 2020 rules apply to apprenticeships starting between 1 August 2019 and 31 July 2020. View the apprenticeship funding rules for:</p>
 <ul class="govuk-list  govuk-list--bullet" >
     <li><a href="manual-home?manual={{_employerManual}}">employers</a></li>
     <li><a href="manual-home?manual={{_employerproviderManual}}">employer-providers</a></li>
     <li><a href="manual-home?manual={{_providerManual}}">training providers</a></li>
 </ul>
-
-<!-- <ul>
-  <li><a href="https://www.gov.uk/guidance/apprenticeship-funding-rules-for-employers">employers</a></li>
-  <li><a href="https://www.gov.uk/guidance/apprenticeship-funding-rules-for-employer-providers">employer-providers</a></li>
-  <li><a href="https://www.gov.uk/guidance/apprenticeship-funding-rules-for-training-providers">training providers</a></li>
-</ul> -->
-
 <p>View the funding rules in PDF format for:</p>
+{% endif %}
 
 <ul>
-  <li>
-    <p><span id="attachment_3280308" class="attachment-inline">
-<a href="/public/downloads/apprenticeship-funding-rules-employers-2018-2019-v2.pdf">employers</a>
-(<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">836KB</span>, <span class="page-length">59 pages</span>)
-</span></p>
-  </li>
-  <li>
-    <p><span id="attachment_3280309" class="attachment-inline">
-<a href="/public/downloads/apprenticeship-funding-rules-employer-providers-2018-2019-v2.pdf">employer-providers</a>
-(<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">911KB</span>, <span class="page-length">69 pages</span>)
-</span></p>
-  </li>
-  <li>
-    <p><span id="attachment_3280310" class="attachment-inline">
-<a href="/public/downloads/apprenticeship-funding-rules-training-providers-2018-2019-v2.pdf">training providers</a>
-(<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">976KB</span>, <span class="page-length">76 pages</span>)
-</span></p>
-  </li>
-</ul>
+    <li>
+      <p><span class="attachment-inline">
+  <a href="/public/downloads/clarification-version-apprenticeship-funding-rules-and-guidance-employers-2019-2020.pdf">employers</a>
+  (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">389KB</span>, <span class="page-length">50 pages</span>)
+  </span></p>
+    </li>
+    <li>
+      <p><span class="attachment-inline">
+  <a href="/public/downloads/clarification-version-apprenticeship-funding-rules-employer-providers-2019-2020.pdf">employer-providers</a>
+  (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">862KB</span>, <span class="page-length">58 pages</span>)
+  </span></p>
+    </li>
+    <li>
+      <p><span class="attachment-inline">
+  <a href="/public/downloads/clarification-version-apprenticeship-funding-rules-training-providers-2019-2020.pdf">training providers</a>
+  (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">489KB</span>, <span class="page-length">82 pages</span>)
+  </span></p>
+    </li>
+  </ul>
 
 <h3 id="other-documents">Other documents</h3>
 
@@ -363,10 +358,10 @@
 
 <ul>
   <li>
-    <p><span id="attachment_3280306" class="attachment-inline">
-<a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/786372/Apprenticeship_funding_rules_August_2018_to_July_2019_summary_of_changes.pdf">apprenticeship funding rules 2018 to 2019: summary of changes</a>
-(<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">164KB</span>, <span class="page-length">4 pages</span>)
-</span></p>
+<p><span class="attachment-inline">
+    <a href="/public/downloads/clarification-version-apprenticeship-funding-rules-2019-2020-summary-of-changes.pdf">apprenticeship funding rules 2019 to 2020: summary of changes</a>
+    (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">95KB</span>, <span class="page-length">4 pages</span>).
+    </span></p>
   </li>
   <li>
     <p><span id="attachment_3280302" class="attachment-inline">
@@ -379,6 +374,41 @@
 <div class="call-to-action">
 <p><a rel="external" href="https://www.smartsurvey.co.uk/s/2CJEQ/">Complete our survey</a> to help us make the funding rules clearer.</p>
 </div>
+
+<h2 id="the-2018-to-2019-rules">The 2018 to 2019 rules</h2>
+
+<p>The 2018 to 2019 rules apply to apprenticeships that started between 1 August 2018 and 31 July 2019.</p>
+
+<p>You can view the apprenticeship funding rules for:</p>
+
+<!-- 18-19 pdfs -->
+<ul>
+    <li>
+      <p><span id="attachment_3280308" class="attachment-inline">
+  <a href="/public/downloads/apprenticeship-funding-rules-employers-2018-2019-v2.pdf">employers</a>
+  (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">836KB</span>, <span class="page-length">59 pages</span>)
+  </span></p>
+    </li>
+    <li>
+      <p><span id="attachment_3280309" class="attachment-inline">
+  <a href="/public/downloads/apprenticeship-funding-rules-employer-providers-2018-2019-v2.pdf">employer-providers</a>
+  (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">911KB</span>, <span class="page-length">69 pages</span>)
+  </span></p>
+    </li>
+    <li>
+      <p><span id="attachment_3280310" class="attachment-inline">
+  <a href="/public/downloads/apprenticeship-funding-rules-training-providers-2018-2019-v2.pdf">training providers</a>
+  (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">976KB</span>, <span class="page-length">76 pages</span>)
+  </span></p>
+    </li>
+  </ul>
+  <!-- 18-19 pdfs end -->
+
+  <p>You can also view <span id="attachment_3280306" class="attachment-inline">
+      <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/786372/Apprenticeship_funding_rules_August_2018_to_July_2019_summary_of_changes.pdf">apprenticeship funding rules 2018 to 2019: summary of changes</a>
+      (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">164KB</span>, <span class="page-length">4 pages</span>)
+      </span></p>
+
 
 <h2 id="the-2017-to-2018-rules">The 2017 to 2018 rules</h2>
 
@@ -434,44 +464,6 @@
 
 <p><a href="https://www.gov.uk/guidance/sfa-funding-rules">View previous funding rules</a> for apprenticeships that started before 1 August 2016.</p>
 
-{% if myData.preview == "true" %}
-
-<h2 id="clarification">Clarification version of the 2019 to 2020 rules</h2>
-
-<p>The 2019 to 2020 rules apply to apprenticeships starting between 1 August 2019 and 31 July 2020. We’re issuing them now to give you time to prepare for any changes.</p>
-
-<p>View the clarification version of the apprenticeship funding rules for:</p>
-
-<ul>
-    <li>
-      <p><span class="attachment-inline">
-  <a href="/public/downloads/clarification-version-apprenticeship-funding-rules-and-guidance-employers-2019-2020.pdf">employers</a>
-  (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">389KB</span>, <span class="page-length">50 pages</span>)
-  </span></p>
-    </li>
-    <li>
-      <p><span class="attachment-inline">
-  <a href="/public/downloads/clarification-version-apprenticeship-funding-rules-employer-providers-2019-2020.pdf">employer-providers</a>
-  (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">862KB</span>, <span class="page-length">58 pages</span>)
-  </span></p>
-    </li>
-    <li>
-      <p><span class="attachment-inline">
-  <a href="/public/downloads/clarification-version-apprenticeship-funding-rules-training-providers-2019-2020.pdf">training providers</a>
-  (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">489KB</span>, <span class="page-length">82 pages</span>)
-  </span></p>
-    </li>
-  </ul>
-
-  <p>We’ll publish a final version of these rules by 31 July 2019.</p>
-
-  <p>You can also view <span class="attachment-inline">
-      <a href="/Public/downloads/clarification-version-apprenticeship-funding-rules-2019-2020-summary-of-changes.pdf">apprenticeship funding rules 2019 to 2020: summary of changes</a>
-      (<span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">95KB</span>, <span class="page-length">4 pages</span>).
-      </span></p>
-
-
-{% endif %}
 
 <h2 id="help-and-support">Contact us</h2>
 
@@ -795,7 +787,7 @@
 
     <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
   <script src="https://assets.publishing.service.gov.uk/government-frontend/application-654ebcdf6c8cc23325b58dd52b1fc1be4218084bef0b9398a8a251d38f6bbb26.js" crossorigin="anonymous" integrity="sha256-ZU6832yMwjMltY3VKx/BvkIYCEvvC5OYqKJR049ruyY="></script><script type="application/ld+json">
-  {"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gov.uk/guidance/apprenticeship-funding-rules"},"headline":"Apprenticeship funding rules","datePublished":"2019-03-15T14:09:00.000+00:00","dateModified":"2019-03-15T14:09:00.000+00:00","description":"Information about funding for training and assessing apprentices in England.\r\n","publisher":{"@type":"Organization","name":"GOV.UK","url":"https://www.gov.uk","logo":{"@type":"ImageObject","url":"https://assets.publishing.service.gov.uk/government-frontend/govuk_publishing_components/govuk-logo-e5962881254c9adb48f94d2f627d3bb67f258a6cbccc969e80abb7bbe4622976.png"}},"image":["https://assets.publishing.service.gov.uk/government-frontend/govuk_publishing_components/govuk-schema-placeholder-1x1-5ceffac04f7f6d4f421bd1d36dbb723ef48c15426d7f77f90be80a83af3c747e.png","https://assets.publishing.service.gov.uk/government-frontend/govuk_publishing_components/govuk-schema-placeholder-4x3-fcfe16abb1a015848e50d2ea797666a9eaf5158dca38ddfb1e52dc8c0543ab74.png","https://assets.publishing.service.gov.uk/government-frontend/govuk_publishing_components/govuk-schema-placeholder-16x9-fcf616879a7b37970df4d2117de962e08f7d057674ef1af6063dcdd529424eee.png"],"author":{"@type":"Organization","name":"Education and Skills Funding Agency","url":"https://www.gov.uk/government/organisations/education-and-skills-funding-agency"},"articleBody":"\u003cdiv class=\"govspeak\"\u003e\u003ch2 id=\"the-latest-rules-2018-to-2019\"\u003eThe latest rules (2018 to 2019)\u003c/h2\u003e\n\n\u003cdiv class=\"call-to-action\"\u003e\n\u003cp\u003eThere are different funding rules for different apprenticeship start dates. You must follow the funding rules that apply to each apprentice.\u003c/p\u003e\n\u003c/div\u003e\n\n\u003cp\u003eThe 2018 to 2019 rules apply to apprenticeships starting on or after 1 August 2018.\u003c/p\u003e\n\n\u003cp\u003eView the apprenticeship funding rules for:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003e\u003ca href=\"https://www.gov.uk/guidance/apprenticeship-funding-rules-for-employers\"\u003eemployers\u003c/a\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ca href=\"https://www.gov.uk/guidance/apprenticeship-funding-rules-for-employer-providers\"\u003eemployer-providers\u003c/a\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ca href=\"https://www.gov.uk/guidance/apprenticeship-funding-rules-for-training-providers\"\u003etraining providers\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\n\u003cp\u003eView the funding rules in PDF format for:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280308\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/786464/apprenticeship_funding_rules_and_guidance_for_employers_August_2018_to_July_2019_version_2.pdf\"\u003eemployers\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e836KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e59 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280309\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/786462/apprenticeship_funding_rules_for_employer-providers_August_2018_to_July_2019_version_2.pdf\"\u003eemployer-providers\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e911KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e69 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280310\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/786465/apprenticeship_funding_rules_for_training_providers_August_2018_to_July_2019_version_2.pdf\"\u003etraining providers\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e976KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e76 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\n\u003ch3 id=\"other-documents\"\u003eOther documents\u003c/h3\u003e\n\n\u003cp\u003eYou can also view:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280306\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/786372/Apprenticeship_funding_rules_August_2018_to_July_2019_summary_of_changes.pdf\"\u003eapprenticeship funding rules 2018 to 2019: summary of changes\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e164KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e4 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280302\" class=\"attachment-inline\"\u003e\n  \u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/783873/Apprenticeship_performance-management_rules_for_training_providers_August_2018_to_March_2019.pdf\"\u003eapprenticeship performance-management rules for training providers\u003c/a\u003e\n  (\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e633KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e16 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\n\u003cdiv class=\"call-to-action\"\u003e\n\u003cp\u003e\u003ca rel=\"external\" href=\"https://www.smartsurvey.co.uk/s/2CJEQ/\"\u003eComplete our survey\u003c/a\u003e to help us make the funding rules clearer.\u003c/p\u003e\n\n\u003cp\u003eWe also run \u003ca rel=\"external\" href=\"https://www.eventbrite.co.uk/o/apprenticeship-service-webinars-18113241310\"\u003eregular webinars\u003c/a\u003e to update employers and training providers about any new developments.\u003c/p\u003e\n\u003c/div\u003e\n\n\u003ch2 id=\"to-2018-rules\"\u003e2017 to 2018 rules\u003c/h2\u003e\n\n\u003cp\u003eThe 2017 to 2018 rules apply to apprenticeships that started between 1 August 2017 and 31 July 2018.\u003c/p\u003e\n\n\u003cp\u003eYou can view the apprenticeship funding rules for:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280303\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/784075/Apprenticeship_funding_rules_and_guidance_for_employers_May_2017_to_July_2018.pdf\"\u003eemployers\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e389KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e50 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280304\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/784099/Apprenticeship_funding_rules_for_employer_providers_May_2017_to_July_2018.pdf\"\u003eemployer-providers\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e862KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e58 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280305\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/784106/Apprenticeship_funding_and_performance_management_rules_for_training_providers_May_2017_to_July_2018.pdf\"\u003etraining providers - includes performance-management rules\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e489KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e82 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\n\u003ch3 id=\"other-documents-1\"\u003eOther documents\u003c/h3\u003e\n\n\u003cp\u003eYou can also view:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280301\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/783663/Apprenticeship_funding_and_performance_management_rules_May_2017_to_July_2018__summary_of_changes.pdf\"\u003eapprenticeship funding and performance-management rules May 2017 to July 2018 - summary of changes\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e111KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e8 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280307\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/784147/Addendum_to_the_apprenticeship_funding_and_performance_management_rules_May_2017_to_March_2018.pdf\"\u003eapprenticeship funding and performance-management rules - addendum 1\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e54.8KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e5 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\n\u003ch2 id=\"to-2017-rules\"\u003e2016 to 2017 rules\u003c/h2\u003e\n\n\u003cp\u003e\u003ca href=\"https://www.gov.uk/government/collections/sfa-funding-rules-2016-to-2017\"\u003eView the 2016 to 2017 funding rules\u003c/a\u003e for apprenticeships that started between 1 August 2016 and 31 July 2017.\u003c/p\u003e\n\n\u003ch2 id=\"previous-rules\"\u003ePrevious rules\u003c/h2\u003e\n\n\u003cp\u003e\u003ca href=\"https://www.gov.uk/guidance/sfa-funding-rules\"\u003eView previous funding rules\u003c/a\u003e for apprenticeships that started before 1 August 2016.\u003c/p\u003e\n\n\u003ch2 id=\"help-and-support\"\u003eHelp and support\u003c/h2\u003e\n\n\u003ch3 id=\"training-providers\"\u003eTraining providers\u003c/h3\u003e\n\n\u003cp\u003eFor help and support you can:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003eemail us at \u003ca href=\"mailto:SDE.servicedesk@education.gov.uk\"\u003eSDE.servicedesk@education.gov.uk\u003c/a\u003e\n\u003c/li\u003e\n  \u003cli\u003ephone us on 0370 267 000\u003c/li\u003e\n  \u003cli\u003econtact your provider management advisor\u003c/li\u003e\n\u003c/ul\u003e\n\n\u003ch3 id=\"employers\"\u003eEmployers\u003c/h3\u003e\n\n\u003cp\u003eFor help and support, phone us on 0800 015 0600.\u003c/p\u003e\n\u003c/div\u003e","about":[{"@context":"http://schema.org","@type":"Thing","sameAs":"https://www.gov.uk/education/hiring-and-training-an-apprentice"},{"@context":"http://schema.org","@type":"Thing","sameAs":"https://www.gov.uk/education/apprenticeships-funding"}]}
+  {"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gov.uk/guidance/apprenticeship-funding-rules"},"headline":"Apprenticeship funding rules","datePublished":"2019-03-15T14:09:00.000+00:00","dateModified":"2019-03-15T14:09:00.000+00:00","description":"Information about funding for training and assessing apprentices in England.\r\n","publisher":{"@type":"Organization","name":"GOV.UK","url":"https://www.gov.uk","logo":{"@type":"ImageObject","url":"https://assets.publishing.service.gov.uk/government-frontend/govuk_publishing_components/govuk-logo-e5962881254c9adb48f94d2f627d3bb67f258a6cbccc969e80abb7bbe4622976.png"}},"image":["https://assets.publishing.service.gov.uk/government-frontend/govuk_publishing_components/govuk-schema-placeholder-1x1-5ceffac04f7f6d4f421bd1d36dbb723ef48c15426d7f77f90be80a83af3c747e.png","https://assets.publishing.service.gov.uk/government-frontend/govuk_publishing_components/govuk-schema-placeholder-4x3-fcfe16abb1a015848e50d2ea797666a9eaf5158dca38ddfb1e52dc8c0543ab74.png","https://assets.publishing.service.gov.uk/government-frontend/govuk_publishing_components/govuk-schema-placeholder-16x9-fcf616879a7b37970df4d2117de962e08f7d057674ef1af6063dcdd529424eee.png"],"author":{"@type":"Organization","name":"Education and Skills Funding Agency","url":"https://www.gov.uk/government/organisations/education-and-skills-funding-agency"},"articleBody":"\u003cdiv class=\"govspeak\"\u003e\u003ch2 id=\"the-latest-rules-2019-to-2020\"\u003eThe latest rules (2019 to 2020)\u003c/h2\u003e\n\n\u003cdiv class=\"call-to-action\"\u003e\n\u003cp\u003eThere are different funding rules for different apprenticeship start dates. You must follow the funding rules that apply to each apprentice.\u003c/p\u003e\n\u003c/div\u003e\n\n\u003cp\u003eThe 2018 to 2019 rules apply to apprenticeships starting on or after 1 August 2018.\u003c/p\u003e\n\n\u003cp\u003eView the apprenticeship funding rules for:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003e\u003ca href=\"https://www.gov.uk/guidance/apprenticeship-funding-rules-for-employers\"\u003eemployers\u003c/a\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ca href=\"https://www.gov.uk/guidance/apprenticeship-funding-rules-for-employer-providers\"\u003eemployer-providers\u003c/a\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ca href=\"https://www.gov.uk/guidance/apprenticeship-funding-rules-for-training-providers\"\u003etraining providers\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\n\u003cp\u003eView the funding rules in PDF format for:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280308\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/786464/apprenticeship_funding_rules_and_guidance_for_employers_August_2018_to_July_2019_version_2.pdf\"\u003eemployers\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e836KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e59 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280309\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/786462/apprenticeship_funding_rules_for_employer-providers_August_2018_to_July_2019_version_2.pdf\"\u003eemployer-providers\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e911KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e69 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280310\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/786465/apprenticeship_funding_rules_for_training_providers_August_2018_to_July_2019_version_2.pdf\"\u003etraining providers\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e976KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e76 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\n\u003ch3 id=\"other-documents\"\u003eOther documents\u003c/h3\u003e\n\n\u003cp\u003eYou can also view:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280306\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/786372/Apprenticeship_funding_rules_August_2018_to_July_2019_summary_of_changes.pdf\"\u003eapprenticeship funding rules 2018 to 2019: summary of changes\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e164KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e4 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280302\" class=\"attachment-inline\"\u003e\n  \u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/783873/Apprenticeship_performance-management_rules_for_training_providers_August_2018_to_March_2019.pdf\"\u003eapprenticeship performance-management rules for training providers\u003c/a\u003e\n  (\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e633KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e16 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\n\u003cdiv class=\"call-to-action\"\u003e\n\u003cp\u003e\u003ca rel=\"external\" href=\"https://www.smartsurvey.co.uk/s/2CJEQ/\"\u003eComplete our survey\u003c/a\u003e to help us make the funding rules clearer.\u003c/p\u003e\n\n\u003cp\u003eWe also run \u003ca rel=\"external\" href=\"https://www.eventbrite.co.uk/o/apprenticeship-service-webinars-18113241310\"\u003eregular webinars\u003c/a\u003e to update employers and training providers about any new developments.\u003c/p\u003e\n\u003c/div\u003e\n\n\u003ch2 id=\"to-2018-rules\"\u003e2017 to 2018 rules\u003c/h2\u003e\n\n\u003cp\u003eThe 2017 to 2018 rules apply to apprenticeships that started between 1 August 2017 and 31 July 2018.\u003c/p\u003e\n\n\u003cp\u003eYou can view the apprenticeship funding rules for:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280303\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/784075/Apprenticeship_funding_rules_and_guidance_for_employers_May_2017_to_July_2018.pdf\"\u003eemployers\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e389KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e50 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280304\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/784099/Apprenticeship_funding_rules_for_employer_providers_May_2017_to_July_2018.pdf\"\u003eemployer-providers\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e862KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e58 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280305\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/784106/Apprenticeship_funding_and_performance_management_rules_for_training_providers_May_2017_to_July_2018.pdf\"\u003etraining providers - includes performance-management rules\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e489KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e82 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\n\u003ch3 id=\"other-documents-1\"\u003eOther documents\u003c/h3\u003e\n\n\u003cp\u003eYou can also view:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280301\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/783663/Apprenticeship_funding_and_performance_management_rules_May_2017_to_July_2018__summary_of_changes.pdf\"\u003eapprenticeship funding and performance-management rules May 2017 to July 2018 - summary of changes\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e111KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e8 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e\u003cspan id=\"attachment_3280307\" class=\"attachment-inline\"\u003e\n\u003ca href=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/784147/Addendum_to_the_apprenticeship_funding_and_performance_management_rules_May_2017_to_March_2018.pdf\"\u003eapprenticeship funding and performance-management rules - addendum 1\u003c/a\u003e\n(\u003cspan class=\"type\"\u003e\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e\u003c/span\u003e, \u003cspan class=\"file-size\"\u003e54.8KB\u003c/span\u003e, \u003cspan class=\"page-length\"\u003e5 pages\u003c/span\u003e)\n\u003c/span\u003e\u003c/p\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\n\u003ch2 id=\"to-2017-rules\"\u003e2016 to 2017 rules\u003c/h2\u003e\n\n\u003cp\u003e\u003ca href=\"https://www.gov.uk/government/collections/sfa-funding-rules-2016-to-2017\"\u003eView the 2016 to 2017 funding rules\u003c/a\u003e for apprenticeships that started between 1 August 2016 and 31 July 2017.\u003c/p\u003e\n\n\u003ch2 id=\"previous-rules\"\u003ePrevious rules\u003c/h2\u003e\n\n\u003cp\u003e\u003ca href=\"https://www.gov.uk/guidance/sfa-funding-rules\"\u003eView previous funding rules\u003c/a\u003e for apprenticeships that started before 1 August 2016.\u003c/p\u003e\n\n\u003ch2 id=\"help-and-support\"\u003eHelp and support\u003c/h2\u003e\n\n\u003ch3 id=\"training-providers\"\u003eTraining providers\u003c/h3\u003e\n\n\u003cp\u003eFor help and support you can:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003eemail us at \u003ca href=\"mailto:SDE.servicedesk@education.gov.uk\"\u003eSDE.servicedesk@education.gov.uk\u003c/a\u003e\n\u003c/li\u003e\n  \u003cli\u003ephone us on 0370 267 000\u003c/li\u003e\n  \u003cli\u003econtact your provider management advisor\u003c/li\u003e\n\u003c/ul\u003e\n\n\u003ch3 id=\"employers\"\u003eEmployers\u003c/h3\u003e\n\n\u003cp\u003eFor help and support, phone us on 0800 015 0600.\u003c/p\u003e\n\u003c/div\u003e","about":[{"@context":"http://schema.org","@type":"Thing","sameAs":"https://www.gov.uk/education/hiring-and-training-an-apprentice"},{"@context":"http://schema.org","@type":"Thing","sameAs":"https://www.gov.uk/education/apprenticeships-funding"}]}
 </script><script type="application/ld+json">
   {"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https://www.gov.uk/"}},{"@type":"ListItem","position":2,"item":{"name":"Education, training and skills","@id":"https://www.gov.uk/education"}},{"@type":"ListItem","position":3,"item":{"name":"Further and higher education, skills and vocational training","@id":"https://www.gov.uk/education/further-and-higher-education-skills-and-vocational-training"}},{"@type":"ListItem","position":4,"item":{"name":"Further education funding","@id":"https://www.gov.uk/education/further-education-funding"}},{"@type":"ListItem","position":5,"item":{"name":"Apprenticeships funding","@id":"https://www.gov.uk/education/apprenticeships-funding"}}]}
 </script>

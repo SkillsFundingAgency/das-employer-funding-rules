@@ -101,6 +101,7 @@ module.exports = function (router,_myData) {
         req.session.myData.yearRangeEnd = req.query.yearRangeEnd || req.session.myData.yearRangeEnd
         req.session.myData.updatesChapter = req.query.updatesChapter || req.session.myData.updatesChapter
         req.session.myData.preview = req.query.preview || req.session.myData.preview
+        req.session.myData.noManuals = req.query.noManuals || false
 
         next()
     });
