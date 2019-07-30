@@ -377,9 +377,19 @@
 
 <h2 id="the-2018-to-2019-rules">The 2018 to 2019 rules</h2>
 
-<p>The 2018 to 2019 rules apply to apprenticeships that started between 1 August 2018 and 31 July 2019.</p>
 
+{% if myData.noManuals == "true" and myData.oldManuals == "true" %}
+<p>The 2018 to 2019 rules apply to apprenticeships that started between 1 August 2018 and 31 July 2019. View the apprenticeship funding rules for:</p>
+<ul class="govuk-list  govuk-list--bullet" >
+    <li><a href="manual-home?manual={{_employerManual}}">employers</a></li>
+    <li><a href="manual-home?manual={{_employerproviderManual}}">employer-providers</a></li>
+    <li><a href="manual-home?manual={{_providerManual}}">training providers</a></li>
+</ul>
+<p>View the funding rules in PDF format for:</p>
+{% else %}
+<p>The 2018 to 2019 rules apply to apprenticeships that started between 1 August 2018 and 31 July 2019.</p>
 <p>You can view the apprenticeship funding rules for:</p>
+{% endif %}
 
 <!-- 18-19 pdfs -->
 <ul>
